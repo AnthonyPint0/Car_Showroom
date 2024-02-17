@@ -42,8 +42,14 @@ Public Class Mainform
     End Sub
 
     Private Sub Registerlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Registerlink.LinkClicked
+        Me.Hide()
         Form_Login.Show()
-        loggedIn = False
+        Registerlink.Visible = True
+        Logout.Text = ""
+        Login_info1.Visible = False
+        Panel2.Visible = False
+        Logout.Visible = False
+        Form_Login.loggedIn = False
     End Sub
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
@@ -72,11 +78,15 @@ Public Class Mainform
         If loggedIn Then
             Registerlink.Visible = False
             Login_info1.Visible = True
+            Logout.Text = "Log out"
             Panel2.Visible = True
+            Logout.Visible = True
         Else
             Registerlink.Visible = True
+            Logout.Text = ""
             Login_info1.Visible = False
             Panel2.Visible = False
+            Logout.Visible = False
         End If
     End Sub
 
@@ -84,7 +94,21 @@ Public Class Mainform
 
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles MPVbel.Click
 
+    End Sub
+
+    Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
+        ' Display a message box with Yes and No buttons
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to Log out?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+
+        ' Check the user's response
+        If result = DialogResult.Yes Then
+            ' If the user clicks Yes, close the application
+            Me.Hide()
+            Form_Login.Show()
+            loggedIn = False
+            Form_Login.loggedIn = False
+        End If
     End Sub
 End Class

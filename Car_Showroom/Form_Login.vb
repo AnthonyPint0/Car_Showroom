@@ -5,6 +5,8 @@ Public Class Form_Login
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
+    Public loggedIn As Boolean = False
+
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
         mousex = System.Windows.Forms.Cursor.Position.X - Me.Left
@@ -62,9 +64,9 @@ Public Class Form_Login
                     ' User is authenticated
                     MessageBox.Show("Login successful")
                     Me.Hide() ' To hide the login form
-                    Mainform.Show() ' To link the main form to the login form
-                    Mainform.loggedIn = True ' Set loggedIn to True
                     Mainform.Show() ' To show the main form
+                    Mainform.loggedIn = True ' Set loggedIn to True
+                    loggedIn = True ' Set loggedIn to True
                     Mainform.Login_info1.Text = "User: " & username_txt.Text
                     Mainform.UpdateUI() ' Update the UI in MainForm
                 Else
@@ -97,6 +99,7 @@ Public Class Form_Login
         Me.Hide()
         Form_Register.Show()
         Mainform.loggedIn = False
+        loggedIn = False ' Set loggedIn to False
     End Sub
 
     Private Sub Remove_user_btn_Click(sender As Object, e As EventArgs) Handles Remove_user_btn.Click
@@ -150,5 +153,7 @@ Public Class Form_Login
         Mainform.Show()
         Mainform.Login_info1.Text = ""
         Mainform.loggedIn = False
+        loggedIn = False
+        Mainform.UpdateUI()
     End Sub
 End Class
