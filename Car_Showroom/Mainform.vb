@@ -5,6 +5,7 @@ Public Class Mainform
     Dim mousex As Integer
     Dim mousey As Integer
     Public loggedIn As Boolean = False
+    Private selectedButton As Button = Nothing
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
@@ -39,6 +40,17 @@ Public Class Mainform
     End Sub
     Private Sub Mainform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         UpdateUI()
+        ' Set the "Allbel" button as the initially selected button
+        selectedButton = Allbel
+        Allbel.BackColor = Color.FromArgb(0, 0, 64) ' Set dark blue color for selected button
+
+        ' Enable MouseEnter and MouseLeave events for all buttons except the selected one
+        For Each button As Button In {Allbel, Hatchbackbel, Sedanbel, SUVbel, MUVbel, MPVbel}
+            If button IsNot selectedButton Then
+                AddHandler button.MouseEnter, AddressOf Button_MouseEnter
+                AddHandler button.MouseLeave, AddressOf Button_MouseLeave
+            End If
+        Next
     End Sub
 
     Private Sub Registerlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Registerlink.LinkClicked
@@ -94,7 +106,7 @@ Public Class Mainform
 
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles MPVbel.Click
+    Private Sub Label5_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -109,6 +121,81 @@ Public Class Mainform
             Form_Login.Show()
             loggedIn = False
             Form_Login.loggedIn = False
+        End If
+    End Sub
+    Private Sub Allbel_Click(sender As Object, e As EventArgs) Handles Allbel.Click
+        ' Call the function to handle button clicks
+        HandleButtonClick(Allbel)
+    End Sub
+
+    Private Sub Hatchbackbel_Click(sender As Object, e As EventArgs) Handles Hatchbackbel.Click
+        ' Call the function to handle button clicks
+        HandleButtonClick(Hatchbackbel)
+    End Sub
+
+    Private Sub Sedanbel_Click(sender As Object, e As EventArgs) Handles Sedanbel.Click
+        ' Call the function to handle button clicks
+        HandleButtonClick(Sedanbel)
+    End Sub
+
+    Private Sub SUVbel_Click(sender As Object, e As EventArgs) Handles SUVbel.Click
+        ' Call the function to handle button clicks
+        HandleButtonClick(SUVbel)
+    End Sub
+
+    Private Sub MUVbel_Click(sender As Object, e As EventArgs) Handles MUVbel.Click
+        ' Call the function to handle button clicks
+        HandleButtonClick(MUVbel)
+    End Sub
+
+    Private Sub MPVbel_Click(sender As Object, e As EventArgs) Handles MPVbel.Click
+        ' Call the function to handle button clicks
+        HandleButtonClick(MPVbel)
+    End Sub
+
+    Private Sub HandleButtonClick(clickedButton As Button)
+        ' Check if a button is already selected
+        If selectedButton IsNot Nothing Then
+            ' Restore the appearance of the previously selected button
+            selectedButton.BackColor = Color.Transparent
+            ' Disable MouseEnter and MouseLeave events for the previously selected button
+            RemoveHandler selectedButton.MouseEnter, AddressOf Button_MouseEnter
+            RemoveHandler selectedButton.MouseLeave, AddressOf Button_MouseLeave
+        End If
+
+        ' Update the selected button to the clicked button
+        selectedButton = clickedButton
+        ' Set the background color of the clicked button to dark blue
+        clickedButton.BackColor = Color.FromArgb(0, 0, 64)
+
+        ' Disable MouseEnter and MouseLeave events for the clicked button
+        RemoveHandler clickedButton.MouseEnter, AddressOf Button_MouseEnter
+        RemoveHandler clickedButton.MouseLeave, AddressOf Button_MouseLeave
+
+        ' Enable MouseEnter and MouseLeave events for all other buttons
+        For Each button As Button In {Allbel, Hatchbackbel, Sedanbel, SUVbel, MUVbel, MPVbel}
+            If button IsNot clickedButton Then
+                AddHandler button.MouseEnter, AddressOf Button_MouseEnter
+                AddHandler button.MouseLeave, AddressOf Button_MouseLeave
+            End If
+        Next
+    End Sub
+
+    Private Sub Button_MouseEnter(sender As Object, e As EventArgs)
+        ' Check if the button is not the selected button
+        If sender IsNot selectedButton Then
+            ' Set the background color of the button to a lighter shade of blue on mouse enter
+            Dim button As Button = DirectCast(sender, Button)
+            button.BackColor = Color.FromArgb(115, 128, 244)
+        End If
+    End Sub
+
+    Private Sub Button_MouseLeave(sender As Object, e As EventArgs)
+        ' Check if the button is not the selected button
+        If sender IsNot selectedButton Then
+            ' Restore the background color of the button to transparent on mouse leave
+            Dim button As Button = DirectCast(sender, Button)
+            button.BackColor = Color.Transparent
         End If
     End Sub
 End Class

@@ -27,12 +27,14 @@ Partial Class Mainform
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Sidebar = New System.Windows.Forms.Panel()
+        Me.MPVbel = New System.Windows.Forms.Button()
+        Me.MUVbel = New System.Windows.Forms.Button()
+        Me.SUVbel = New System.Windows.Forms.Button()
+        Me.Sedanbel = New System.Windows.Forms.Button()
+        Me.Hatchbackbel = New System.Windows.Forms.Button()
+        Me.Allbel = New System.Windows.Forms.Button()
         Me.Logout = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.MPVbel = New System.Windows.Forms.Label()
-        Me.MUVbel = New System.Windows.Forms.Label()
-        Me.SUVbel = New System.Windows.Forms.Label()
-        Me.Sedanbel = New System.Windows.Forms.Label()
         Me.Registerlink = New System.Windows.Forms.LinkLabel()
         Me.Exit_btn = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
@@ -67,9 +69,6 @@ Partial Class Mainform
         Me.Label11 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -101,6 +100,7 @@ Partial Class Mainform
         Me.Label29 = New System.Windows.Forms.Label()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.Label30 = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
@@ -131,6 +131,7 @@ Partial Class Mainform
         Me.Label41 = New System.Windows.Forms.Label()
         Me.PictureBox20 = New System.Windows.Forms.PictureBox()
         Me.Label42 = New System.Windows.Forms.Label()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Button19 = New System.Windows.Forms.Button()
         Me.Label43 = New System.Windows.Forms.Label()
@@ -161,6 +162,7 @@ Partial Class Mainform
         Me.Label53 = New System.Windows.Forms.Label()
         Me.PictureBox26 = New System.Windows.Forms.PictureBox()
         Me.Label54 = New System.Windows.Forms.Label()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.Button25 = New System.Windows.Forms.Button()
         Me.Label55 = New System.Windows.Forms.Label()
@@ -191,8 +193,6 @@ Partial Class Mainform
         Me.Label65 = New System.Windows.Forms.Label()
         Me.PictureBox32 = New System.Windows.Forms.PictureBox()
         Me.Label66 = New System.Windows.Forms.Label()
-        Me.Allbel = New System.Windows.Forms.Button()
-        Me.Hatchbackbel = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
@@ -211,9 +211,6 @@ Partial Class Mainform
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox5.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -227,6 +224,7 @@ Partial Class Mainform
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel22.SuspendLayout()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
         Me.Panel8.SuspendLayout()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
@@ -239,6 +237,7 @@ Partial Class Mainform
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel25.SuspendLayout()
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
         Me.Panel11.SuspendLayout()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel12.SuspendLayout()
@@ -251,6 +250,7 @@ Partial Class Mainform
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel28.SuspendLayout()
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox5.SuspendLayout()
         Me.Panel14.SuspendLayout()
         CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel15.SuspendLayout()
@@ -303,12 +303,12 @@ Partial Class Mainform
         '
         Me.Sidebar.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(243, Byte), Integer))
         Me.Sidebar.BackgroundImage = CType(resources.GetObject("Sidebar.BackgroundImage"), System.Drawing.Image)
+        Me.Sidebar.Controls.Add(Me.MPVbel)
+        Me.Sidebar.Controls.Add(Me.MUVbel)
+        Me.Sidebar.Controls.Add(Me.SUVbel)
+        Me.Sidebar.Controls.Add(Me.Sedanbel)
         Me.Sidebar.Controls.Add(Me.Hatchbackbel)
         Me.Sidebar.Controls.Add(Me.Allbel)
-        Me.Sidebar.Controls.Add(Me.Sedanbel)
-        Me.Sidebar.Controls.Add(Me.SUVbel)
-        Me.Sidebar.Controls.Add(Me.MUVbel)
-        Me.Sidebar.Controls.Add(Me.MPVbel)
         Me.Sidebar.Controls.Add(Me.Logout)
         Me.Sidebar.Controls.Add(Me.Panel2)
         Me.Sidebar.Controls.Add(Me.Registerlink)
@@ -319,6 +319,84 @@ Partial Class Mainform
         Me.Sidebar.Name = "Sidebar"
         Me.Sidebar.Size = New System.Drawing.Size(194, 571)
         Me.Sidebar.TabIndex = 11
+        '
+        'MPVbel
+        '
+        Me.MPVbel.BackColor = System.Drawing.Color.Transparent
+        Me.MPVbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.MPVbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.MPVbel.ForeColor = System.Drawing.Color.White
+        Me.MPVbel.Location = New System.Drawing.Point(0, 363)
+        Me.MPVbel.Name = "MPVbel"
+        Me.MPVbel.Size = New System.Drawing.Size(194, 36)
+        Me.MPVbel.TabIndex = 21
+        Me.MPVbel.Text = "MPV"
+        Me.MPVbel.UseVisualStyleBackColor = False
+        '
+        'MUVbel
+        '
+        Me.MUVbel.BackColor = System.Drawing.Color.Transparent
+        Me.MUVbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.MUVbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.MUVbel.ForeColor = System.Drawing.Color.White
+        Me.MUVbel.Location = New System.Drawing.Point(0, 321)
+        Me.MUVbel.Name = "MUVbel"
+        Me.MUVbel.Size = New System.Drawing.Size(194, 36)
+        Me.MUVbel.TabIndex = 20
+        Me.MUVbel.Text = "MUV"
+        Me.MUVbel.UseVisualStyleBackColor = False
+        '
+        'SUVbel
+        '
+        Me.SUVbel.BackColor = System.Drawing.Color.Transparent
+        Me.SUVbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.SUVbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.SUVbel.ForeColor = System.Drawing.Color.White
+        Me.SUVbel.Location = New System.Drawing.Point(0, 279)
+        Me.SUVbel.Name = "SUVbel"
+        Me.SUVbel.Size = New System.Drawing.Size(194, 36)
+        Me.SUVbel.TabIndex = 19
+        Me.SUVbel.Text = "SUV"
+        Me.SUVbel.UseVisualStyleBackColor = False
+        '
+        'Sedanbel
+        '
+        Me.Sedanbel.BackColor = System.Drawing.Color.Transparent
+        Me.Sedanbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Sedanbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Sedanbel.ForeColor = System.Drawing.Color.White
+        Me.Sedanbel.Location = New System.Drawing.Point(0, 237)
+        Me.Sedanbel.Name = "Sedanbel"
+        Me.Sedanbel.Size = New System.Drawing.Size(194, 36)
+        Me.Sedanbel.TabIndex = 18
+        Me.Sedanbel.Text = "Sedan"
+        Me.Sedanbel.UseVisualStyleBackColor = False
+        '
+        'Hatchbackbel
+        '
+        Me.Hatchbackbel.BackColor = System.Drawing.Color.Transparent
+        Me.Hatchbackbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Hatchbackbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Hatchbackbel.ForeColor = System.Drawing.Color.White
+        Me.Hatchbackbel.Location = New System.Drawing.Point(0, 195)
+        Me.Hatchbackbel.Name = "Hatchbackbel"
+        Me.Hatchbackbel.Size = New System.Drawing.Size(194, 36)
+        Me.Hatchbackbel.TabIndex = 17
+        Me.Hatchbackbel.Text = "Hatchback"
+        Me.Hatchbackbel.UseVisualStyleBackColor = False
+        '
+        'Allbel
+        '
+        Me.Allbel.BackColor = System.Drawing.Color.Transparent
+        Me.Allbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Allbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Allbel.ForeColor = System.Drawing.Color.White
+        Me.Allbel.Location = New System.Drawing.Point(0, 153)
+        Me.Allbel.Name = "Allbel"
+        Me.Allbel.Size = New System.Drawing.Size(194, 36)
+        Me.Allbel.TabIndex = 16
+        Me.Allbel.Text = "All"
+        Me.Allbel.UseVisualStyleBackColor = False
         '
         'Logout
         '
@@ -340,54 +418,6 @@ Partial Class Mainform
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(139, 40)
         Me.Panel2.TabIndex = 12
-        '
-        'MPVbel
-        '
-        Me.MPVbel.AutoSize = True
-        Me.MPVbel.BackColor = System.Drawing.Color.Transparent
-        Me.MPVbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MPVbel.ForeColor = System.Drawing.Color.White
-        Me.MPVbel.Location = New System.Drawing.Point(56, 395)
-        Me.MPVbel.Name = "MPVbel"
-        Me.MPVbel.Size = New System.Drawing.Size(46, 21)
-        Me.MPVbel.TabIndex = 13
-        Me.MPVbel.Text = "MPV"
-        '
-        'MUVbel
-        '
-        Me.MUVbel.AutoSize = True
-        Me.MUVbel.BackColor = System.Drawing.Color.Transparent
-        Me.MUVbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MUVbel.ForeColor = System.Drawing.Color.White
-        Me.MUVbel.Location = New System.Drawing.Point(56, 357)
-        Me.MUVbel.Name = "MUVbel"
-        Me.MUVbel.Size = New System.Drawing.Size(48, 21)
-        Me.MUVbel.TabIndex = 12
-        Me.MUVbel.Text = "MUV"
-        '
-        'SUVbel
-        '
-        Me.SUVbel.AutoSize = True
-        Me.SUVbel.BackColor = System.Drawing.Color.Transparent
-        Me.SUVbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SUVbel.ForeColor = System.Drawing.Color.White
-        Me.SUVbel.Location = New System.Drawing.Point(60, 320)
-        Me.SUVbel.Name = "SUVbel"
-        Me.SUVbel.Size = New System.Drawing.Size(42, 21)
-        Me.SUVbel.TabIndex = 11
-        Me.SUVbel.Text = "SUV"
-        '
-        'Sedanbel
-        '
-        Me.Sedanbel.AutoSize = True
-        Me.Sedanbel.BackColor = System.Drawing.Color.Transparent
-        Me.Sedanbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Sedanbel.ForeColor = System.Drawing.Color.White
-        Me.Sedanbel.Location = New System.Drawing.Point(50, 286)
-        Me.Sedanbel.Name = "Sedanbel"
-        Me.Sedanbel.Size = New System.Drawing.Size(57, 21)
-        Me.Sedanbel.TabIndex = 9
-        Me.Sedanbel.Text = "Sedan"
         '
         'Registerlink
         '
@@ -797,54 +827,6 @@ Partial Class Mainform
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "Maruti Suzuki Baleno"
         '
-        'GroupBox5
-        '
-        Me.GroupBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.GroupBox5.Controls.Add(Me.Panel14)
-        Me.GroupBox5.Controls.Add(Me.Panel15)
-        Me.GroupBox5.Controls.Add(Me.Panel16)
-        Me.GroupBox5.Controls.Add(Me.Panel29)
-        Me.GroupBox5.Controls.Add(Me.Panel30)
-        Me.GroupBox5.Controls.Add(Me.Panel31)
-        Me.GroupBox5.Location = New System.Drawing.Point(3, 1691)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(707, 416)
-        Me.GroupBox5.TabIndex = 4
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "MPV"
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.GroupBox4.Controls.Add(Me.Panel11)
-        Me.GroupBox4.Controls.Add(Me.Panel12)
-        Me.GroupBox4.Controls.Add(Me.Panel13)
-        Me.GroupBox4.Controls.Add(Me.Panel26)
-        Me.GroupBox4.Controls.Add(Me.Panel27)
-        Me.GroupBox4.Controls.Add(Me.Panel28)
-        Me.GroupBox4.Location = New System.Drawing.Point(3, 1269)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(707, 416)
-        Me.GroupBox4.TabIndex = 4
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "MUV"
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.GroupBox3.Controls.Add(Me.Panel8)
-        Me.GroupBox3.Controls.Add(Me.Panel9)
-        Me.GroupBox3.Controls.Add(Me.Panel10)
-        Me.GroupBox3.Controls.Add(Me.Panel23)
-        Me.GroupBox3.Controls.Add(Me.Panel24)
-        Me.GroupBox3.Controls.Add(Me.Panel25)
-        Me.GroupBox3.Location = New System.Drawing.Point(3, 847)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(707, 416)
-        Me.GroupBox3.TabIndex = 5
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "SUV"
-        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
@@ -1215,6 +1197,22 @@ Partial Class Mainform
         Me.Label30.TabIndex = 16
         Me.Label30.Text = "Maruti Suzuki Baleno"
         '
+        'GroupBox3
+        '
+        Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.GroupBox3.Controls.Add(Me.Panel8)
+        Me.GroupBox3.Controls.Add(Me.Panel9)
+        Me.GroupBox3.Controls.Add(Me.Panel10)
+        Me.GroupBox3.Controls.Add(Me.Panel23)
+        Me.GroupBox3.Controls.Add(Me.Panel24)
+        Me.GroupBox3.Controls.Add(Me.Panel25)
+        Me.GroupBox3.Location = New System.Drawing.Point(3, 847)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(707, 416)
+        Me.GroupBox3.TabIndex = 5
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "SUV"
+        '
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.White
@@ -1568,6 +1566,22 @@ Partial Class Mainform
         Me.Label42.Size = New System.Drawing.Size(136, 17)
         Me.Label42.TabIndex = 16
         Me.Label42.Text = "Maruti Suzuki Baleno"
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.GroupBox4.Controls.Add(Me.Panel11)
+        Me.GroupBox4.Controls.Add(Me.Panel12)
+        Me.GroupBox4.Controls.Add(Me.Panel13)
+        Me.GroupBox4.Controls.Add(Me.Panel26)
+        Me.GroupBox4.Controls.Add(Me.Panel27)
+        Me.GroupBox4.Controls.Add(Me.Panel28)
+        Me.GroupBox4.Location = New System.Drawing.Point(3, 1269)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(707, 416)
+        Me.GroupBox4.TabIndex = 4
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "MUV"
         '
         'Panel11
         '
@@ -1923,6 +1937,22 @@ Partial Class Mainform
         Me.Label54.TabIndex = 16
         Me.Label54.Text = "Maruti Suzuki Baleno"
         '
+        'GroupBox5
+        '
+        Me.GroupBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.GroupBox5.Controls.Add(Me.Panel14)
+        Me.GroupBox5.Controls.Add(Me.Panel15)
+        Me.GroupBox5.Controls.Add(Me.Panel16)
+        Me.GroupBox5.Controls.Add(Me.Panel29)
+        Me.GroupBox5.Controls.Add(Me.Panel30)
+        Me.GroupBox5.Controls.Add(Me.Panel31)
+        Me.GroupBox5.Location = New System.Drawing.Point(3, 1691)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(707, 416)
+        Me.GroupBox5.TabIndex = 4
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "MPV"
+        '
         'Panel14
         '
         Me.Panel14.BackColor = System.Drawing.Color.White
@@ -2277,32 +2307,6 @@ Partial Class Mainform
         Me.Label66.TabIndex = 16
         Me.Label66.Text = "Maruti Suzuki Baleno"
         '
-        'Allbel
-        '
-        Me.Allbel.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(4, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.Allbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Allbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Allbel.ForeColor = System.Drawing.Color.White
-        Me.Allbel.Location = New System.Drawing.Point(0, 153)
-        Me.Allbel.Name = "Allbel"
-        Me.Allbel.Size = New System.Drawing.Size(194, 36)
-        Me.Allbel.TabIndex = 16
-        Me.Allbel.Text = "All"
-        Me.Allbel.UseVisualStyleBackColor = False
-        '
-        'Hatchbackbel
-        '
-        Me.Hatchbackbel.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(4, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.Hatchbackbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Hatchbackbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Hatchbackbel.ForeColor = System.Drawing.Color.White
-        Me.Hatchbackbel.Location = New System.Drawing.Point(0, 195)
-        Me.Hatchbackbel.Name = "Hatchbackbel"
-        Me.Hatchbackbel.Size = New System.Drawing.Size(194, 36)
-        Me.Hatchbackbel.TabIndex = 17
-        Me.Hatchbackbel.Text = "Hatchback"
-        Me.Hatchbackbel.UseVisualStyleBackColor = False
-        '
         'Mainform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2342,9 +2346,6 @@ Partial Class Mainform
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
@@ -2364,6 +2365,7 @@ Partial Class Mainform
         Me.Panel22.ResumeLayout(False)
         Me.Panel22.PerformLayout()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2382,6 +2384,7 @@ Partial Class Mainform
         Me.Panel25.ResumeLayout(False)
         Me.Panel25.PerformLayout()
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox4.ResumeLayout(False)
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2400,6 +2403,7 @@ Partial Class Mainform
         Me.Panel28.ResumeLayout(False)
         Me.Panel28.PerformLayout()
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox5.ResumeLayout(False)
         Me.Panel14.ResumeLayout(False)
         Me.Panel14.PerformLayout()
         CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2427,10 +2431,6 @@ Partial Class Mainform
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Sidebar As Panel
     Friend WithEvents Registerlink As LinkLabel
-    Friend WithEvents Sedanbel As Label
-    Friend WithEvents SUVbel As Label
-    Friend WithEvents MPVbel As Label
-    Friend WithEvents MUVbel As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Exit_btn As Button
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
@@ -2592,4 +2592,8 @@ Partial Class Mainform
     Friend WithEvents Label66 As Label
     Friend WithEvents Allbel As Button
     Friend WithEvents Hatchbackbel As Button
+    Friend WithEvents MUVbel As Button
+    Friend WithEvents SUVbel As Button
+    Friend WithEvents Sedanbel As Button
+    Friend WithEvents MPVbel As Button
 End Class
