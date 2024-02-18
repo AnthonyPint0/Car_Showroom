@@ -23,10 +23,10 @@ Partial Class Mainform
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Mainform))
-        Me.Login_info1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Sidebar = New System.Windows.Forms.Panel()
+        Me.Login_info1 = New System.Windows.Forms.Button()
         Me.MPVbel = New System.Windows.Forms.Button()
         Me.MUVbel = New System.Windows.Forms.Button()
         Me.SUVbel = New System.Windows.Forms.Button()
@@ -34,184 +34,182 @@ Partial Class Mainform
         Me.Hatchbackbel = New System.Windows.Forms.Button()
         Me.Allbel = New System.Windows.Forms.Button()
         Me.Logout = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Registerlink = New System.Windows.Forms.LinkLabel()
         Me.Exit_btn = New System.Windows.Forms.Button()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Panel19 = New System.Windows.Forms.Panel()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Mainpanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.HatchbackGB = New System.Windows.Forms.GroupBox()
+        Me.KwidPan = New System.Windows.Forms.Panel()
+        Me.KwidBtn = New System.Windows.Forms.Button()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Panel18 = New System.Windows.Forms.Panel()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.i10_NiosPan = New System.Windows.Forms.Panel()
+        Me.i10_NiosBtn = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.Panel17 = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.SwiftPan = New System.Windows.Forms.Panel()
+        Me.SwiftBtn = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.WagonPan = New System.Windows.Forms.Panel()
+        Me.WagonRBtn = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.PunchPan = New System.Windows.Forms.Panel()
+        Me.PunchBtn = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BalenoPan = New System.Windows.Forms.Panel()
+        Me.BalenoBtn = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.SedanGB = New System.Windows.Forms.GroupBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.LivaBtn = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.TigoBtn = New System.Windows.Forms.Button()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Button9 = New System.Windows.Forms.Button()
+        Me.CiazBtn = New System.Windows.Forms.Button()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Panel20 = New System.Windows.Forms.Panel()
-        Me.Button10 = New System.Windows.Forms.Button()
+        Me.AuraBtn = New System.Windows.Forms.Button()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Panel21 = New System.Windows.Forms.Panel()
-        Me.Button11 = New System.Windows.Forms.Button()
+        Me.AmazeBtn = New System.Windows.Forms.Button()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Panel22 = New System.Windows.Forms.Panel()
-        Me.Button12 = New System.Windows.Forms.Button()
+        Me.DzireBtn = New System.Windows.Forms.Button()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.SUVGB = New System.Windows.Forms.GroupBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Button13 = New System.Windows.Forms.Button()
+        Me.MagniteBtn = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.PictureBox15 = New System.Windows.Forms.PictureBox()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Button14 = New System.Windows.Forms.Button()
+        Me.XUV300Btn = New System.Windows.Forms.Button()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Button15 = New System.Windows.Forms.Button()
+        Me.SeltosBtn = New System.Windows.Forms.Button()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.PictureBox17 = New System.Windows.Forms.PictureBox()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.Panel23 = New System.Windows.Forms.Panel()
-        Me.Button16 = New System.Windows.Forms.Button()
+        Me.CretaBtn = New System.Windows.Forms.Button()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel24 = New System.Windows.Forms.Panel()
-        Me.Button17 = New System.Windows.Forms.Button()
+        Me.NexonBtn = New System.Windows.Forms.Button()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.PictureBox19 = New System.Windows.Forms.PictureBox()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Panel25 = New System.Windows.Forms.Panel()
-        Me.Button18 = New System.Windows.Forms.Button()
+        Me.BrezzaBtn = New System.Windows.Forms.Button()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.PictureBox20 = New System.Windows.Forms.PictureBox()
         Me.Label42 = New System.Windows.Forms.Label()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.MUVGB = New System.Windows.Forms.GroupBox()
         Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Button19 = New System.Windows.Forms.Button()
+        Me.SumGoldBtn = New System.Windows.Forms.Button()
         Me.Label43 = New System.Windows.Forms.Label()
         Me.PictureBox21 = New System.Windows.Forms.PictureBox()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.Button20 = New System.Windows.Forms.Button()
+        Me.ScorpioBtn = New System.Windows.Forms.Button()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.PictureBox22 = New System.Windows.Forms.PictureBox()
         Me.Label46 = New System.Windows.Forms.Label()
         Me.Panel13 = New System.Windows.Forms.Panel()
-        Me.Button21 = New System.Windows.Forms.Button()
+        Me.CarensBtn = New System.Windows.Forms.Button()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.PictureBox23 = New System.Windows.Forms.PictureBox()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Panel26 = New System.Windows.Forms.Panel()
-        Me.Button22 = New System.Windows.Forms.Button()
+        Me.ErtigaBtn = New System.Windows.Forms.Button()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.PictureBox24 = New System.Windows.Forms.PictureBox()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.Panel27 = New System.Windows.Forms.Panel()
-        Me.Button23 = New System.Windows.Forms.Button()
+        Me.CrystaBtn = New System.Windows.Forms.Button()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.PictureBox25 = New System.Windows.Forms.PictureBox()
         Me.Label52 = New System.Windows.Forms.Label()
         Me.Panel28 = New System.Windows.Forms.Panel()
-        Me.Button24 = New System.Windows.Forms.Button()
+        Me.BoleroBtn = New System.Windows.Forms.Button()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.PictureBox26 = New System.Windows.Forms.PictureBox()
         Me.Label54 = New System.Windows.Forms.Label()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.MPVGB = New System.Windows.Forms.GroupBox()
         Me.Panel14 = New System.Windows.Forms.Panel()
-        Me.Button25 = New System.Windows.Forms.Button()
+        Me.TravellerBtn = New System.Windows.Forms.Button()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.PictureBox27 = New System.Windows.Forms.PictureBox()
         Me.Label56 = New System.Windows.Forms.Label()
         Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.Button26 = New System.Windows.Forms.Button()
+        Me.JeetaBtn = New System.Windows.Forms.Button()
         Me.Label57 = New System.Windows.Forms.Label()
         Me.PictureBox28 = New System.Windows.Forms.PictureBox()
         Me.Label58 = New System.Windows.Forms.Label()
         Me.Panel16 = New System.Windows.Forms.Panel()
-        Me.Button27 = New System.Windows.Forms.Button()
+        Me.PlusBtn = New System.Windows.Forms.Button()
         Me.Label59 = New System.Windows.Forms.Label()
         Me.PictureBox29 = New System.Windows.Forms.PictureBox()
         Me.Label60 = New System.Windows.Forms.Label()
         Me.Panel29 = New System.Windows.Forms.Panel()
-        Me.Button28 = New System.Windows.Forms.Button()
+        Me.PickupBtn = New System.Windows.Forms.Button()
         Me.Label61 = New System.Windows.Forms.Label()
         Me.PictureBox30 = New System.Windows.Forms.PictureBox()
         Me.Label62 = New System.Windows.Forms.Label()
         Me.Panel30 = New System.Windows.Forms.Panel()
-        Me.Button29 = New System.Windows.Forms.Button()
+        Me.AceGoldBtn = New System.Windows.Forms.Button()
         Me.Label63 = New System.Windows.Forms.Label()
         Me.PictureBox31 = New System.Windows.Forms.PictureBox()
         Me.Label64 = New System.Windows.Forms.Label()
         Me.Panel31 = New System.Windows.Forms.Panel()
-        Me.Button30 = New System.Windows.Forms.Button()
+        Me.SuperCarryBtn = New System.Windows.Forms.Button()
         Me.Label65 = New System.Windows.Forms.Label()
         Me.PictureBox32 = New System.Windows.Forms.PictureBox()
         Me.Label66 = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.FlowLayoutPanel1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.Panel19.SuspendLayout()
+        Me.Mainpanel.SuspendLayout()
+        Me.HatchbackGB.SuspendLayout()
+        Me.KwidPan.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel18.SuspendLayout()
+        Me.i10_NiosPan.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel17.SuspendLayout()
+        Me.SwiftPan.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel4.SuspendLayout()
+        Me.WagonPan.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
+        Me.PunchPan.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
+        Me.BalenoPan.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
+        Me.SedanGB.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
@@ -224,7 +222,7 @@ Partial Class Mainform
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel22.SuspendLayout()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox3.SuspendLayout()
+        Me.SUVGB.SuspendLayout()
         Me.Panel8.SuspendLayout()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
@@ -237,7 +235,7 @@ Partial Class Mainform
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel25.SuspendLayout()
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox4.SuspendLayout()
+        Me.MUVGB.SuspendLayout()
         Me.Panel11.SuspendLayout()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel12.SuspendLayout()
@@ -250,7 +248,7 @@ Partial Class Mainform
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel28.SuspendLayout()
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox5.SuspendLayout()
+        Me.MPVGB.SuspendLayout()
         Me.Panel14.SuspendLayout()
         CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel15.SuspendLayout()
@@ -264,18 +262,6 @@ Partial Class Mainform
         Me.Panel31.SuspendLayout()
         CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Login_info1
-        '
-        Me.Login_info1.AutoSize = True
-        Me.Login_info1.BackColor = System.Drawing.Color.Transparent
-        Me.Login_info1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Login_info1.ForeColor = System.Drawing.Color.White
-        Me.Login_info1.Location = New System.Drawing.Point(8, 8)
-        Me.Login_info1.Name = "Login_info1"
-        Me.Login_info1.Size = New System.Drawing.Size(53, 21)
-        Me.Login_info1.TabIndex = 0
-        Me.Login_info1.Text = "Guest"
         '
         'PictureBox2
         '
@@ -303,6 +289,7 @@ Partial Class Mainform
         '
         Me.Sidebar.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(243, Byte), Integer))
         Me.Sidebar.BackgroundImage = CType(resources.GetObject("Sidebar.BackgroundImage"), System.Drawing.Image)
+        Me.Sidebar.Controls.Add(Me.Login_info1)
         Me.Sidebar.Controls.Add(Me.MPVbel)
         Me.Sidebar.Controls.Add(Me.MUVbel)
         Me.Sidebar.Controls.Add(Me.SUVbel)
@@ -310,7 +297,6 @@ Partial Class Mainform
         Me.Sidebar.Controls.Add(Me.Hatchbackbel)
         Me.Sidebar.Controls.Add(Me.Allbel)
         Me.Sidebar.Controls.Add(Me.Logout)
-        Me.Sidebar.Controls.Add(Me.Panel2)
         Me.Sidebar.Controls.Add(Me.Registerlink)
         Me.Sidebar.Controls.Add(Me.PictureBox1)
         Me.Sidebar.Controls.Add(Me.PictureBox2)
@@ -319,6 +305,19 @@ Partial Class Mainform
         Me.Sidebar.Name = "Sidebar"
         Me.Sidebar.Size = New System.Drawing.Size(194, 571)
         Me.Sidebar.TabIndex = 11
+        '
+        'Login_info1
+        '
+        Me.Login_info1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Login_info1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Login_info1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Login_info1.ForeColor = System.Drawing.Color.White
+        Me.Login_info1.Location = New System.Drawing.Point(4, 508)
+        Me.Login_info1.Name = "Login_info1"
+        Me.Login_info1.Size = New System.Drawing.Size(188, 36)
+        Me.Login_info1.TabIndex = 22
+        Me.Login_info1.Text = "Guest"
+        Me.Login_info1.UseVisualStyleBackColor = False
         '
         'MPVbel
         '
@@ -410,15 +409,6 @@ Partial Class Mainform
         Me.Logout.TabIndex = 15
         Me.Logout.Text = "Log out"
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Login_info1)
-        Me.Panel2.Location = New System.Drawing.Point(27, 504)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(139, 40)
-        Me.Panel2.TabIndex = 12
-        '
         'Registerlink
         '
         Me.Registerlink.AutoSize = True
@@ -444,59 +434,61 @@ Partial Class Mainform
         Me.Exit_btn.Text = "X"
         Me.Exit_btn.UseVisualStyleBackColor = False
         '
-        'FlowLayoutPanel1
+        'Mainpanel
         '
-        Me.FlowLayoutPanel1.AutoScroll = True
-        Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox1)
-        Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox2)
-        Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox3)
-        Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox4)
-        Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox5)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(214, 36)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(740, 507)
-        Me.FlowLayoutPanel1.TabIndex = 40
+        Me.Mainpanel.AutoScroll = True
+        Me.Mainpanel.Controls.Add(Me.HatchbackGB)
+        Me.Mainpanel.Controls.Add(Me.SedanGB)
+        Me.Mainpanel.Controls.Add(Me.SUVGB)
+        Me.Mainpanel.Controls.Add(Me.MUVGB)
+        Me.Mainpanel.Controls.Add(Me.MPVGB)
+        Me.Mainpanel.Location = New System.Drawing.Point(214, 36)
+        Me.Mainpanel.Name = "Mainpanel"
+        Me.Mainpanel.Size = New System.Drawing.Size(740, 507)
+        Me.Mainpanel.TabIndex = 40
         '
-        'GroupBox1
+        'HatchbackGB
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.GroupBox1.Controls.Add(Me.Panel19)
-        Me.GroupBox1.Controls.Add(Me.Panel18)
-        Me.GroupBox1.Controls.Add(Me.Panel17)
-        Me.GroupBox1.Controls.Add(Me.Panel4)
-        Me.GroupBox1.Controls.Add(Me.Panel3)
-        Me.GroupBox1.Controls.Add(Me.Panel1)
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(707, 416)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Hatchback"
+        Me.HatchbackGB.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.HatchbackGB.Controls.Add(Me.KwidPan)
+        Me.HatchbackGB.Controls.Add(Me.i10_NiosPan)
+        Me.HatchbackGB.Controls.Add(Me.SwiftPan)
+        Me.HatchbackGB.Controls.Add(Me.WagonPan)
+        Me.HatchbackGB.Controls.Add(Me.PunchPan)
+        Me.HatchbackGB.Controls.Add(Me.BalenoPan)
+        Me.HatchbackGB.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HatchbackGB.Location = New System.Drawing.Point(3, 3)
+        Me.HatchbackGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 15)
+        Me.HatchbackGB.Name = "HatchbackGB"
+        Me.HatchbackGB.Size = New System.Drawing.Size(707, 426)
+        Me.HatchbackGB.TabIndex = 0
+        Me.HatchbackGB.TabStop = False
+        Me.HatchbackGB.Text = "Hatchback"
         '
-        'Panel19
+        'KwidPan
         '
-        Me.Panel19.BackColor = System.Drawing.Color.White
-        Me.Panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel19.Controls.Add(Me.Button6)
-        Me.Panel19.Controls.Add(Me.Label17)
-        Me.Panel19.Controls.Add(Me.PictureBox8)
-        Me.Panel19.Controls.Add(Me.Label18)
-        Me.Panel19.Location = New System.Drawing.Point(475, 215)
-        Me.Panel19.Name = "Panel19"
-        Me.Panel19.Size = New System.Drawing.Size(226, 193)
-        Me.Panel19.TabIndex = 22
+        Me.KwidPan.BackColor = System.Drawing.Color.White
+        Me.KwidPan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.KwidPan.Controls.Add(Me.KwidBtn)
+        Me.KwidPan.Controls.Add(Me.Label17)
+        Me.KwidPan.Controls.Add(Me.PictureBox8)
+        Me.KwidPan.Controls.Add(Me.Label18)
+        Me.KwidPan.Location = New System.Drawing.Point(475, 226)
+        Me.KwidPan.Name = "KwidPan"
+        Me.KwidPan.Size = New System.Drawing.Size(226, 193)
+        Me.KwidPan.TabIndex = 22
         '
-        'Button6
+        'KwidBtn
         '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(144, 164)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(78, 23)
-        Me.Button6.TabIndex = 19
-        Me.Button6.Text = "View More"
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.KwidBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.KwidBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.KwidBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.KwidBtn.Location = New System.Drawing.Point(144, 164)
+        Me.KwidBtn.Name = "KwidBtn"
+        Me.KwidBtn.Size = New System.Drawing.Size(78, 23)
+        Me.KwidBtn.TabIndex = 19
+        Me.KwidBtn.Text = "View More"
+        Me.KwidBtn.UseVisualStyleBackColor = False
         '
         'Label17
         '
@@ -504,11 +496,11 @@ Partial Class Mainform
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.Black
-        Me.Label17.Location = New System.Drawing.Point(9, 166)
+        Me.Label17.Location = New System.Drawing.Point(0, 167)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(128, 15)
+        Me.Label17.Size = New System.Drawing.Size(144, 15)
         Me.Label17.TabIndex = 18
-        Me.Label17.Text = "Starting from 7,00,000"
+        Me.Label17.Text = "Starting from ₹ 4.65 Lakh"
         '
         'PictureBox8
         '
@@ -528,34 +520,34 @@ Partial Class Mainform
         Me.Label18.ForeColor = System.Drawing.Color.Black
         Me.Label18.Location = New System.Drawing.Point(3, 10)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(136, 17)
+        Me.Label18.Size = New System.Drawing.Size(87, 17)
         Me.Label18.TabIndex = 16
-        Me.Label18.Text = "Maruti Suzuki Baleno"
+        Me.Label18.Text = "Renault Kwid"
         '
-        'Panel18
+        'i10_NiosPan
         '
-        Me.Panel18.BackColor = System.Drawing.Color.White
-        Me.Panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel18.Controls.Add(Me.Button5)
-        Me.Panel18.Controls.Add(Me.Label15)
-        Me.Panel18.Controls.Add(Me.PictureBox7)
-        Me.Panel18.Controls.Add(Me.Label16)
-        Me.Panel18.Location = New System.Drawing.Point(241, 215)
-        Me.Panel18.Name = "Panel18"
-        Me.Panel18.Size = New System.Drawing.Size(226, 193)
-        Me.Panel18.TabIndex = 21
+        Me.i10_NiosPan.BackColor = System.Drawing.Color.White
+        Me.i10_NiosPan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.i10_NiosPan.Controls.Add(Me.i10_NiosBtn)
+        Me.i10_NiosPan.Controls.Add(Me.Label15)
+        Me.i10_NiosPan.Controls.Add(Me.PictureBox7)
+        Me.i10_NiosPan.Controls.Add(Me.Label16)
+        Me.i10_NiosPan.Location = New System.Drawing.Point(241, 226)
+        Me.i10_NiosPan.Name = "i10_NiosPan"
+        Me.i10_NiosPan.Size = New System.Drawing.Size(226, 193)
+        Me.i10_NiosPan.TabIndex = 21
         '
-        'Button5
+        'i10_NiosBtn
         '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(144, 164)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(78, 23)
-        Me.Button5.TabIndex = 19
-        Me.Button5.Text = "View More"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.i10_NiosBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.i10_NiosBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.i10_NiosBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.i10_NiosBtn.Location = New System.Drawing.Point(144, 164)
+        Me.i10_NiosBtn.Name = "i10_NiosBtn"
+        Me.i10_NiosBtn.Size = New System.Drawing.Size(78, 23)
+        Me.i10_NiosBtn.TabIndex = 19
+        Me.i10_NiosBtn.Text = "View More"
+        Me.i10_NiosBtn.UseVisualStyleBackColor = False
         '
         'Label15
         '
@@ -563,11 +555,11 @@ Partial Class Mainform
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(9, 166)
+        Me.Label15.Location = New System.Drawing.Point(-2, 167)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(128, 15)
+        Me.Label15.Size = New System.Drawing.Size(144, 15)
         Me.Label15.TabIndex = 18
-        Me.Label15.Text = "Starting from 7,00,000"
+        Me.Label15.Text = "Starting from ₹ 5.92 Lakh"
         '
         'PictureBox7
         '
@@ -587,34 +579,34 @@ Partial Class Mainform
         Me.Label16.ForeColor = System.Drawing.Color.Black
         Me.Label16.Location = New System.Drawing.Point(3, 10)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(136, 17)
+        Me.Label16.Size = New System.Drawing.Size(150, 17)
         Me.Label16.TabIndex = 16
-        Me.Label16.Text = "Maruti Suzuki Baleno"
+        Me.Label16.Text = "Hyundai Grand i10 Nios"
         '
-        'Panel17
+        'SwiftPan
         '
-        Me.Panel17.BackColor = System.Drawing.Color.White
-        Me.Panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel17.Controls.Add(Me.Button4)
-        Me.Panel17.Controls.Add(Me.Label13)
-        Me.Panel17.Controls.Add(Me.PictureBox6)
-        Me.Panel17.Controls.Add(Me.Label14)
-        Me.Panel17.Location = New System.Drawing.Point(7, 215)
-        Me.Panel17.Name = "Panel17"
-        Me.Panel17.Size = New System.Drawing.Size(226, 193)
-        Me.Panel17.TabIndex = 20
+        Me.SwiftPan.BackColor = System.Drawing.Color.White
+        Me.SwiftPan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.SwiftPan.Controls.Add(Me.SwiftBtn)
+        Me.SwiftPan.Controls.Add(Me.Label13)
+        Me.SwiftPan.Controls.Add(Me.PictureBox6)
+        Me.SwiftPan.Controls.Add(Me.Label14)
+        Me.SwiftPan.Location = New System.Drawing.Point(7, 226)
+        Me.SwiftPan.Name = "SwiftPan"
+        Me.SwiftPan.Size = New System.Drawing.Size(226, 193)
+        Me.SwiftPan.TabIndex = 20
         '
-        'Button4
+        'SwiftBtn
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(144, 164)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(78, 23)
-        Me.Button4.TabIndex = 19
-        Me.Button4.Text = "View More"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.SwiftBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.SwiftBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SwiftBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SwiftBtn.Location = New System.Drawing.Point(144, 164)
+        Me.SwiftBtn.Name = "SwiftBtn"
+        Me.SwiftBtn.Size = New System.Drawing.Size(78, 23)
+        Me.SwiftBtn.TabIndex = 19
+        Me.SwiftBtn.Text = "View More"
+        Me.SwiftBtn.UseVisualStyleBackColor = False
         '
         'Label13
         '
@@ -622,11 +614,11 @@ Partial Class Mainform
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(9, 166)
+        Me.Label13.Location = New System.Drawing.Point(-1, 166)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(128, 15)
+        Me.Label13.Size = New System.Drawing.Size(144, 15)
         Me.Label13.TabIndex = 18
-        Me.Label13.Text = "Starting from 7,00,000"
+        Me.Label13.Text = "Starting from ₹ 5.99 Lakh"
         '
         'PictureBox6
         '
@@ -646,34 +638,34 @@ Partial Class Mainform
         Me.Label14.ForeColor = System.Drawing.Color.Black
         Me.Label14.Location = New System.Drawing.Point(3, 10)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(136, 17)
+        Me.Label14.Size = New System.Drawing.Size(124, 17)
         Me.Label14.TabIndex = 16
-        Me.Label14.Text = "Maruti Suzuki Baleno"
+        Me.Label14.Text = "Maruti Suzuki Swift"
         '
-        'Panel4
+        'WagonPan
         '
-        Me.Panel4.BackColor = System.Drawing.Color.White
-        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.Button3)
-        Me.Panel4.Controls.Add(Me.Label10)
-        Me.Panel4.Controls.Add(Me.PictureBox5)
-        Me.Panel4.Controls.Add(Me.Label12)
-        Me.Panel4.Location = New System.Drawing.Point(475, 16)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(226, 193)
-        Me.Panel4.TabIndex = 20
+        Me.WagonPan.BackColor = System.Drawing.Color.White
+        Me.WagonPan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.WagonPan.Controls.Add(Me.WagonRBtn)
+        Me.WagonPan.Controls.Add(Me.Label10)
+        Me.WagonPan.Controls.Add(Me.PictureBox5)
+        Me.WagonPan.Controls.Add(Me.Label12)
+        Me.WagonPan.Location = New System.Drawing.Point(475, 27)
+        Me.WagonPan.Name = "WagonPan"
+        Me.WagonPan.Size = New System.Drawing.Size(226, 193)
+        Me.WagonPan.TabIndex = 20
         '
-        'Button3
+        'WagonRBtn
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(144, 164)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(78, 23)
-        Me.Button3.TabIndex = 19
-        Me.Button3.Text = "View More"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.WagonRBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.WagonRBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.WagonRBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WagonRBtn.Location = New System.Drawing.Point(144, 164)
+        Me.WagonRBtn.Name = "WagonRBtn"
+        Me.WagonRBtn.Size = New System.Drawing.Size(78, 23)
+        Me.WagonRBtn.TabIndex = 19
+        Me.WagonRBtn.Text = "View More"
+        Me.WagonRBtn.UseVisualStyleBackColor = False
         '
         'Label10
         '
@@ -681,11 +673,11 @@ Partial Class Mainform
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(9, 166)
+        Me.Label10.Location = New System.Drawing.Point(-2, 168)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(128, 15)
+        Me.Label10.Size = New System.Drawing.Size(144, 15)
         Me.Label10.TabIndex = 18
-        Me.Label10.Text = "Starting from 7,00,000"
+        Me.Label10.Text = "Starting from ₹ 5.47 Lakh"
         '
         'PictureBox5
         '
@@ -705,34 +697,34 @@ Partial Class Mainform
         Me.Label12.ForeColor = System.Drawing.Color.Black
         Me.Label12.Location = New System.Drawing.Point(3, 10)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(136, 17)
+        Me.Label12.Size = New System.Drawing.Size(146, 17)
         Me.Label12.TabIndex = 16
-        Me.Label12.Text = "Maruti Suzuki Baleno"
+        Me.Label12.Text = "Maruti Suzuki WagonR"
         '
-        'Panel3
+        'PunchPan
         '
-        Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.Button2)
-        Me.Panel3.Controls.Add(Me.Label8)
-        Me.Panel3.Controls.Add(Me.PictureBox4)
-        Me.Panel3.Controls.Add(Me.Label9)
-        Me.Panel3.Location = New System.Drawing.Point(241, 16)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(226, 193)
-        Me.Panel3.TabIndex = 20
+        Me.PunchPan.BackColor = System.Drawing.Color.White
+        Me.PunchPan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PunchPan.Controls.Add(Me.PunchBtn)
+        Me.PunchPan.Controls.Add(Me.Label8)
+        Me.PunchPan.Controls.Add(Me.PictureBox4)
+        Me.PunchPan.Controls.Add(Me.Label9)
+        Me.PunchPan.Location = New System.Drawing.Point(241, 27)
+        Me.PunchPan.Name = "PunchPan"
+        Me.PunchPan.Size = New System.Drawing.Size(226, 193)
+        Me.PunchPan.TabIndex = 20
         '
-        'Button2
+        'PunchBtn
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(144, 164)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(78, 23)
-        Me.Button2.TabIndex = 19
-        Me.Button2.Text = "View More"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.PunchBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.PunchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PunchBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PunchBtn.Location = New System.Drawing.Point(144, 164)
+        Me.PunchBtn.Name = "PunchBtn"
+        Me.PunchBtn.Size = New System.Drawing.Size(78, 23)
+        Me.PunchBtn.TabIndex = 19
+        Me.PunchBtn.Text = "View More"
+        Me.PunchBtn.UseVisualStyleBackColor = False
         '
         'Label8
         '
@@ -740,11 +732,11 @@ Partial Class Mainform
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(9, 166)
+        Me.Label8.Location = New System.Drawing.Point(1, 166)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(128, 15)
+        Me.Label8.Size = New System.Drawing.Size(144, 15)
         Me.Label8.TabIndex = 18
-        Me.Label8.Text = "Starting from 7,00,000"
+        Me.Label8.Text = "Starting from ₹ 5.49 Lakh"
         '
         'PictureBox4
         '
@@ -764,34 +756,34 @@ Partial Class Mainform
         Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(3, 10)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(136, 17)
+        Me.Label9.Size = New System.Drawing.Size(75, 17)
         Me.Label9.TabIndex = 16
-        Me.Label9.Text = "Maruti Suzuki Baleno"
+        Me.Label9.Text = "Tata Punch"
         '
-        'Panel1
+        'BalenoPan
         '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.Label11)
-        Me.Panel1.Controls.Add(Me.PictureBox3)
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Location = New System.Drawing.Point(7, 16)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(226, 193)
-        Me.Panel1.TabIndex = 2
+        Me.BalenoPan.BackColor = System.Drawing.Color.White
+        Me.BalenoPan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.BalenoPan.Controls.Add(Me.BalenoBtn)
+        Me.BalenoPan.Controls.Add(Me.Label11)
+        Me.BalenoPan.Controls.Add(Me.PictureBox3)
+        Me.BalenoPan.Controls.Add(Me.Label7)
+        Me.BalenoPan.Location = New System.Drawing.Point(7, 27)
+        Me.BalenoPan.Name = "BalenoPan"
+        Me.BalenoPan.Size = New System.Drawing.Size(226, 193)
+        Me.BalenoPan.TabIndex = 2
         '
-        'Button1
+        'BalenoBtn
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(144, 164)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(78, 23)
-        Me.Button1.TabIndex = 19
-        Me.Button1.Text = "View More"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BalenoBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.BalenoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BalenoBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BalenoBtn.Location = New System.Drawing.Point(144, 164)
+        Me.BalenoBtn.Name = "BalenoBtn"
+        Me.BalenoBtn.Size = New System.Drawing.Size(78, 23)
+        Me.BalenoBtn.TabIndex = 19
+        Me.BalenoBtn.Text = "View More"
+        Me.BalenoBtn.UseVisualStyleBackColor = False
         '
         'Label11
         '
@@ -799,11 +791,11 @@ Partial Class Mainform
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(9, 166)
+        Me.Label11.Location = New System.Drawing.Point(0, 166)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(128, 15)
+        Me.Label11.Size = New System.Drawing.Size(144, 15)
         Me.Label11.TabIndex = 18
-        Me.Label11.Text = "Starting from 7,00,000"
+        Me.Label11.Text = "Starting from ₹ 6.66 Lakh"
         '
         'PictureBox3
         '
@@ -827,46 +819,48 @@ Partial Class Mainform
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "Maruti Suzuki Baleno"
         '
-        'GroupBox2
+        'SedanGB
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.GroupBox2.Controls.Add(Me.Panel5)
-        Me.GroupBox2.Controls.Add(Me.Panel6)
-        Me.GroupBox2.Controls.Add(Me.Panel7)
-        Me.GroupBox2.Controls.Add(Me.Panel20)
-        Me.GroupBox2.Controls.Add(Me.Panel21)
-        Me.GroupBox2.Controls.Add(Me.Panel22)
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 425)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(707, 416)
-        Me.GroupBox2.TabIndex = 4
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Sedan"
+        Me.SedanGB.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.SedanGB.Controls.Add(Me.Panel5)
+        Me.SedanGB.Controls.Add(Me.Panel6)
+        Me.SedanGB.Controls.Add(Me.Panel7)
+        Me.SedanGB.Controls.Add(Me.Panel20)
+        Me.SedanGB.Controls.Add(Me.Panel21)
+        Me.SedanGB.Controls.Add(Me.Panel22)
+        Me.SedanGB.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.SedanGB.Location = New System.Drawing.Point(3, 447)
+        Me.SedanGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 15)
+        Me.SedanGB.Name = "SedanGB"
+        Me.SedanGB.Size = New System.Drawing.Size(707, 426)
+        Me.SedanGB.TabIndex = 4
+        Me.SedanGB.TabStop = False
+        Me.SedanGB.Text = "Sedan"
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.White
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel5.Controls.Add(Me.Button7)
+        Me.Panel5.Controls.Add(Me.LivaBtn)
         Me.Panel5.Controls.Add(Me.Label19)
         Me.Panel5.Controls.Add(Me.PictureBox9)
         Me.Panel5.Controls.Add(Me.Label20)
-        Me.Panel5.Location = New System.Drawing.Point(474, 211)
+        Me.Panel5.Location = New System.Drawing.Point(474, 224)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(226, 193)
         Me.Panel5.TabIndex = 28
         '
-        'Button7
+        'LivaBtn
         '
-        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(144, 164)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(78, 23)
-        Me.Button7.TabIndex = 19
-        Me.Button7.Text = "View More"
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.LivaBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.LivaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LivaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LivaBtn.Location = New System.Drawing.Point(144, 164)
+        Me.LivaBtn.Name = "LivaBtn"
+        Me.LivaBtn.Size = New System.Drawing.Size(78, 23)
+        Me.LivaBtn.TabIndex = 19
+        Me.LivaBtn.Text = "View More"
+        Me.LivaBtn.UseVisualStyleBackColor = False
         '
         'Label19
         '
@@ -874,11 +868,11 @@ Partial Class Mainform
         Me.Label19.BackColor = System.Drawing.Color.Transparent
         Me.Label19.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.Black
-        Me.Label19.Location = New System.Drawing.Point(9, 166)
+        Me.Label19.Location = New System.Drawing.Point(0, 166)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(128, 15)
+        Me.Label19.Size = New System.Drawing.Size(144, 15)
         Me.Label19.TabIndex = 18
-        Me.Label19.Text = "Starting from 7,00,000"
+        Me.Label19.Text = "Starting from ₹ 6.50 Lakh"
         '
         'PictureBox9
         '
@@ -898,34 +892,34 @@ Partial Class Mainform
         Me.Label20.ForeColor = System.Drawing.Color.Black
         Me.Label20.Location = New System.Drawing.Point(3, 10)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(136, 17)
+        Me.Label20.Size = New System.Drawing.Size(109, 17)
         Me.Label20.TabIndex = 16
-        Me.Label20.Text = "Maruti Suzuki Baleno"
+        Me.Label20.Text = "Toyota Etios Liva"
         '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.White
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel6.Controls.Add(Me.Button8)
+        Me.Panel6.Controls.Add(Me.TigoBtn)
         Me.Panel6.Controls.Add(Me.Label21)
         Me.Panel6.Controls.Add(Me.PictureBox10)
         Me.Panel6.Controls.Add(Me.Label22)
-        Me.Panel6.Location = New System.Drawing.Point(240, 211)
+        Me.Panel6.Location = New System.Drawing.Point(240, 224)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(226, 193)
         Me.Panel6.TabIndex = 27
         '
-        'Button8
+        'TigoBtn
         '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(144, 164)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(78, 23)
-        Me.Button8.TabIndex = 19
-        Me.Button8.Text = "View More"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.TigoBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.TigoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TigoBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TigoBtn.Location = New System.Drawing.Point(144, 164)
+        Me.TigoBtn.Name = "TigoBtn"
+        Me.TigoBtn.Size = New System.Drawing.Size(78, 23)
+        Me.TigoBtn.TabIndex = 19
+        Me.TigoBtn.Text = "View More"
+        Me.TigoBtn.UseVisualStyleBackColor = False
         '
         'Label21
         '
@@ -933,11 +927,11 @@ Partial Class Mainform
         Me.Label21.BackColor = System.Drawing.Color.Transparent
         Me.Label21.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(9, 166)
+        Me.Label21.Location = New System.Drawing.Point(0, 166)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(128, 15)
+        Me.Label21.Size = New System.Drawing.Size(144, 15)
         Me.Label21.TabIndex = 18
-        Me.Label21.Text = "Starting from 7,00,000"
+        Me.Label21.Text = "Starting from ₹ 5.45 Lakh"
         '
         'PictureBox10
         '
@@ -957,34 +951,34 @@ Partial Class Mainform
         Me.Label22.ForeColor = System.Drawing.Color.Black
         Me.Label22.Location = New System.Drawing.Point(3, 10)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(136, 17)
+        Me.Label22.Size = New System.Drawing.Size(63, 17)
         Me.Label22.TabIndex = 16
-        Me.Label22.Text = "Maruti Suzuki Baleno"
+        Me.Label22.Text = "Tata Tigo"
         '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.White
         Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel7.Controls.Add(Me.Button9)
+        Me.Panel7.Controls.Add(Me.CiazBtn)
         Me.Panel7.Controls.Add(Me.Label23)
         Me.Panel7.Controls.Add(Me.PictureBox11)
         Me.Panel7.Controls.Add(Me.Label24)
-        Me.Panel7.Location = New System.Drawing.Point(6, 211)
+        Me.Panel7.Location = New System.Drawing.Point(6, 224)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(226, 193)
         Me.Panel7.TabIndex = 24
         '
-        'Button9
+        'CiazBtn
         '
-        Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(144, 164)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(78, 23)
-        Me.Button9.TabIndex = 19
-        Me.Button9.Text = "View More"
-        Me.Button9.UseVisualStyleBackColor = False
+        Me.CiazBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.CiazBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CiazBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CiazBtn.Location = New System.Drawing.Point(144, 164)
+        Me.CiazBtn.Name = "CiazBtn"
+        Me.CiazBtn.Size = New System.Drawing.Size(78, 23)
+        Me.CiazBtn.TabIndex = 19
+        Me.CiazBtn.Text = "View More"
+        Me.CiazBtn.UseVisualStyleBackColor = False
         '
         'Label23
         '
@@ -992,11 +986,11 @@ Partial Class Mainform
         Me.Label23.BackColor = System.Drawing.Color.Transparent
         Me.Label23.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.Black
-        Me.Label23.Location = New System.Drawing.Point(9, 166)
+        Me.Label23.Location = New System.Drawing.Point(0, 166)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(128, 15)
+        Me.Label23.Size = New System.Drawing.Size(144, 15)
         Me.Label23.TabIndex = 18
-        Me.Label23.Text = "Starting from 7,00,000"
+        Me.Label23.Text = "Starting from ₹ 8.99 Lakh"
         '
         'PictureBox11
         '
@@ -1016,34 +1010,34 @@ Partial Class Mainform
         Me.Label24.ForeColor = System.Drawing.Color.Black
         Me.Label24.Location = New System.Drawing.Point(3, 10)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(136, 17)
+        Me.Label24.Size = New System.Drawing.Size(119, 17)
         Me.Label24.TabIndex = 16
-        Me.Label24.Text = "Maruti Suzuki Baleno"
+        Me.Label24.Text = "Maruti Suzuki Ciaz"
         '
         'Panel20
         '
         Me.Panel20.BackColor = System.Drawing.Color.White
         Me.Panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel20.Controls.Add(Me.Button10)
+        Me.Panel20.Controls.Add(Me.AuraBtn)
         Me.Panel20.Controls.Add(Me.Label25)
         Me.Panel20.Controls.Add(Me.PictureBox12)
         Me.Panel20.Controls.Add(Me.Label26)
-        Me.Panel20.Location = New System.Drawing.Point(474, 12)
+        Me.Panel20.Location = New System.Drawing.Point(474, 25)
         Me.Panel20.Name = "Panel20"
         Me.Panel20.Size = New System.Drawing.Size(226, 193)
         Me.Panel20.TabIndex = 25
         '
-        'Button10
+        'AuraBtn
         '
-        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(144, 164)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(78, 23)
-        Me.Button10.TabIndex = 19
-        Me.Button10.Text = "View More"
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.AuraBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.AuraBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AuraBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AuraBtn.Location = New System.Drawing.Point(144, 164)
+        Me.AuraBtn.Name = "AuraBtn"
+        Me.AuraBtn.Size = New System.Drawing.Size(78, 23)
+        Me.AuraBtn.TabIndex = 19
+        Me.AuraBtn.Text = "View More"
+        Me.AuraBtn.UseVisualStyleBackColor = False
         '
         'Label25
         '
@@ -1051,11 +1045,11 @@ Partial Class Mainform
         Me.Label25.BackColor = System.Drawing.Color.Transparent
         Me.Label25.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.Black
-        Me.Label25.Location = New System.Drawing.Point(9, 166)
+        Me.Label25.Location = New System.Drawing.Point(0, 166)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(128, 15)
+        Me.Label25.Size = New System.Drawing.Size(144, 15)
         Me.Label25.TabIndex = 18
-        Me.Label25.Text = "Starting from 7,00,000"
+        Me.Label25.Text = "Starting from ₹ 6.29 Lakh"
         '
         'PictureBox12
         '
@@ -1075,34 +1069,34 @@ Partial Class Mainform
         Me.Label26.ForeColor = System.Drawing.Color.Black
         Me.Label26.Location = New System.Drawing.Point(3, 10)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(136, 17)
+        Me.Label26.Size = New System.Drawing.Size(92, 17)
         Me.Label26.TabIndex = 16
-        Me.Label26.Text = "Maruti Suzuki Baleno"
+        Me.Label26.Text = "Hyundai Aura"
         '
         'Panel21
         '
         Me.Panel21.BackColor = System.Drawing.Color.White
         Me.Panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel21.Controls.Add(Me.Button11)
+        Me.Panel21.Controls.Add(Me.AmazeBtn)
         Me.Panel21.Controls.Add(Me.Label27)
         Me.Panel21.Controls.Add(Me.PictureBox13)
         Me.Panel21.Controls.Add(Me.Label28)
-        Me.Panel21.Location = New System.Drawing.Point(240, 12)
+        Me.Panel21.Location = New System.Drawing.Point(240, 25)
         Me.Panel21.Name = "Panel21"
         Me.Panel21.Size = New System.Drawing.Size(226, 193)
         Me.Panel21.TabIndex = 26
         '
-        'Button11
+        'AmazeBtn
         '
-        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.Location = New System.Drawing.Point(144, 164)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(78, 23)
-        Me.Button11.TabIndex = 19
-        Me.Button11.Text = "View More"
-        Me.Button11.UseVisualStyleBackColor = False
+        Me.AmazeBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.AmazeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AmazeBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AmazeBtn.Location = New System.Drawing.Point(144, 164)
+        Me.AmazeBtn.Name = "AmazeBtn"
+        Me.AmazeBtn.Size = New System.Drawing.Size(78, 23)
+        Me.AmazeBtn.TabIndex = 19
+        Me.AmazeBtn.Text = "View More"
+        Me.AmazeBtn.UseVisualStyleBackColor = False
         '
         'Label27
         '
@@ -1110,11 +1104,11 @@ Partial Class Mainform
         Me.Label27.BackColor = System.Drawing.Color.Transparent
         Me.Label27.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.Color.Black
-        Me.Label27.Location = New System.Drawing.Point(9, 166)
+        Me.Label27.Location = New System.Drawing.Point(0, 166)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(128, 15)
+        Me.Label27.Size = New System.Drawing.Size(144, 15)
         Me.Label27.TabIndex = 18
-        Me.Label27.Text = "Starting from 7,00,000"
+        Me.Label27.Text = "Starting from ₹ 6.89 Lakh"
         '
         'PictureBox13
         '
@@ -1134,34 +1128,34 @@ Partial Class Mainform
         Me.Label28.ForeColor = System.Drawing.Color.Black
         Me.Label28.Location = New System.Drawing.Point(3, 10)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(136, 17)
+        Me.Label28.Size = New System.Drawing.Size(94, 17)
         Me.Label28.TabIndex = 16
-        Me.Label28.Text = "Maruti Suzuki Baleno"
+        Me.Label28.Text = "Honda Amaze"
         '
         'Panel22
         '
         Me.Panel22.BackColor = System.Drawing.Color.White
         Me.Panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel22.Controls.Add(Me.Button12)
+        Me.Panel22.Controls.Add(Me.DzireBtn)
         Me.Panel22.Controls.Add(Me.Label29)
         Me.Panel22.Controls.Add(Me.PictureBox14)
         Me.Panel22.Controls.Add(Me.Label30)
-        Me.Panel22.Location = New System.Drawing.Point(6, 12)
+        Me.Panel22.Location = New System.Drawing.Point(6, 25)
         Me.Panel22.Name = "Panel22"
         Me.Panel22.Size = New System.Drawing.Size(226, 193)
         Me.Panel22.TabIndex = 23
         '
-        'Button12
+        'DzireBtn
         '
-        Me.Button12.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button12.Location = New System.Drawing.Point(144, 164)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(78, 23)
-        Me.Button12.TabIndex = 19
-        Me.Button12.Text = "View More"
-        Me.Button12.UseVisualStyleBackColor = False
+        Me.DzireBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.DzireBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DzireBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DzireBtn.Location = New System.Drawing.Point(144, 164)
+        Me.DzireBtn.Name = "DzireBtn"
+        Me.DzireBtn.Size = New System.Drawing.Size(78, 23)
+        Me.DzireBtn.TabIndex = 19
+        Me.DzireBtn.Text = "View More"
+        Me.DzireBtn.UseVisualStyleBackColor = False
         '
         'Label29
         '
@@ -1169,11 +1163,11 @@ Partial Class Mainform
         Me.Label29.BackColor = System.Drawing.Color.Transparent
         Me.Label29.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.ForeColor = System.Drawing.Color.Black
-        Me.Label29.Location = New System.Drawing.Point(9, 166)
+        Me.Label29.Location = New System.Drawing.Point(0, 166)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(128, 15)
+        Me.Label29.Size = New System.Drawing.Size(144, 15)
         Me.Label29.TabIndex = 18
-        Me.Label29.Text = "Starting from 7,00,000"
+        Me.Label29.Text = "Starting from ₹ 6.35 Lakh"
         '
         'PictureBox14
         '
@@ -1193,50 +1187,52 @@ Partial Class Mainform
         Me.Label30.ForeColor = System.Drawing.Color.Black
         Me.Label30.Location = New System.Drawing.Point(3, 10)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(136, 17)
+        Me.Label30.Size = New System.Drawing.Size(125, 17)
         Me.Label30.TabIndex = 16
-        Me.Label30.Text = "Maruti Suzuki Baleno"
+        Me.Label30.Text = "Maruti Suzuki Dzire"
         '
-        'GroupBox3
+        'SUVGB
         '
-        Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.GroupBox3.Controls.Add(Me.Panel8)
-        Me.GroupBox3.Controls.Add(Me.Panel9)
-        Me.GroupBox3.Controls.Add(Me.Panel10)
-        Me.GroupBox3.Controls.Add(Me.Panel23)
-        Me.GroupBox3.Controls.Add(Me.Panel24)
-        Me.GroupBox3.Controls.Add(Me.Panel25)
-        Me.GroupBox3.Location = New System.Drawing.Point(3, 847)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(707, 416)
-        Me.GroupBox3.TabIndex = 5
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "SUV"
+        Me.SUVGB.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.SUVGB.Controls.Add(Me.Panel8)
+        Me.SUVGB.Controls.Add(Me.Panel9)
+        Me.SUVGB.Controls.Add(Me.Panel10)
+        Me.SUVGB.Controls.Add(Me.Panel23)
+        Me.SUVGB.Controls.Add(Me.Panel24)
+        Me.SUVGB.Controls.Add(Me.Panel25)
+        Me.SUVGB.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.SUVGB.Location = New System.Drawing.Point(3, 891)
+        Me.SUVGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 15)
+        Me.SUVGB.Name = "SUVGB"
+        Me.SUVGB.Size = New System.Drawing.Size(707, 426)
+        Me.SUVGB.TabIndex = 5
+        Me.SUVGB.TabStop = False
+        Me.SUVGB.Text = "SUV"
         '
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.White
         Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel8.Controls.Add(Me.Button13)
+        Me.Panel8.Controls.Add(Me.MagniteBtn)
         Me.Panel8.Controls.Add(Me.Label31)
         Me.Panel8.Controls.Add(Me.PictureBox15)
         Me.Panel8.Controls.Add(Me.Label32)
-        Me.Panel8.Location = New System.Drawing.Point(474, 211)
+        Me.Panel8.Location = New System.Drawing.Point(474, 225)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(226, 193)
         Me.Panel8.TabIndex = 28
         '
-        'Button13
+        'MagniteBtn
         '
-        Me.Button13.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button13.Location = New System.Drawing.Point(144, 164)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(78, 23)
-        Me.Button13.TabIndex = 19
-        Me.Button13.Text = "View More"
-        Me.Button13.UseVisualStyleBackColor = False
+        Me.MagniteBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.MagniteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.MagniteBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MagniteBtn.Location = New System.Drawing.Point(144, 164)
+        Me.MagniteBtn.Name = "MagniteBtn"
+        Me.MagniteBtn.Size = New System.Drawing.Size(78, 23)
+        Me.MagniteBtn.TabIndex = 19
+        Me.MagniteBtn.Text = "View More"
+        Me.MagniteBtn.UseVisualStyleBackColor = False
         '
         'Label31
         '
@@ -1244,11 +1240,11 @@ Partial Class Mainform
         Me.Label31.BackColor = System.Drawing.Color.Transparent
         Me.Label31.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.Black
-        Me.Label31.Location = New System.Drawing.Point(9, 166)
+        Me.Label31.Location = New System.Drawing.Point(0, 166)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(128, 15)
+        Me.Label31.Size = New System.Drawing.Size(144, 15)
         Me.Label31.TabIndex = 18
-        Me.Label31.Text = "Starting from 7,00,000"
+        Me.Label31.Text = "Starting from ₹ 5.79 Lakh"
         '
         'PictureBox15
         '
@@ -1268,34 +1264,34 @@ Partial Class Mainform
         Me.Label32.ForeColor = System.Drawing.Color.Black
         Me.Label32.Location = New System.Drawing.Point(3, 10)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(136, 17)
+        Me.Label32.Size = New System.Drawing.Size(102, 17)
         Me.Label32.TabIndex = 16
-        Me.Label32.Text = "Maruti Suzuki Baleno"
+        Me.Label32.Text = "Nissan Magnite"
         '
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.White
         Me.Panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel9.Controls.Add(Me.Button14)
+        Me.Panel9.Controls.Add(Me.XUV300Btn)
         Me.Panel9.Controls.Add(Me.Label33)
         Me.Panel9.Controls.Add(Me.PictureBox16)
         Me.Panel9.Controls.Add(Me.Label34)
-        Me.Panel9.Location = New System.Drawing.Point(240, 211)
+        Me.Panel9.Location = New System.Drawing.Point(240, 225)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(226, 193)
         Me.Panel9.TabIndex = 27
         '
-        'Button14
+        'XUV300Btn
         '
-        Me.Button14.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button14.Location = New System.Drawing.Point(144, 164)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(78, 23)
-        Me.Button14.TabIndex = 19
-        Me.Button14.Text = "View More"
-        Me.Button14.UseVisualStyleBackColor = False
+        Me.XUV300Btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.XUV300Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.XUV300Btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XUV300Btn.Location = New System.Drawing.Point(144, 164)
+        Me.XUV300Btn.Name = "XUV300Btn"
+        Me.XUV300Btn.Size = New System.Drawing.Size(78, 23)
+        Me.XUV300Btn.TabIndex = 19
+        Me.XUV300Btn.Text = "View More"
+        Me.XUV300Btn.UseVisualStyleBackColor = False
         '
         'Label33
         '
@@ -1303,11 +1299,11 @@ Partial Class Mainform
         Me.Label33.BackColor = System.Drawing.Color.Transparent
         Me.Label33.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.ForeColor = System.Drawing.Color.Black
-        Me.Label33.Location = New System.Drawing.Point(9, 166)
+        Me.Label33.Location = New System.Drawing.Point(0, 166)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(128, 15)
+        Me.Label33.Size = New System.Drawing.Size(144, 15)
         Me.Label33.TabIndex = 18
-        Me.Label33.Text = "Starting from 7,00,000"
+        Me.Label33.Text = "Starting from ₹ 8.55 Lakh"
         '
         'PictureBox16
         '
@@ -1327,34 +1323,34 @@ Partial Class Mainform
         Me.Label34.ForeColor = System.Drawing.Color.Black
         Me.Label34.Location = New System.Drawing.Point(3, 10)
         Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(136, 17)
+        Me.Label34.Size = New System.Drawing.Size(116, 17)
         Me.Label34.TabIndex = 16
-        Me.Label34.Text = "Maruti Suzuki Baleno"
+        Me.Label34.Text = "Mahindra XUV300"
         '
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.White
         Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel10.Controls.Add(Me.Button15)
+        Me.Panel10.Controls.Add(Me.SeltosBtn)
         Me.Panel10.Controls.Add(Me.Label35)
         Me.Panel10.Controls.Add(Me.PictureBox17)
         Me.Panel10.Controls.Add(Me.Label36)
-        Me.Panel10.Location = New System.Drawing.Point(6, 211)
+        Me.Panel10.Location = New System.Drawing.Point(6, 225)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(226, 193)
         Me.Panel10.TabIndex = 24
         '
-        'Button15
+        'SeltosBtn
         '
-        Me.Button15.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button15.Location = New System.Drawing.Point(144, 164)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(78, 23)
-        Me.Button15.TabIndex = 19
-        Me.Button15.Text = "View More"
-        Me.Button15.UseVisualStyleBackColor = False
+        Me.SeltosBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.SeltosBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SeltosBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SeltosBtn.Location = New System.Drawing.Point(144, 164)
+        Me.SeltosBtn.Name = "SeltosBtn"
+        Me.SeltosBtn.Size = New System.Drawing.Size(78, 23)
+        Me.SeltosBtn.TabIndex = 19
+        Me.SeltosBtn.Text = "View More"
+        Me.SeltosBtn.UseVisualStyleBackColor = False
         '
         'Label35
         '
@@ -1362,11 +1358,11 @@ Partial Class Mainform
         Me.Label35.BackColor = System.Drawing.Color.Transparent
         Me.Label35.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label35.ForeColor = System.Drawing.Color.Black
-        Me.Label35.Location = New System.Drawing.Point(9, 166)
+        Me.Label35.Location = New System.Drawing.Point(-3, 166)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(128, 15)
+        Me.Label35.Size = New System.Drawing.Size(154, 15)
         Me.Label35.TabIndex = 18
-        Me.Label35.Text = "Starting from 7,00,000"
+        Me.Label35.Text = "Starting from ₹ 10.29 Lakh "
         '
         'PictureBox17
         '
@@ -1386,34 +1382,34 @@ Partial Class Mainform
         Me.Label36.ForeColor = System.Drawing.Color.Black
         Me.Label36.Location = New System.Drawing.Point(3, 10)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(136, 17)
+        Me.Label36.Size = New System.Drawing.Size(66, 17)
         Me.Label36.TabIndex = 16
-        Me.Label36.Text = "Maruti Suzuki Baleno"
+        Me.Label36.Text = "Kia Seltos"
         '
         'Panel23
         '
         Me.Panel23.BackColor = System.Drawing.Color.White
         Me.Panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel23.Controls.Add(Me.Button16)
+        Me.Panel23.Controls.Add(Me.CretaBtn)
         Me.Panel23.Controls.Add(Me.Label37)
         Me.Panel23.Controls.Add(Me.PictureBox18)
         Me.Panel23.Controls.Add(Me.Label38)
-        Me.Panel23.Location = New System.Drawing.Point(474, 12)
+        Me.Panel23.Location = New System.Drawing.Point(474, 26)
         Me.Panel23.Name = "Panel23"
         Me.Panel23.Size = New System.Drawing.Size(226, 193)
         Me.Panel23.TabIndex = 25
         '
-        'Button16
+        'CretaBtn
         '
-        Me.Button16.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button16.Location = New System.Drawing.Point(144, 164)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(78, 23)
-        Me.Button16.TabIndex = 19
-        Me.Button16.Text = "View More"
-        Me.Button16.UseVisualStyleBackColor = False
+        Me.CretaBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.CretaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CretaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CretaBtn.Location = New System.Drawing.Point(144, 164)
+        Me.CretaBtn.Name = "CretaBtn"
+        Me.CretaBtn.Size = New System.Drawing.Size(78, 23)
+        Me.CretaBtn.TabIndex = 19
+        Me.CretaBtn.Text = "View More"
+        Me.CretaBtn.UseVisualStyleBackColor = False
         '
         'Label37
         '
@@ -1421,11 +1417,11 @@ Partial Class Mainform
         Me.Label37.BackColor = System.Drawing.Color.Transparent
         Me.Label37.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label37.ForeColor = System.Drawing.Color.Black
-        Me.Label37.Location = New System.Drawing.Point(9, 166)
+        Me.Label37.Location = New System.Drawing.Point(-3, 166)
         Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(128, 15)
+        Me.Label37.Size = New System.Drawing.Size(151, 15)
         Me.Label37.TabIndex = 18
-        Me.Label37.Text = "Starting from 7,00,000"
+        Me.Label37.Text = "Starting from ₹ 10.46 Lakh"
         '
         'PictureBox18
         '
@@ -1445,34 +1441,34 @@ Partial Class Mainform
         Me.Label38.ForeColor = System.Drawing.Color.Black
         Me.Label38.Location = New System.Drawing.Point(3, 10)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(136, 17)
+        Me.Label38.Size = New System.Drawing.Size(95, 17)
         Me.Label38.TabIndex = 16
-        Me.Label38.Text = "Maruti Suzuki Baleno"
+        Me.Label38.Text = "Hyundai Creta"
         '
         'Panel24
         '
         Me.Panel24.BackColor = System.Drawing.Color.White
         Me.Panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel24.Controls.Add(Me.Button17)
+        Me.Panel24.Controls.Add(Me.NexonBtn)
         Me.Panel24.Controls.Add(Me.Label39)
         Me.Panel24.Controls.Add(Me.PictureBox19)
         Me.Panel24.Controls.Add(Me.Label40)
-        Me.Panel24.Location = New System.Drawing.Point(240, 12)
+        Me.Panel24.Location = New System.Drawing.Point(240, 26)
         Me.Panel24.Name = "Panel24"
         Me.Panel24.Size = New System.Drawing.Size(226, 193)
         Me.Panel24.TabIndex = 26
         '
-        'Button17
+        'NexonBtn
         '
-        Me.Button17.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button17.Location = New System.Drawing.Point(144, 164)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(78, 23)
-        Me.Button17.TabIndex = 19
-        Me.Button17.Text = "View More"
-        Me.Button17.UseVisualStyleBackColor = False
+        Me.NexonBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.NexonBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NexonBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NexonBtn.Location = New System.Drawing.Point(144, 164)
+        Me.NexonBtn.Name = "NexonBtn"
+        Me.NexonBtn.Size = New System.Drawing.Size(78, 23)
+        Me.NexonBtn.TabIndex = 19
+        Me.NexonBtn.Text = "View More"
+        Me.NexonBtn.UseVisualStyleBackColor = False
         '
         'Label39
         '
@@ -1480,11 +1476,11 @@ Partial Class Mainform
         Me.Label39.BackColor = System.Drawing.Color.Transparent
         Me.Label39.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label39.ForeColor = System.Drawing.Color.Black
-        Me.Label39.Location = New System.Drawing.Point(9, 166)
+        Me.Label39.Location = New System.Drawing.Point(0, 166)
         Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(128, 15)
+        Me.Label39.Size = New System.Drawing.Size(144, 15)
         Me.Label39.TabIndex = 18
-        Me.Label39.Text = "Starting from 7,00,000"
+        Me.Label39.Text = "Starting from ₹ 7.58 Lakh"
         '
         'PictureBox19
         '
@@ -1504,34 +1500,34 @@ Partial Class Mainform
         Me.Label40.ForeColor = System.Drawing.Color.Black
         Me.Label40.Location = New System.Drawing.Point(3, 10)
         Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(136, 17)
+        Me.Label40.Size = New System.Drawing.Size(77, 17)
         Me.Label40.TabIndex = 16
-        Me.Label40.Text = "Maruti Suzuki Baleno"
+        Me.Label40.Text = "Tata Nexon"
         '
         'Panel25
         '
         Me.Panel25.BackColor = System.Drawing.Color.White
         Me.Panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel25.Controls.Add(Me.Button18)
+        Me.Panel25.Controls.Add(Me.BrezzaBtn)
         Me.Panel25.Controls.Add(Me.Label41)
         Me.Panel25.Controls.Add(Me.PictureBox20)
         Me.Panel25.Controls.Add(Me.Label42)
-        Me.Panel25.Location = New System.Drawing.Point(6, 12)
+        Me.Panel25.Location = New System.Drawing.Point(6, 26)
         Me.Panel25.Name = "Panel25"
         Me.Panel25.Size = New System.Drawing.Size(226, 193)
         Me.Panel25.TabIndex = 23
         '
-        'Button18
+        'BrezzaBtn
         '
-        Me.Button18.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button18.Location = New System.Drawing.Point(144, 164)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(78, 23)
-        Me.Button18.TabIndex = 19
-        Me.Button18.Text = "View More"
-        Me.Button18.UseVisualStyleBackColor = False
+        Me.BrezzaBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.BrezzaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BrezzaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BrezzaBtn.Location = New System.Drawing.Point(144, 164)
+        Me.BrezzaBtn.Name = "BrezzaBtn"
+        Me.BrezzaBtn.Size = New System.Drawing.Size(78, 23)
+        Me.BrezzaBtn.TabIndex = 19
+        Me.BrezzaBtn.Text = "View More"
+        Me.BrezzaBtn.UseVisualStyleBackColor = False
         '
         'Label41
         '
@@ -1539,11 +1535,11 @@ Partial Class Mainform
         Me.Label41.BackColor = System.Drawing.Color.Transparent
         Me.Label41.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label41.ForeColor = System.Drawing.Color.Black
-        Me.Label41.Location = New System.Drawing.Point(9, 166)
+        Me.Label41.Location = New System.Drawing.Point(1, 166)
         Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(128, 15)
+        Me.Label41.Size = New System.Drawing.Size(147, 15)
         Me.Label41.TabIndex = 18
-        Me.Label41.Text = "Starting from 7,00,000"
+        Me.Label41.Text = "Starting from ₹ 8.34 Lakh "
         '
         'PictureBox20
         '
@@ -1563,50 +1559,52 @@ Partial Class Mainform
         Me.Label42.ForeColor = System.Drawing.Color.Black
         Me.Label42.Location = New System.Drawing.Point(3, 10)
         Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(136, 17)
+        Me.Label42.Size = New System.Drawing.Size(134, 17)
         Me.Label42.TabIndex = 16
-        Me.Label42.Text = "Maruti Suzuki Baleno"
+        Me.Label42.Text = "Maruti Suzuki Brezza"
         '
-        'GroupBox4
+        'MUVGB
         '
-        Me.GroupBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.GroupBox4.Controls.Add(Me.Panel11)
-        Me.GroupBox4.Controls.Add(Me.Panel12)
-        Me.GroupBox4.Controls.Add(Me.Panel13)
-        Me.GroupBox4.Controls.Add(Me.Panel26)
-        Me.GroupBox4.Controls.Add(Me.Panel27)
-        Me.GroupBox4.Controls.Add(Me.Panel28)
-        Me.GroupBox4.Location = New System.Drawing.Point(3, 1269)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(707, 416)
-        Me.GroupBox4.TabIndex = 4
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "MUV"
+        Me.MUVGB.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.MUVGB.Controls.Add(Me.Panel11)
+        Me.MUVGB.Controls.Add(Me.Panel12)
+        Me.MUVGB.Controls.Add(Me.Panel13)
+        Me.MUVGB.Controls.Add(Me.Panel26)
+        Me.MUVGB.Controls.Add(Me.Panel27)
+        Me.MUVGB.Controls.Add(Me.Panel28)
+        Me.MUVGB.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.MUVGB.Location = New System.Drawing.Point(3, 1335)
+        Me.MUVGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 15)
+        Me.MUVGB.Name = "MUVGB"
+        Me.MUVGB.Size = New System.Drawing.Size(707, 426)
+        Me.MUVGB.TabIndex = 4
+        Me.MUVGB.TabStop = False
+        Me.MUVGB.Text = "MUV"
         '
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.Color.White
         Me.Panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel11.Controls.Add(Me.Button19)
+        Me.Panel11.Controls.Add(Me.SumGoldBtn)
         Me.Panel11.Controls.Add(Me.Label43)
         Me.Panel11.Controls.Add(Me.PictureBox21)
         Me.Panel11.Controls.Add(Me.Label44)
-        Me.Panel11.Location = New System.Drawing.Point(474, 211)
+        Me.Panel11.Location = New System.Drawing.Point(474, 222)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(226, 193)
         Me.Panel11.TabIndex = 28
         '
-        'Button19
+        'SumGoldBtn
         '
-        Me.Button19.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button19.Location = New System.Drawing.Point(144, 164)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(78, 23)
-        Me.Button19.TabIndex = 19
-        Me.Button19.Text = "View More"
-        Me.Button19.UseVisualStyleBackColor = False
+        Me.SumGoldBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.SumGoldBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SumGoldBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SumGoldBtn.Location = New System.Drawing.Point(144, 164)
+        Me.SumGoldBtn.Name = "SumGoldBtn"
+        Me.SumGoldBtn.Size = New System.Drawing.Size(78, 23)
+        Me.SumGoldBtn.TabIndex = 19
+        Me.SumGoldBtn.Text = "View More"
+        Me.SumGoldBtn.UseVisualStyleBackColor = False
         '
         'Label43
         '
@@ -1614,11 +1612,11 @@ Partial Class Mainform
         Me.Label43.BackColor = System.Drawing.Color.Transparent
         Me.Label43.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label43.ForeColor = System.Drawing.Color.Black
-        Me.Label43.Location = New System.Drawing.Point(9, 166)
+        Me.Label43.Location = New System.Drawing.Point(1, 166)
         Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(128, 15)
+        Me.Label43.Size = New System.Drawing.Size(144, 15)
         Me.Label43.TabIndex = 18
-        Me.Label43.Text = "Starting from 7,00,000"
+        Me.Label43.Text = "Starting from ₹ 7.37 Lakh"
         '
         'PictureBox21
         '
@@ -1638,34 +1636,34 @@ Partial Class Mainform
         Me.Label44.ForeColor = System.Drawing.Color.Black
         Me.Label44.Location = New System.Drawing.Point(3, 10)
         Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(136, 17)
+        Me.Label44.Size = New System.Drawing.Size(104, 17)
         Me.Label44.TabIndex = 16
-        Me.Label44.Text = "Maruti Suzuki Baleno"
+        Me.Label44.Text = "Tata Sumo Gold"
         '
         'Panel12
         '
         Me.Panel12.BackColor = System.Drawing.Color.White
         Me.Panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel12.Controls.Add(Me.Button20)
+        Me.Panel12.Controls.Add(Me.ScorpioBtn)
         Me.Panel12.Controls.Add(Me.Label45)
         Me.Panel12.Controls.Add(Me.PictureBox22)
         Me.Panel12.Controls.Add(Me.Label46)
-        Me.Panel12.Location = New System.Drawing.Point(240, 211)
+        Me.Panel12.Location = New System.Drawing.Point(240, 222)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(226, 193)
         Me.Panel12.TabIndex = 27
         '
-        'Button20
+        'ScorpioBtn
         '
-        Me.Button20.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button20.Location = New System.Drawing.Point(144, 164)
-        Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(78, 23)
-        Me.Button20.TabIndex = 19
-        Me.Button20.Text = "View More"
-        Me.Button20.UseVisualStyleBackColor = False
+        Me.ScorpioBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.ScorpioBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ScorpioBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ScorpioBtn.Location = New System.Drawing.Point(144, 164)
+        Me.ScorpioBtn.Name = "ScorpioBtn"
+        Me.ScorpioBtn.Size = New System.Drawing.Size(78, 23)
+        Me.ScorpioBtn.TabIndex = 19
+        Me.ScorpioBtn.Text = "View More"
+        Me.ScorpioBtn.UseVisualStyleBackColor = False
         '
         'Label45
         '
@@ -1673,11 +1671,11 @@ Partial Class Mainform
         Me.Label45.BackColor = System.Drawing.Color.Transparent
         Me.Label45.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label45.ForeColor = System.Drawing.Color.Black
-        Me.Label45.Location = New System.Drawing.Point(9, 166)
+        Me.Label45.Location = New System.Drawing.Point(-3, 166)
         Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(128, 15)
+        Me.Label45.Size = New System.Drawing.Size(151, 15)
         Me.Label45.TabIndex = 18
-        Me.Label45.Text = "Starting from 7,00,000"
+        Me.Label45.Text = "Starting from ₹ 12.75 Lakh"
         '
         'PictureBox22
         '
@@ -1697,34 +1695,34 @@ Partial Class Mainform
         Me.Label46.ForeColor = System.Drawing.Color.Black
         Me.Label46.Location = New System.Drawing.Point(3, 10)
         Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(136, 17)
+        Me.Label46.Size = New System.Drawing.Size(115, 17)
         Me.Label46.TabIndex = 16
-        Me.Label46.Text = "Maruti Suzuki Baleno"
+        Me.Label46.Text = "Mahindra Scorpio"
         '
         'Panel13
         '
         Me.Panel13.BackColor = System.Drawing.Color.White
         Me.Panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel13.Controls.Add(Me.Button21)
+        Me.Panel13.Controls.Add(Me.CarensBtn)
         Me.Panel13.Controls.Add(Me.Label47)
         Me.Panel13.Controls.Add(Me.PictureBox23)
         Me.Panel13.Controls.Add(Me.Label48)
-        Me.Panel13.Location = New System.Drawing.Point(6, 211)
+        Me.Panel13.Location = New System.Drawing.Point(6, 222)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Size = New System.Drawing.Size(226, 193)
         Me.Panel13.TabIndex = 24
         '
-        'Button21
+        'CarensBtn
         '
-        Me.Button21.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button21.Location = New System.Drawing.Point(144, 164)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(78, 23)
-        Me.Button21.TabIndex = 19
-        Me.Button21.Text = "View More"
-        Me.Button21.UseVisualStyleBackColor = False
+        Me.CarensBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.CarensBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CarensBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CarensBtn.Location = New System.Drawing.Point(144, 164)
+        Me.CarensBtn.Name = "CarensBtn"
+        Me.CarensBtn.Size = New System.Drawing.Size(78, 23)
+        Me.CarensBtn.TabIndex = 19
+        Me.CarensBtn.Text = "View More"
+        Me.CarensBtn.UseVisualStyleBackColor = False
         '
         'Label47
         '
@@ -1732,11 +1730,11 @@ Partial Class Mainform
         Me.Label47.BackColor = System.Drawing.Color.Transparent
         Me.Label47.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label47.ForeColor = System.Drawing.Color.Black
-        Me.Label47.Location = New System.Drawing.Point(9, 166)
+        Me.Label47.Location = New System.Drawing.Point(1, 166)
         Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(128, 15)
+        Me.Label47.Size = New System.Drawing.Size(144, 15)
         Me.Label47.TabIndex = 18
-        Me.Label47.Text = "Starting from 7,00,000"
+        Me.Label47.Text = "Starting from ₹ 9.99 Lakh"
         '
         'PictureBox23
         '
@@ -1756,34 +1754,34 @@ Partial Class Mainform
         Me.Label48.ForeColor = System.Drawing.Color.Black
         Me.Label48.Location = New System.Drawing.Point(3, 10)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(136, 17)
+        Me.Label48.Size = New System.Drawing.Size(71, 17)
         Me.Label48.TabIndex = 16
-        Me.Label48.Text = "Maruti Suzuki Baleno"
+        Me.Label48.Text = "Kia Carens"
         '
         'Panel26
         '
         Me.Panel26.BackColor = System.Drawing.Color.White
         Me.Panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel26.Controls.Add(Me.Button22)
+        Me.Panel26.Controls.Add(Me.ErtigaBtn)
         Me.Panel26.Controls.Add(Me.Label49)
         Me.Panel26.Controls.Add(Me.PictureBox24)
         Me.Panel26.Controls.Add(Me.Label50)
-        Me.Panel26.Location = New System.Drawing.Point(474, 12)
+        Me.Panel26.Location = New System.Drawing.Point(474, 23)
         Me.Panel26.Name = "Panel26"
         Me.Panel26.Size = New System.Drawing.Size(226, 193)
         Me.Panel26.TabIndex = 25
         '
-        'Button22
+        'ErtigaBtn
         '
-        Me.Button22.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button22.Location = New System.Drawing.Point(144, 164)
-        Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(78, 23)
-        Me.Button22.TabIndex = 19
-        Me.Button22.Text = "View More"
-        Me.Button22.UseVisualStyleBackColor = False
+        Me.ErtigaBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.ErtigaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ErtigaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ErtigaBtn.Location = New System.Drawing.Point(144, 164)
+        Me.ErtigaBtn.Name = "ErtigaBtn"
+        Me.ErtigaBtn.Size = New System.Drawing.Size(78, 23)
+        Me.ErtigaBtn.TabIndex = 19
+        Me.ErtigaBtn.Text = "View More"
+        Me.ErtigaBtn.UseVisualStyleBackColor = False
         '
         'Label49
         '
@@ -1791,11 +1789,11 @@ Partial Class Mainform
         Me.Label49.BackColor = System.Drawing.Color.Transparent
         Me.Label49.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label49.ForeColor = System.Drawing.Color.Black
-        Me.Label49.Location = New System.Drawing.Point(9, 166)
+        Me.Label49.Location = New System.Drawing.Point(1, 166)
         Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(128, 15)
+        Me.Label49.Size = New System.Drawing.Size(144, 15)
         Me.Label49.TabIndex = 18
-        Me.Label49.Text = "Starting from 7,00,000"
+        Me.Label49.Text = "Starting from ₹ 8.69 Lakh"
         '
         'PictureBox24
         '
@@ -1815,34 +1813,34 @@ Partial Class Mainform
         Me.Label50.ForeColor = System.Drawing.Color.Black
         Me.Label50.Location = New System.Drawing.Point(3, 10)
         Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(136, 17)
+        Me.Label50.Size = New System.Drawing.Size(130, 17)
         Me.Label50.TabIndex = 16
-        Me.Label50.Text = "Maruti Suzuki Baleno"
+        Me.Label50.Text = "Maruti Suzuki Ertiga"
         '
         'Panel27
         '
         Me.Panel27.BackColor = System.Drawing.Color.White
         Me.Panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel27.Controls.Add(Me.Button23)
+        Me.Panel27.Controls.Add(Me.CrystaBtn)
         Me.Panel27.Controls.Add(Me.Label51)
         Me.Panel27.Controls.Add(Me.PictureBox25)
         Me.Panel27.Controls.Add(Me.Label52)
-        Me.Panel27.Location = New System.Drawing.Point(240, 12)
+        Me.Panel27.Location = New System.Drawing.Point(240, 23)
         Me.Panel27.Name = "Panel27"
         Me.Panel27.Size = New System.Drawing.Size(226, 193)
         Me.Panel27.TabIndex = 26
         '
-        'Button23
+        'CrystaBtn
         '
-        Me.Button23.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button23.Location = New System.Drawing.Point(144, 164)
-        Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(78, 23)
-        Me.Button23.TabIndex = 19
-        Me.Button23.Text = "View More"
-        Me.Button23.UseVisualStyleBackColor = False
+        Me.CrystaBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.CrystaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CrystaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CrystaBtn.Location = New System.Drawing.Point(144, 164)
+        Me.CrystaBtn.Name = "CrystaBtn"
+        Me.CrystaBtn.Size = New System.Drawing.Size(78, 23)
+        Me.CrystaBtn.TabIndex = 19
+        Me.CrystaBtn.Text = "View More"
+        Me.CrystaBtn.UseVisualStyleBackColor = False
         '
         'Label51
         '
@@ -1850,11 +1848,11 @@ Partial Class Mainform
         Me.Label51.BackColor = System.Drawing.Color.Transparent
         Me.Label51.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label51.ForeColor = System.Drawing.Color.Black
-        Me.Label51.Location = New System.Drawing.Point(9, 166)
+        Me.Label51.Location = New System.Drawing.Point(-3, 166)
         Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(128, 15)
+        Me.Label51.Size = New System.Drawing.Size(151, 15)
         Me.Label51.TabIndex = 18
-        Me.Label51.Text = "Starting from 7,00,000"
+        Me.Label51.Text = "Starting from ₹ 20.81 Lakh"
         '
         'PictureBox25
         '
@@ -1874,34 +1872,34 @@ Partial Class Mainform
         Me.Label52.ForeColor = System.Drawing.Color.Black
         Me.Label52.Location = New System.Drawing.Point(3, 10)
         Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(136, 17)
+        Me.Label52.Size = New System.Drawing.Size(138, 17)
         Me.Label52.TabIndex = 16
-        Me.Label52.Text = "Maruti Suzuki Baleno"
+        Me.Label52.Text = "Toyota Innova Crysta"
         '
         'Panel28
         '
         Me.Panel28.BackColor = System.Drawing.Color.White
         Me.Panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel28.Controls.Add(Me.Button24)
+        Me.Panel28.Controls.Add(Me.BoleroBtn)
         Me.Panel28.Controls.Add(Me.Label53)
         Me.Panel28.Controls.Add(Me.PictureBox26)
         Me.Panel28.Controls.Add(Me.Label54)
-        Me.Panel28.Location = New System.Drawing.Point(6, 12)
+        Me.Panel28.Location = New System.Drawing.Point(6, 23)
         Me.Panel28.Name = "Panel28"
         Me.Panel28.Size = New System.Drawing.Size(226, 193)
         Me.Panel28.TabIndex = 23
         '
-        'Button24
+        'BoleroBtn
         '
-        Me.Button24.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button24.Location = New System.Drawing.Point(144, 164)
-        Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(78, 23)
-        Me.Button24.TabIndex = 19
-        Me.Button24.Text = "View More"
-        Me.Button24.UseVisualStyleBackColor = False
+        Me.BoleroBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.BoleroBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BoleroBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BoleroBtn.Location = New System.Drawing.Point(144, 164)
+        Me.BoleroBtn.Name = "BoleroBtn"
+        Me.BoleroBtn.Size = New System.Drawing.Size(78, 23)
+        Me.BoleroBtn.TabIndex = 19
+        Me.BoleroBtn.Text = "View More"
+        Me.BoleroBtn.UseVisualStyleBackColor = False
         '
         'Label53
         '
@@ -1909,11 +1907,11 @@ Partial Class Mainform
         Me.Label53.BackColor = System.Drawing.Color.Transparent
         Me.Label53.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label53.ForeColor = System.Drawing.Color.Black
-        Me.Label53.Location = New System.Drawing.Point(9, 166)
+        Me.Label53.Location = New System.Drawing.Point(1, 166)
         Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(128, 15)
+        Me.Label53.Size = New System.Drawing.Size(144, 15)
         Me.Label53.TabIndex = 18
-        Me.Label53.Text = "Starting from 7,00,000"
+        Me.Label53.Text = "Starting from ₹ 9.41 Lakh"
         '
         'PictureBox26
         '
@@ -1933,50 +1931,52 @@ Partial Class Mainform
         Me.Label54.ForeColor = System.Drawing.Color.Black
         Me.Label54.Location = New System.Drawing.Point(3, 10)
         Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(136, 17)
+        Me.Label54.Size = New System.Drawing.Size(109, 17)
         Me.Label54.TabIndex = 16
-        Me.Label54.Text = "Maruti Suzuki Baleno"
+        Me.Label54.Text = "Mahindra Bolero"
         '
-        'GroupBox5
+        'MPVGB
         '
-        Me.GroupBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.GroupBox5.Controls.Add(Me.Panel14)
-        Me.GroupBox5.Controls.Add(Me.Panel15)
-        Me.GroupBox5.Controls.Add(Me.Panel16)
-        Me.GroupBox5.Controls.Add(Me.Panel29)
-        Me.GroupBox5.Controls.Add(Me.Panel30)
-        Me.GroupBox5.Controls.Add(Me.Panel31)
-        Me.GroupBox5.Location = New System.Drawing.Point(3, 1691)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(707, 416)
-        Me.GroupBox5.TabIndex = 4
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "MPV"
+        Me.MPVGB.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.MPVGB.Controls.Add(Me.Panel14)
+        Me.MPVGB.Controls.Add(Me.Panel15)
+        Me.MPVGB.Controls.Add(Me.Panel16)
+        Me.MPVGB.Controls.Add(Me.Panel29)
+        Me.MPVGB.Controls.Add(Me.Panel30)
+        Me.MPVGB.Controls.Add(Me.Panel31)
+        Me.MPVGB.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.MPVGB.Location = New System.Drawing.Point(3, 1779)
+        Me.MPVGB.Name = "MPVGB"
+        Me.MPVGB.Padding = New System.Windows.Forms.Padding(3, 3, 3, 15)
+        Me.MPVGB.Size = New System.Drawing.Size(707, 426)
+        Me.MPVGB.TabIndex = 4
+        Me.MPVGB.TabStop = False
+        Me.MPVGB.Text = "MPV"
         '
         'Panel14
         '
         Me.Panel14.BackColor = System.Drawing.Color.White
         Me.Panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel14.Controls.Add(Me.Button25)
+        Me.Panel14.Controls.Add(Me.TravellerBtn)
         Me.Panel14.Controls.Add(Me.Label55)
         Me.Panel14.Controls.Add(Me.PictureBox27)
         Me.Panel14.Controls.Add(Me.Label56)
-        Me.Panel14.Location = New System.Drawing.Point(474, 211)
+        Me.Panel14.Location = New System.Drawing.Point(474, 224)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(226, 193)
         Me.Panel14.TabIndex = 28
         '
-        'Button25
+        'TravellerBtn
         '
-        Me.Button25.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button25.Location = New System.Drawing.Point(144, 164)
-        Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(78, 23)
-        Me.Button25.TabIndex = 19
-        Me.Button25.Text = "View More"
-        Me.Button25.UseVisualStyleBackColor = False
+        Me.TravellerBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.TravellerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TravellerBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TravellerBtn.Location = New System.Drawing.Point(144, 164)
+        Me.TravellerBtn.Name = "TravellerBtn"
+        Me.TravellerBtn.Size = New System.Drawing.Size(78, 23)
+        Me.TravellerBtn.TabIndex = 19
+        Me.TravellerBtn.Text = "View More"
+        Me.TravellerBtn.UseVisualStyleBackColor = False
         '
         'Label55
         '
@@ -1984,11 +1984,11 @@ Partial Class Mainform
         Me.Label55.BackColor = System.Drawing.Color.Transparent
         Me.Label55.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label55.ForeColor = System.Drawing.Color.Black
-        Me.Label55.Location = New System.Drawing.Point(9, 166)
+        Me.Label55.Location = New System.Drawing.Point(-3, 168)
         Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(128, 15)
+        Me.Label55.Size = New System.Drawing.Size(150, 15)
         Me.Label55.TabIndex = 18
-        Me.Label55.Text = "Starting from 7,00,000"
+        Me.Label55.Text = "Starting from ₹ 11.00 Lakh"
         '
         'PictureBox27
         '
@@ -2008,34 +2008,34 @@ Partial Class Mainform
         Me.Label56.ForeColor = System.Drawing.Color.Black
         Me.Label56.Location = New System.Drawing.Point(3, 10)
         Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(136, 17)
+        Me.Label56.Size = New System.Drawing.Size(127, 17)
         Me.Label56.TabIndex = 16
-        Me.Label56.Text = "Maruti Suzuki Baleno"
+        Me.Label56.Text = "Force Traveller 3050"
         '
         'Panel15
         '
         Me.Panel15.BackColor = System.Drawing.Color.White
         Me.Panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel15.Controls.Add(Me.Button26)
+        Me.Panel15.Controls.Add(Me.JeetaBtn)
         Me.Panel15.Controls.Add(Me.Label57)
         Me.Panel15.Controls.Add(Me.PictureBox28)
         Me.Panel15.Controls.Add(Me.Label58)
-        Me.Panel15.Location = New System.Drawing.Point(240, 211)
+        Me.Panel15.Location = New System.Drawing.Point(240, 224)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(226, 193)
         Me.Panel15.TabIndex = 27
         '
-        'Button26
+        'JeetaBtn
         '
-        Me.Button26.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button26.Location = New System.Drawing.Point(144, 164)
-        Me.Button26.Name = "Button26"
-        Me.Button26.Size = New System.Drawing.Size(78, 23)
-        Me.Button26.TabIndex = 19
-        Me.Button26.Text = "View More"
-        Me.Button26.UseVisualStyleBackColor = False
+        Me.JeetaBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.JeetaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.JeetaBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.JeetaBtn.Location = New System.Drawing.Point(144, 164)
+        Me.JeetaBtn.Name = "JeetaBtn"
+        Me.JeetaBtn.Size = New System.Drawing.Size(78, 23)
+        Me.JeetaBtn.TabIndex = 19
+        Me.JeetaBtn.Text = "View More"
+        Me.JeetaBtn.UseVisualStyleBackColor = False
         '
         'Label57
         '
@@ -2043,11 +2043,11 @@ Partial Class Mainform
         Me.Label57.BackColor = System.Drawing.Color.Transparent
         Me.Label57.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label57.ForeColor = System.Drawing.Color.Black
-        Me.Label57.Location = New System.Drawing.Point(9, 166)
+        Me.Label57.Location = New System.Drawing.Point(1, 168)
         Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(128, 15)
+        Me.Label57.Size = New System.Drawing.Size(144, 15)
         Me.Label57.TabIndex = 18
-        Me.Label57.Text = "Starting from 7,00,000"
+        Me.Label57.Text = "Starting from ₹ 4.72 Lakh"
         '
         'PictureBox28
         '
@@ -2067,34 +2067,34 @@ Partial Class Mainform
         Me.Label58.ForeColor = System.Drawing.Color.Black
         Me.Label58.Location = New System.Drawing.Point(3, 10)
         Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(136, 17)
+        Me.Label58.Size = New System.Drawing.Size(102, 17)
         Me.Label58.TabIndex = 16
-        Me.Label58.Text = "Maruti Suzuki Baleno"
+        Me.Label58.Text = "Mahindra Jeeto"
         '
         'Panel16
         '
         Me.Panel16.BackColor = System.Drawing.Color.White
         Me.Panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel16.Controls.Add(Me.Button27)
+        Me.Panel16.Controls.Add(Me.PlusBtn)
         Me.Panel16.Controls.Add(Me.Label59)
         Me.Panel16.Controls.Add(Me.PictureBox29)
         Me.Panel16.Controls.Add(Me.Label60)
-        Me.Panel16.Location = New System.Drawing.Point(6, 211)
+        Me.Panel16.Location = New System.Drawing.Point(6, 224)
         Me.Panel16.Name = "Panel16"
         Me.Panel16.Size = New System.Drawing.Size(226, 193)
         Me.Panel16.TabIndex = 24
         '
-        'Button27
+        'PlusBtn
         '
-        Me.Button27.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button27.Location = New System.Drawing.Point(144, 164)
-        Me.Button27.Name = "Button27"
-        Me.Button27.Size = New System.Drawing.Size(78, 23)
-        Me.Button27.TabIndex = 19
-        Me.Button27.Text = "View More"
-        Me.Button27.UseVisualStyleBackColor = False
+        Me.PlusBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.PlusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PlusBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlusBtn.Location = New System.Drawing.Point(144, 164)
+        Me.PlusBtn.Name = "PlusBtn"
+        Me.PlusBtn.Size = New System.Drawing.Size(78, 23)
+        Me.PlusBtn.TabIndex = 19
+        Me.PlusBtn.Text = "View More"
+        Me.PlusBtn.UseVisualStyleBackColor = False
         '
         'Label59
         '
@@ -2102,11 +2102,11 @@ Partial Class Mainform
         Me.Label59.BackColor = System.Drawing.Color.Transparent
         Me.Label59.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label59.ForeColor = System.Drawing.Color.Black
-        Me.Label59.Location = New System.Drawing.Point(9, 166)
+        Me.Label59.Location = New System.Drawing.Point(1, 168)
         Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(128, 15)
+        Me.Label59.Size = New System.Drawing.Size(141, 15)
         Me.Label59.TabIndex = 18
-        Me.Label59.Text = "Starting from 7,00,000"
+        Me.Label59.Text = "Starting from₹ 4.35 Lakh"
         '
         'PictureBox29
         '
@@ -2126,34 +2126,34 @@ Partial Class Mainform
         Me.Label60.ForeColor = System.Drawing.Color.Black
         Me.Label60.Location = New System.Drawing.Point(3, 10)
         Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(136, 17)
+        Me.Label60.Size = New System.Drawing.Size(122, 17)
         Me.Label60.TabIndex = 16
-        Me.Label60.Text = "Maruti Suzuki Baleno"
+        Me.Label60.Text = "Mahindra Alfa Plus"
         '
         'Panel29
         '
         Me.Panel29.BackColor = System.Drawing.Color.White
         Me.Panel29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel29.Controls.Add(Me.Button28)
+        Me.Panel29.Controls.Add(Me.PickupBtn)
         Me.Panel29.Controls.Add(Me.Label61)
         Me.Panel29.Controls.Add(Me.PictureBox30)
         Me.Panel29.Controls.Add(Me.Label62)
-        Me.Panel29.Location = New System.Drawing.Point(474, 12)
+        Me.Panel29.Location = New System.Drawing.Point(474, 25)
         Me.Panel29.Name = "Panel29"
         Me.Panel29.Size = New System.Drawing.Size(226, 193)
         Me.Panel29.TabIndex = 25
         '
-        'Button28
+        'PickupBtn
         '
-        Me.Button28.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button28.Location = New System.Drawing.Point(144, 164)
-        Me.Button28.Name = "Button28"
-        Me.Button28.Size = New System.Drawing.Size(78, 23)
-        Me.Button28.TabIndex = 19
-        Me.Button28.Text = "View More"
-        Me.Button28.UseVisualStyleBackColor = False
+        Me.PickupBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.PickupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PickupBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PickupBtn.Location = New System.Drawing.Point(144, 164)
+        Me.PickupBtn.Name = "PickupBtn"
+        Me.PickupBtn.Size = New System.Drawing.Size(78, 23)
+        Me.PickupBtn.TabIndex = 19
+        Me.PickupBtn.Text = "View More"
+        Me.PickupBtn.UseVisualStyleBackColor = False
         '
         'Label61
         '
@@ -2161,11 +2161,11 @@ Partial Class Mainform
         Me.Label61.BackColor = System.Drawing.Color.Transparent
         Me.Label61.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label61.ForeColor = System.Drawing.Color.Black
-        Me.Label61.Location = New System.Drawing.Point(9, 166)
+        Me.Label61.Location = New System.Drawing.Point(1, 168)
         Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(128, 15)
+        Me.Label61.Size = New System.Drawing.Size(144, 15)
         Me.Label61.TabIndex = 18
-        Me.Label61.Text = "Starting from 7,00,000"
+        Me.Label61.Text = "Starting from ₹ 7.25 Lakh"
         '
         'PictureBox30
         '
@@ -2185,34 +2185,34 @@ Partial Class Mainform
         Me.Label62.ForeColor = System.Drawing.Color.Black
         Me.Label62.Location = New System.Drawing.Point(3, 10)
         Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(136, 17)
+        Me.Label62.Size = New System.Drawing.Size(181, 17)
         Me.Label62.TabIndex = 16
-        Me.Label62.Text = "Maruti Suzuki Baleno"
+        Me.Label62.Text = "Ashok Leyland Dost+ Pickup"
         '
         'Panel30
         '
         Me.Panel30.BackColor = System.Drawing.Color.White
         Me.Panel30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel30.Controls.Add(Me.Button29)
+        Me.Panel30.Controls.Add(Me.AceGoldBtn)
         Me.Panel30.Controls.Add(Me.Label63)
         Me.Panel30.Controls.Add(Me.PictureBox31)
         Me.Panel30.Controls.Add(Me.Label64)
-        Me.Panel30.Location = New System.Drawing.Point(240, 12)
+        Me.Panel30.Location = New System.Drawing.Point(240, 25)
         Me.Panel30.Name = "Panel30"
         Me.Panel30.Size = New System.Drawing.Size(226, 193)
         Me.Panel30.TabIndex = 26
         '
-        'Button29
+        'AceGoldBtn
         '
-        Me.Button29.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button29.Location = New System.Drawing.Point(144, 164)
-        Me.Button29.Name = "Button29"
-        Me.Button29.Size = New System.Drawing.Size(78, 23)
-        Me.Button29.TabIndex = 19
-        Me.Button29.Text = "View More"
-        Me.Button29.UseVisualStyleBackColor = False
+        Me.AceGoldBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.AceGoldBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AceGoldBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AceGoldBtn.Location = New System.Drawing.Point(144, 164)
+        Me.AceGoldBtn.Name = "AceGoldBtn"
+        Me.AceGoldBtn.Size = New System.Drawing.Size(78, 23)
+        Me.AceGoldBtn.TabIndex = 19
+        Me.AceGoldBtn.Text = "View More"
+        Me.AceGoldBtn.UseVisualStyleBackColor = False
         '
         'Label63
         '
@@ -2220,11 +2220,11 @@ Partial Class Mainform
         Me.Label63.BackColor = System.Drawing.Color.Transparent
         Me.Label63.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label63.ForeColor = System.Drawing.Color.Black
-        Me.Label63.Location = New System.Drawing.Point(9, 166)
+        Me.Label63.Location = New System.Drawing.Point(1, 168)
         Me.Label63.Name = "Label63"
-        Me.Label63.Size = New System.Drawing.Size(128, 15)
+        Me.Label63.Size = New System.Drawing.Size(144, 15)
         Me.Label63.TabIndex = 18
-        Me.Label63.Text = "Starting from 7,00,000"
+        Me.Label63.Text = "Starting from ₹ 3.99 Lakh"
         '
         'PictureBox31
         '
@@ -2244,34 +2244,34 @@ Partial Class Mainform
         Me.Label64.ForeColor = System.Drawing.Color.Black
         Me.Label64.Location = New System.Drawing.Point(3, 10)
         Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(136, 17)
+        Me.Label64.Size = New System.Drawing.Size(91, 17)
         Me.Label64.TabIndex = 16
-        Me.Label64.Text = "Maruti Suzuki Baleno"
+        Me.Label64.Text = "Tata Ace Gold"
         '
         'Panel31
         '
         Me.Panel31.BackColor = System.Drawing.Color.White
         Me.Panel31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel31.Controls.Add(Me.Button30)
+        Me.Panel31.Controls.Add(Me.SuperCarryBtn)
         Me.Panel31.Controls.Add(Me.Label65)
         Me.Panel31.Controls.Add(Me.PictureBox32)
         Me.Panel31.Controls.Add(Me.Label66)
-        Me.Panel31.Location = New System.Drawing.Point(6, 12)
+        Me.Panel31.Location = New System.Drawing.Point(6, 25)
         Me.Panel31.Name = "Panel31"
         Me.Panel31.Size = New System.Drawing.Size(226, 193)
         Me.Panel31.TabIndex = 23
         '
-        'Button30
+        'SuperCarryBtn
         '
-        Me.Button30.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button30.Location = New System.Drawing.Point(144, 164)
-        Me.Button30.Name = "Button30"
-        Me.Button30.Size = New System.Drawing.Size(78, 23)
-        Me.Button30.TabIndex = 19
-        Me.Button30.Text = "View More"
-        Me.Button30.UseVisualStyleBackColor = False
+        Me.SuperCarryBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.SuperCarryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SuperCarryBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SuperCarryBtn.Location = New System.Drawing.Point(144, 164)
+        Me.SuperCarryBtn.Name = "SuperCarryBtn"
+        Me.SuperCarryBtn.Size = New System.Drawing.Size(78, 23)
+        Me.SuperCarryBtn.TabIndex = 19
+        Me.SuperCarryBtn.Text = "View More"
+        Me.SuperCarryBtn.UseVisualStyleBackColor = False
         '
         'Label65
         '
@@ -2279,11 +2279,11 @@ Partial Class Mainform
         Me.Label65.BackColor = System.Drawing.Color.Transparent
         Me.Label65.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label65.ForeColor = System.Drawing.Color.Black
-        Me.Label65.Location = New System.Drawing.Point(9, 166)
+        Me.Label65.Location = New System.Drawing.Point(1, 168)
         Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(128, 15)
+        Me.Label65.Size = New System.Drawing.Size(144, 15)
         Me.Label65.TabIndex = 18
-        Me.Label65.Text = "Starting from 7,00,000"
+        Me.Label65.Text = "Starting from ₹ 4.73 Lakh"
         '
         'PictureBox32
         '
@@ -2303,9 +2303,9 @@ Partial Class Mainform
         Me.Label66.ForeColor = System.Drawing.Color.Black
         Me.Label66.Location = New System.Drawing.Point(3, 10)
         Me.Label66.Name = "Label66"
-        Me.Label66.Size = New System.Drawing.Size(136, 17)
+        Me.Label66.Size = New System.Drawing.Size(167, 17)
         Me.Label66.TabIndex = 16
-        Me.Label66.Text = "Maruti Suzuki Baleno"
+        Me.Label66.Text = "Maruti Suzuki Super Carry"
         '
         'Mainform
         '
@@ -2313,7 +2313,7 @@ Partial Class Mainform
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(990, 568)
-        Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Controls.Add(Me.Mainpanel)
         Me.Controls.Add(Me.Exit_btn)
         Me.Controls.Add(Me.Sidebar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -2324,29 +2324,27 @@ Partial Class Mainform
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
-        Me.Panel19.ResumeLayout(False)
-        Me.Panel19.PerformLayout()
+        Me.Mainpanel.ResumeLayout(False)
+        Me.HatchbackGB.ResumeLayout(False)
+        Me.KwidPan.ResumeLayout(False)
+        Me.KwidPan.PerformLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel18.ResumeLayout(False)
-        Me.Panel18.PerformLayout()
+        Me.i10_NiosPan.ResumeLayout(False)
+        Me.i10_NiosPan.PerformLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel17.ResumeLayout(False)
-        Me.Panel17.PerformLayout()
+        Me.SwiftPan.ResumeLayout(False)
+        Me.SwiftPan.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
+        Me.WagonPan.ResumeLayout(False)
+        Me.WagonPan.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        Me.PunchPan.ResumeLayout(False)
+        Me.PunchPan.PerformLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.BalenoPan.ResumeLayout(False)
+        Me.BalenoPan.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
+        Me.SedanGB.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2365,7 +2363,7 @@ Partial Class Mainform
         Me.Panel22.ResumeLayout(False)
         Me.Panel22.PerformLayout()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox3.ResumeLayout(False)
+        Me.SUVGB.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2384,7 +2382,7 @@ Partial Class Mainform
         Me.Panel25.ResumeLayout(False)
         Me.Panel25.PerformLayout()
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox4.ResumeLayout(False)
+        Me.MUVGB.ResumeLayout(False)
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2403,7 +2401,7 @@ Partial Class Mainform
         Me.Panel28.ResumeLayout(False)
         Me.Panel28.PerformLayout()
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox5.ResumeLayout(False)
+        Me.MPVGB.ResumeLayout(False)
         Me.Panel14.ResumeLayout(False)
         Me.Panel14.PerformLayout()
         CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2425,168 +2423,165 @@ Partial Class Mainform
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Login_info1 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Sidebar As Panel
     Friend WithEvents Registerlink As LinkLabel
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents Exit_btn As Button
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Mainpanel As FlowLayoutPanel
+    Friend WithEvents HatchbackGB As GroupBox
     Friend WithEvents Logout As Label
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents BalenoPan As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BalenoBtn As Button
     Friend WithEvents Label11 As Label
-    Friend WithEvents Panel19 As Panel
-    Friend WithEvents Button6 As Button
+    Friend WithEvents KwidPan As Panel
+    Friend WithEvents KwidBtn As Button
     Friend WithEvents Label17 As Label
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents Label18 As Label
-    Friend WithEvents Panel18 As Panel
-    Friend WithEvents Button5 As Button
+    Friend WithEvents i10_NiosPan As Panel
+    Friend WithEvents i10_NiosBtn As Button
     Friend WithEvents Label15 As Label
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents Panel17 As Panel
-    Friend WithEvents Button4 As Button
+    Friend WithEvents SwiftPan As Panel
+    Friend WithEvents SwiftBtn As Button
     Friend WithEvents Label13 As Label
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Button3 As Button
+    Friend WithEvents WagonPan As Panel
+    Friend WithEvents WagonRBtn As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Button2 As Button
+    Friend WithEvents PunchPan As Panel
+    Friend WithEvents PunchBtn As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents SedanGB As GroupBox
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents Button7 As Button
+    Friend WithEvents LivaBtn As Button
     Friend WithEvents Label19 As Label
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents Label20 As Label
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents Button8 As Button
+    Friend WithEvents TigoBtn As Button
     Friend WithEvents Label21 As Label
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Label22 As Label
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents Button9 As Button
+    Friend WithEvents CiazBtn As Button
     Friend WithEvents Label23 As Label
     Friend WithEvents PictureBox11 As PictureBox
     Friend WithEvents Label24 As Label
     Friend WithEvents Panel20 As Panel
-    Friend WithEvents Button10 As Button
+    Friend WithEvents AuraBtn As Button
     Friend WithEvents Label25 As Label
     Friend WithEvents PictureBox12 As PictureBox
     Friend WithEvents Label26 As Label
     Friend WithEvents Panel21 As Panel
-    Friend WithEvents Button11 As Button
+    Friend WithEvents AmazeBtn As Button
     Friend WithEvents Label27 As Label
     Friend WithEvents PictureBox13 As PictureBox
     Friend WithEvents Label28 As Label
     Friend WithEvents Panel22 As Panel
-    Friend WithEvents Button12 As Button
+    Friend WithEvents DzireBtn As Button
     Friend WithEvents Label29 As Label
     Friend WithEvents PictureBox14 As PictureBox
     Friend WithEvents Label30 As Label
-    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents SUVGB As GroupBox
     Friend WithEvents Panel8 As Panel
-    Friend WithEvents Button13 As Button
+    Friend WithEvents MagniteBtn As Button
     Friend WithEvents Label31 As Label
     Friend WithEvents PictureBox15 As PictureBox
     Friend WithEvents Label32 As Label
     Friend WithEvents Panel9 As Panel
-    Friend WithEvents Button14 As Button
+    Friend WithEvents XUV300Btn As Button
     Friend WithEvents Label33 As Label
     Friend WithEvents PictureBox16 As PictureBox
     Friend WithEvents Label34 As Label
     Friend WithEvents Panel10 As Panel
-    Friend WithEvents Button15 As Button
+    Friend WithEvents SeltosBtn As Button
     Friend WithEvents Label35 As Label
     Friend WithEvents PictureBox17 As PictureBox
     Friend WithEvents Label36 As Label
     Friend WithEvents Panel23 As Panel
-    Friend WithEvents Button16 As Button
+    Friend WithEvents CretaBtn As Button
     Friend WithEvents Label37 As Label
     Friend WithEvents PictureBox18 As PictureBox
     Friend WithEvents Label38 As Label
     Friend WithEvents Panel24 As Panel
-    Friend WithEvents Button17 As Button
+    Friend WithEvents NexonBtn As Button
     Friend WithEvents Label39 As Label
     Friend WithEvents PictureBox19 As PictureBox
     Friend WithEvents Label40 As Label
     Friend WithEvents Panel25 As Panel
-    Friend WithEvents Button18 As Button
+    Friend WithEvents BrezzaBtn As Button
     Friend WithEvents Label41 As Label
     Friend WithEvents PictureBox20 As PictureBox
     Friend WithEvents Label42 As Label
-    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents MUVGB As GroupBox
     Friend WithEvents Panel11 As Panel
-    Friend WithEvents Button19 As Button
+    Friend WithEvents SumGoldBtn As Button
     Friend WithEvents Label43 As Label
     Friend WithEvents PictureBox21 As PictureBox
     Friend WithEvents Label44 As Label
     Friend WithEvents Panel12 As Panel
-    Friend WithEvents Button20 As Button
+    Friend WithEvents ScorpioBtn As Button
     Friend WithEvents Label45 As Label
     Friend WithEvents PictureBox22 As PictureBox
     Friend WithEvents Label46 As Label
     Friend WithEvents Panel13 As Panel
-    Friend WithEvents Button21 As Button
+    Friend WithEvents CarensBtn As Button
     Friend WithEvents Label47 As Label
     Friend WithEvents PictureBox23 As PictureBox
     Friend WithEvents Label48 As Label
     Friend WithEvents Panel26 As Panel
-    Friend WithEvents Button22 As Button
+    Friend WithEvents ErtigaBtn As Button
     Friend WithEvents Label49 As Label
     Friend WithEvents PictureBox24 As PictureBox
     Friend WithEvents Label50 As Label
     Friend WithEvents Panel27 As Panel
-    Friend WithEvents Button23 As Button
+    Friend WithEvents CrystaBtn As Button
     Friend WithEvents Label51 As Label
     Friend WithEvents PictureBox25 As PictureBox
     Friend WithEvents Label52 As Label
     Friend WithEvents Panel28 As Panel
-    Friend WithEvents Button24 As Button
+    Friend WithEvents BoleroBtn As Button
     Friend WithEvents Label53 As Label
     Friend WithEvents PictureBox26 As PictureBox
     Friend WithEvents Label54 As Label
-    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents MPVGB As GroupBox
     Friend WithEvents Panel14 As Panel
-    Friend WithEvents Button25 As Button
+    Friend WithEvents TravellerBtn As Button
     Friend WithEvents Label55 As Label
     Friend WithEvents PictureBox27 As PictureBox
     Friend WithEvents Label56 As Label
     Friend WithEvents Panel15 As Panel
-    Friend WithEvents Button26 As Button
+    Friend WithEvents JeetaBtn As Button
     Friend WithEvents Label57 As Label
     Friend WithEvents PictureBox28 As PictureBox
     Friend WithEvents Label58 As Label
     Friend WithEvents Panel16 As Panel
-    Friend WithEvents Button27 As Button
+    Friend WithEvents PlusBtn As Button
     Friend WithEvents Label59 As Label
     Friend WithEvents PictureBox29 As PictureBox
     Friend WithEvents Label60 As Label
     Friend WithEvents Panel29 As Panel
-    Friend WithEvents Button28 As Button
+    Friend WithEvents PickupBtn As Button
     Friend WithEvents Label61 As Label
     Friend WithEvents PictureBox30 As PictureBox
     Friend WithEvents Label62 As Label
     Friend WithEvents Panel30 As Panel
-    Friend WithEvents Button29 As Button
+    Friend WithEvents AceGoldBtn As Button
     Friend WithEvents Label63 As Label
     Friend WithEvents PictureBox31 As PictureBox
     Friend WithEvents Label64 As Label
     Friend WithEvents Panel31 As Panel
-    Friend WithEvents Button30 As Button
+    Friend WithEvents SuperCarryBtn As Button
     Friend WithEvents Label65 As Label
     Friend WithEvents PictureBox32 As PictureBox
     Friend WithEvents Label66 As Label
@@ -2596,4 +2591,5 @@ Partial Class Mainform
     Friend WithEvents SUVbel As Button
     Friend WithEvents Sedanbel As Button
     Friend WithEvents MPVbel As Button
+    Friend WithEvents Login_info1 As Button
 End Class

@@ -43,6 +43,11 @@ Public Class Mainform
         ' Set the "Allbel" button as the initially selected button
         selectedButton = Allbel
         Allbel.BackColor = Color.FromArgb(0, 0, 64) ' Set dark blue color for selected button
+        HatchbackGB.Visible = True
+        SedanGB.Visible = True
+        SUVGB.Visible = True
+        MUVGB.Visible = True
+        MPVGB.Visible = True
 
         ' Enable MouseEnter and MouseLeave events for all buttons except the selected one
         For Each button As Button In {Allbel, Hatchbackbel, Sedanbel, SUVbel, MUVbel, MPVbel}
@@ -59,31 +64,31 @@ Public Class Mainform
         Registerlink.Visible = True
         Logout.Text = ""
         Login_info1.Visible = False
-        Panel2.Visible = False
+        Login_info1.Visible = False
         Logout.Visible = False
         Form_Login.loggedIn = False
     End Sub
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+    Private Sub Login_info1_Paint(sender As Object, e As PaintEventArgs)
         ' Define the region for rounded edges
-        Dim panelRegion As New Region(New Rectangle(0, 0, Panel2.Width, Panel2.Height))
+        Dim panelRegion As New Region(New Rectangle(0, 0, Login_info1.Width, Login_info1.Height))
         Dim panelPath As New GraphicsPath()
-        Dim radius As Integer = 15 ' Adjust the radius to control the roundness of edges
+        Dim radius As Integer = 10 ' Adjust the radius to control the roundness of edges
 
         ' Draw rounded rectangle
         panelPath.AddArc(New Rectangle(0, 0, 2 * radius, 2 * radius), 180, 90)
-        panelPath.AddArc(New Rectangle(Panel2.Width - 2 * radius, 0, 2 * radius, 2 * radius), 270, 90)
-        panelPath.AddArc(New Rectangle(Panel2.Width - 2 * radius, Panel2.Height - 2 * radius, 2 * radius, 2 * radius), 0, 90)
-        panelPath.AddArc(New Rectangle(0, Panel2.Height - 2 * radius, 2 * radius, 2 * radius), 90, 90)
+        panelPath.AddArc(New Rectangle(Login_info1.Width - 2 * radius, 0, 2 * radius, 2 * radius), 270, 90)
+        panelPath.AddArc(New Rectangle(Login_info1.Width - 2 * radius, Login_info1.Height - 2 * radius, 2 * radius, 2 * radius), 0, 90)
+        panelPath.AddArc(New Rectangle(0, Login_info1.Height - 2 * radius, 2 * radius, 2 * radius), 90, 90)
         panelPath.CloseAllFigures()
 
         ' Apply the rounded rectangle region to the panel
         panelRegion = New Region(panelPath)
-        Panel2.Region = panelRegion
+        Login_info1.Region = panelRegion
 
         ' Optionally, you can set a background color or image for the panel
-        ' Panel2.BackColor = Color.White
-        ' Panel2.BackgroundImage = YourImage
+        ' Login_info1.BackColor = Color.White
+        ' Login_info1.BackgroundImage = YourImage
     End Sub
 
     Public Sub UpdateUI()
@@ -91,13 +96,11 @@ Public Class Mainform
             Registerlink.Visible = False
             Login_info1.Visible = True
             Logout.Text = "Log out"
-            Panel2.Visible = True
             Logout.Visible = True
         Else
             Registerlink.Visible = True
             Logout.Text = ""
             Login_info1.Visible = False
-            Panel2.Visible = False
             Logout.Visible = False
         End If
     End Sub
@@ -126,31 +129,61 @@ Public Class Mainform
     Private Sub Allbel_Click(sender As Object, e As EventArgs) Handles Allbel.Click
         ' Call the function to handle button clicks
         HandleButtonClick(Allbel)
+        HatchbackGB.Visible = True
+        SedanGB.Visible = True
+        SUVGB.Visible = True
+        MUVGB.Visible = True
+        MPVGB.Visible = True
     End Sub
 
     Private Sub Hatchbackbel_Click(sender As Object, e As EventArgs) Handles Hatchbackbel.Click
         ' Call the function to handle button clicks
         HandleButtonClick(Hatchbackbel)
+        HatchbackGB.Visible = True
+        SedanGB.Visible = False
+        SUVGB.Visible = False
+        MUVGB.Visible = False
+        MPVGB.Visible = False
     End Sub
 
     Private Sub Sedanbel_Click(sender As Object, e As EventArgs) Handles Sedanbel.Click
         ' Call the function to handle button clicks
         HandleButtonClick(Sedanbel)
+        HatchbackGB.Visible = False
+        SedanGB.Visible = True
+        SUVGB.Visible = False
+        MUVGB.Visible = False
+        MPVGB.Visible = False
     End Sub
 
     Private Sub SUVbel_Click(sender As Object, e As EventArgs) Handles SUVbel.Click
         ' Call the function to handle button clicks
         HandleButtonClick(SUVbel)
+        HatchbackGB.Visible = False
+        SedanGB.Visible = False
+        SUVGB.Visible = True
+        MUVGB.Visible = False
+        MPVGB.Visible = False
     End Sub
 
     Private Sub MUVbel_Click(sender As Object, e As EventArgs) Handles MUVbel.Click
         ' Call the function to handle button clicks
         HandleButtonClick(MUVbel)
+        HatchbackGB.Visible = False
+        SedanGB.Visible = False
+        SUVGB.Visible = False
+        MUVGB.Visible = True
+        MPVGB.Visible = False
     End Sub
 
     Private Sub MPVbel_Click(sender As Object, e As EventArgs) Handles MPVbel.Click
         ' Call the function to handle button clicks
         HandleButtonClick(MPVbel)
+        HatchbackGB.Visible = False
+        SedanGB.Visible = False
+        SUVGB.Visible = False
+        MUVGB.Visible = False
+        MPVGB.Visible = True
     End Sub
 
     Private Sub HandleButtonClick(clickedButton As Button)
@@ -197,5 +230,17 @@ Public Class Mainform
             Dim button As Button = DirectCast(sender, Button)
             button.BackColor = Color.Transparent
         End If
+    End Sub
+
+    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
+
+    End Sub
+
+    Private Sub Label42_Click(sender As Object, e As EventArgs) Handles Label42.Click
+
+    End Sub
+
+    Private Sub BalenoBtn_Click(sender As Object, e As EventArgs) Handles BalenoBtn.Click
+
     End Sub
 End Class

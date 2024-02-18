@@ -67,7 +67,7 @@ Public Class Form_Login
                     Mainform.Show() ' To show the main form
                     Mainform.loggedIn = True ' Set loggedIn to True
                     loggedIn = True ' Set loggedIn to True
-                    Mainform.Login_info1.Text = "User: " & username_txt.Text
+                    Mainform.Login_info1.Text = "" & username_txt.Text
                     Mainform.UpdateUI() ' Update the UI in MainForm
                 Else
                     ' User authentication failed

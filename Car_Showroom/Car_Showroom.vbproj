@@ -81,6 +81,12 @@
     <Compile Include="Car_ShowroomDataSet1.vb">
       <DependentUpon>Car_ShowroomDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Individual_Car.Designer.vb">
+      <DependentUpon>Individual_Car.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Individual_Car.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Register.Designer.vb">
       <DependentUpon>Form_Register.vb</DependentUpon>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Register.resx">
       <DependentUpon>Form_Register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Individual_Car.resx">
+      <DependentUpon>Individual_Car.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mainform.resx">
       <DependentUpon>Mainform.vb</DependentUpon>
