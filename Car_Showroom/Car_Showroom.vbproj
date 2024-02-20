@@ -73,6 +73,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Car_ShowroomADataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Car_ShowroomADataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Car_ShowroomDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,6 +148,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Car_ShowroomADataSet.xsc">
+      <DependentUpon>Car_ShowroomADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Car_ShowroomADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Car_ShowroomADataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Car_ShowroomADataSet.xss">
+      <DependentUpon>Car_ShowroomADataSet.xsd</DependentUpon>
+    </None>
     <None Include="Car_ShowroomDataSet1.xsc">
       <DependentUpon>Car_ShowroomDataSet1.xsd</DependentUpon>
     </None>
