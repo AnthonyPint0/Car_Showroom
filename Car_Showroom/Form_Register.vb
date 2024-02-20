@@ -32,7 +32,7 @@ Public Class Form_Register
 
         ' Check the user's response
         If result = DialogResult.Yes Then
-            ' If the user clicks Yes, close the application
+            ' If the user clicks Yes, close the application Hello
             Application.Exit()
         End If
     End Sub
