@@ -37,7 +37,7 @@ Public Class Form_Register
         End If
     End Sub
 
-    Public con As New SqlConnection("Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_Showroom;Integrated Security=True;Encrypt=False")
+    Public con As New SqlConnection("Data Source=DESKTOP-COMG-76;Initial Catalog=Car_Showroom;Integrated Security=True;Encrypt=False")
     Private Sub Register_btn_Click(sender As Object, e As EventArgs) Handles Register_btn.Click
         PerformRegistration()
     End Sub

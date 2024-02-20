@@ -213,4 +213,9 @@ Public Class Individual_Car
     Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
 
     End Sub
+
+    Private Sub CustReviewlink_Click(sender As Object, e As EventArgs) Handles CustReviewlink.Click
+        Dim url As String = "https://www.google.com"
+        Process.Start(url)
+    End Sub
 End Class

@@ -11,9 +11,10 @@
     <AssemblyName>Car_Showroom</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -73,6 +74,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Car_ShowroomDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Car_ShowroomDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Car_ShowroomDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,6 +149,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Car_ShowroomDataSet.xsc">
+      <DependentUpon>Car_ShowroomDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Car_ShowroomDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Car_ShowroomDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Car_ShowroomDataSet.xss">
+      <DependentUpon>Car_ShowroomDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Car_ShowroomDataSet1.xsc">
       <DependentUpon>Car_ShowroomDataSet1.xsd</DependentUpon>
     </None>
