@@ -6,6 +6,7 @@ Public Class Mainform
     Dim mousey As Integer
     Public loggedIn As Boolean = False
     Private selectedButton As Button = Nothing
+    Public carID As String
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
@@ -47,10 +48,8 @@ Public Class Mainform
         SedanGB.Visible = True
         SUVGB.Visible = True
         MUVGB.Visible = True
-        MPVGB.Visible = True
-
         ' Enable MouseEnter and MouseLeave events for all buttons except the selected one
-        For Each button As Button In {Allbel, Hatchbackbel, Sedanbel, SUVbel, MUVbel, MPVbel}
+        For Each button As Button In {Allbel, Hatchbackbel, Sedanbel, SUVbel, MUVbel}
             If button IsNot selectedButton Then
                 AddHandler button.MouseEnter, AddressOf Button_MouseEnter
                 AddHandler button.MouseLeave, AddressOf Button_MouseLeave
@@ -133,7 +132,6 @@ Public Class Mainform
         SedanGB.Visible = True
         SUVGB.Visible = True
         MUVGB.Visible = True
-        MPVGB.Visible = True
     End Sub
 
     Private Sub Hatchbackbel_Click(sender As Object, e As EventArgs) Handles Hatchbackbel.Click
@@ -143,7 +141,6 @@ Public Class Mainform
         SedanGB.Visible = False
         SUVGB.Visible = False
         MUVGB.Visible = False
-        MPVGB.Visible = False
     End Sub
 
     Private Sub Sedanbel_Click(sender As Object, e As EventArgs) Handles Sedanbel.Click
@@ -153,7 +150,6 @@ Public Class Mainform
         SedanGB.Visible = True
         SUVGB.Visible = False
         MUVGB.Visible = False
-        MPVGB.Visible = False
     End Sub
 
     Private Sub SUVbel_Click(sender As Object, e As EventArgs) Handles SUVbel.Click
@@ -163,7 +159,6 @@ Public Class Mainform
         SedanGB.Visible = False
         SUVGB.Visible = True
         MUVGB.Visible = False
-        MPVGB.Visible = False
     End Sub
 
     Private Sub MUVbel_Click(sender As Object, e As EventArgs) Handles MUVbel.Click
@@ -173,17 +168,6 @@ Public Class Mainform
         SedanGB.Visible = False
         SUVGB.Visible = False
         MUVGB.Visible = True
-        MPVGB.Visible = False
-    End Sub
-
-    Private Sub MPVbel_Click(sender As Object, e As EventArgs) Handles MPVbel.Click
-        ' Call the function to handle button clicks
-        HandleButtonClick(MPVbel)
-        HatchbackGB.Visible = False
-        SedanGB.Visible = False
-        SUVGB.Visible = False
-        MUVGB.Visible = False
-        MPVGB.Visible = True
     End Sub
 
     Private Sub HandleButtonClick(clickedButton As Button)
@@ -206,7 +190,7 @@ Public Class Mainform
         RemoveHandler clickedButton.MouseLeave, AddressOf Button_MouseLeave
 
         ' Enable MouseEnter and MouseLeave events for all other buttons
-        For Each button As Button In {Allbel, Hatchbackbel, Sedanbel, SUVbel, MUVbel, MPVbel}
+        For Each button As Button In {Allbel, Hatchbackbel, Sedanbel, SUVbel, MUVbel}
             If button IsNot clickedButton Then
                 AddHandler button.MouseEnter, AddressOf Button_MouseEnter
                 AddHandler button.MouseLeave, AddressOf Button_MouseLeave
@@ -240,7 +224,180 @@ Public Class Mainform
 
     End Sub
 
-    Private Sub BalenoBtn_Click(sender As Object, e As EventArgs) Handles BalenoBtn.Click
+    Public Sub NextForm(carID)
+        Individual_Car.Show() ' To show the main form
+        Individual_Car.loggedIn = loggedIn ' Set loggedIn to True
+        Individual_Car.Login_info1.Text = "" & Login_info1.Text
+        Individual_Car.UpdateUI() ' Update the UI in Individual_Car
+        Individual_Car.DisplayCarDetails(carID)
+    End Sub
 
+    Private Sub BalenoBtn_Click(sender As Object, e As EventArgs) Handles BalenoBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "BalenoC1"
+        carID = "BalenoC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub PunchBtn_Click(sender As Object, e As EventArgs) Handles PunchBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "PunchC1"
+        carID = "PunchC1"
+        NextForm(carID)
+
+    End Sub
+
+    Private Sub WagonRBtn_Click(sender As Object, e As EventArgs) Handles WagonRBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "WagonRC1"
+        carID = "WagonRC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub SeltosBtn_Click(sender As Object, e As EventArgs) Handles SeltosBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "SeltosC1"
+        carID = "SeltosC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub SwiftBtn_Click(sender As Object, e As EventArgs) Handles SwiftBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "SwiftC1"
+        carID = "SwiftC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub i10_NiosBtn_Click(sender As Object, e As EventArgs) Handles i10_NiosBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "i10_NiosC1"
+        carID = "i10_NiosC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub KwidBtn_Click(sender As Object, e As EventArgs) Handles KwidBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "KwidC1"
+        carID = "KwidC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub DzireBtn_Click(sender As Object, e As EventArgs) Handles DzireBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "DzireC1"
+        carID = "DzireC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub AmazeBtn_Click(sender As Object, e As EventArgs) Handles AmazeBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "AmazeC1"
+        carID = "AmazeC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub AuraBtn_Click(sender As Object, e As EventArgs) Handles AuraBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "AuraC1"
+        carID = "AuraC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub CiazBtn_Click(sender As Object, e As EventArgs) Handles CiazBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "CiazC1"
+        carID = "CiazC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub TigoBtn_Click(sender As Object, e As EventArgs) Handles TigoBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "Tata Tigor"
+        carID = "Tata Tigor"
+        NextForm(carID)
+    End Sub
+
+    Private Sub VernaBtn_Click(sender As Object, e As EventArgs) Handles VernaBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "VernaC1"
+        carID = "VernaC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub BrezzaBtn_Click(sender As Object, e As EventArgs) Handles BrezzaBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "BrezzaC1"
+        carID = "BrezzaC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub NexonBtn_Click(sender As Object, e As EventArgs) Handles NexonBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "NexonC1"
+        carID = "NexonC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub CretaBtn_Click(sender As Object, e As EventArgs) Handles CretaBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "CretaC1"
+        carID = "CretaC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub XUV300Btn_Click(sender As Object, e As EventArgs) Handles XUV300Btn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "XUV300C1"
+        carID = "XUV300C1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub MagniteBtn_Click(sender As Object, e As EventArgs) Handles MagniteBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "MagniteC1"
+        carID = "MagniteC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub BoleroBtn_Click(sender As Object, e As EventArgs) Handles BoleroBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "BoleroC1"
+        carID = "BoleroC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub CrystaBtn_Click(sender As Object, e As EventArgs) Handles CrystaBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "InnovaC1"
+        carID = "InnovaC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub ErtigaBtn_Click(sender As Object, e As EventArgs) Handles ErtigaBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "ErtigaC1"
+        carID = "ErtigaC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub CarensBtn_Click(sender As Object, e As EventArgs) Handles CarensBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "CarensC1"
+        carID = "CarensC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub ScorpioBtn_Click(sender As Object, e As EventArgs) Handles ScorpioBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "ScorpioC1"
+        carID = "ScorpioC1"
+        NextForm(carID)
+    End Sub
+
+    Private Sub TriberBtn_Click(sender As Object, e As EventArgs) Handles TriberBtn.Click
+        Me.Hide() ' To hide the login form
+        Individual_Car.carID = "TriberC1"
+        carID = "TriberC1"
+        NextForm(carID)
     End Sub
 End Class

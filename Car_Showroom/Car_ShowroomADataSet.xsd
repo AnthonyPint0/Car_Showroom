@@ -226,7 +226,7 @@ SELECT CustomerID, FirstName, LastName, Email, Address, ContactNumber, Username,
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="Car_ShowroomADataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="Car_ShowroomADataSet" msprop:Generator_DataSetName="Car_ShowroomADataSet">
+  <xs:element name="Car_ShowroomADataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Car_ShowroomADataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Car_ShowroomADataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Cars" msprop:Generator_RowEvHandlerName="CarsRowChangeEventHandler" msprop:Generator_RowDeletedName="CarsRowDeleted" msprop:Generator_RowDeletingName="CarsRowDeleting" msprop:Generator_RowEvArgName="CarsRowChangeEvent" msprop:Generator_TablePropName="Cars" msprop:Generator_RowChangedName="CarsRowChanged" msprop:Generator_RowChangingName="CarsRowChanging" msprop:Generator_TableClassName="CarsDataTable" msprop:Generator_RowClassName="CarsRow" msprop:Generator_TableVarName="tableCars" msprop:Generator_UserTableName="Cars">

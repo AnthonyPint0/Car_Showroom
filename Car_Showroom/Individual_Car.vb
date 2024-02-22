@@ -1,5 +1,6 @@
 ﻿Imports System.Drawing.Drawing2D
 Imports System.Data.SqlClient
+Imports System.Security.Policy
 
 Public Class Individual_Car
     Dim drag As Boolean
@@ -7,6 +8,8 @@ Public Class Individual_Car
     Dim mousey As Integer
     Public loggedIn As Boolean = False
     Private selectedButton As Button = Nothing
+    Public CustReviewLink As String
+    Public carID As String
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
@@ -39,6 +42,66 @@ Public Class Individual_Car
             Application.Exit()
         End If
     End Sub
+
+    ' Define a connection string to connect to your SQL Server database
+    Private connectionString As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
+
+    ' Define a method to retrieve and display car details based on CarID
+    Public Sub DisplayCarDetails(ByVal carID As String)
+        Try
+            ' Create a SqlConnection using the connection string
+            Using connection As New SqlConnection(connectionString)
+                ' Open the connection
+                connection.Open()
+
+                ' Define a SQL query to retrieve car details based on CarID
+                Dim query As String = "SELECT * FROM Cars WHERE CarId = @CarId"
+
+                ' Create a SqlCommand with the query and connection
+                Using command As New SqlCommand(query, connection)
+                    ' Add a parameter for CarID to the SqlCommand
+                    command.Parameters.AddWithValue("@CarId", carID)
+
+                    ' Execute the SQL query and retrieve the results
+                    Using reader As SqlDataReader = command.ExecuteReader()
+                        ' Check if there are any rows returned
+                        If reader.Read() Then
+                            ' Populate labels with the retrieved data
+                            CarMainTitle.Text = reader("CarName").ToString()
+                            CarTitle2.Text = reader("CarName").ToString()
+                            CarTitle3.Text = reader("CarName").ToString()
+                            EngineLabel.Text = reader("Engine").ToString()
+                            MileageLabel.Text = reader("Mileage").ToString()
+                            TransmissionLabel.Text = reader("Transmission").ToString()
+                            FuelTypeLabel.Text = reader("FuelType").ToString()
+                            MaxPowerLabel.Text = reader("MaxPower").ToString()
+                            SeatingCapacityLabel.Text = reader("SeatingCapacity").ToString()
+                            DriverTypeLabel.Text = reader("DriverType").ToString()
+                            BodyTypeLabel.Text = reader("BodyType").ToString()
+                            DescriptionRichtext.Text = reader("Description").ToString()
+                            PriceLabel.Text = reader("Price").ToString()
+                            CustReviewLabel.Text = reader("CustReview").ToString() & "/5 Customer Rating"
+                            CustReviewLink = reader("CustReviewLink").ToString()
+                        Else
+                            ' If no rows are returned, display a message
+                            MessageBox.Show("No car found with the specified CarID.")
+                        End If
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            ' Handle any exceptions that may occur
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+        Dim imagePath As String = "C:\Users\anton\OneDrive\Documents\Cruz Motors\Images\Car\" & carID & ".png"
+        ' Check if the image file exists
+        If System.IO.File.Exists(imagePath) Then
+            ' Load the image from the file and assign it to the PictureBox control
+            CarImage.Image = Image.FromFile(imagePath)
+        End If
+    End Sub
+
+    ' Call the DisplayCarDetails method when the form loads
     Private Sub Individual_Car_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         UpdateUI()
         ' Set the "Allbel" button as the initially selected button
@@ -46,12 +109,17 @@ Public Class Individual_Car
         Allbel.BackColor = Color.FromArgb(0, 0, 64) ' Set dark blue color for selected button
 
         ' Enable MouseEnter and MouseLeave events for all buttons except the selected one
-        For Each button As Button In {Allbel, Hatchbackbel, Sedanbel, SUVbel, MUVbel, MPVbel}
+        For Each button As Button In {Allbel, Hatchbackbel, Sedanbel, SUVbel, MUVbel}
             If button IsNot selectedButton Then
                 AddHandler button.MouseEnter, AddressOf Button_MouseEnter
                 AddHandler button.MouseLeave, AddressOf Button_MouseLeave
             End If
         Next
+        ' Set the value of CarID (you can replace this with your actual CarID value)
+
+
+        ' Call the DisplayCarDetails method with the specified CarID
+        ' Construct the file path for the image using the carID
     End Sub
 
     Private Sub Registerlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Registerlink.LinkClicked
@@ -147,11 +215,6 @@ Public Class Individual_Car
         HandleButtonClick(MUVbel)
     End Sub
 
-    Private Sub MPVbel_Click(sender As Object, e As EventArgs) Handles MPVbel.Click
-        ' Call the function to handle button clicks
-        HandleButtonClick(MPVbel)
-    End Sub
-
     Private Sub HandleButtonClick(clickedButton As Button)
         ' Check if a button is already selected
         If selectedButton IsNot Nothing Then
@@ -172,7 +235,7 @@ Public Class Individual_Car
         RemoveHandler clickedButton.MouseLeave, AddressOf Button_MouseLeave
 
         ' Enable MouseEnter and MouseLeave events for all other buttons
-        For Each button As Button In {Allbel, Hatchbackbel, Sedanbel, SUVbel, MUVbel, MPVbel}
+        For Each button As Button In {Allbel, Hatchbackbel, Sedanbel, SUVbel, MUVbel}
             If button IsNot clickedButton Then
                 AddHandler button.MouseEnter, AddressOf Button_MouseEnter
                 AddHandler button.MouseLeave, AddressOf Button_MouseLeave
@@ -198,19 +261,31 @@ Public Class Individual_Car
         End If
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Me.Hide()
+        Mainform.Show()
+        Mainform.loggedIn = loggedIn ' Set loggedIn to True
+        Mainform.Login_info1.Text = "" & Login_info1.Text
+        Mainform.UpdateUI() ' Update the UI in MainForm
     End Sub
 
-    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
-
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Me.Hide()
+        Mainform.Show()
+        Mainform.loggedIn = loggedIn ' Set loggedIn to True
+        Mainform.Login_info1.Text = "" & Login_info1.Text
+        Mainform.UpdateUI() ' Update the UI in MainForm
     End Sub
 
-    Private Sub Label5_Click_1(sender As Object, e As EventArgs) Handles Label5.Click
-
+    Private Sub back_icon_Click(sender As Object, e As EventArgs) Handles back_icon.Click
+        Me.Hide()
+        Mainform.Show()
+        Mainform.loggedIn = loggedIn ' Set loggedIn to True
+        Mainform.Login_info1.Text = "" & Login_info1.Text
+        Mainform.UpdateUI() ' Update the UI in MainForm
     End Sub
 
-    Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
-
+    Private Sub CustReviewLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles CustReviewLabel.LinkClicked
+        Process.Start(CustReviewLink)
     End Sub
 End Class

@@ -26,7 +26,6 @@ Partial Class Individual_Car
         Me.Exit_btn = New System.Windows.Forms.Button()
         Me.Sidebar = New System.Windows.Forms.Panel()
         Me.Login_info1 = New System.Windows.Forms.Button()
-        Me.MPVbel = New System.Windows.Forms.Button()
         Me.MUVbel = New System.Windows.Forms.Button()
         Me.SUVbel = New System.Windows.Forms.Button()
         Me.Sedanbel = New System.Windows.Forms.Button()
@@ -36,37 +35,41 @@ Partial Class Individual_Car
         Me.Registerlink = New System.Windows.Forms.LinkLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.CarMainTitle = New System.Windows.Forms.Label()
+        Me.CarImage = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PriceLabel = New System.Windows.Forms.Label()
+        Me.DescriptionRichtext = New System.Windows.Forms.RichTextBox()
+        Me.CarTitle2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.DriverTypeLabel = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.BodyTypeLabel = New System.Windows.Forms.Label()
+        Me.SeatingCapacityLabel = New System.Windows.Forms.Label()
+        Me.MaxPowerLabel = New System.Windows.Forms.Label()
+        Me.FuelTypeLabel = New System.Windows.Forms.Label()
+        Me.TransmissionLabel = New System.Windows.Forms.Label()
+        Me.MileageLabel = New System.Windows.Forms.Label()
+        Me.EngineLabel = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
+        Me.CarTitle3 = New System.Windows.Forms.Label()
+        Me.back_icon = New System.Windows.Forms.PictureBox()
+        Me.CustReviewLabel = New System.Windows.Forms.LinkLabel()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CarImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.back_icon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Exit_btn
@@ -74,10 +77,10 @@ Partial Class Individual_Car
         Me.Exit_btn.BackColor = System.Drawing.Color.Red
         Me.Exit_btn.Font = New System.Drawing.Font("Bahnschrift", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Exit_btn.ForeColor = System.Drawing.Color.White
-        Me.Exit_btn.Location = New System.Drawing.Point(950, 12)
+        Me.Exit_btn.Location = New System.Drawing.Point(949, 12)
         Me.Exit_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Exit_btn.Name = "Exit_btn"
-        Me.Exit_btn.Size = New System.Drawing.Size(28, 26)
+        Me.Exit_btn.Size = New System.Drawing.Size(30, 33)
         Me.Exit_btn.TabIndex = 41
         Me.Exit_btn.Text = "X"
         Me.Exit_btn.UseVisualStyleBackColor = False
@@ -87,7 +90,6 @@ Partial Class Individual_Car
         Me.Sidebar.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(243, Byte), Integer))
         Me.Sidebar.BackgroundImage = CType(resources.GetObject("Sidebar.BackgroundImage"), System.Drawing.Image)
         Me.Sidebar.Controls.Add(Me.Login_info1)
-        Me.Sidebar.Controls.Add(Me.MPVbel)
         Me.Sidebar.Controls.Add(Me.MUVbel)
         Me.Sidebar.Controls.Add(Me.SUVbel)
         Me.Sidebar.Controls.Add(Me.Sedanbel)
@@ -115,19 +117,6 @@ Partial Class Individual_Car
         Me.Login_info1.TabIndex = 22
         Me.Login_info1.Text = "Guest"
         Me.Login_info1.UseVisualStyleBackColor = False
-        '
-        'MPVbel
-        '
-        Me.MPVbel.BackColor = System.Drawing.Color.Transparent
-        Me.MPVbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.MPVbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.MPVbel.ForeColor = System.Drawing.Color.White
-        Me.MPVbel.Location = New System.Drawing.Point(0, 363)
-        Me.MPVbel.Name = "MPVbel"
-        Me.MPVbel.Size = New System.Drawing.Size(194, 36)
-        Me.MPVbel.TabIndex = 21
-        Me.MPVbel.Text = "MPV"
-        Me.MPVbel.UseVisualStyleBackColor = False
         '
         'MUVbel
         '
@@ -240,80 +229,39 @@ Partial Class Individual_Car
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
-        'Label1
+        'CarMainTitle
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(200, 8)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(201, 37)
-        Me.Label1.TabIndex = 42
-        Me.Label1.Text = "Hyundai Creta"
+        Me.CarMainTitle.AutoSize = True
+        Me.CarMainTitle.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CarMainTitle.Location = New System.Drawing.Point(200, 8)
+        Me.CarMainTitle.Name = "CarMainTitle"
+        Me.CarMainTitle.Size = New System.Drawing.Size(201, 37)
+        Me.CarMainTitle.TabIndex = 42
+        Me.CarMainTitle.Text = "Hyundai Creta"
         '
-        'PictureBox3
+        'CarImage
         '
-        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(208, 61)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(398, 263)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 43
-        Me.PictureBox3.TabStop = False
+        Me.CarImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CarImage.Image = CType(resources.GetObject("CarImage.Image"), System.Drawing.Image)
+        Me.CarImage.Location = New System.Drawing.Point(208, 61)
+        Me.CarImage.Name = "CarImage"
+        Me.CarImage.Size = New System.Drawing.Size(398, 263)
+        Me.CarImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.CarImage.TabIndex = 43
+        Me.CarImage.TabStop = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.CustReviewLabel)
         Me.Panel1.Controls.Add(Me.PictureBox4)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.RichTextBox1)
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.PriceLabel)
+        Me.Panel1.Controls.Add(Me.DescriptionRichtext)
+        Me.Panel1.Controls.Add(Me.CarTitle2)
         Me.Panel1.Location = New System.Drawing.Point(615, 59)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(359, 265)
         Me.Panel1.TabIndex = 44
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(5, 3)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(153, 30)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Hyundai Creta"
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(9, 48)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(335, 158)
-        Me.RichTextBox1.TabIndex = 1
-        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(16, 203)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(127, 16)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Rs. 10.99 - 20.14 Lakh"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(44, 231)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(142, 16)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "4.6/5 Customer Ratings"
         '
         'PictureBox4
         '
@@ -324,16 +272,49 @@ Partial Class Individual_Car
         Me.PictureBox4.TabIndex = 4
         Me.PictureBox4.TabStop = False
         '
+        'PriceLabel
+        '
+        Me.PriceLabel.AutoSize = True
+        Me.PriceLabel.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PriceLabel.Location = New System.Drawing.Point(16, 203)
+        Me.PriceLabel.Name = "PriceLabel"
+        Me.PriceLabel.Size = New System.Drawing.Size(127, 16)
+        Me.PriceLabel.TabIndex = 2
+        Me.PriceLabel.Text = "Rs. 10.99 - 20.14 Lakh"
+        '
+        'DescriptionRichtext
+        '
+        Me.DescriptionRichtext.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DescriptionRichtext.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DescriptionRichtext.Location = New System.Drawing.Point(9, 48)
+        Me.DescriptionRichtext.Name = "DescriptionRichtext"
+        Me.DescriptionRichtext.Size = New System.Drawing.Size(335, 158)
+        Me.DescriptionRichtext.TabIndex = 1
+        Me.DescriptionRichtext.Text = resources.GetString("DescriptionRichtext.Text")
+        '
+        'CarTitle2
+        '
+        Me.CarTitle2.AutoSize = True
+        Me.CarTitle2.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.CarTitle2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CarTitle2.Location = New System.Drawing.Point(5, 3)
+        Me.CarTitle2.Name = "CarTitle2"
+        Me.CarTitle2.Size = New System.Drawing.Size(153, 30)
+        Me.CarTitle2.TabIndex = 0
+        Me.CarTitle2.Text = "Hyundai Creta"
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Controls.Add(Me.Label13)
-        Me.Panel2.Controls.Add(Me.Label14)
-        Me.Panel2.Controls.Add(Me.Label15)
-        Me.Panel2.Controls.Add(Me.Label16)
-        Me.Panel2.Controls.Add(Me.Label17)
-        Me.Panel2.Controls.Add(Me.Label18)
-        Me.Panel2.Controls.Add(Me.Label19)
+        Me.Panel2.Controls.Add(Me.DriverTypeLabel)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.BodyTypeLabel)
+        Me.Panel2.Controls.Add(Me.SeatingCapacityLabel)
+        Me.Panel2.Controls.Add(Me.MaxPowerLabel)
+        Me.Panel2.Controls.Add(Me.FuelTypeLabel)
+        Me.Panel2.Controls.Add(Me.TransmissionLabel)
+        Me.Panel2.Controls.Add(Me.MileageLabel)
+        Me.Panel2.Controls.Add(Me.EngineLabel)
         Me.Panel2.Controls.Add(Me.Label12)
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.Label10)
@@ -341,17 +322,157 @@ Partial Class Individual_Car
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.CarTitle3)
         Me.Panel2.Location = New System.Drawing.Point(208, 330)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(359, 229)
+        Me.Panel2.Size = New System.Drawing.Size(398, 229)
         Me.Panel2.TabIndex = 45
+        '
+        'DriverTypeLabel
+        '
+        Me.DriverTypeLabel.AutoSize = True
+        Me.DriverTypeLabel.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DriverTypeLabel.Location = New System.Drawing.Point(224, 209)
+        Me.DriverTypeLabel.Name = "DriverTypeLabel"
+        Me.DriverTypeLabel.Size = New System.Drawing.Size(35, 16)
+        Me.DriverTypeLabel.TabIndex = 17
+        Me.DriverTypeLabel.Text = "FWD"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(9, 207)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(74, 16)
+        Me.Label1.TabIndex = 16
+        Me.Label1.Text = "Driver Type"
+        '
+        'BodyTypeLabel
+        '
+        Me.BodyTypeLabel.AutoSize = True
+        Me.BodyTypeLabel.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BodyTypeLabel.Location = New System.Drawing.Point(224, 183)
+        Me.BodyTypeLabel.Name = "BodyTypeLabel"
+        Me.BodyTypeLabel.Size = New System.Drawing.Size(32, 16)
+        Me.BodyTypeLabel.TabIndex = 15
+        Me.BodyTypeLabel.Text = "SUV"
+        '
+        'SeatingCapacityLabel
+        '
+        Me.SeatingCapacityLabel.AutoSize = True
+        Me.SeatingCapacityLabel.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SeatingCapacityLabel.Location = New System.Drawing.Point(228, 160)
+        Me.SeatingCapacityLabel.Name = "SeatingCapacityLabel"
+        Me.SeatingCapacityLabel.Size = New System.Drawing.Size(14, 16)
+        Me.SeatingCapacityLabel.TabIndex = 14
+        Me.SeatingCapacityLabel.Text = "5"
+        '
+        'MaxPowerLabel
+        '
+        Me.MaxPowerLabel.AutoSize = True
+        Me.MaxPowerLabel.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaxPowerLabel.Location = New System.Drawing.Point(224, 135)
+        Me.MaxPowerLabel.Name = "MaxPowerLabel"
+        Me.MaxPowerLabel.Size = New System.Drawing.Size(123, 16)
+        Me.MaxPowerLabel.TabIndex = 13
+        Me.MaxPowerLabel.Text = "88.50bhp@6000rpm"
+        '
+        'FuelTypeLabel
+        '
+        Me.FuelTypeLabel.AutoSize = True
+        Me.FuelTypeLabel.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FuelTypeLabel.Location = New System.Drawing.Point(224, 106)
+        Me.FuelTypeLabel.Name = "FuelTypeLabel"
+        Me.FuelTypeLabel.Size = New System.Drawing.Size(90, 16)
+        Me.FuelTypeLabel.TabIndex = 12
+        Me.FuelTypeLabel.Text = "Petrol / Diesel"
+        '
+        'TransmissionLabel
+        '
+        Me.TransmissionLabel.AutoSize = True
+        Me.TransmissionLabel.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TransmissionLabel.Location = New System.Drawing.Point(224, 79)
+        Me.TransmissionLabel.Name = "TransmissionLabel"
+        Me.TransmissionLabel.Size = New System.Drawing.Size(117, 16)
+        Me.TransmissionLabel.TabIndex = 11
+        Me.TransmissionLabel.Text = "Manual / Automatic"
+        '
+        'MileageLabel
+        '
+        Me.MileageLabel.AutoSize = True
+        Me.MileageLabel.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MileageLabel.Location = New System.Drawing.Point(224, 58)
+        Me.MileageLabel.Name = "MileageLabel"
+        Me.MileageLabel.Size = New System.Drawing.Size(94, 16)
+        Me.MileageLabel.TabIndex = 10
+        Me.MileageLabel.Text = "17.7 - 21.8 Kmpl"
+        '
+        'EngineLabel
+        '
+        Me.EngineLabel.AutoSize = True
+        Me.EngineLabel.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EngineLabel.Location = New System.Drawing.Point(226, 35)
+        Me.EngineLabel.Name = "EngineLabel"
+        Me.EngineLabel.Size = New System.Drawing.Size(88, 16)
+        Me.EngineLabel.TabIndex = 9
+        Me.EngineLabel.Text = "1482 - 1497 CC"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(7, 183)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(64, 16)
+        Me.Label12.TabIndex = 8
+        Me.Label12.Text = "Body Type"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(7, 158)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(101, 16)
+        Me.Label11.TabIndex = 7
+        Me.Label11.Text = "Seating Capacity"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(7, 132)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(71, 16)
+        Me.Label10.TabIndex = 6
+        Me.Label10.Text = "Max Power"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(7, 106)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(61, 16)
+        Me.Label9.TabIndex = 5
+        Me.Label9.Text = "Fuel Type"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(7, 81)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(84, 16)
+        Me.Label8.TabIndex = 4
+        Me.Label8.Text = "Transmission"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(7, 69)
+        Me.Label5.Location = New System.Drawing.Point(7, 60)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(52, 16)
         Me.Label5.TabIndex = 3
@@ -361,142 +482,45 @@ Partial Class Individual_Car
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(7, 44)
+        Me.Label6.Location = New System.Drawing.Point(7, 38)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(46, 16)
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Engine"
         '
-        'Label7
+        'CarTitle3
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(5, 3)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(153, 30)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "Hyundai Creta"
+        Me.CarTitle3.AutoSize = True
+        Me.CarTitle3.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.CarTitle3.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CarTitle3.Location = New System.Drawing.Point(5, 3)
+        Me.CarTitle3.Name = "CarTitle3"
+        Me.CarTitle3.Size = New System.Drawing.Size(153, 30)
+        Me.CarTitle3.TabIndex = 0
+        Me.CarTitle3.Text = "Hyundai Creta"
         '
-        'Label8
+        'back_icon
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(7, 95)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(84, 16)
-        Me.Label8.TabIndex = 4
-        Me.Label8.Text = "Transmission"
+        Me.back_icon.Image = CType(resources.GetObject("back_icon.Image"), System.Drawing.Image)
+        Me.back_icon.Location = New System.Drawing.Point(906, 12)
+        Me.back_icon.Name = "back_icon"
+        Me.back_icon.Size = New System.Drawing.Size(35, 33)
+        Me.back_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.back_icon.TabIndex = 46
+        Me.back_icon.TabStop = False
         '
-        'Label9
+        'CustReviewLabel
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(7, 123)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(61, 16)
-        Me.Label9.TabIndex = 5
-        Me.Label9.Text = "Fuel Type"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(7, 152)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(71, 16)
-        Me.Label10.TabIndex = 6
-        Me.Label10.Text = "Max Power"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(7, 182)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(101, 16)
-        Me.Label11.TabIndex = 7
-        Me.Label11.Text = "Seating Capacity"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(7, 210)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(64, 16)
-        Me.Label12.TabIndex = 8
-        Me.Label12.Text = "Body Type"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(224, 210)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(32, 16)
-        Me.Label13.TabIndex = 15
-        Me.Label13.Text = "SUV"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(224, 182)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(35, 16)
-        Me.Label14.TabIndex = 14
-        Me.Label14.Text = "FWD"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(224, 152)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(14, 16)
-        Me.Label15.TabIndex = 13
-        Me.Label15.Text = "5"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(224, 123)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(90, 16)
-        Me.Label16.TabIndex = 12
-        Me.Label16.Text = "Petrol / Diesel"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(224, 95)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(117, 16)
-        Me.Label17.TabIndex = 11
-        Me.Label17.Text = "Manual / Automatic"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(224, 69)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(94, 16)
-        Me.Label18.TabIndex = 10
-        Me.Label18.Text = "17.7 - 21.8 Kmpl"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Bahnschrift", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(224, 44)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(88, 16)
-        Me.Label19.TabIndex = 9
-        Me.Label19.Text = "1482 - 1497 CC"
+        Me.CustReviewLabel.AutoSize = True
+        Me.CustReviewLabel.Font = New System.Drawing.Font("Bahnschrift", 9.75!)
+        Me.CustReviewLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.CustReviewLabel.LinkColor = System.Drawing.Color.Black
+        Me.CustReviewLabel.Location = New System.Drawing.Point(44, 231)
+        Me.CustReviewLabel.Name = "CustReviewLabel"
+        Me.CustReviewLabel.Size = New System.Drawing.Size(142, 16)
+        Me.CustReviewLabel.TabIndex = 47
+        Me.CustReviewLabel.TabStop = True
+        Me.CustReviewLabel.Text = "4.6/5 Customer Ratings"
         '
         'Individual_Car
         '
@@ -504,25 +528,28 @@ Partial Class Individual_Car
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(990, 568)
+        Me.Controls.Add(Me.back_icon)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.CarImage)
+        Me.Controls.Add(Me.CarMainTitle)
         Me.Controls.Add(Me.Exit_btn)
         Me.Controls.Add(Me.Sidebar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Individual_Car"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CarImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.back_icon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -531,7 +558,6 @@ Partial Class Individual_Car
     Friend WithEvents Exit_btn As Button
     Friend WithEvents Sidebar As Panel
     Friend WithEvents Login_info1 As Button
-    Friend WithEvents MPVbel As Button
     Friend WithEvents MUVbel As Button
     Friend WithEvents SUVbel As Button
     Friend WithEvents Sedanbel As Button
@@ -541,14 +567,13 @@ Partial Class Individual_Car
     Friend WithEvents Registerlink As LinkLabel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents CarMainTitle As Label
+    Friend WithEvents CarImage As PictureBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents CarTitle2 As Label
+    Friend WithEvents DescriptionRichtext As RichTextBox
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents PriceLabel As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
@@ -556,13 +581,17 @@ Partial Class Individual_Car
     Friend WithEvents Label8 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label19 As Label
+    Friend WithEvents CarTitle3 As Label
+    Friend WithEvents BodyTypeLabel As Label
+    Friend WithEvents SeatingCapacityLabel As Label
+    Friend WithEvents MaxPowerLabel As Label
+    Friend WithEvents FuelTypeLabel As Label
+    Friend WithEvents TransmissionLabel As Label
+    Friend WithEvents MileageLabel As Label
+    Friend WithEvents EngineLabel As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents DriverTypeLabel As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents back_icon As PictureBox
+    Friend WithEvents CustReviewLabel As LinkLabel
 End Class
