@@ -137,4 +137,4 @@ CREATE TABLE admin (
 );
 
 INSERT INTO admin (Role, Department, FirstName, LastName, Email, Address, ContactNumber, Username, Password)
-VALUES ('Manager', 'Sales', 'John', 'Doe', 'johndoe@example.com', '123 Main Street', '1234567890', 'johndoe', 'password123');
+VALUES ('Manager', 'Sales', 'Anthony', 'Pinto', 'anthonypinto@example.com', '123 Main Street', '1234567890', 'Pinto', 'password123');
