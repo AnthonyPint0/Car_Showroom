@@ -121,7 +121,7 @@
   <data name="Panel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAuQAAALkCAYAAABHpCBlAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAA/7JJREFUeF7sneGVJD2uXPenzJApMkWeyBSZIlNkirR33t7dmBgwK7MqM6u6p3VO
+        DgAACw4BQL7hQQAA/7JJREFUeF7sneGVJD2uXPenzJApMkWeyBSZIlNkirR33t7dmBgwK7MqM6u6p3VO
         iEwQBAMBkNXzvaejf/zz//y3s/Hf//t//zX+7//9v//b//t//++//d//+39/jf/zf/7PP3zPRp7JvNfh
         xtrEBZt7gXlcBblwpudefeazeMQrtWP8P//n/4x+Z8Izt7TDvuJir4A7ehMe8FGjO848E+j7P/7H//gF
         czAf1q7sXWJ75ko7bHLptUfvwtn4X//rf/1bG86948yrkNoxktvkdybybk7a0YMrLtkrjFf2Jejz7jjz
@@ -3033,7 +3033,7 @@
   <data name="PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAskAAADOCAYAAADMr598AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAADt0RVh0Q29tbWVudAB4cjpkOkRBRjhtQUpucDhBOjMsajo1MDIwODA2MTUyOTYw
+        vwAADr8BOAVTJAAAADt0RVh0Q29tbWVudAB4cjpkOkRBRjhtQUpucDhBOjMsajo1MDIwODA2MTUyOTYw
         NDUyODU1LHQ6MjQwMjEyMTYqsKDmAAD/a0lEQVR4Xuz955/dtrX2D+cven73fZ8kbuq9914syZZ7l3uL
         u2XJluQu9+44cY2TnBQnsZ160nOSuKlL03tTnRk5eNa1QJAg9iIJcnPvGcl+8f1wswELhcDFtQHwG/+/
         b/1T/X/fBv9S//eMf6v/Y7bE/z3zk2h75r/V/zvrU/6NreH/nkX7Z3+WzDma/zrn83IZgy2FO+ZT2vrx
@@ -4380,7 +4380,7 @@
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAigAAADBCAYAAADl2UvmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAA/7JJREFUeF7s/Ym7ZllVJvre/+K2dau0zj3VnLrX4xG1TpVVVndUtLx1q5S+xwTJ
+        DgAACw4BQL7hQQAA/7JJREFUeF7s/Ym7ZllVJvre/+K2dau0zj3VnLrX4xG1TpVVVndUtLx1q5S+xwTJ
         RHqFRKRLMAFBDSBBpIekMQHBRBpNEkha6XsETRDpm0TaiNg7dkTkd8dvrDlWzm/t9e29IyMiMzJjxRPv
         s769mrlmM+YY7xxzzLn+T7/yf/7hasGCBQsWLFiw4FzCQlAWLFiwYMGCBeccFoKyYMGCBQsWLDjnsBCU
         BQsWLFiwYME5h4WgLFiwYMGCBQvOOSwEZcGCBQsWLFhwzmEhKAsWLFiwYMGCcw4LQVmwYMGCBQsWnHNY

@@ -25,7 +25,7 @@ Partial Class Individual_Car
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Individual_Car))
         Me.Exit_btn = New System.Windows.Forms.Button()
         Me.Sidebar = New System.Windows.Forms.Panel()
-        Me.Login_info1 = New System.Windows.Forms.Button()
+        Me.Profile = New System.Windows.Forms.Button()
         Me.MUVbel = New System.Windows.Forms.Button()
         Me.SUVbel = New System.Windows.Forms.Button()
         Me.Sedanbel = New System.Windows.Forms.Button()
@@ -38,6 +38,7 @@ Partial Class Individual_Car
         Me.CarMainTitle = New System.Windows.Forms.Label()
         Me.CarImage = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CustReviewLabel = New System.Windows.Forms.LinkLabel()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PriceLabel = New System.Windows.Forms.Label()
         Me.DescriptionRichtext = New System.Windows.Forms.RichTextBox()
@@ -61,7 +62,6 @@ Partial Class Individual_Car
         Me.Label6 = New System.Windows.Forms.Label()
         Me.CarTitle3 = New System.Windows.Forms.Label()
         Me.back_icon = New System.Windows.Forms.PictureBox()
-        Me.CustReviewLabel = New System.Windows.Forms.LinkLabel()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,7 +89,7 @@ Partial Class Individual_Car
         '
         Me.Sidebar.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(243, Byte), Integer))
         Me.Sidebar.BackgroundImage = CType(resources.GetObject("Sidebar.BackgroundImage"), System.Drawing.Image)
-        Me.Sidebar.Controls.Add(Me.Login_info1)
+        Me.Sidebar.Controls.Add(Me.Profile)
         Me.Sidebar.Controls.Add(Me.MUVbel)
         Me.Sidebar.Controls.Add(Me.SUVbel)
         Me.Sidebar.Controls.Add(Me.Sedanbel)
@@ -105,18 +105,18 @@ Partial Class Individual_Car
         Me.Sidebar.Size = New System.Drawing.Size(194, 571)
         Me.Sidebar.TabIndex = 40
         '
-        'Login_info1
+        'Profile
         '
-        Me.Login_info1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Login_info1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Login_info1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Login_info1.ForeColor = System.Drawing.Color.White
-        Me.Login_info1.Location = New System.Drawing.Point(4, 508)
-        Me.Login_info1.Name = "Login_info1"
-        Me.Login_info1.Size = New System.Drawing.Size(188, 36)
-        Me.Login_info1.TabIndex = 22
-        Me.Login_info1.Text = "Guest"
-        Me.Login_info1.UseVisualStyleBackColor = False
+        Me.Profile.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Profile.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Profile.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Profile.ForeColor = System.Drawing.Color.White
+        Me.Profile.Location = New System.Drawing.Point(4, 508)
+        Me.Profile.Name = "Profile"
+        Me.Profile.Size = New System.Drawing.Size(188, 36)
+        Me.Profile.TabIndex = 22
+        Me.Profile.Text = "Guest"
+        Me.Profile.UseVisualStyleBackColor = False
         '
         'MUVbel
         '
@@ -242,7 +242,7 @@ Partial Class Individual_Car
         'CarImage
         '
         Me.CarImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CarImage.Image = CType(resources.GetObject("CarImage.Image"), System.Drawing.Image)
+        Me.CarImage.Image = Global.Car_Showroom.My.Resources.Resources.CretaC1
         Me.CarImage.Location = New System.Drawing.Point(208, 61)
         Me.CarImage.Name = "CarImage"
         Me.CarImage.Size = New System.Drawing.Size(398, 263)
@@ -262,6 +262,19 @@ Partial Class Individual_Car
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(359, 265)
         Me.Panel1.TabIndex = 44
+        '
+        'CustReviewLabel
+        '
+        Me.CustReviewLabel.AutoSize = True
+        Me.CustReviewLabel.Font = New System.Drawing.Font("Bahnschrift", 9.75!)
+        Me.CustReviewLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.CustReviewLabel.LinkColor = System.Drawing.Color.Black
+        Me.CustReviewLabel.Location = New System.Drawing.Point(44, 231)
+        Me.CustReviewLabel.Name = "CustReviewLabel"
+        Me.CustReviewLabel.Size = New System.Drawing.Size(142, 16)
+        Me.CustReviewLabel.TabIndex = 47
+        Me.CustReviewLabel.TabStop = True
+        Me.CustReviewLabel.Text = "4.6/5 Customer Ratings"
         '
         'PictureBox4
         '
@@ -509,19 +522,6 @@ Partial Class Individual_Car
         Me.back_icon.TabIndex = 46
         Me.back_icon.TabStop = False
         '
-        'CustReviewLabel
-        '
-        Me.CustReviewLabel.AutoSize = True
-        Me.CustReviewLabel.Font = New System.Drawing.Font("Bahnschrift", 9.75!)
-        Me.CustReviewLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.CustReviewLabel.LinkColor = System.Drawing.Color.Black
-        Me.CustReviewLabel.Location = New System.Drawing.Point(44, 231)
-        Me.CustReviewLabel.Name = "CustReviewLabel"
-        Me.CustReviewLabel.Size = New System.Drawing.Size(142, 16)
-        Me.CustReviewLabel.TabIndex = 47
-        Me.CustReviewLabel.TabStop = True
-        Me.CustReviewLabel.Text = "4.6/5 Customer Ratings"
-        '
         'Individual_Car
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -557,7 +557,7 @@ Partial Class Individual_Car
 
     Friend WithEvents Exit_btn As Button
     Friend WithEvents Sidebar As Panel
-    Friend WithEvents Login_info1 As Button
+    Friend WithEvents Profile As Button
     Friend WithEvents MUVbel As Button
     Friend WithEvents SUVbel As Button
     Friend WithEvents Sedanbel As Button

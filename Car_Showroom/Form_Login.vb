@@ -46,6 +46,15 @@ Public Class Form_Login
     End Sub
 
     Private Sub PerformLogin()
+        If username_txt.Text = "admin" And username_txt.Text = "admin" Then
+            Me.Hide()
+            Admin_Login.Show()
+            Admin_Login.username_txt.Text = ""
+            Admin_Login.Password_txt.Text = ""
+            username_txt.Text = ""
+            Password_txt.Text = ""
+            Exit Sub
+        End If
         Try
             ' Open the database connection
             con.Open()
@@ -67,7 +76,7 @@ Public Class Form_Login
                     Mainform.Show() ' To show the main form
                     Mainform.loggedIn = True ' Set loggedIn to True
                     loggedIn = True ' Set loggedIn to True
-                    Mainform.Login_info1.Text = "" & username_txt.Text
+                    Mainform.Profile.Text = "" & username_txt.Text
                     Mainform.UpdateUI() ' Update the UI in MainForm
                 Else
                     ' User authentication failed
@@ -100,6 +109,8 @@ Public Class Form_Login
         Form_Register.Show()
         Mainform.loggedIn = False
         loggedIn = False ' Set loggedIn to False
+        username_txt.Text = ""
+        Password_txt.Text = ""
     End Sub
 
     Private Sub Remove_user_btn_Click(sender As Object, e As EventArgs) Handles Remove_user_btn.Click
@@ -151,9 +162,11 @@ Public Class Form_Login
     Private Sub guestL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles guestL.LinkClicked
         Me.Hide()
         Mainform.Show()
-        Mainform.Login_info1.Text = ""
+        Mainform.Profile.Text = ""
         Mainform.loggedIn = False
         loggedIn = False
         Mainform.UpdateUI()
+        username_txt.Text = ""
+        Password_txt.Text = ""
     End Sub
 End Class

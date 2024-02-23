@@ -117,4 +117,80 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CarensC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CarensC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PunchC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PunchC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SeltosC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SeltosC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SwiftC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SwiftC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tata Tigor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tata Tigor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="i10_NiosC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\i10_NiosC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CretaC11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CretaC11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BalenoC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BalenoC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InnovaC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InnovaC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScorpioC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScorpioC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ErtigaC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ErtigaC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CretaC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CretaC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XUV300C1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XUV300C1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BoleroC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BoleroC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CiazC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CiazC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VernaC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VernaC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AuraC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AuraC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KwidC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KwidC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WagonRC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WagonRC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BrezzaC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BrezzaC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MagniteC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MagniteC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NexonC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NexonC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DzireC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DzireC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AmazeC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AmazeC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TriberC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TriberC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

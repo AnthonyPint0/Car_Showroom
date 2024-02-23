@@ -51,6 +51,15 @@ Public Class Admin_Login
     End Sub
 
     Private Sub PerformLogin()
+        If username_txt.Text = "admin" And username_txt.Text = "admin" Then
+            Me.Hide()
+            Admin_Register.Show()
+            username_txt.Text = ""
+            Password_txt.Text = ""
+            Form_Login.username_txt.Text = ""
+            Form_Login.Password_txt.Text = ""
+            Exit Sub
+        End If
         Try
             ' Open the database connection
             con.Open()
@@ -69,11 +78,11 @@ Public Class Admin_Login
                     ' User is authenticated
                     MessageBox.Show("Login successful")
                     Me.Hide() ' To hide the login form
-                    Mainform.Show() ' To show the main form
-                    Mainform.loggedIn = True ' Set loggedIn to True
+                    Admin_Mainform.Show() ' To show the main form
+                    Admin_Mainform.loggedIn = True ' Set loggedIn to True
                     loggedIn = True ' Set loggedIn to True
-                    Mainform.Login_info1.Text = "" & username_txt.Text
-                    Mainform.UpdateUI() ' Update the UI in MainForm
+                    Admin_Mainform.Profile.Text = "" & username_txt.Text
+                    Admin_Mainform.UpdateUI() ' Update the UI in MainForm
                 Else
                     ' User authentication failed
                     MessageBox.Show("Invalid username or password")
@@ -100,13 +109,6 @@ Public Class Admin_Login
         End If
     End Sub
 
-    Private Sub Registerlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Registerlink.LinkClicked
-        Me.Hide()
-        Form_Register.Show()
-        Mainform.loggedIn = False
-        loggedIn = False ' Set loggedIn to False
-    End Sub
-
     Private Sub Remove_user_btn_Click(sender As Object, e As EventArgs) Handles Remove_user_btn.Click
         ' Get the username from the user (you may use a TextBox or another input method)
         Dim usernameToRemove As String = InputBox("Enter the username to remove:", "Remove User")
@@ -121,7 +123,7 @@ Public Class Admin_Login
             con.Open()
 
             ' Execute SQL command to delete user by username
-            Dim sql As String = "DELETE FROM customer WHERE Username = @Username"
+            Dim sql As String = "DELETE FROM admin WHERE Username = @Username"
             Using cmd As New SqlCommand(sql, con)
                 ' Replace the parameter with the actual value
                 cmd.Parameters.AddWithValue("@Username", username)
@@ -149,11 +151,18 @@ Public Class Admin_Login
         Password_txt.PasswordChar = "*" ' Hide characters
     End Sub
 
+    Private Sub guestL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles guestL.LinkClicked
+        Me.Hide()
+        Form_Login.Show()
+        Form_Login.username_txt.Text = ""
+        Form_Login.Password_txt.Text = ""
+    End Sub
+
 
     'Private Sub guestL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles guestL.LinkClicked
     'Me.Hide()
     '   Mainform.Show()
-    '    Mainform.Login_info1.Text = ""
+    '    Mainform.Profile.Text = ""
     '   Mainform.loggedIn = False
     '  loggedIn = False
     ' Mainform.UpdateUI()

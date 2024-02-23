@@ -73,6 +73,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_Mainform.Designer.vb">
+      <DependentUpon>Admin_Mainform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Mainform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Register.Designer.vb">
+      <DependentUpon>Admin_Register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Register.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Car_ShowroomADataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,6 +97,12 @@
     </Compile>
     <Compile Include="Car_ShowroomDataSet1.vb">
       <DependentUpon>Car_ShowroomDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Login.Designer.vb">
+      <DependentUpon>Admin_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Login.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Individual_Car.Designer.vb">
       <DependentUpon>Individual_Car.vb</DependentUpon>
@@ -128,6 +146,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin_Login.resx">
+      <DependentUpon>Admin_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Mainform.resx">
+      <DependentUpon>Admin_Mainform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Register.resx">
+      <DependentUpon>Admin_Register.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.vb</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +207,81 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CretaC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BalenoC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PunchC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WagonRC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SwiftC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i10_NiosC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KwidC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DzireC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AmazeC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AuraC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CiazC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tata Tigor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VernaC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrezzaC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NexonC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CretaC11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeltosC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XUV300C1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MagniteC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BoleroC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InnovaC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ErtigaC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarensC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScorpioC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TriberC1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

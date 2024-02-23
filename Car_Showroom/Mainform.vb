@@ -62,44 +62,46 @@ Public Class Mainform
         Form_Login.Show()
         Registerlink.Visible = True
         Logout.Text = ""
-        Login_info1.Visible = False
-        Login_info1.Visible = False
+        Profile.Visible = False
+        Profile.Visible = False
         Logout.Visible = False
         Form_Login.loggedIn = False
+        Form_Login.username_txt.Text = ""
+        Form_Login.Password_txt.Text = ""
     End Sub
 
-    Private Sub Login_info1_Paint(sender As Object, e As PaintEventArgs)
+    Private Sub Profile_Paint(sender As Object, e As PaintEventArgs)
         ' Define the region for rounded edges
-        Dim panelRegion As New Region(New Rectangle(0, 0, Login_info1.Width, Login_info1.Height))
+        Dim panelRegion As New Region(New Rectangle(0, 0, Profile.Width, Profile.Height))
         Dim panelPath As New GraphicsPath()
         Dim radius As Integer = 10 ' Adjust the radius to control the roundness of edges
 
         ' Draw rounded rectangle
         panelPath.AddArc(New Rectangle(0, 0, 2 * radius, 2 * radius), 180, 90)
-        panelPath.AddArc(New Rectangle(Login_info1.Width - 2 * radius, 0, 2 * radius, 2 * radius), 270, 90)
-        panelPath.AddArc(New Rectangle(Login_info1.Width - 2 * radius, Login_info1.Height - 2 * radius, 2 * radius, 2 * radius), 0, 90)
-        panelPath.AddArc(New Rectangle(0, Login_info1.Height - 2 * radius, 2 * radius, 2 * radius), 90, 90)
+        panelPath.AddArc(New Rectangle(Profile.Width - 2 * radius, 0, 2 * radius, 2 * radius), 270, 90)
+        panelPath.AddArc(New Rectangle(Profile.Width - 2 * radius, Profile.Height - 2 * radius, 2 * radius, 2 * radius), 0, 90)
+        panelPath.AddArc(New Rectangle(0, Profile.Height - 2 * radius, 2 * radius, 2 * radius), 90, 90)
         panelPath.CloseAllFigures()
 
         ' Apply the rounded rectangle region to the panel
         panelRegion = New Region(panelPath)
-        Login_info1.Region = panelRegion
+        Profile.Region = panelRegion
 
         ' Optionally, you can set a background color or image for the panel
-        ' Login_info1.BackColor = Color.White
-        ' Login_info1.BackgroundImage = YourImage
+        ' Profile.BackColor = Color.White
+        ' Profile.BackgroundImage = YourImage
     End Sub
 
     Public Sub UpdateUI()
         If loggedIn Then
             Registerlink.Visible = False
-            Login_info1.Visible = True
+            Profile.Visible = True
             Logout.Text = "Log out"
             Logout.Visible = True
         Else
             Registerlink.Visible = True
             Logout.Text = ""
-            Login_info1.Visible = False
+            Profile.Visible = False
             Logout.Visible = False
         End If
     End Sub
@@ -123,6 +125,8 @@ Public Class Mainform
             Form_Login.Show()
             loggedIn = False
             Form_Login.loggedIn = False
+            Form_Login.username_txt.Text = ""
+            Form_Login.Password_txt.Text = ""
         End If
     End Sub
     Private Sub Allbel_Click(sender As Object, e As EventArgs) Handles Allbel.Click
@@ -227,7 +231,7 @@ Public Class Mainform
     Public Sub NextForm(carID)
         Individual_Car.Show() ' To show the main form
         Individual_Car.loggedIn = loggedIn ' Set loggedIn to True
-        Individual_Car.Login_info1.Text = "" & Login_info1.Text
+        Individual_Car.Profile.Text = "" & Profile.Text
         Individual_Car.UpdateUI() ' Update the UI in Individual_Car
         Individual_Car.DisplayCarDetails(carID)
     End Sub
@@ -399,5 +403,13 @@ Public Class Mainform
         Individual_Car.carID = "TriberC1"
         carID = "TriberC1"
         NextForm(carID)
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+
+    End Sub
+
+    Private Sub PictureBox26_Click(sender As Object, e As EventArgs) Handles PictureBox26.Click
+
     End Sub
 End Class
