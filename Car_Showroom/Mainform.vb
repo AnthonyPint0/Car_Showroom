@@ -234,6 +234,7 @@ Public Class Mainform
         Individual_Car.Profile.Text = "" & Profile.Text
         Individual_Car.UpdateUI() ' Update the UI in Individual_Car
         Individual_Car.DisplayCarDetails(carID)
+        Individual_Car.ColorsDisplay(carID)
     End Sub
 
     Private Sub BalenoBtn_Click(sender As Object, e As EventArgs) Handles BalenoBtn.Click

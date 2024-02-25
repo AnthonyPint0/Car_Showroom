@@ -40,6 +40,8 @@ Public Class Admin_Mainform
         End If
     End Sub
     Private Sub Admin_Mainform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Car_ShowroomADataSet.InventoryStatus' table. You can move, or remove it, as needed.
+        Me.InventoryStatusTableAdapter.Fill(Me.Car_ShowroomADataSet.InventoryStatus)
         UpdateUI()
         ' Set the "Car_Inventory" button as the initially selected button
         selectedButton = Car_Inventory
@@ -117,6 +119,7 @@ Public Class Admin_Mainform
     Private Sub Car_Inventory_Click(sender As Object, e As EventArgs) Handles Car_Inventory.Click, MyBase.Click
         ' Call the function to handle button clicks
         HandleButtonClick(Car_Inventory)
+        Car_InventoryGB.Visible = True
     End Sub
 
     Private Sub Customer_Management_Click(sender As Object, e As EventArgs) Handles Customer_Management.Click
@@ -186,6 +189,23 @@ Public Class Admin_Mainform
     End Sub
 
     Private Sub Profile_Click(sender As Object, e As EventArgs) Handles Profile.Click
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+
+    Private Sub MainPanel_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub Car_InventoryGB_Enter(sender As Object, e As EventArgs) Handles Car_InventoryGB.Enter
 
     End Sub
 End Class

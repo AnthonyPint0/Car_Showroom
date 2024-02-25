@@ -10,6 +10,10 @@ Public Class Individual_Car
     Private selectedButton As Button = Nothing
     Public CustReviewLink As String
     Public carID As String
+    Public colour1 As String
+    Public colour2 As String
+    Public colour3 As String
+
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
@@ -45,7 +49,7 @@ Public Class Individual_Car
 
     ' Define a connection string to connect to your SQL Server database
     Private connectionString As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
-
+    Dim a As String
     ' Define a method to retrieve and display car details based on CarID
     Public Sub DisplayCarDetails(ByVal carID As String)
         Dim imageName As String = carID ' Assuming carID contains "SwiftC1"
@@ -71,7 +75,7 @@ Public Class Individual_Car
                             ' Populate labels with the retrieved data
                             CarMainTitle.Text = reader("CarName").ToString()
                             CarTitle2.Text = reader("CarName").ToString()
-                            CarTitle3.Text = reader("CarName").ToString()
+                            Specification.Text = reader("CarName").ToString()
                             EngineLabel.Text = reader("Engine").ToString()
                             MileageLabel.Text = reader("Mileage").ToString()
                             TransmissionLabel.Text = reader("Transmission").ToString()
@@ -81,9 +85,49 @@ Public Class Individual_Car
                             DriverTypeLabel.Text = reader("DriverType").ToString()
                             BodyTypeLabel.Text = reader("BodyType").ToString()
                             DescriptionRichtext.Text = reader("Description").ToString()
-                            PriceLabel.Text = reader("Price").ToString()
+                            a = reader("Price").ToString()
+                            PriceLabel.Text = "₹ " & a & " /-"
                             CustReviewLabel.Text = reader("CustReview").ToString() & "/5 Customer Rating"
                             CustReviewLink = reader("CustReviewLink").ToString()
+                        Else
+                            ' If no rows are returned, display a message
+                            MessageBox.Show("No car found with the specified CarID.")
+                        End If
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            ' Handle any exceptions that may occur
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
+
+    Public Sub ColorsDisplay(ByVal carID As String)
+        Try
+            ' Create a SqlConnection using the connection string
+            Using connection As New SqlConnection(connectionString)
+                ' Open the connection
+                connection.Open()
+
+                ' Define a SQL query to retrieve car details based on CarID
+                Dim query As String = "SELECT * FROM CarColors WHERE CarId = @CarId"
+
+                ' Create a SqlCommand with the query and connection
+                Using command As New SqlCommand(query, connection)
+                    ' Add a parameter for CarID to the SqlCommand
+                    command.Parameters.AddWithValue("@CarId", carID)
+
+                    ' Execute the SQL query and retrieve the results
+                    Using reader As SqlDataReader = command.ExecuteReader()
+                        ' Check if there are any rows returned
+                        If reader.Read() Then
+                            ' Populate labels with the retrieved data
+                            Color1.Text = reader("Color1").ToString()
+                            Color2.Text = reader("Color2").ToString()
+                            Color3.Text = reader("Color3").ToString()
+                            Color1Pic.Image = My.Resources.ResourceManager.GetObject(Color1.Text)
+                            Color2Pic.Image = My.Resources.ResourceManager.GetObject(Color2.Text)
+                            Color3Pic.Image = My.Resources.ResourceManager.GetObject(Color3.Text)
                         Else
                             ' If no rows are returned, display a message
                             MessageBox.Show("No car found with the specified CarID.")
@@ -287,5 +331,13 @@ Public Class Individual_Car
 
     Private Sub CustReviewLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles CustReviewLabel.LinkClicked
         Process.Start(CustReviewLink)
+    End Sub
+
+    Private Sub Label24_Click(sender As Object, e As EventArgs) Handles Color1.Click
+
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles Color1Pic.Click
+
     End Sub
 End Class

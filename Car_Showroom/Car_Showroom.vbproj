@@ -283,5 +283,29 @@
   <ItemGroup>
     <None Include="Resources\TriberC1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sliver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beige.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Silver.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
