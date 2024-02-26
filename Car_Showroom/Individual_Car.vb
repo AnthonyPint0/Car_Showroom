@@ -145,11 +145,11 @@ Public Class Individual_Car
     Private Sub Individual_Car_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         UpdateUI()
         ' Set the "Allbel" button as the initially selected button
-        selectedButton = Allbel
-        Allbel.BackColor = Color.FromArgb(0, 0, 64) ' Set dark blue color for selected button
+        selectedButton = Homebel
+        Homebel.BackColor = Color.FromArgb(0, 0, 64) ' Set dark blue color for selected button
 
         ' Enable MouseEnter and MouseLeave events for all buttons except the selected one
-        For Each button As Button In {Allbel, Hatchbackbel, Sedanbel, SUVbel, MUVbel}
+        For Each button As Button In {Homebel}
             If button IsNot selectedButton Then
                 AddHandler button.MouseEnter, AddressOf Button_MouseEnter
                 AddHandler button.MouseLeave, AddressOf Button_MouseLeave
@@ -234,29 +234,9 @@ Public Class Individual_Car
             Form_Login.Password_txt.Text = ""
         End If
     End Sub
-    Private Sub Allbel_Click(sender As Object, e As EventArgs) Handles Allbel.Click
+    Private Sub Allbel_Click(sender As Object, e As EventArgs) Handles Homebel.Click
         ' Call the function to handle button clicks
-        HandleButtonClick(Allbel)
-    End Sub
-
-    Private Sub Hatchbackbel_Click(sender As Object, e As EventArgs) Handles Hatchbackbel.Click
-        ' Call the function to handle button clicks
-        HandleButtonClick(Hatchbackbel)
-    End Sub
-
-    Private Sub Sedanbel_Click(sender As Object, e As EventArgs) Handles Sedanbel.Click
-        ' Call the function to handle button clicks
-        HandleButtonClick(Sedanbel)
-    End Sub
-
-    Private Sub SUVbel_Click(sender As Object, e As EventArgs) Handles SUVbel.Click
-        ' Call the function to handle button clicks
-        HandleButtonClick(SUVbel)
-    End Sub
-
-    Private Sub MUVbel_Click(sender As Object, e As EventArgs) Handles MUVbel.Click
-        ' Call the function to handle button clicks
-        HandleButtonClick(MUVbel)
+        HandleButtonClick(Homebel)
     End Sub
 
     Private Sub HandleButtonClick(clickedButton As Button)
@@ -279,7 +259,7 @@ Public Class Individual_Car
         RemoveHandler clickedButton.MouseLeave, AddressOf Button_MouseLeave
 
         ' Enable MouseEnter and MouseLeave events for all other buttons
-        For Each button As Button In {Allbel, Hatchbackbel, Sedanbel, SUVbel, MUVbel}
+        For Each button As Button In {Homebel}
             If button IsNot clickedButton Then
                 AddHandler button.MouseEnter, AddressOf Button_MouseEnter
                 AddHandler button.MouseLeave, AddressOf Button_MouseLeave

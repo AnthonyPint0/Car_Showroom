@@ -151,8 +151,8 @@
   <data name="BrezzaC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BrezzaC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="i10_NiosC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\i10_NiosC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Silver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AuraC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AuraC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,6 +175,9 @@
   <data name="Beige" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Beige.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Sliver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sliver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -189,6 +192,9 @@
   </data>
   <data name="TriberC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TriberC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="i10_NiosC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\i10_NiosC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="InnovaC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InnovaC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,13 +214,19 @@
   <data name="SeltosC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SeltosC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="userImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="header" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\header.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ScorpioC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ScorpioC1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CretaC11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CretaC11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Silver" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Silver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="yellow_O" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_O.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

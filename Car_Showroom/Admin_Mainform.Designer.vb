@@ -27,24 +27,24 @@ Partial Class Admin_Mainform
         Me.Exit_btn = New System.Windows.Forms.Button()
         Me.Sidebar = New System.Windows.Forms.Panel()
         Me.Profile = New System.Windows.Forms.Button()
-        Me.Settings = New System.Windows.Forms.Button()
-        Me.Employee_Management = New System.Windows.Forms.Button()
         Me.Sales_Reports = New System.Windows.Forms.Button()
-        Me.Customer_Management = New System.Windows.Forms.Button()
         Me.Car_Inventory = New System.Windows.Forms.Button()
         Me.Logout = New System.Windows.Forms.Label()
         Me.Registerlink = New System.Windows.Forms.LinkLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CarIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AvailableCountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MaxCapacityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.InventoryStatusBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Car_ShowroomADataSet = New Car_Showroom.Car_ShowroomADataSet()
         Me.InventoryStatusTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.InventoryStatusTableAdapter()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Car_InventoryGB = New System.Windows.Forms.GroupBox()
-        Me.CarIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AvailableCountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MaxCapacityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Customer_Management = New System.Windows.Forms.Button()
+        Me.Employee_Management = New System.Windows.Forms.Button()
+        Me.Settings = New System.Windows.Forms.Button()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,32 +101,6 @@ Partial Class Admin_Mainform
         Me.Profile.Text = "Guest"
         Me.Profile.UseVisualStyleBackColor = False
         '
-        'Settings
-        '
-        Me.Settings.BackColor = System.Drawing.Color.Transparent
-        Me.Settings.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Settings.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Settings.ForeColor = System.Drawing.Color.White
-        Me.Settings.Location = New System.Drawing.Point(0, 359)
-        Me.Settings.Name = "Settings"
-        Me.Settings.Size = New System.Drawing.Size(194, 36)
-        Me.Settings.TabIndex = 20
-        Me.Settings.Text = "Settings"
-        Me.Settings.UseVisualStyleBackColor = False
-        '
-        'Employee_Management
-        '
-        Me.Employee_Management.BackColor = System.Drawing.Color.Transparent
-        Me.Employee_Management.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Employee_Management.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Employee_Management.ForeColor = System.Drawing.Color.White
-        Me.Employee_Management.Location = New System.Drawing.Point(0, 311)
-        Me.Employee_Management.Name = "Employee_Management"
-        Me.Employee_Management.Size = New System.Drawing.Size(194, 36)
-        Me.Employee_Management.TabIndex = 19
-        Me.Employee_Management.Text = "Employee Management"
-        Me.Employee_Management.UseVisualStyleBackColor = False
-        '
         'Sales_Reports
         '
         Me.Sales_Reports.BackColor = System.Drawing.Color.Transparent
@@ -139,19 +113,6 @@ Partial Class Admin_Mainform
         Me.Sales_Reports.TabIndex = 18
         Me.Sales_Reports.Text = "Sales Reports"
         Me.Sales_Reports.UseVisualStyleBackColor = False
-        '
-        'Customer_Management
-        '
-        Me.Customer_Management.BackColor = System.Drawing.Color.Transparent
-        Me.Customer_Management.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Customer_Management.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Customer_Management.ForeColor = System.Drawing.Color.White
-        Me.Customer_Management.Location = New System.Drawing.Point(0, 199)
-        Me.Customer_Management.Name = "Customer_Management"
-        Me.Customer_Management.Size = New System.Drawing.Size(194, 55)
-        Me.Customer_Management.TabIndex = 17
-        Me.Customer_Management.Text = "Customer Management"
-        Me.Customer_Management.UseVisualStyleBackColor = False
         '
         'Car_Inventory
         '
@@ -226,6 +187,33 @@ Partial Class Admin_Mainform
         Me.DataGridView1.Size = New System.Drawing.Size(645, 360)
         Me.DataGridView1.TabIndex = 1
         '
+        'CarIDDataGridViewTextBoxColumn
+        '
+        Me.CarIDDataGridViewTextBoxColumn.DataPropertyName = "CarID"
+        Me.CarIDDataGridViewTextBoxColumn.HeaderText = "CarID"
+        Me.CarIDDataGridViewTextBoxColumn.MinimumWidth = 20
+        Me.CarIDDataGridViewTextBoxColumn.Name = "CarIDDataGridViewTextBoxColumn"
+        Me.CarIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CarIDDataGridViewTextBoxColumn.Width = 200
+        '
+        'AvailableCountDataGridViewTextBoxColumn
+        '
+        Me.AvailableCountDataGridViewTextBoxColumn.DataPropertyName = "AvailableCount"
+        Me.AvailableCountDataGridViewTextBoxColumn.HeaderText = "AvailableCount"
+        Me.AvailableCountDataGridViewTextBoxColumn.MinimumWidth = 40
+        Me.AvailableCountDataGridViewTextBoxColumn.Name = "AvailableCountDataGridViewTextBoxColumn"
+        Me.AvailableCountDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AvailableCountDataGridViewTextBoxColumn.Width = 200
+        '
+        'MaxCapacityDataGridViewTextBoxColumn
+        '
+        Me.MaxCapacityDataGridViewTextBoxColumn.DataPropertyName = "MaxCapacity"
+        Me.MaxCapacityDataGridViewTextBoxColumn.HeaderText = "MaxCapacity"
+        Me.MaxCapacityDataGridViewTextBoxColumn.MinimumWidth = 40
+        Me.MaxCapacityDataGridViewTextBoxColumn.Name = "MaxCapacityDataGridViewTextBoxColumn"
+        Me.MaxCapacityDataGridViewTextBoxColumn.ReadOnly = True
+        Me.MaxCapacityDataGridViewTextBoxColumn.Width = 200
+        '
         'InventoryStatusBindingSource
         '
         Me.InventoryStatusBindingSource.DataMember = "InventoryStatus"
@@ -263,29 +251,44 @@ Partial Class Admin_Mainform
         Me.Car_InventoryGB.TabStop = False
         Me.Car_InventoryGB.Text = "Car Inventory"
         '
-        'CarIDDataGridViewTextBoxColumn
+        'Customer_Management
         '
-        Me.CarIDDataGridViewTextBoxColumn.DataPropertyName = "CarID"
-        Me.CarIDDataGridViewTextBoxColumn.HeaderText = "CarID"
-        Me.CarIDDataGridViewTextBoxColumn.MinimumWidth = 20
-        Me.CarIDDataGridViewTextBoxColumn.Name = "CarIDDataGridViewTextBoxColumn"
-        Me.CarIDDataGridViewTextBoxColumn.Width = 200
+        Me.Customer_Management.BackColor = System.Drawing.Color.Transparent
+        Me.Customer_Management.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Customer_Management.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Customer_Management.ForeColor = System.Drawing.Color.White
+        Me.Customer_Management.Location = New System.Drawing.Point(0, 199)
+        Me.Customer_Management.Name = "Customer_Management"
+        Me.Customer_Management.Size = New System.Drawing.Size(194, 55)
+        Me.Customer_Management.TabIndex = 17
+        Me.Customer_Management.Text = "Customer Management"
+        Me.Customer_Management.UseVisualStyleBackColor = False
         '
-        'AvailableCountDataGridViewTextBoxColumn
+        'Employee_Management
         '
-        Me.AvailableCountDataGridViewTextBoxColumn.DataPropertyName = "AvailableCount"
-        Me.AvailableCountDataGridViewTextBoxColumn.HeaderText = "AvailableCount"
-        Me.AvailableCountDataGridViewTextBoxColumn.MinimumWidth = 40
-        Me.AvailableCountDataGridViewTextBoxColumn.Name = "AvailableCountDataGridViewTextBoxColumn"
-        Me.AvailableCountDataGridViewTextBoxColumn.Width = 200
+        Me.Employee_Management.BackColor = System.Drawing.Color.Transparent
+        Me.Employee_Management.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Employee_Management.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Employee_Management.ForeColor = System.Drawing.Color.White
+        Me.Employee_Management.Location = New System.Drawing.Point(0, 311)
+        Me.Employee_Management.Name = "Employee_Management"
+        Me.Employee_Management.Size = New System.Drawing.Size(194, 36)
+        Me.Employee_Management.TabIndex = 19
+        Me.Employee_Management.Text = "Employee Management"
+        Me.Employee_Management.UseVisualStyleBackColor = False
         '
-        'MaxCapacityDataGridViewTextBoxColumn
+        'Settings
         '
-        Me.MaxCapacityDataGridViewTextBoxColumn.DataPropertyName = "MaxCapacity"
-        Me.MaxCapacityDataGridViewTextBoxColumn.HeaderText = "MaxCapacity"
-        Me.MaxCapacityDataGridViewTextBoxColumn.MinimumWidth = 40
-        Me.MaxCapacityDataGridViewTextBoxColumn.Name = "MaxCapacityDataGridViewTextBoxColumn"
-        Me.MaxCapacityDataGridViewTextBoxColumn.Width = 200
+        Me.Settings.BackColor = System.Drawing.Color.Transparent
+        Me.Settings.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Settings.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Settings.ForeColor = System.Drawing.Color.White
+        Me.Settings.Location = New System.Drawing.Point(0, 359)
+        Me.Settings.Name = "Settings"
+        Me.Settings.Size = New System.Drawing.Size(194, 36)
+        Me.Settings.TabIndex = 20
+        Me.Settings.Text = "Settings"
+        Me.Settings.UseVisualStyleBackColor = False
         '
         'Admin_Mainform
         '
@@ -315,10 +318,7 @@ Partial Class Admin_Mainform
     Friend WithEvents Exit_btn As Button
     Friend WithEvents Sidebar As Panel
     Friend WithEvents Profile As Button
-    Friend WithEvents Settings As Button
-    Friend WithEvents Employee_Management As Button
     Friend WithEvents Sales_Reports As Button
-    Friend WithEvents Customer_Management As Button
     Friend WithEvents Car_Inventory As Button
     Friend WithEvents Logout As Label
     Friend WithEvents Registerlink As LinkLabel
@@ -333,4 +333,7 @@ Partial Class Admin_Mainform
     Friend WithEvents CarIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AvailableCountDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MaxCapacityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Settings As Button
+    Friend WithEvents Employee_Management As Button
+    Friend WithEvents Customer_Management As Button
 End Class

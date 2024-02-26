@@ -104,6 +104,18 @@
     <Compile Include="Admin_Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Payment.Designer.vb">
+      <DependentUpon>Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Profile.Designer.vb">
+      <DependentUpon>User_Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User_Profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Individual_Car.Designer.vb">
       <DependentUpon>Individual_Car.vb</DependentUpon>
     </Compile>
@@ -160,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Register.resx">
       <DependentUpon>Form_Register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Profile.resx">
+      <DependentUpon>User_Profile.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Individual_Car.resx">
       <DependentUpon>Individual_Car.vb</DependentUpon>
@@ -306,6 +324,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Silver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_O.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

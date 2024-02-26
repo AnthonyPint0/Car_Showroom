@@ -27,7 +27,6 @@ Partial Class Individual_Car
         Me.CarMainTitle = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.CustReviewLabel = New System.Windows.Forms.LinkLabel()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PriceLabel = New System.Windows.Forms.Label()
         Me.DescriptionRichtext = New System.Windows.Forms.RichTextBox()
         Me.CarTitle2 = New System.Windows.Forms.Label()
@@ -50,35 +49,32 @@ Partial Class Individual_Car
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Specification = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Color3Pic = New System.Windows.Forms.PictureBox()
-        Me.Color2Pic = New System.Windows.Forms.PictureBox()
-        Me.Color1Pic = New System.Windows.Forms.PictureBox()
         Me.Color3 = New System.Windows.Forms.Label()
         Me.Color2 = New System.Windows.Forms.Label()
         Me.Color1 = New System.Windows.Forms.Label()
         Me.Colors = New System.Windows.Forms.Label()
         Me.OrderBtn = New System.Windows.Forms.Button()
+        Me.Color3Pic = New System.Windows.Forms.PictureBox()
+        Me.Color2Pic = New System.Windows.Forms.PictureBox()
+        Me.Color1Pic = New System.Windows.Forms.PictureBox()
         Me.back_icon = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.CarImage = New System.Windows.Forms.PictureBox()
         Me.Sidebar = New System.Windows.Forms.Panel()
         Me.Profile = New System.Windows.Forms.Button()
-        Me.MUVbel = New System.Windows.Forms.Button()
-        Me.SUVbel = New System.Windows.Forms.Button()
-        Me.Sedanbel = New System.Windows.Forms.Button()
-        Me.Hatchbackbel = New System.Windows.Forms.Button()
-        Me.Allbel = New System.Windows.Forms.Button()
+        Me.Homebel = New System.Windows.Forms.Button()
         Me.Logout = New System.Windows.Forms.Label()
         Me.Registerlink = New System.Windows.Forms.LinkLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.Color3Pic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Color2Pic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Color1Pic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.back_icon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CarImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,15 +130,6 @@ Partial Class Individual_Car
         Me.CustReviewLabel.TabIndex = 47
         Me.CustReviewLabel.TabStop = True
         Me.CustReviewLabel.Text = "4.6/5 Customer Ratings"
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(22, 227)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(25, 24)
-        Me.PictureBox4.TabIndex = 4
-        Me.PictureBox4.TabStop = False
         '
         'PriceLabel
         '
@@ -388,36 +375,6 @@ Partial Class Individual_Car
         Me.Panel3.Size = New System.Drawing.Size(359, 154)
         Me.Panel3.TabIndex = 46
         '
-        'Color3Pic
-        '
-        Me.Color3Pic.Image = Global.Car_Showroom.My.Resources.Resources.Blue
-        Me.Color3Pic.Location = New System.Drawing.Point(240, 110)
-        Me.Color3Pic.Name = "Color3Pic"
-        Me.Color3Pic.Size = New System.Drawing.Size(31, 31)
-        Me.Color3Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Color3Pic.TabIndex = 18
-        Me.Color3Pic.TabStop = False
-        '
-        'Color2Pic
-        '
-        Me.Color2Pic.Image = Global.Car_Showroom.My.Resources.Resources.White
-        Me.Color2Pic.Location = New System.Drawing.Point(240, 73)
-        Me.Color2Pic.Name = "Color2Pic"
-        Me.Color2Pic.Size = New System.Drawing.Size(31, 31)
-        Me.Color2Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Color2Pic.TabIndex = 17
-        Me.Color2Pic.TabStop = False
-        '
-        'Color1Pic
-        '
-        Me.Color1Pic.Image = Global.Car_Showroom.My.Resources.Resources.Red
-        Me.Color1Pic.Location = New System.Drawing.Point(240, 37)
-        Me.Color1Pic.Name = "Color1Pic"
-        Me.Color1Pic.Size = New System.Drawing.Size(31, 31)
-        Me.Color1Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Color1Pic.TabIndex = 16
-        Me.Color1Pic.TabStop = False
-        '
         'Color3
         '
         Me.Color3.AutoSize = True
@@ -472,6 +429,36 @@ Partial Class Individual_Car
         Me.OrderBtn.Text = "Order Now"
         Me.OrderBtn.UseVisualStyleBackColor = False
         '
+        'Color3Pic
+        '
+        Me.Color3Pic.Image = Global.Car_Showroom.My.Resources.Resources.Blue
+        Me.Color3Pic.Location = New System.Drawing.Point(240, 110)
+        Me.Color3Pic.Name = "Color3Pic"
+        Me.Color3Pic.Size = New System.Drawing.Size(31, 31)
+        Me.Color3Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Color3Pic.TabIndex = 18
+        Me.Color3Pic.TabStop = False
+        '
+        'Color2Pic
+        '
+        Me.Color2Pic.Image = Global.Car_Showroom.My.Resources.Resources.White
+        Me.Color2Pic.Location = New System.Drawing.Point(240, 73)
+        Me.Color2Pic.Name = "Color2Pic"
+        Me.Color2Pic.Size = New System.Drawing.Size(31, 31)
+        Me.Color2Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Color2Pic.TabIndex = 17
+        Me.Color2Pic.TabStop = False
+        '
+        'Color1Pic
+        '
+        Me.Color1Pic.Image = Global.Car_Showroom.My.Resources.Resources.Red
+        Me.Color1Pic.Location = New System.Drawing.Point(240, 37)
+        Me.Color1Pic.Name = "Color1Pic"
+        Me.Color1Pic.Size = New System.Drawing.Size(31, 31)
+        Me.Color1Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Color1Pic.TabIndex = 16
+        Me.Color1Pic.TabStop = False
+        '
         'back_icon
         '
         Me.back_icon.Image = CType(resources.GetObject("back_icon.Image"), System.Drawing.Image)
@@ -481,6 +468,15 @@ Partial Class Individual_Car
         Me.back_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.back_icon.TabIndex = 46
         Me.back_icon.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(22, 227)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(25, 24)
+        Me.PictureBox4.TabIndex = 4
+        Me.PictureBox4.TabStop = False
         '
         'CarImage
         '
@@ -498,11 +494,7 @@ Partial Class Individual_Car
         Me.Sidebar.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(243, Byte), Integer))
         Me.Sidebar.BackgroundImage = CType(resources.GetObject("Sidebar.BackgroundImage"), System.Drawing.Image)
         Me.Sidebar.Controls.Add(Me.Profile)
-        Me.Sidebar.Controls.Add(Me.MUVbel)
-        Me.Sidebar.Controls.Add(Me.SUVbel)
-        Me.Sidebar.Controls.Add(Me.Sedanbel)
-        Me.Sidebar.Controls.Add(Me.Hatchbackbel)
-        Me.Sidebar.Controls.Add(Me.Allbel)
+        Me.Sidebar.Controls.Add(Me.Homebel)
         Me.Sidebar.Controls.Add(Me.Logout)
         Me.Sidebar.Controls.Add(Me.Registerlink)
         Me.Sidebar.Controls.Add(Me.PictureBox1)
@@ -526,70 +518,18 @@ Partial Class Individual_Car
         Me.Profile.Text = "Guest"
         Me.Profile.UseVisualStyleBackColor = False
         '
-        'MUVbel
+        'Homebel
         '
-        Me.MUVbel.BackColor = System.Drawing.Color.Transparent
-        Me.MUVbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.MUVbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.MUVbel.ForeColor = System.Drawing.Color.White
-        Me.MUVbel.Location = New System.Drawing.Point(0, 321)
-        Me.MUVbel.Name = "MUVbel"
-        Me.MUVbel.Size = New System.Drawing.Size(194, 36)
-        Me.MUVbel.TabIndex = 20
-        Me.MUVbel.Text = "MUV"
-        Me.MUVbel.UseVisualStyleBackColor = False
-        '
-        'SUVbel
-        '
-        Me.SUVbel.BackColor = System.Drawing.Color.Transparent
-        Me.SUVbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.SUVbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.SUVbel.ForeColor = System.Drawing.Color.White
-        Me.SUVbel.Location = New System.Drawing.Point(0, 279)
-        Me.SUVbel.Name = "SUVbel"
-        Me.SUVbel.Size = New System.Drawing.Size(194, 36)
-        Me.SUVbel.TabIndex = 19
-        Me.SUVbel.Text = "SUV"
-        Me.SUVbel.UseVisualStyleBackColor = False
-        '
-        'Sedanbel
-        '
-        Me.Sedanbel.BackColor = System.Drawing.Color.Transparent
-        Me.Sedanbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Sedanbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Sedanbel.ForeColor = System.Drawing.Color.White
-        Me.Sedanbel.Location = New System.Drawing.Point(0, 237)
-        Me.Sedanbel.Name = "Sedanbel"
-        Me.Sedanbel.Size = New System.Drawing.Size(194, 36)
-        Me.Sedanbel.TabIndex = 18
-        Me.Sedanbel.Text = "Sedan"
-        Me.Sedanbel.UseVisualStyleBackColor = False
-        '
-        'Hatchbackbel
-        '
-        Me.Hatchbackbel.BackColor = System.Drawing.Color.Transparent
-        Me.Hatchbackbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Hatchbackbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Hatchbackbel.ForeColor = System.Drawing.Color.White
-        Me.Hatchbackbel.Location = New System.Drawing.Point(0, 195)
-        Me.Hatchbackbel.Name = "Hatchbackbel"
-        Me.Hatchbackbel.Size = New System.Drawing.Size(194, 36)
-        Me.Hatchbackbel.TabIndex = 17
-        Me.Hatchbackbel.Text = "Hatchback"
-        Me.Hatchbackbel.UseVisualStyleBackColor = False
-        '
-        'Allbel
-        '
-        Me.Allbel.BackColor = System.Drawing.Color.Transparent
-        Me.Allbel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Allbel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Allbel.ForeColor = System.Drawing.Color.White
-        Me.Allbel.Location = New System.Drawing.Point(0, 153)
-        Me.Allbel.Name = "Allbel"
-        Me.Allbel.Size = New System.Drawing.Size(194, 36)
-        Me.Allbel.TabIndex = 16
-        Me.Allbel.Text = "All"
-        Me.Allbel.UseVisualStyleBackColor = False
+        Me.Homebel.BackColor = System.Drawing.Color.Transparent
+        Me.Homebel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Homebel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Homebel.ForeColor = System.Drawing.Color.White
+        Me.Homebel.Location = New System.Drawing.Point(-2, 184)
+        Me.Homebel.Name = "Homebel"
+        Me.Homebel.Size = New System.Drawing.Size(194, 36)
+        Me.Homebel.TabIndex = 16
+        Me.Homebel.Text = "Home"
+        Me.Homebel.UseVisualStyleBackColor = False
         '
         'Logout
         '
@@ -658,7 +598,6 @@ Partial Class Individual_Car
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
@@ -667,6 +606,7 @@ Partial Class Individual_Car
         CType(Me.Color2Pic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Color1Pic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.back_icon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CarImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
@@ -680,11 +620,7 @@ Partial Class Individual_Car
     Friend WithEvents Exit_btn As Button
     Friend WithEvents Sidebar As Panel
     Friend WithEvents Profile As Button
-    Friend WithEvents MUVbel As Button
-    Friend WithEvents SUVbel As Button
-    Friend WithEvents Sedanbel As Button
-    Friend WithEvents Hatchbackbel As Button
-    Friend WithEvents Allbel As Button
+    Friend WithEvents Homebel As Button
     Friend WithEvents Logout As Label
     Friend WithEvents Registerlink As LinkLabel
     Friend WithEvents PictureBox1 As PictureBox
