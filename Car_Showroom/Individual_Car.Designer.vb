@@ -27,6 +27,7 @@ Partial Class Individual_Car
         Me.CarMainTitle = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.CustReviewLabel = New System.Windows.Forms.LinkLabel()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PriceLabel = New System.Windows.Forms.Label()
         Me.DescriptionRichtext = New System.Windows.Forms.RichTextBox()
         Me.CarTitle2 = New System.Windows.Forms.Label()
@@ -49,16 +50,15 @@ Partial Class Individual_Car
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Specification = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Color3Pic = New System.Windows.Forms.PictureBox()
+        Me.Color2Pic = New System.Windows.Forms.PictureBox()
+        Me.Color1Pic = New System.Windows.Forms.PictureBox()
         Me.Color3 = New System.Windows.Forms.Label()
         Me.Color2 = New System.Windows.Forms.Label()
         Me.Color1 = New System.Windows.Forms.Label()
         Me.Colors = New System.Windows.Forms.Label()
-        Me.OrderBtn = New System.Windows.Forms.Button()
-        Me.Color3Pic = New System.Windows.Forms.PictureBox()
-        Me.Color2Pic = New System.Windows.Forms.PictureBox()
-        Me.Color1Pic = New System.Windows.Forms.PictureBox()
+        Me.Add2cartBtn = New System.Windows.Forms.Button()
         Me.back_icon = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.CarImage = New System.Windows.Forms.PictureBox()
         Me.Sidebar = New System.Windows.Forms.Panel()
         Me.Profile = New System.Windows.Forms.Button()
@@ -68,13 +68,13 @@ Partial Class Individual_Car
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.Color3Pic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Color2Pic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Color1Pic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.back_icon, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CarImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -130,6 +130,15 @@ Partial Class Individual_Car
         Me.CustReviewLabel.TabIndex = 47
         Me.CustReviewLabel.TabStop = True
         Me.CustReviewLabel.Text = "4.6/5 Customer Ratings"
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(22, 227)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(25, 24)
+        Me.PictureBox4.TabIndex = 4
+        Me.PictureBox4.TabStop = False
         '
         'PriceLabel
         '
@@ -375,6 +384,36 @@ Partial Class Individual_Car
         Me.Panel3.Size = New System.Drawing.Size(359, 154)
         Me.Panel3.TabIndex = 46
         '
+        'Color3Pic
+        '
+        Me.Color3Pic.Image = Global.Car_Showroom.My.Resources.Resources.Blue
+        Me.Color3Pic.Location = New System.Drawing.Point(240, 110)
+        Me.Color3Pic.Name = "Color3Pic"
+        Me.Color3Pic.Size = New System.Drawing.Size(31, 31)
+        Me.Color3Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Color3Pic.TabIndex = 18
+        Me.Color3Pic.TabStop = False
+        '
+        'Color2Pic
+        '
+        Me.Color2Pic.Image = Global.Car_Showroom.My.Resources.Resources.White
+        Me.Color2Pic.Location = New System.Drawing.Point(240, 73)
+        Me.Color2Pic.Name = "Color2Pic"
+        Me.Color2Pic.Size = New System.Drawing.Size(31, 31)
+        Me.Color2Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Color2Pic.TabIndex = 17
+        Me.Color2Pic.TabStop = False
+        '
+        'Color1Pic
+        '
+        Me.Color1Pic.Image = Global.Car_Showroom.My.Resources.Resources.Red
+        Me.Color1Pic.Location = New System.Drawing.Point(240, 37)
+        Me.Color1Pic.Name = "Color1Pic"
+        Me.Color1Pic.Size = New System.Drawing.Size(31, 31)
+        Me.Color1Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Color1Pic.TabIndex = 16
+        Me.Color1Pic.TabStop = False
+        '
         'Color3
         '
         Me.Color3.AutoSize = True
@@ -416,48 +455,18 @@ Partial Class Individual_Car
         Me.Colors.TabIndex = 0
         Me.Colors.Text = "Colors"
         '
-        'OrderBtn
+        'Add2cartBtn
         '
-        Me.OrderBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.OrderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.OrderBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.OrderBtn.ForeColor = System.Drawing.Color.White
-        Me.OrderBtn.Location = New System.Drawing.Point(699, 509)
-        Me.OrderBtn.Name = "OrderBtn"
-        Me.OrderBtn.Size = New System.Drawing.Size(188, 36)
-        Me.OrderBtn.TabIndex = 23
-        Me.OrderBtn.Text = "Order Now"
-        Me.OrderBtn.UseVisualStyleBackColor = False
-        '
-        'Color3Pic
-        '
-        Me.Color3Pic.Image = Global.Car_Showroom.My.Resources.Resources.Blue
-        Me.Color3Pic.Location = New System.Drawing.Point(240, 110)
-        Me.Color3Pic.Name = "Color3Pic"
-        Me.Color3Pic.Size = New System.Drawing.Size(31, 31)
-        Me.Color3Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Color3Pic.TabIndex = 18
-        Me.Color3Pic.TabStop = False
-        '
-        'Color2Pic
-        '
-        Me.Color2Pic.Image = Global.Car_Showroom.My.Resources.Resources.White
-        Me.Color2Pic.Location = New System.Drawing.Point(240, 73)
-        Me.Color2Pic.Name = "Color2Pic"
-        Me.Color2Pic.Size = New System.Drawing.Size(31, 31)
-        Me.Color2Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Color2Pic.TabIndex = 17
-        Me.Color2Pic.TabStop = False
-        '
-        'Color1Pic
-        '
-        Me.Color1Pic.Image = Global.Car_Showroom.My.Resources.Resources.Red
-        Me.Color1Pic.Location = New System.Drawing.Point(240, 37)
-        Me.Color1Pic.Name = "Color1Pic"
-        Me.Color1Pic.Size = New System.Drawing.Size(31, 31)
-        Me.Color1Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Color1Pic.TabIndex = 16
-        Me.Color1Pic.TabStop = False
+        Me.Add2cartBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Add2cartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Add2cartBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Add2cartBtn.ForeColor = System.Drawing.Color.White
+        Me.Add2cartBtn.Location = New System.Drawing.Point(699, 509)
+        Me.Add2cartBtn.Name = "Add2cartBtn"
+        Me.Add2cartBtn.Size = New System.Drawing.Size(188, 36)
+        Me.Add2cartBtn.TabIndex = 23
+        Me.Add2cartBtn.Text = "Add to Cart"
+        Me.Add2cartBtn.UseVisualStyleBackColor = False
         '
         'back_icon
         '
@@ -468,15 +477,6 @@ Partial Class Individual_Car
         Me.back_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.back_icon.TabIndex = 46
         Me.back_icon.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(22, 227)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(25, 24)
-        Me.PictureBox4.TabIndex = 4
-        Me.PictureBox4.TabStop = False
         '
         'CarImage
         '
@@ -583,7 +583,7 @@ Partial Class Individual_Car
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(990, 568)
-        Me.Controls.Add(Me.OrderBtn)
+        Me.Controls.Add(Me.Add2cartBtn)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.back_icon)
         Me.Controls.Add(Me.Panel2)
@@ -598,6 +598,7 @@ Partial Class Individual_Car
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
@@ -606,7 +607,6 @@ Partial Class Individual_Car
         CType(Me.Color2Pic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Color1Pic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.back_icon, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CarImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
@@ -660,5 +660,5 @@ Partial Class Individual_Car
     Friend WithEvents Color1Pic As PictureBox
     Friend WithEvents Color3Pic As PictureBox
     Friend WithEvents Color2Pic As PictureBox
-    Friend WithEvents OrderBtn As Button
+    Friend WithEvents Add2cartBtn As Button
 End Class

@@ -111,14 +111,9 @@ VALUES ('TriberC1', 'Renault Triber', '999 CC', '18.2 - 20 Kmpl', 'Manual / Auto
 INSERT INTO Cars (CarId, CarName, Engine, Mileage, Transmission, FuelType, MaxPower, SeatingCapacity, DriverType, BodyType, Description, Price, CustReview, CustReviewLink)
 VALUES ('CarId', 'CarName', 'Engine', 'Mileage', 'Transmission', 'FuelType', 'MaxPower', 'SeatingCapacity','DriverType', 'BodyType', 'Descrpition', 'Price', CustReview, 'CustReviewLink');
 
+SELECT * FROM Cars;
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-SELECT * FROM sys.tables;
-
-SELECT * FROM Cars ;
-
-SELECT * FROM Cars ORDER BY BodyType ASC;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -137,11 +132,10 @@ CREATE TABLE admin (
 );
 
 INSERT INTO admin (Role, Department, FirstName, LastName, Email, Address, ContactNumber, Username, Password)
-VALUES ('Manager', 'Sales', 'John', 'Doe', 'johndoe@example.com', '123 Main Street', '1234567890', 'johndoe', 'password123');
+VALUES ('Manager', 'Sales', 'Anthony', 'Pinto', 'anthonypinto@example.com', '123 Main Street', '1234567890', 'Pinto', 'password123');
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-drop table Cars;
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -229,7 +223,6 @@ VALUES ('TriberC1', 7, 7);
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-drop table InventoryStatus;
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -284,3 +277,107 @@ INSERT INTO CarColors (CarId, Color1, Color2, Color3) VALUES ('ScorpioC1', 'Red'
 INSERT INTO CarColors (CarId, Color1, Color2, Color3) VALUES ('TriberC1', 'Red', 'White', 'Green');
 
 SELECT * FROM CarColors
+
+-----------------------------------------------------------------------------------------------------------------------------
+-- Create the [Order] table
+CREATE TABLE Orders(
+    OrderID INT PRIMARY KEY IDENTITY(1,1),
+    CarID VARCHAR(50) NOT NULL,
+    CustomerID INT NOT NULL,
+    Username VARCHAR(100) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL,
+    Cart BIT NOT NULL DEFAULT 0,
+    Ordered BIT NOT NULL DEFAULT 0,
+    Delivered BIT NOT NULL DEFAULT 0,
+    Status VARCHAR(50),
+    Message TEXT
+);
+
+-- Add foreign key constraint after table creation
+ALTER TABLE Orders
+ADD CONSTRAINT FK_Customer_Order FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID),
+    CONSTRAINT FK_Car_Order FOREIGN KEY (CarId) REFERENCES Cars(CarId);
+
+--- Add check constraints after table creation
+ALTER TABLE Orders
+ADD CONSTRAINT CHK_Cart_Order CHECK (Cart IN (0, 1));
+
+ALTER TABLE Orders
+ADD CONSTRAINT CHK_Ordered_Order CHECK (Ordered IN (0, 1));
+
+ALTER TABLE Orders
+ADD CONSTRAINT CHK_Delivered_Order CHECK (Delivered IN (0, 1));
+
+ALTER TABLE Orders
+ADD CONSTRAINT CHK_Order_Status CHECK (Status IN ('Pending', 'Processing', 'Delivered', 'ToBeDeleted', 'Cancelled'));
+
+ALTER TABLE Orders
+ADD CONSTRAINT CHK_Only_One_Status CHECK (
+        (Cart = 1 AND Ordered = 0 AND Delivered = 0) OR
+        (Cart = 0 AND Ordered = 1 AND Delivered = 0) OR
+        (Cart = 0 AND Ordered = 0 AND Delivered = 1) OR
+        (Cart = 0 AND Ordered = 0 AND Delivered = 0)
+);
+
+
+-- Create the function dbo.CheckAvailableCount if it doesn't exist
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'dbo.CheckAvailableCount') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+BEGIN
+    EXEC('
+    CREATE FUNCTION dbo.CheckAvailableCount (@CarID VARCHAR(50))
+    RETURNS BIT
+    AS
+    BEGIN
+        DECLARE @AvailableCount INT;
+
+        SELECT @AvailableCount = COUNT(*)
+        FROM InventoryStatus
+        WHERE CarID = @CarID AND AvailableCount > 0;
+
+        RETURN CASE WHEN @AvailableCount > 0 THEN 1 ELSE 0 END;
+    END;
+    ');
+END;
+
+-- Add check constraint using the function
+ALTER TABLE Orders
+ADD CONSTRAINT CHK_Available_Count CHECK (
+    (Delivered = 0) OR (Delivered = 1 AND dbo.CheckAvailableCount(CarID) = 1)
+);
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Create OrderHistory table if it doesn't exist
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[OrderHistory]') AND type in (N'U'))
+BEGIN
+    CREATE TABLE OrderHistory (
+        OrderID INT PRIMARY KEY,
+        CarID VARCHAR(50) NOT NULL,
+        CustomerID INT NOT NULL,
+        Username VARCHAR(100) NOT NULL,
+        Price DECIMAL(10, 2) NOT NULL,
+        Cart BIT NOT NULL,
+        Ordered BIT NOT NULL,
+        Delivered BIT NOT NULL,
+        Status VARCHAR(50),
+        Message TEXT,
+        MovedOn DATETIME DEFAULT GETDATE() -- Add a column to track the date/time of the move
+        -- Add additional columns if needed
+    );
+END;
+
+-- Move orders with status 'ToBeDeleted' to OrderHistory table
+INSERT INTO OrderHistory (OrderID, CarID, CustomerID, Username, Price, Cart, Ordered, Delivered, Status, Message)
+SELECT OrderID, CarID, CustomerID, Username, Price, Cart, Ordered, Delivered, Status, Message
+FROM Orders
+WHERE Status = 'ToBeDeleted';
+
+-- Delete orders with status 'ToBeDeleted' from the Orders table
+DELETE FROM Orders
+WHERE Status = 'ToBeDeleted';
+
+
+select * from Orders
+select * from Customer
+select * from OrderHistory

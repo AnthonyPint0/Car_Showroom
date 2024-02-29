@@ -7,6 +7,7 @@ Public Class Mainform
     Public loggedIn As Boolean = False
     Private selectedButton As Button = Nothing
     Public carID As String
+    Public CustID As Integer
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
@@ -98,6 +99,8 @@ Public Class Mainform
             Profile.Visible = True
             Logout.Text = "Log out"
             Logout.Visible = True
+            Individual_Car.CustID = CustID
+            User_Profile.CustID = CustID
         Else
             Registerlink.Visible = True
             Logout.Text = ""
@@ -412,5 +415,19 @@ Public Class Mainform
 
     Private Sub PictureBox26_Click(sender As Object, e As EventArgs) Handles PictureBox26.Click
 
+    End Sub
+
+    Private Sub Profile_Click(sender As Object, e As EventArgs) Handles Profile.Click
+        If loggedIn Then
+            Me.Hide()
+            User_Profile.Show()
+            User_Profile.loggedIn = loggedIn ' Set loggedIn to True
+            User_Profile.Profile.Text = "" & Profile.Text
+            User_Profile.UpdateUI()
+            User_Profile.CheckOrderConditionsForCustomer(CustID)
+            User_Profile.CustomerInfo(CustID)
+        Else
+            loggedIn = False
+        End If
     End Sub
 End Class

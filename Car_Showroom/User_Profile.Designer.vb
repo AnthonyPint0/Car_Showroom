@@ -38,13 +38,14 @@ Partial Class User_Profile
         Me.Label1 = New System.Windows.Forms.Label()
         Me.usernameTxt = New System.Windows.Forms.TextBox()
         Me.CartPanel = New System.Windows.Forms.Panel()
+        Me.confoLB = New System.Windows.Forms.Label()
         Me.Cart = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.WagonRBtn = New System.Windows.Forms.Button()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.Price2LB = New System.Windows.Forms.Label()
+        Me.TotalLB = New System.Windows.Forms.Label()
+        Me.ViewMBtn = New System.Windows.Forms.Button()
+        Me.trashimg = New System.Windows.Forms.PictureBox()
         Me.PriceLabel = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.CarName = New System.Windows.Forms.Label()
         Me.CarImage = New System.Windows.Forms.PictureBox()
         Me.UserInfoPanel2 = New System.Windows.Forms.Panel()
         Me.AddressTxt = New System.Windows.Forms.RichTextBox()
@@ -60,13 +61,10 @@ Partial Class User_Profile
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.HeaderPanel = New System.Windows.Forms.Panel()
         Me.Label94 = New System.Windows.Forms.Label()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CartEmp = New System.Windows.Forms.Panel()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.FlowCart = New System.Windows.Forms.FlowLayoutPanel()
         Me.UserInfoPanel1.SuspendLayout()
         Me.CartPanel.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.trashimg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CarImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UserInfoPanel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,8 +72,7 @@ Partial Class User_Profile
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.HeaderPanel.SuspendLayout()
-        Me.FlowLayoutPanel1.SuspendLayout()
-        Me.CartEmp.SuspendLayout()
+        Me.FlowCart.SuspendLayout()
         Me.SuspendLayout()
         '
         'Exit_btn
@@ -235,19 +232,31 @@ Partial Class User_Profile
         '
         Me.CartPanel.BackColor = System.Drawing.Color.White
         Me.CartPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CartPanel.Controls.Add(Me.confoLB)
         Me.CartPanel.Controls.Add(Me.Cart)
-        Me.CartPanel.Controls.Add(Me.Label8)
-        Me.CartPanel.Controls.Add(Me.Label7)
-        Me.CartPanel.Controls.Add(Me.WagonRBtn)
-        Me.CartPanel.Controls.Add(Me.PictureBox5)
+        Me.CartPanel.Controls.Add(Me.Price2LB)
+        Me.CartPanel.Controls.Add(Me.TotalLB)
+        Me.CartPanel.Controls.Add(Me.ViewMBtn)
+        Me.CartPanel.Controls.Add(Me.trashimg)
         Me.CartPanel.Controls.Add(Me.PriceLabel)
-        Me.CartPanel.Controls.Add(Me.Label5)
+        Me.CartPanel.Controls.Add(Me.CarName)
         Me.CartPanel.Controls.Add(Me.CarImage)
         Me.CartPanel.Controls.Add(Me.OrderBtn)
         Me.CartPanel.Location = New System.Drawing.Point(3, 3)
         Me.CartPanel.Name = "CartPanel"
         Me.CartPanel.Size = New System.Drawing.Size(394, 181)
         Me.CartPanel.TabIndex = 46
+        '
+        'confoLB
+        '
+        Me.confoLB.AutoSize = True
+        Me.confoLB.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.confoLB.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.confoLB.Location = New System.Drawing.Point(60, 74)
+        Me.confoLB.Name = "confoLB"
+        Me.confoLB.Size = New System.Drawing.Size(272, 30)
+        Me.confoLB.TabIndex = 31
+        Me.confoLB.Text = "Waiting For Conformation"
         '
         'Cart
         '
@@ -260,46 +269,46 @@ Partial Class User_Profile
         Me.Cart.TabIndex = 0
         Me.Cart.Text = "Your Cart"
         '
-        'Label8
+        'Price2LB
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(17, 140)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(101, 23)
-        Me.Label8.TabIndex = 30
-        Me.Label8.Text = "Rs. 725000"
+        Me.Price2LB.AutoSize = True
+        Me.Price2LB.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Price2LB.Location = New System.Drawing.Point(17, 140)
+        Me.Price2LB.Name = "Price2LB"
+        Me.Price2LB.Size = New System.Drawing.Size(101, 23)
+        Me.Price2LB.TabIndex = 30
+        Me.Price2LB.Text = "Rs. 725000"
         '
-        'Label7
+        'TotalLB
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Bahnschrift SemiBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(12, 112)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(39, 18)
-        Me.Label7.TabIndex = 29
-        Me.Label7.Text = "Total"
+        Me.TotalLB.AutoSize = True
+        Me.TotalLB.Font = New System.Drawing.Font("Bahnschrift SemiBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TotalLB.Location = New System.Drawing.Point(12, 112)
+        Me.TotalLB.Name = "TotalLB"
+        Me.TotalLB.Size = New System.Drawing.Size(39, 18)
+        Me.TotalLB.TabIndex = 29
+        Me.TotalLB.Text = "Total"
         '
-        'WagonRBtn
+        'ViewMBtn
         '
-        Me.WagonRBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.WagonRBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.WagonRBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.WagonRBtn.Location = New System.Drawing.Point(301, 68)
-        Me.WagonRBtn.Name = "WagonRBtn"
-        Me.WagonRBtn.Size = New System.Drawing.Size(78, 23)
-        Me.WagonRBtn.TabIndex = 28
-        Me.WagonRBtn.Text = "View More"
-        Me.WagonRBtn.UseVisualStyleBackColor = False
+        Me.ViewMBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(121, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.ViewMBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ViewMBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ViewMBtn.Location = New System.Drawing.Point(301, 68)
+        Me.ViewMBtn.Name = "ViewMBtn"
+        Me.ViewMBtn.Size = New System.Drawing.Size(78, 23)
+        Me.ViewMBtn.TabIndex = 28
+        Me.ViewMBtn.Text = "View More"
+        Me.ViewMBtn.UseVisualStyleBackColor = False
         '
-        'PictureBox5
+        'trashimg
         '
-        Me.PictureBox5.Image = Global.Car_Showroom.My.Resources.Resources.trash
-        Me.PictureBox5.Location = New System.Drawing.Point(349, 18)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(30, 27)
-        Me.PictureBox5.TabIndex = 27
-        Me.PictureBox5.TabStop = False
+        Me.trashimg.Image = Global.Car_Showroom.My.Resources.Resources.trash
+        Me.trashimg.Location = New System.Drawing.Point(349, 18)
+        Me.trashimg.Name = "trashimg"
+        Me.trashimg.Size = New System.Drawing.Size(30, 27)
+        Me.trashimg.TabIndex = 27
+        Me.trashimg.TabStop = False
         '
         'PriceLabel
         '
@@ -311,15 +320,15 @@ Partial Class User_Profile
         Me.PriceLabel.TabIndex = 26
         Me.PriceLabel.Text = "Rs. 725000"
         '
-        'Label5
+        'CarName
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Bahnschrift SemiBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(159, 37)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(142, 18)
-        Me.Label5.TabIndex = 25
-        Me.Label5.Text = "Maruti Suzuki Swift "
+        Me.CarName.AutoSize = True
+        Me.CarName.Font = New System.Drawing.Font("Bahnschrift SemiBold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CarName.Location = New System.Drawing.Point(159, 37)
+        Me.CarName.Name = "CarName"
+        Me.CarName.Size = New System.Drawing.Size(142, 18)
+        Me.CarName.TabIndex = 25
+        Me.CarName.Text = "Maruti Suzuki Swift "
         '
         'CarImage
         '
@@ -493,48 +502,14 @@ Partial Class User_Profile
         Me.Label94.TabIndex = 42
         Me.Label94.Text = "User Profile"
         '
-        'FlowLayoutPanel1
+        'FlowCart
         '
-        Me.FlowLayoutPanel1.AutoScroll = True
-        Me.FlowLayoutPanel1.Controls.Add(Me.CartPanel)
-        Me.FlowLayoutPanel1.Controls.Add(Me.CartEmp)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(571, 378)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(421, 185)
-        Me.FlowLayoutPanel1.TabIndex = 31
-        '
-        'CartEmp
-        '
-        Me.CartEmp.BackColor = System.Drawing.Color.White
-        Me.CartEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CartEmp.Controls.Add(Me.Label12)
-        Me.CartEmp.Controls.Add(Me.Label9)
-        Me.CartEmp.Location = New System.Drawing.Point(3, 190)
-        Me.CartEmp.Name = "CartEmp"
-        Me.CartEmp.Size = New System.Drawing.Size(394, 181)
-        Me.CartEmp.TabIndex = 47
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(65, 80)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(272, 30)
-        Me.Label12.TabIndex = 1
-        Me.Label12.Text = "Waiting For Conformation"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(22, 4)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(105, 30)
-        Me.Label9.TabIndex = 0
-        Me.Label9.Text = "Your Cart"
+        Me.FlowCart.AutoScroll = True
+        Me.FlowCart.Controls.Add(Me.CartPanel)
+        Me.FlowCart.Location = New System.Drawing.Point(571, 378)
+        Me.FlowCart.Name = "FlowCart"
+        Me.FlowCart.Size = New System.Drawing.Size(421, 185)
+        Me.FlowCart.TabIndex = 31
         '
         'User_Profile
         '
@@ -545,7 +520,7 @@ Partial Class User_Profile
         Me.Controls.Add(Me.UserInfoPanel1)
         Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.UserInfoPanel2)
-        Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Controls.Add(Me.FlowCart)
         Me.Controls.Add(Me.Exit_btn)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.HeaderPanel)
@@ -557,7 +532,7 @@ Partial Class User_Profile
         Me.UserInfoPanel1.PerformLayout()
         Me.CartPanel.ResumeLayout(False)
         Me.CartPanel.PerformLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.trashimg, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CarImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UserInfoPanel2.ResumeLayout(False)
         Me.UserInfoPanel2.PerformLayout()
@@ -568,9 +543,7 @@ Partial Class User_Profile
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.HeaderPanel.ResumeLayout(False)
         Me.HeaderPanel.PerformLayout()
-        Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.CartEmp.ResumeLayout(False)
-        Me.CartEmp.PerformLayout()
+        Me.FlowCart.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -605,15 +578,13 @@ Partial Class User_Profile
     Friend WithEvents AddressTxt As RichTextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents CarName As Label
     Friend WithEvents CarImage As PictureBox
     Friend WithEvents PriceLabel As Label
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents WagonRBtn As Button
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents CartEmp As Panel
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label9 As Label
+    Friend WithEvents trashimg As PictureBox
+    Friend WithEvents Price2LB As Label
+    Friend WithEvents TotalLB As Label
+    Friend WithEvents ViewMBtn As Button
+    Friend WithEvents FlowCart As FlowLayoutPanel
+    Friend WithEvents confoLB As Label
 End Class

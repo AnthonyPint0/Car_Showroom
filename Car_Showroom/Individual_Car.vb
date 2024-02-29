@@ -1,6 +1,7 @@
 ﻿Imports System.Drawing.Drawing2D
 Imports System.Data.SqlClient
 Imports System.Security.Policy
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class Individual_Car
     Dim drag As Boolean
@@ -13,7 +14,9 @@ Public Class Individual_Car
     Public colour1 As String
     Public colour2 As String
     Public colour3 As String
-
+    Public CustID As Integer
+    Private connectionString As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
+    Private a As String
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
@@ -48,47 +51,46 @@ Public Class Individual_Car
     End Sub
 
     ' Define a connection string to connect to your SQL Server database
-    Private connectionString As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
-    Dim a As String
+
     ' Define a method to retrieve and display car details based on CarID
     Public Sub DisplayCarDetails(ByVal carID As String)
         Dim imageName As String = carID ' Assuming carID contains "SwiftC1"
         CarImage.Image = My.Resources.ResourceManager.GetObject(imageName)
         Try
             ' Create a SqlConnection using the connection string
-            Using connection As New SqlConnection(connectionString)
+            Using connectionCarDetails As New SqlConnection(connectionString)
                 ' Open the connection
-                connection.Open()
+                connectionCarDetails.Open()
 
                 ' Define a SQL query to retrieve car details based on CarID
-                Dim query As String = "SELECT * FROM Cars WHERE CarId = @CarId"
+                Dim queryCarDetails As String = "SELECT * FROM Cars WHERE CarId = @CarId"
 
                 ' Create a SqlCommand with the query and connection
-                Using command As New SqlCommand(query, connection)
+                Using commandCarDetails As New SqlCommand(queryCarDetails, connectionCarDetails)
                     ' Add a parameter for CarID to the SqlCommand
-                    command.Parameters.AddWithValue("@CarId", carID)
+                    commandCarDetails.Parameters.AddWithValue("@CarId", carID)
 
                     ' Execute the SQL query and retrieve the results
-                    Using reader As SqlDataReader = command.ExecuteReader()
+                    Using readerCarDetails As SqlDataReader = commandCarDetails.ExecuteReader()
                         ' Check if there are any rows returned
-                        If reader.Read() Then
+                        If readerCarDetails.Read() Then
                             ' Populate labels with the retrieved data
-                            CarMainTitle.Text = reader("CarName").ToString()
-                            CarTitle2.Text = reader("CarName").ToString()
-                            Specification.Text = reader("CarName").ToString()
-                            EngineLabel.Text = reader("Engine").ToString()
-                            MileageLabel.Text = reader("Mileage").ToString()
-                            TransmissionLabel.Text = reader("Transmission").ToString()
-                            FuelTypeLabel.Text = reader("FuelType").ToString()
-                            MaxPowerLabel.Text = reader("MaxPower").ToString()
-                            SeatingCapacityLabel.Text = reader("SeatingCapacity").ToString()
-                            DriverTypeLabel.Text = reader("DriverType").ToString()
-                            BodyTypeLabel.Text = reader("BodyType").ToString()
-                            DescriptionRichtext.Text = reader("Description").ToString()
-                            a = reader("Price").ToString()
+                            CarMainTitle.Text = readerCarDetails("CarName").ToString()
+                            CarTitle2.Text = readerCarDetails("CarName").ToString()
+                            Specification.Text = readerCarDetails("CarName").ToString()
+                            EngineLabel.Text = readerCarDetails("Engine").ToString()
+                            MileageLabel.Text = readerCarDetails("Mileage").ToString()
+                            TransmissionLabel.Text = readerCarDetails("Transmission").ToString()
+                            FuelTypeLabel.Text = readerCarDetails("FuelType").ToString()
+                            MaxPowerLabel.Text = readerCarDetails("MaxPower").ToString()
+                            SeatingCapacityLabel.Text = readerCarDetails("SeatingCapacity").ToString()
+                            DriverTypeLabel.Text = readerCarDetails("DriverType").ToString()
+                            BodyTypeLabel.Text = readerCarDetails("BodyType").ToString()
+                            DescriptionRichtext.Text = readerCarDetails("Description").ToString()
+                            a = readerCarDetails("Price").ToString()
                             PriceLabel.Text = "₹ " & a & " /-"
-                            CustReviewLabel.Text = reader("CustReview").ToString() & "/5 Customer Rating"
-                            CustReviewLink = reader("CustReviewLink").ToString()
+                            CustReviewLabel.Text = readerCarDetails("CustReview").ToString() & "/5 Customer Rating"
+                            CustReviewLink = readerCarDetails("CustReviewLink").ToString()
                         Else
                             ' If no rows are returned, display a message
                             MessageBox.Show("No car found with the specified CarID.")
@@ -105,20 +107,20 @@ Public Class Individual_Car
     Public Sub ColorsDisplay(ByVal carID As String)
         Try
             ' Create a SqlConnection using the connection string
-            Using connection As New SqlConnection(connectionString)
+            Using connectionColor As New SqlConnection(connectionString)
                 ' Open the connection
-                connection.Open()
+                connectionColor.Open()
 
                 ' Define a SQL query to retrieve car details based on CarID
-                Dim query As String = "SELECT * FROM CarColors WHERE CarId = @CarId"
+                Dim queryColor As String = "SELECT * FROM CarColors WHERE CarId = @CarId"
 
                 ' Create a SqlCommand with the query and connection
-                Using command As New SqlCommand(query, connection)
+                Using commandColor As New SqlCommand(queryColor, connectionColor)
                     ' Add a parameter for CarID to the SqlCommand
-                    command.Parameters.AddWithValue("@CarId", carID)
+                    commandColor.Parameters.AddWithValue("@CarId", carID)
 
                     ' Execute the SQL query and retrieve the results
-                    Using reader As SqlDataReader = command.ExecuteReader()
+                    Using reader As SqlDataReader = commandColor.ExecuteReader()
                         ' Check if there are any rows returned
                         If reader.Read() Then
                             ' Populate labels with the retrieved data
@@ -203,6 +205,7 @@ Public Class Individual_Car
             Profile.Visible = True
             Logout.Text = "Log out"
             Logout.Visible = True
+            User_Profile.CustID = CustID
         Else
             Registerlink.Visible = True
             Logout.Text = ""
@@ -234,9 +237,14 @@ Public Class Individual_Car
             Form_Login.Password_txt.Text = ""
         End If
     End Sub
-    Private Sub Allbel_Click(sender As Object, e As EventArgs) Handles Homebel.Click
+    Private Sub Homebel_Click(sender As Object, e As EventArgs) Handles Homebel.Click
         ' Call the function to handle button clicks
         HandleButtonClick(Homebel)
+        Me.Hide()
+        Mainform.Show()
+        Mainform.loggedIn = loggedIn ' Set loggedIn to True
+        Mainform.Profile.Text = "" & Profile.Text
+        Mainform.UpdateUI() ' Update the UI in MainForm
     End Sub
 
     Private Sub HandleButtonClick(clickedButton As Button)
@@ -319,5 +327,152 @@ Public Class Individual_Car
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles Color1Pic.Click
 
+    End Sub
+
+    Private Sub Add2cart_Click(sender As Object, e As EventArgs) Handles Add2cartBtn.Click
+        If loggedIn Then
+            ' Display a message box with Yes and No buttons
+            Dim result As DialogResult = MessageBox.Show("Are you sure you want to add this Car to Cart?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            ' Check the user's response
+            If result = DialogResult.Yes Then
+                CheckOrderConditionsForCustomer(CustID, carID, a)
+            End If
+        Else
+            MessageBox.Show("To add cars to your cart, please log in to your account.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Public Sub CheckOrderConditionsForCustomer(ByVal custID As Integer, ByVal carID As String, ByVal a As String)
+        Dim querycheck As String = "SELECT * FROM Orders WHERE CustomerID = @CustID"
+
+        ' Create a SqlConnection
+        Using connectioncheck As New SqlConnection(connectionString)
+            ' Create a SqlCommand
+            Using commandcheck As New SqlCommand(querycheck, connectioncheck)
+                ' Add parameter for CustID
+                commandcheck.Parameters.AddWithValue("@CustID", custID)
+
+                ' Open the connection
+                connectioncheck.Open()
+
+                ' Execute the query and retrieve the result
+                Using readercheck As SqlDataReader = commandcheck.ExecuteReader()
+                    ' Check if there are any rows returned
+                    If readercheck.HasRows Then
+                        ' Iterate through the result set
+                        While readercheck.Read()
+                            ' Retrieve the values of Cart, Ordered, and Delivered columns
+                            Dim cart As Boolean = readercheck.GetBoolean(readercheck.GetOrdinal("Cart"))
+                            Dim ordered As Boolean = readercheck.GetBoolean(readercheck.GetOrdinal("Ordered"))
+                            Dim delivered As Boolean = readercheck.GetBoolean(readercheck.GetOrdinal("Delivered"))
+                            ' Check the conditions using if-else statements
+                            '********************************************************************************************************************************
+                            If cart AndAlso Not ordered AndAlso Not delivered Then
+                                ' Condition 1: Cart = 1, Ordered = 0, Delivered = 0
+                                ' Perform actions for Condition 1
+                                Dim Cartresult As DialogResult = MessageBox.Show("There is already a Car existing in Your Cart! Do you want to replace it with the current car?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+                                ' Check the user's response
+                                If Cartresult = DialogResult.Yes Then
+                                    Try
+                                        Using connectionUpdateCart As New SqlConnection(connectionString)
+                                            connectionUpdateCart.Open()
+                                            Dim queryUpdateCart As String = "UPDATE Orders SET CarID = @carID, Price = @price WHERE CustomerID = @CustID"
+                                            Using commandUpdateCart As New SqlCommand(queryUpdateCart, connectionUpdateCart)
+                                                commandUpdateCart.Parameters.AddWithValue("@CustID", custID)
+                                                commandUpdateCart.Parameters.AddWithValue("@carID", carID)
+                                                commandUpdateCart.Parameters.AddWithValue("@price", a)
+                                                commandUpdateCart.ExecuteNonQuery()
+                                            End Using
+                                        End Using
+                                    Catch ex As Exception
+                                        MessageBox.Show("Error ordering now: " & ex.Message)
+                                    End Try
+                                End If
+                                Console.WriteLine("Condition 1: Cart = 1, Ordered = 0, Delivered = 0")
+                                '********************************************************************************************************************************
+                            ElseIf Not cart AndAlso ordered AndAlso Not delivered Then
+                                ' Condition 2: Cart = 0, Ordered = 1, Delivered = 0
+                                ' Perform actions for Condition 2
+                                MessageBox.Show("You are unable to add cars to your cart or place new orders while your current order is being processed.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                Try
+                                    Using connection As New SqlConnection(connectionString)
+                                        connection.Open()
+                                        Dim query As String = "UPDATE Orders SET Cart = 0, Ordered = 0, Delivered = 1 WHERE CustomerID = @custID"
+                                        Using command As New SqlCommand(query, connection)
+                                            command.Parameters.AddWithValue("@custID", custID)
+                                            command.ExecuteNonQuery()
+                                        End Using
+                                    End Using
+                                Catch ex As Exception
+                                    MessageBox.Show("Error marking order as successful: " & ex.Message)
+                                End Try
+                                Console.WriteLine("Condition 2: Cart = 0, Ordered = 1, Delivered = 0")
+                                '********************************************************************************************************************************
+                            ElseIf Not cart AndAlso Not ordered AndAlso delivered Then
+                                ' Condition 3: Cart = 0, Ordered = 0, Delivered = 1
+                                ' Perform actions for Condition 3
+                                MessageBox.Show("You are unable to add cars to your cart or place new orders while your current order is being processed.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                Console.WriteLine("Condition 3: Cart = 0, Ordered = 0, Delivered = 1")
+                                '********************************************************************************************************************************
+                            ElseIf Not cart AndAlso Not ordered AndAlso Not delivered Then
+                                ' Condition 3: Cart = 0, Ordered = 0, Delivered = 0
+                                ' Perform actions for Condition 4
+                                Console.WriteLine("Condition 4: Cart = 0, Ordered = 0, Delivered = 0")
+                                '********************************************************************************************************************************
+                            Else
+                                ' Other conditions
+                                ' Perform actions for other conditions or handle unknown conditions
+                                Console.WriteLine("Other conditions")
+                            End If
+                        End While
+                    Else
+                        'insert data into the Orders table
+                        Dim cart As Boolean = True ' 1 for True (or 1), 0 for False (or 0)
+                        Dim status As String = "Pending"
+
+                        MessageBox.Show("Adding this Car to Your Cart", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        ' SQL query to insert data into the Orders table
+                        Dim query As String = "INSERT INTO Orders (CarID, CustomerID, Username, Price, Cart, Status) VALUES (@CarID, @CustomerID, @Username, @Price, @Cart, @Status);"
+
+                        ' Create a connection to the database
+                        Using connection As New SqlConnection(connectionString)
+                            ' Open the connection
+                            connection.Open()
+
+                            ' Create a SqlCommand object with the query and connection
+                            Using command As New SqlCommand(query, connection)
+                                ' Add parameters to the command
+                                command.Parameters.AddWithValue("@CarID", carID)
+                                command.Parameters.AddWithValue("@CustomerID", custID)
+                                command.Parameters.AddWithValue("@Username", Profile.Text)
+                                command.Parameters.AddWithValue("@Price", a)
+                                command.Parameters.AddWithValue("@Cart", cart)
+                                command.Parameters.AddWithValue("@Status", status)
+
+                                ' Execute the command (perform the INSERT operation)
+                                Dim rowsAffected As Integer = command.ExecuteNonQuery()
+
+                                ' Check if the operation was successful
+                                If rowsAffected > 0 Then
+                                    MessageBox.Show("Order placed successfully!")
+                                Else
+                                    MessageBox.Show("Failed to place the order.")
+                                End If
+                            End Using
+                        End Using
+                    End If
+                End Using
+            End Using
+        End Using
+    End Sub
+
+    Private Sub Profile_Click(sender As Object, e As EventArgs) Handles Profile.Click
+        Me.Hide()
+        User_Profile.Show()
+        User_Profile.loggedIn = loggedIn ' Set loggedIn to True
+        User_Profile.Profile.Text = "" & Profile.Text
+        User_Profile.UpdateUI()
+        User_Profile.CheckOrderConditionsForCustomer(CustID)
+        User_Profile.CustomerInfo(CustID)
     End Sub
 End Class

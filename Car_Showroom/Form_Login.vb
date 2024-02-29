@@ -6,6 +6,7 @@ Public Class Form_Login
     Dim mousex As Integer
     Dim mousey As Integer
     Public loggedIn As Boolean = False
+    Public CustID As Integer
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
@@ -67,7 +68,11 @@ Public Class Form_Login
 
                 ' Execute the command
                 Dim reader As SqlDataReader = cmd.ExecuteReader()
-
+                ' Check if there are any rows returned
+                If reader.Read() Then
+                    ' Populate labels with the retrieved data
+                    CustID = reader("CustomerID").ToString()
+                End If
                 ' Check if there is a row with matching username and password
                 If reader.HasRows Then
                     ' User is authenticated
@@ -92,6 +97,9 @@ Public Class Form_Login
         Finally
             ' Close the database connection in the finally block to ensure it's always closed
             con.Close()
+            Mainform.CustID = CustID
+            Individual_Car.CustID = CustID
+            User_Profile.CustID = CustID
         End Try
     End Sub
 

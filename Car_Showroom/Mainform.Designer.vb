@@ -29,126 +29,126 @@ Partial Class Mainform
         Me.KwidPan = New System.Windows.Forms.Panel()
         Me.KwidBtn = New System.Windows.Forms.Button()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.i10_NiosPan = New System.Windows.Forms.Panel()
         Me.i10_NiosBtn = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.SwiftPan = New System.Windows.Forms.Panel()
         Me.SwiftBtn = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.WagonPan = New System.Windows.Forms.Panel()
         Me.WagonRBtn = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.PunchPan = New System.Windows.Forms.Panel()
         Me.PunchBtn = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.BalenoPan = New System.Windows.Forms.Panel()
         Me.BalenoBtn = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.SedanGB = New System.Windows.Forms.GroupBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.VernaBtn = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.TigoBtn = New System.Windows.Forms.Button()
         Me.Label21 = New System.Windows.Forms.Label()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.CiazBtn = New System.Windows.Forms.Button()
         Me.Label23 = New System.Windows.Forms.Label()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Panel20 = New System.Windows.Forms.Panel()
         Me.AuraBtn = New System.Windows.Forms.Button()
         Me.Label25 = New System.Windows.Forms.Label()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Panel21 = New System.Windows.Forms.Panel()
         Me.AmazeBtn = New System.Windows.Forms.Button()
         Me.Label27 = New System.Windows.Forms.Label()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Panel22 = New System.Windows.Forms.Panel()
         Me.DzireBtn = New System.Windows.Forms.Button()
         Me.Label29 = New System.Windows.Forms.Label()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.SUVGB = New System.Windows.Forms.GroupBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.MagniteBtn = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.XUV300Btn = New System.Windows.Forms.Button()
         Me.Label33 = New System.Windows.Forms.Label()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.SeltosBtn = New System.Windows.Forms.Button()
         Me.Label35 = New System.Windows.Forms.Label()
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.Panel23 = New System.Windows.Forms.Panel()
         Me.CretaBtn = New System.Windows.Forms.Button()
         Me.Label37 = New System.Windows.Forms.Label()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel24 = New System.Windows.Forms.Panel()
         Me.NexonBtn = New System.Windows.Forms.Button()
         Me.Label39 = New System.Windows.Forms.Label()
+        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Panel25 = New System.Windows.Forms.Panel()
         Me.BrezzaBtn = New System.Windows.Forms.Button()
         Me.Label41 = New System.Windows.Forms.Label()
+        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.MUVGB = New System.Windows.Forms.GroupBox()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.TriberBtn = New System.Windows.Forms.Button()
         Me.Label43 = New System.Windows.Forms.Label()
+        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.ScorpioBtn = New System.Windows.Forms.Button()
         Me.Label45 = New System.Windows.Forms.Label()
+        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
         Me.Label46 = New System.Windows.Forms.Label()
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.CarensBtn = New System.Windows.Forms.Button()
         Me.Label47 = New System.Windows.Forms.Label()
+        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Panel26 = New System.Windows.Forms.Panel()
         Me.ErtigaBtn = New System.Windows.Forms.Button()
         Me.Label49 = New System.Windows.Forms.Label()
+        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.Panel27 = New System.Windows.Forms.Panel()
         Me.CrystaBtn = New System.Windows.Forms.Button()
         Me.Label51 = New System.Windows.Forms.Label()
+        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
         Me.Label52 = New System.Windows.Forms.Label()
         Me.Panel28 = New System.Windows.Forms.Panel()
         Me.BoleroBtn = New System.Windows.Forms.Button()
         Me.Label53 = New System.Windows.Forms.Label()
-        Me.Label54 = New System.Windows.Forms.Label()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
         Me.PictureBox26 = New System.Windows.Forms.PictureBox()
+        Me.Label54 = New System.Windows.Forms.Label()
         Me.Sidebar = New System.Windows.Forms.Panel()
         Me.Profile = New System.Windows.Forms.Button()
         Me.MUVbel = New System.Windows.Forms.Button()
@@ -163,55 +163,55 @@ Partial Class Mainform
         Me.Mainpanel.SuspendLayout()
         Me.HatchbackGB.SuspendLayout()
         Me.KwidPan.SuspendLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.i10_NiosPan.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SwiftPan.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.WagonPan.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PunchPan.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BalenoPan.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SedanGB.SuspendLayout()
         Me.Panel5.SuspendLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel20.SuspendLayout()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel21.SuspendLayout()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel22.SuspendLayout()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SUVGB.SuspendLayout()
         Me.Panel8.SuspendLayout()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel23.SuspendLayout()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel24.SuspendLayout()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel25.SuspendLayout()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MUVGB.SuspendLayout()
         Me.Panel11.SuspendLayout()
-        Me.Panel12.SuspendLayout()
-        Me.Panel13.SuspendLayout()
-        Me.Panel26.SuspendLayout()
-        Me.Panel27.SuspendLayout()
-        Me.Panel28.SuspendLayout()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel12.SuspendLayout()
         CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel13.SuspendLayout()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel26.SuspendLayout()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel27.SuspendLayout()
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel28.SuspendLayout()
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -298,6 +298,16 @@ Partial Class Mainform
         Me.Label17.TabIndex = 18
         Me.Label17.Text = "Starting from ₹ 4.65 Lakh"
         '
+        'PictureBox8
+        '
+        Me.PictureBox8.Image = Global.Car_Showroom.My.Resources.Resources.KwidC1
+        Me.PictureBox8.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox8.TabIndex = 17
+        Me.PictureBox8.TabStop = False
+        '
         'Label18
         '
         Me.Label18.AutoSize = True
@@ -346,6 +356,16 @@ Partial Class Mainform
         Me.Label15.Size = New System.Drawing.Size(144, 15)
         Me.Label15.TabIndex = 18
         Me.Label15.Text = "Starting from ₹ 5.92 Lakh"
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = Global.Car_Showroom.My.Resources.Resources.i10_NiosC1
+        Me.PictureBox7.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox7.TabIndex = 17
+        Me.PictureBox7.TabStop = False
         '
         'Label16
         '
@@ -396,6 +416,16 @@ Partial Class Mainform
         Me.Label13.TabIndex = 18
         Me.Label13.Text = "Starting from ₹ 5.99 Lakh"
         '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = Global.Car_Showroom.My.Resources.Resources.SwiftC1
+        Me.PictureBox6.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 17
+        Me.PictureBox6.TabStop = False
+        '
         'Label14
         '
         Me.Label14.AutoSize = True
@@ -444,6 +474,16 @@ Partial Class Mainform
         Me.Label10.Size = New System.Drawing.Size(144, 15)
         Me.Label10.TabIndex = 18
         Me.Label10.Text = "Starting from ₹ 5.47 Lakh"
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.Car_Showroom.My.Resources.Resources.WagonRC1
+        Me.PictureBox5.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 17
+        Me.PictureBox5.TabStop = False
         '
         'Label12
         '
@@ -494,6 +534,16 @@ Partial Class Mainform
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "Starting from ₹ 5.49 Lakh"
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.Car_Showroom.My.Resources.Resources.PunchC1
+        Me.PictureBox4.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 17
+        Me.PictureBox4.TabStop = False
+        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -542,6 +592,16 @@ Partial Class Mainform
         Me.Label11.Size = New System.Drawing.Size(144, 15)
         Me.Label11.TabIndex = 18
         Me.Label11.Text = "Starting from ₹ 6.66 Lakh"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Car_Showroom.My.Resources.Resources.BalenoC1
+        Me.PictureBox3.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 17
+        Me.PictureBox3.TabStop = False
         '
         'Label7
         '
@@ -610,6 +670,16 @@ Partial Class Mainform
         Me.Label19.TabIndex = 18
         Me.Label19.Text = "Starting from ₹ 11.00 Lakh"
         '
+        'PictureBox9
+        '
+        Me.PictureBox9.Image = Global.Car_Showroom.My.Resources.Resources.VernaC1
+        Me.PictureBox9.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox9.TabIndex = 17
+        Me.PictureBox9.TabStop = False
+        '
         'Label20
         '
         Me.Label20.AutoSize = True
@@ -658,6 +728,16 @@ Partial Class Mainform
         Me.Label21.Size = New System.Drawing.Size(144, 15)
         Me.Label21.TabIndex = 18
         Me.Label21.Text = "Starting from ₹ 5.45 Lakh"
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Image = Global.Car_Showroom.My.Resources.Resources.Tata_Tigor
+        Me.PictureBox10.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox10.TabIndex = 17
+        Me.PictureBox10.TabStop = False
         '
         'Label22
         '
@@ -708,6 +788,16 @@ Partial Class Mainform
         Me.Label23.TabIndex = 18
         Me.Label23.Text = "Starting from ₹ 8.99 Lakh"
         '
+        'PictureBox11
+        '
+        Me.PictureBox11.Image = Global.Car_Showroom.My.Resources.Resources.CiazC1
+        Me.PictureBox11.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox11.TabIndex = 17
+        Me.PictureBox11.TabStop = False
+        '
         'Label24
         '
         Me.Label24.AutoSize = True
@@ -756,6 +846,16 @@ Partial Class Mainform
         Me.Label25.Size = New System.Drawing.Size(144, 15)
         Me.Label25.TabIndex = 18
         Me.Label25.Text = "Starting from ₹ 6.29 Lakh"
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.Image = Global.Car_Showroom.My.Resources.Resources.AuraC1
+        Me.PictureBox12.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox12.TabIndex = 17
+        Me.PictureBox12.TabStop = False
         '
         'Label26
         '
@@ -806,6 +906,16 @@ Partial Class Mainform
         Me.Label27.TabIndex = 18
         Me.Label27.Text = "Starting from ₹ 6.89 Lakh"
         '
+        'PictureBox13
+        '
+        Me.PictureBox13.Image = Global.Car_Showroom.My.Resources.Resources.AmazeC1
+        Me.PictureBox13.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox13.TabIndex = 17
+        Me.PictureBox13.TabStop = False
+        '
         'Label28
         '
         Me.Label28.AutoSize = True
@@ -854,6 +964,16 @@ Partial Class Mainform
         Me.Label29.Size = New System.Drawing.Size(144, 15)
         Me.Label29.TabIndex = 18
         Me.Label29.Text = "Starting from ₹ 6.35 Lakh"
+        '
+        'PictureBox14
+        '
+        Me.PictureBox14.Image = Global.Car_Showroom.My.Resources.Resources.DzireC1
+        Me.PictureBox14.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox14.TabIndex = 17
+        Me.PictureBox14.TabStop = False
         '
         'Label30
         '
@@ -922,6 +1042,16 @@ Partial Class Mainform
         Me.Label31.TabIndex = 18
         Me.Label31.Text = "Starting from ₹ 5.79 Lakh"
         '
+        'PictureBox15
+        '
+        Me.PictureBox15.Image = Global.Car_Showroom.My.Resources.Resources.MagniteC1
+        Me.PictureBox15.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox15.TabIndex = 17
+        Me.PictureBox15.TabStop = False
+        '
         'Label32
         '
         Me.Label32.AutoSize = True
@@ -970,6 +1100,16 @@ Partial Class Mainform
         Me.Label33.Size = New System.Drawing.Size(144, 15)
         Me.Label33.TabIndex = 18
         Me.Label33.Text = "Starting from ₹ 8.55 Lakh"
+        '
+        'PictureBox16
+        '
+        Me.PictureBox16.Image = Global.Car_Showroom.My.Resources.Resources.XUV300C1
+        Me.PictureBox16.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox16.TabIndex = 17
+        Me.PictureBox16.TabStop = False
         '
         'Label34
         '
@@ -1020,6 +1160,16 @@ Partial Class Mainform
         Me.Label35.TabIndex = 18
         Me.Label35.Text = "Starting from ₹ 10.29 Lakh "
         '
+        'PictureBox17
+        '
+        Me.PictureBox17.Image = Global.Car_Showroom.My.Resources.Resources.SeltosC1
+        Me.PictureBox17.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox17.TabIndex = 17
+        Me.PictureBox17.TabStop = False
+        '
         'Label36
         '
         Me.Label36.AutoSize = True
@@ -1068,6 +1218,16 @@ Partial Class Mainform
         Me.Label37.Size = New System.Drawing.Size(151, 15)
         Me.Label37.TabIndex = 18
         Me.Label37.Text = "Starting from ₹ 10.46 Lakh"
+        '
+        'PictureBox18
+        '
+        Me.PictureBox18.Image = Global.Car_Showroom.My.Resources.Resources.CretaC1
+        Me.PictureBox18.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox18.TabIndex = 17
+        Me.PictureBox18.TabStop = False
         '
         'Label38
         '
@@ -1118,6 +1278,16 @@ Partial Class Mainform
         Me.Label39.TabIndex = 18
         Me.Label39.Text = "Starting from ₹ 7.58 Lakh"
         '
+        'PictureBox19
+        '
+        Me.PictureBox19.Image = Global.Car_Showroom.My.Resources.Resources.NexonC1
+        Me.PictureBox19.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox19.Name = "PictureBox19"
+        Me.PictureBox19.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox19.TabIndex = 17
+        Me.PictureBox19.TabStop = False
+        '
         'Label40
         '
         Me.Label40.AutoSize = True
@@ -1166,6 +1336,16 @@ Partial Class Mainform
         Me.Label41.Size = New System.Drawing.Size(147, 15)
         Me.Label41.TabIndex = 18
         Me.Label41.Text = "Starting from ₹ 8.34 Lakh "
+        '
+        'PictureBox20
+        '
+        Me.PictureBox20.Image = Global.Car_Showroom.My.Resources.Resources.BrezzaC1
+        Me.PictureBox20.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox20.TabIndex = 17
+        Me.PictureBox20.TabStop = False
         '
         'Label42
         '
@@ -1234,6 +1414,16 @@ Partial Class Mainform
         Me.Label43.TabIndex = 18
         Me.Label43.Text = "Starting from ₹ 5.99 Lakh"
         '
+        'PictureBox21
+        '
+        Me.PictureBox21.Image = Global.Car_Showroom.My.Resources.Resources.TriberC1
+        Me.PictureBox21.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox21.Name = "PictureBox21"
+        Me.PictureBox21.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox21.TabIndex = 17
+        Me.PictureBox21.TabStop = False
+        '
         'Label44
         '
         Me.Label44.AutoSize = True
@@ -1282,6 +1472,16 @@ Partial Class Mainform
         Me.Label45.Size = New System.Drawing.Size(151, 15)
         Me.Label45.TabIndex = 18
         Me.Label45.Text = "Starting from ₹ 12.75 Lakh"
+        '
+        'PictureBox22
+        '
+        Me.PictureBox22.Image = Global.Car_Showroom.My.Resources.Resources.ScorpioC1
+        Me.PictureBox22.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox22.Name = "PictureBox22"
+        Me.PictureBox22.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox22.TabIndex = 17
+        Me.PictureBox22.TabStop = False
         '
         'Label46
         '
@@ -1332,6 +1532,16 @@ Partial Class Mainform
         Me.Label47.TabIndex = 18
         Me.Label47.Text = "Starting from ₹ 9.99 Lakh"
         '
+        'PictureBox23
+        '
+        Me.PictureBox23.Image = Global.Car_Showroom.My.Resources.Resources.CarensC1
+        Me.PictureBox23.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox23.Name = "PictureBox23"
+        Me.PictureBox23.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox23.TabIndex = 17
+        Me.PictureBox23.TabStop = False
+        '
         'Label48
         '
         Me.Label48.AutoSize = True
@@ -1380,6 +1590,16 @@ Partial Class Mainform
         Me.Label49.Size = New System.Drawing.Size(144, 15)
         Me.Label49.TabIndex = 18
         Me.Label49.Text = "Starting from ₹ 8.69 Lakh"
+        '
+        'PictureBox24
+        '
+        Me.PictureBox24.Image = Global.Car_Showroom.My.Resources.Resources.ErtigaC1
+        Me.PictureBox24.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox24.Name = "PictureBox24"
+        Me.PictureBox24.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox24.TabIndex = 17
+        Me.PictureBox24.TabStop = False
         '
         'Label50
         '
@@ -1430,6 +1650,16 @@ Partial Class Mainform
         Me.Label51.TabIndex = 18
         Me.Label51.Text = "Starting from ₹ 20.81 Lakh"
         '
+        'PictureBox25
+        '
+        Me.PictureBox25.Image = Global.Car_Showroom.My.Resources.Resources.InnovaC1
+        Me.PictureBox25.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox25.Name = "PictureBox25"
+        Me.PictureBox25.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox25.TabIndex = 17
+        Me.PictureBox25.TabStop = False
+        '
         'Label52
         '
         Me.Label52.AutoSize = True
@@ -1479,6 +1709,16 @@ Partial Class Mainform
         Me.Label53.TabIndex = 18
         Me.Label53.Text = "Starting from ₹ 9.41 Lakh"
         '
+        'PictureBox26
+        '
+        Me.PictureBox26.Image = Global.Car_Showroom.My.Resources.Resources.BoleroC1
+        Me.PictureBox26.Location = New System.Drawing.Point(6, 30)
+        Me.PictureBox26.Name = "PictureBox26"
+        Me.PictureBox26.Size = New System.Drawing.Size(217, 127)
+        Me.PictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox26.TabIndex = 17
+        Me.PictureBox26.TabStop = False
+        '
         'Label54
         '
         Me.Label54.AutoSize = True
@@ -1490,246 +1730,6 @@ Partial Class Mainform
         Me.Label54.Size = New System.Drawing.Size(109, 17)
         Me.Label54.TabIndex = 16
         Me.Label54.Text = "Mahindra Bolero"
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Image = Global.Car_Showroom.My.Resources.Resources.KwidC1
-        Me.PictureBox8.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 17
-        Me.PictureBox8.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Image = Global.Car_Showroom.My.Resources.Resources.i10_NiosC1
-        Me.PictureBox7.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox7.TabIndex = 17
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = Global.Car_Showroom.My.Resources.Resources.SwiftC1
-        Me.PictureBox6.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox6.TabIndex = 17
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = Global.Car_Showroom.My.Resources.Resources.WagonRC1
-        Me.PictureBox5.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 17
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.Car_Showroom.My.Resources.Resources.PunchC1
-        Me.PictureBox4.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 17
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Car_Showroom.My.Resources.Resources.BalenoC1
-        Me.PictureBox3.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 17
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Image = Global.Car_Showroom.My.Resources.Resources.VernaC1
-        Me.PictureBox9.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox9.TabIndex = 17
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox10
-        '
-        Me.PictureBox10.Image = Global.Car_Showroom.My.Resources.Resources.Tata_Tigor
-        Me.PictureBox10.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox10.TabIndex = 17
-        Me.PictureBox10.TabStop = False
-        '
-        'PictureBox11
-        '
-        Me.PictureBox11.Image = Global.Car_Showroom.My.Resources.Resources.CiazC1
-        Me.PictureBox11.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox11.TabIndex = 17
-        Me.PictureBox11.TabStop = False
-        '
-        'PictureBox12
-        '
-        Me.PictureBox12.Image = Global.Car_Showroom.My.Resources.Resources.AuraC1
-        Me.PictureBox12.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox12.TabIndex = 17
-        Me.PictureBox12.TabStop = False
-        '
-        'PictureBox13
-        '
-        Me.PictureBox13.Image = Global.Car_Showroom.My.Resources.Resources.AmazeC1
-        Me.PictureBox13.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox13.TabIndex = 17
-        Me.PictureBox13.TabStop = False
-        '
-        'PictureBox14
-        '
-        Me.PictureBox14.Image = Global.Car_Showroom.My.Resources.Resources.DzireC1
-        Me.PictureBox14.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox14.TabIndex = 17
-        Me.PictureBox14.TabStop = False
-        '
-        'PictureBox15
-        '
-        Me.PictureBox15.Image = Global.Car_Showroom.My.Resources.Resources.MagniteC1
-        Me.PictureBox15.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox15.TabIndex = 17
-        Me.PictureBox15.TabStop = False
-        '
-        'PictureBox16
-        '
-        Me.PictureBox16.Image = Global.Car_Showroom.My.Resources.Resources.XUV300C1
-        Me.PictureBox16.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox16.TabIndex = 17
-        Me.PictureBox16.TabStop = False
-        '
-        'PictureBox17
-        '
-        Me.PictureBox17.Image = Global.Car_Showroom.My.Resources.Resources.SeltosC1
-        Me.PictureBox17.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox17.TabIndex = 17
-        Me.PictureBox17.TabStop = False
-        '
-        'PictureBox18
-        '
-        Me.PictureBox18.Image = Global.Car_Showroom.My.Resources.Resources.CretaC1
-        Me.PictureBox18.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox18.Name = "PictureBox18"
-        Me.PictureBox18.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox18.TabIndex = 17
-        Me.PictureBox18.TabStop = False
-        '
-        'PictureBox19
-        '
-        Me.PictureBox19.Image = Global.Car_Showroom.My.Resources.Resources.NexonC1
-        Me.PictureBox19.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox19.Name = "PictureBox19"
-        Me.PictureBox19.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox19.TabIndex = 17
-        Me.PictureBox19.TabStop = False
-        '
-        'PictureBox20
-        '
-        Me.PictureBox20.Image = Global.Car_Showroom.My.Resources.Resources.BrezzaC1
-        Me.PictureBox20.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox20.Name = "PictureBox20"
-        Me.PictureBox20.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox20.TabIndex = 17
-        Me.PictureBox20.TabStop = False
-        '
-        'PictureBox21
-        '
-        Me.PictureBox21.Image = Global.Car_Showroom.My.Resources.Resources.TriberC1
-        Me.PictureBox21.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox21.Name = "PictureBox21"
-        Me.PictureBox21.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox21.TabIndex = 17
-        Me.PictureBox21.TabStop = False
-        '
-        'PictureBox22
-        '
-        Me.PictureBox22.Image = Global.Car_Showroom.My.Resources.Resources.ScorpioC1
-        Me.PictureBox22.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox22.Name = "PictureBox22"
-        Me.PictureBox22.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox22.TabIndex = 17
-        Me.PictureBox22.TabStop = False
-        '
-        'PictureBox23
-        '
-        Me.PictureBox23.Image = Global.Car_Showroom.My.Resources.Resources.CarensC1
-        Me.PictureBox23.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox23.Name = "PictureBox23"
-        Me.PictureBox23.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox23.TabIndex = 17
-        Me.PictureBox23.TabStop = False
-        '
-        'PictureBox24
-        '
-        Me.PictureBox24.Image = Global.Car_Showroom.My.Resources.Resources.ErtigaC1
-        Me.PictureBox24.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox24.Name = "PictureBox24"
-        Me.PictureBox24.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox24.TabIndex = 17
-        Me.PictureBox24.TabStop = False
-        '
-        'PictureBox25
-        '
-        Me.PictureBox25.Image = Global.Car_Showroom.My.Resources.Resources.InnovaC1
-        Me.PictureBox25.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox25.Name = "PictureBox25"
-        Me.PictureBox25.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox25.TabIndex = 17
-        Me.PictureBox25.TabStop = False
-        '
-        'PictureBox26
-        '
-        Me.PictureBox26.Image = Global.Car_Showroom.My.Resources.Resources.BoleroC1
-        Me.PictureBox26.Location = New System.Drawing.Point(6, 30)
-        Me.PictureBox26.Name = "PictureBox26"
-        Me.PictureBox26.Size = New System.Drawing.Size(217, 127)
-        Me.PictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox26.TabIndex = 17
-        Me.PictureBox26.TabStop = False
         '
         'Sidebar
         '
@@ -1892,78 +1892,78 @@ Partial Class Mainform
         Me.HatchbackGB.ResumeLayout(False)
         Me.KwidPan.ResumeLayout(False)
         Me.KwidPan.PerformLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.i10_NiosPan.ResumeLayout(False)
         Me.i10_NiosPan.PerformLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SwiftPan.ResumeLayout(False)
         Me.SwiftPan.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.WagonPan.ResumeLayout(False)
         Me.WagonPan.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PunchPan.ResumeLayout(False)
         Me.PunchPan.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BalenoPan.ResumeLayout(False)
         Me.BalenoPan.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SedanGB.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel20.ResumeLayout(False)
         Me.Panel20.PerformLayout()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel21.ResumeLayout(False)
         Me.Panel21.PerformLayout()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel22.ResumeLayout(False)
         Me.Panel22.PerformLayout()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SUVGB.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel23.ResumeLayout(False)
         Me.Panel23.PerformLayout()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel24.ResumeLayout(False)
         Me.Panel24.PerformLayout()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel25.ResumeLayout(False)
         Me.Panel25.PerformLayout()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MUVGB.ResumeLayout(False)
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel12.ResumeLayout(False)
         Me.Panel12.PerformLayout()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel13.ResumeLayout(False)
         Me.Panel13.PerformLayout()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel26.ResumeLayout(False)
         Me.Panel26.PerformLayout()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel27.ResumeLayout(False)
         Me.Panel27.PerformLayout()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel28.ResumeLayout(False)
         Me.Panel28.PerformLayout()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
