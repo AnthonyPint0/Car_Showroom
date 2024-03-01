@@ -2,6 +2,7 @@
 Imports System.Data.SqlClient
 Imports System.Security.Policy
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports System.Runtime.CompilerServices
 
 Public Class Individual_Car
     Dim drag As Boolean
@@ -102,6 +103,7 @@ Public Class Individual_Car
             ' Handle any exceptions that may occur
             MessageBox.Show("Error: " & ex.Message)
         End Try
+
     End Sub
 
     Public Sub ColorsDisplay(ByVal carID As String)
@@ -141,7 +143,30 @@ Public Class Individual_Car
             ' Handle any exceptions that may occur
             MessageBox.Show("Error: " & ex.Message)
         End Try
+        If CheckAvailability(carID) Then
+            Add2cartBtn.Visible = True
+            stockstatus.Visible = False
+        Else
+            Add2cartBtn.Visible = False
+            stockstatus.Visible = True
+        End If
     End Sub
+
+    Public Function CheckAvailability(ByVal carID As String) As Boolean
+        Dim query As String = "SELECT AvailableCount FROM InventoryStatus WHERE CarID = @CarID"
+        Using connection As New SqlConnection(connectionString)
+            Using command As New SqlCommand(query, connection)
+                command.Parameters.AddWithValue("@CarID", carID)
+                connection.Open()
+                Dim AvailableCounts As Integer = Convert.ToInt32(command.ExecuteScalar())
+                If AvailableCounts > 0 Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End Using
+        End Using
+    End Function
 
     ' Call the DisplayCarDetails method when the form loads
     Private Sub Individual_Car_Load(sender As Object, e As EventArgs) Handles MyBase.Load

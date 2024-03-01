@@ -62,6 +62,7 @@ Partial Class User_Profile
         Me.HeaderPanel = New System.Windows.Forms.Panel()
         Me.Label94 = New System.Windows.Forms.Label()
         Me.FlowCart = New System.Windows.Forms.FlowLayoutPanel()
+        Me.stockstatus = New System.Windows.Forms.Label()
         Me.UserInfoPanel1.SuspendLayout()
         Me.CartPanel.SuspendLayout()
         CType(Me.trashimg, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -232,6 +233,7 @@ Partial Class User_Profile
         '
         Me.CartPanel.BackColor = System.Drawing.Color.White
         Me.CartPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CartPanel.Controls.Add(Me.stockstatus)
         Me.CartPanel.Controls.Add(Me.confoLB)
         Me.CartPanel.Controls.Add(Me.Cart)
         Me.CartPanel.Controls.Add(Me.Price2LB)
@@ -511,6 +513,18 @@ Partial Class User_Profile
         Me.FlowCart.Size = New System.Drawing.Size(421, 185)
         Me.FlowCart.TabIndex = 31
         '
+        'stockstatus
+        '
+        Me.stockstatus.AutoSize = True
+        Me.stockstatus.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.stockstatus.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.stockstatus.ForeColor = System.Drawing.Color.Red
+        Me.stockstatus.Location = New System.Drawing.Point(242, 132)
+        Me.stockstatus.Name = "stockstatus"
+        Me.stockstatus.Size = New System.Drawing.Size(137, 30)
+        Me.stockstatus.TabIndex = 48
+        Me.stockstatus.Text = "Out of Stock"
+        '
         'User_Profile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -587,4 +601,5 @@ Partial Class User_Profile
     Friend WithEvents ViewMBtn As Button
     Friend WithEvents FlowCart As FlowLayoutPanel
     Friend WithEvents confoLB As Label
+    Friend WithEvents stockstatus As Label
 End Class

@@ -67,6 +67,7 @@ Partial Class Individual_Car
         Me.Registerlink = New System.Windows.Forms.LinkLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.stockstatus = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -577,12 +578,25 @@ Partial Class Individual_Car
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
+        'stockstatus
+        '
+        Me.stockstatus.AutoSize = True
+        Me.stockstatus.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.stockstatus.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.stockstatus.ForeColor = System.Drawing.Color.Red
+        Me.stockstatus.Location = New System.Drawing.Point(724, 513)
+        Me.stockstatus.Name = "stockstatus"
+        Me.stockstatus.Size = New System.Drawing.Size(137, 30)
+        Me.stockstatus.TabIndex = 47
+        Me.stockstatus.Text = "Out of Stock"
+        '
         'Individual_Car
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(990, 568)
+        Me.Controls.Add(Me.stockstatus)
         Me.Controls.Add(Me.Add2cartBtn)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.back_icon)
@@ -661,4 +675,5 @@ Partial Class Individual_Car
     Friend WithEvents Color3Pic As PictureBox
     Friend WithEvents Color2Pic As PictureBox
     Friend WithEvents Add2cartBtn As Button
+    Friend WithEvents stockstatus As Label
 End Class

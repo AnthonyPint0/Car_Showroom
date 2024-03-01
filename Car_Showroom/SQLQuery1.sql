@@ -339,11 +339,13 @@ BEGIN
     ');
 END;
 
+
+
 -- Add check constraint using the function
-ALTER TABLE Orders
-ADD CONSTRAINT CHK_Available_Count CHECK (
-    (Delivered = 0) OR (Delivered = 1 AND dbo.CheckAvailableCount(CarID) = 1)
-);
+--ALTER TABLE Orders
+--ADD CONSTRAINT CHK_Available_Count CHECK (
+--    (Delivered = 0) OR (Delivered = 1 AND dbo.CheckAvailableCount(CarID) = 1)
+--);
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -352,7 +354,8 @@ ADD CONSTRAINT CHK_Available_Count CHECK (
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[OrderHistory]') AND type in (N'U'))
 BEGIN
     CREATE TABLE OrderHistory (
-        OrderID INT PRIMARY KEY,
+		OrderHis INT PRIMARY KEY IDENTITY(1,1), 
+        OrderID INT,
         CarID VARCHAR(50) NOT NULL,
         CustomerID INT NOT NULL,
         Username VARCHAR(100) NOT NULL,
@@ -366,6 +369,8 @@ BEGIN
         -- Add additional columns if needed
     );
 END;
+
+
 
 -- Move orders with status 'ToBeDeleted' to OrderHistory table
 INSERT INTO OrderHistory (OrderID, CarID, CustomerID, Username, Price, Cart, Ordered, Delivered, Status, Message)
@@ -381,3 +386,7 @@ WHERE Status = 'ToBeDeleted';
 select * from Orders
 select * from Customer
 select * from OrderHistory
+select * from Cars
+select * from InventoryStatus
+
+UPDATE InventoryStatus SET AvailableCount = 1 WHERE CarID = 'i10_NiosC1';

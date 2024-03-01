@@ -27,7 +27,10 @@ Partial Class Admin_Mainform
         Me.Exit_btn = New System.Windows.Forms.Button()
         Me.Sidebar = New System.Windows.Forms.Panel()
         Me.Profile = New System.Windows.Forms.Button()
+        Me.Settings = New System.Windows.Forms.Button()
+        Me.Employee_Management = New System.Windows.Forms.Button()
         Me.Sales_Reports = New System.Windows.Forms.Button()
+        Me.Customer_Management = New System.Windows.Forms.Button()
         Me.Car_Inventory = New System.Windows.Forms.Button()
         Me.Logout = New System.Windows.Forms.Label()
         Me.Registerlink = New System.Windows.Forms.LinkLabel()
@@ -42,9 +45,12 @@ Partial Class Admin_Mainform
         Me.InventoryStatusTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.InventoryStatusTableAdapter()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Car_InventoryGB = New System.Windows.Forms.GroupBox()
-        Me.Customer_Management = New System.Windows.Forms.Button()
-        Me.Employee_Management = New System.Windows.Forms.Button()
-        Me.Settings = New System.Windows.Forms.Button()
+        Me.AddCarBtn = New System.Windows.Forms.Button()
+        Me.noofcars = New System.Windows.Forms.TextBox()
+        Me.CarIDCB = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,6 +107,32 @@ Partial Class Admin_Mainform
         Me.Profile.Text = "Guest"
         Me.Profile.UseVisualStyleBackColor = False
         '
+        'Settings
+        '
+        Me.Settings.BackColor = System.Drawing.Color.Transparent
+        Me.Settings.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Settings.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Settings.ForeColor = System.Drawing.Color.White
+        Me.Settings.Location = New System.Drawing.Point(0, 359)
+        Me.Settings.Name = "Settings"
+        Me.Settings.Size = New System.Drawing.Size(194, 36)
+        Me.Settings.TabIndex = 20
+        Me.Settings.Text = "Settings"
+        Me.Settings.UseVisualStyleBackColor = False
+        '
+        'Employee_Management
+        '
+        Me.Employee_Management.BackColor = System.Drawing.Color.Transparent
+        Me.Employee_Management.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Employee_Management.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Employee_Management.ForeColor = System.Drawing.Color.White
+        Me.Employee_Management.Location = New System.Drawing.Point(0, 311)
+        Me.Employee_Management.Name = "Employee_Management"
+        Me.Employee_Management.Size = New System.Drawing.Size(194, 36)
+        Me.Employee_Management.TabIndex = 19
+        Me.Employee_Management.Text = "Employee Management"
+        Me.Employee_Management.UseVisualStyleBackColor = False
+        '
         'Sales_Reports
         '
         Me.Sales_Reports.BackColor = System.Drawing.Color.Transparent
@@ -113,6 +145,19 @@ Partial Class Admin_Mainform
         Me.Sales_Reports.TabIndex = 18
         Me.Sales_Reports.Text = "Sales Reports"
         Me.Sales_Reports.UseVisualStyleBackColor = False
+        '
+        'Customer_Management
+        '
+        Me.Customer_Management.BackColor = System.Drawing.Color.Transparent
+        Me.Customer_Management.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Customer_Management.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Customer_Management.ForeColor = System.Drawing.Color.White
+        Me.Customer_Management.Location = New System.Drawing.Point(0, 199)
+        Me.Customer_Management.Name = "Customer_Management"
+        Me.Customer_Management.Size = New System.Drawing.Size(194, 55)
+        Me.Customer_Management.TabIndex = 17
+        Me.Customer_Management.Text = "Customer Management"
+        Me.Customer_Management.UseVisualStyleBackColor = False
         '
         'Car_Inventory
         '
@@ -181,10 +226,10 @@ Partial Class Admin_Mainform
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CarIDDataGridViewTextBoxColumn, Me.AvailableCountDataGridViewTextBoxColumn, Me.MaxCapacityDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.InventoryStatusBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 32)
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 24)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(645, 360)
+        Me.DataGridView1.Size = New System.Drawing.Size(667, 360)
         Me.DataGridView1.TabIndex = 1
         '
         'CarIDDataGridViewTextBoxColumn
@@ -241,54 +286,76 @@ Partial Class Admin_Mainform
         'Car_InventoryGB
         '
         Me.Car_InventoryGB.BackColor = System.Drawing.Color.White
+        Me.Car_InventoryGB.Controls.Add(Me.AddCarBtn)
+        Me.Car_InventoryGB.Controls.Add(Me.noofcars)
+        Me.Car_InventoryGB.Controls.Add(Me.CarIDCB)
+        Me.Car_InventoryGB.Controls.Add(Me.Label3)
+        Me.Car_InventoryGB.Controls.Add(Me.Label2)
+        Me.Car_InventoryGB.Controls.Add(Me.Label1)
         Me.Car_InventoryGB.Controls.Add(Me.DataGridView1)
         Me.Car_InventoryGB.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Car_InventoryGB.Location = New System.Drawing.Point(3, 3)
         Me.Car_InventoryGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 15)
         Me.Car_InventoryGB.Name = "Car_InventoryGB"
-        Me.Car_InventoryGB.Size = New System.Drawing.Size(740, 482)
+        Me.Car_InventoryGB.Size = New System.Drawing.Size(740, 484)
         Me.Car_InventoryGB.TabIndex = 4
         Me.Car_InventoryGB.TabStop = False
         Me.Car_InventoryGB.Text = "Car Inventory"
         '
-        'Customer_Management
+        'AddCarBtn
         '
-        Me.Customer_Management.BackColor = System.Drawing.Color.Transparent
-        Me.Customer_Management.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Customer_Management.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Customer_Management.ForeColor = System.Drawing.Color.White
-        Me.Customer_Management.Location = New System.Drawing.Point(0, 199)
-        Me.Customer_Management.Name = "Customer_Management"
-        Me.Customer_Management.Size = New System.Drawing.Size(194, 55)
-        Me.Customer_Management.TabIndex = 17
-        Me.Customer_Management.Text = "Customer Management"
-        Me.Customer_Management.UseVisualStyleBackColor = False
+        Me.AddCarBtn.BackColor = System.Drawing.Color.Green
+        Me.AddCarBtn.ForeColor = System.Drawing.Color.White
+        Me.AddCarBtn.Location = New System.Drawing.Point(557, 417)
+        Me.AddCarBtn.Name = "AddCarBtn"
+        Me.AddCarBtn.Size = New System.Drawing.Size(90, 43)
+        Me.AddCarBtn.TabIndex = 26
+        Me.AddCarBtn.Text = "Add Car"
+        Me.AddCarBtn.UseVisualStyleBackColor = False
         '
-        'Employee_Management
+        'noofcars
         '
-        Me.Employee_Management.BackColor = System.Drawing.Color.Transparent
-        Me.Employee_Management.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Employee_Management.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Employee_Management.ForeColor = System.Drawing.Color.White
-        Me.Employee_Management.Location = New System.Drawing.Point(0, 311)
-        Me.Employee_Management.Name = "Employee_Management"
-        Me.Employee_Management.Size = New System.Drawing.Size(194, 36)
-        Me.Employee_Management.TabIndex = 19
-        Me.Employee_Management.Text = "Employee Management"
-        Me.Employee_Management.UseVisualStyleBackColor = False
+        Me.noofcars.Location = New System.Drawing.Point(278, 438)
+        Me.noofcars.Name = "noofcars"
+        Me.noofcars.Size = New System.Drawing.Size(58, 25)
+        Me.noofcars.TabIndex = 25
         '
-        'Settings
+        'CarIDCB
         '
-        Me.Settings.BackColor = System.Drawing.Color.Transparent
-        Me.Settings.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Settings.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Settings.ForeColor = System.Drawing.Color.White
-        Me.Settings.Location = New System.Drawing.Point(0, 359)
-        Me.Settings.Name = "Settings"
-        Me.Settings.Size = New System.Drawing.Size(194, 36)
-        Me.Settings.TabIndex = 20
-        Me.Settings.Text = "Settings"
-        Me.Settings.UseVisualStyleBackColor = False
+        Me.CarIDCB.FormattingEnabled = True
+        Me.CarIDCB.Location = New System.Drawing.Point(12, 435)
+        Me.CarIDCB.Name = "CarIDCB"
+        Me.CarIDCB.Size = New System.Drawing.Size(121, 26)
+        Me.CarIDCB.TabIndex = 24
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(275, 416)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 16)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "No. of Cars"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(12, 416)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 16)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "CarID"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(9, 390)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(68, 18)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Add Car:"
         '
         'Admin_Mainform
         '
@@ -312,6 +379,7 @@ Partial Class Admin_Mainform
         CType(Me.Car_ShowroomADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Car_InventoryGB.ResumeLayout(False)
+        Me.Car_InventoryGB.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -336,4 +404,10 @@ Partial Class Admin_Mainform
     Friend WithEvents Settings As Button
     Friend WithEvents Employee_Management As Button
     Friend WithEvents Customer_Management As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents noofcars As TextBox
+    Friend WithEvents CarIDCB As ComboBox
+    Friend WithEvents AddCarBtn As Button
 End Class

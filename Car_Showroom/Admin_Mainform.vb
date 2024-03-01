@@ -1,4 +1,6 @@
-﻿Imports System.Drawing.Drawing2D
+﻿Imports System.Windows.Forms
+Imports System.Data.SqlClient
+Imports System.Drawing.Drawing2D
 
 Public Class Admin_Mainform
     Dim drag As Boolean
@@ -7,6 +9,7 @@ Public Class Admin_Mainform
     Public loggedIn As Boolean = False
     Private selectedButton As Button = Nothing
     Public carID As String
+    Private connectionString As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
@@ -53,8 +56,24 @@ Public Class Admin_Mainform
                 AddHandler button.MouseLeave, AddressOf Button_MouseLeave
             End If
         Next
+        LoadCarIds()
     End Sub
 
+    Private Sub LoadCarIds()
+        ' Define the list of car IDs
+        Dim carIds() As String = {
+        "AmazeC1", "AuraC1", "BalenoC1", "BoleroC1", "BrezzaC1",
+        "CarensC1", "CiazC1", "CretaC1", "DzireC1", "ErtigaC1",
+        "i10_NiosC1", "InnovaC1", "KwidC1", "MagniteC1", "NexonC1",
+        "PunchC1", "ScorpioC1", "SeltosC1", "SwiftC1", "Tata Tigor",
+        "TriberC1", "VernaC1", "WagonRC1", "XUV300C1"
+    }
+
+        ' Add each car ID to the ComboBox
+        For Each carId As String In carIds
+            CarIDCB.Items.Add(carId)
+        Next
+    End Sub
     Private Sub Registerlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Registerlink.LinkClicked
         Me.Hide()
         Form_Login.Show()
@@ -188,24 +207,126 @@ Public Class Admin_Mainform
         End If
     End Sub
 
-    Private Sub Profile_Click(sender As Object, e As EventArgs) Handles Profile.Click
-
+    Private Sub NumericTextBox_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles noofcars.KeyPress
+        ' Check if the entered character is a digit or a control character
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            ' If not a digit or control character, ignore the key press event
+            e.Handled = True
+        End If
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
+    Private Sub UpdateAvailableCount(ByVal carID As String, ByVal countToAdd As Integer)
+        Try
+            ' Get the current AvailableCount for the specified carID
+            Dim currentCount As Integer = GetCurrentAvailableCount(carID)
+            Console.WriteLine(currentCount)
+            Console.WriteLine("Good7")
+            ' Calculate the new count after adding the specified number of cars
+            Dim newCount As Integer = currentCount + countToAdd
+            Console.WriteLine(newCount)
+            ' Limit the new count to a maximum of 7
+            If newCount > 7 Then
+                newCount = 7
+                Console.WriteLine("Good8")
+            End If
+            Console.WriteLine(newCount)
 
+            ' Define the SQL query to update the AvailableCount
+            Dim query As String = "UPDATE InventoryStatus SET AvailableCount = @newCount WHERE CarID = @carID"
+
+            ' Create a SqlConnection using the connection string
+            Using connection As New SqlConnection(connectionString)
+                ' Create a SqlCommand with the query and connection
+                Using command As New SqlCommand(query, connection)
+                    ' Add parameters for CarID and newCount to the SqlCommand
+                    Console.WriteLine(newCount)
+                    command.Parameters.AddWithValue("@carID", carID)
+                    command.Parameters.AddWithValue("@newCount", newCount)
+                    Console.WriteLine(newCount)
+                    ' Open the connection
+                    connection.Open()
+
+                    ' Execute the SQL query
+                    Dim rowsAffected As Integer = command.ExecuteNonQuery()
+                    Console.WriteLine("Good10")
+                    ' Check if any rows were affected by the update
+                    If rowsAffected > 0 Then
+                        MessageBox.Show("AvailableCount updated successfully.")
+                        Console.WriteLine("Good11")
+                    Else
+                        MessageBox.Show("No rows updated. CarID not found.")
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            ' Handle any exceptions that may occur
+            MessageBox.Show("Error updating AvailableCount: " & ex.Message)
+        End Try
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Function GetCurrentAvailableCount(ByVal carID As String) As Integer
+        ' Define the SQL query to retrieve the current AvailableCount
+        Dim query As String = "SELECT AvailableCount FROM InventoryStatus WHERE CarID = @carID"
 
+        ' Create a variable to store the AvailableCount
+        Dim currentCount As Integer = 0
+        Console.WriteLine("Good1")
+        Try
+            ' Create a SqlConnection using the connection string
+            Using connection As New SqlConnection(connectionString)
+                ' Create a SqlCommand with the query and connection
+                Using command As New SqlCommand(query, connection)
+                    ' Add a parameter for CarID to the SqlCommand
+                    command.Parameters.AddWithValue("@carID", carID)
+
+                    ' Open the connection
+                    connection.Open()
+
+                    ' Execute the SQL query and retrieve the AvailableCount
+                    Dim result As Object = command.ExecuteScalar()
+
+                    ' Check if the result is not null and convert it to an integer
+                    If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                        currentCount = Convert.ToInt32(result)
+                    End If
+                    Console.WriteLine("Good2")
+                End Using
+                Console.WriteLine("Good3")
+            End Using
+        Catch ex As Exception
+            ' Handle any exceptions that may occur
+            MessageBox.Show("Error retrieving AvailableCount: " & ex.Message)
+            Console.WriteLine("Bad")
+        End Try
+        Console.WriteLine("Good5")
+        ' Return the current AvailableCount
+        Return currentCount
+        Console.WriteLine("Good6")
+    End Function
+
+    Private Sub AddCarBtn_Click(sender As Object, e As EventArgs) Handles AddCarBtn.Click
+        ' Validate the input value in the textbox
+        Dim numberOfCars As Integer
+        If Integer.TryParse(noofcars.Text, numberOfCars) AndAlso numberOfCars > 0 AndAlso numberOfCars < 8 Then
+            ' Get the selected CarID from the combobox
+            Dim selectedCarID As String = CarIDCB.SelectedItem.ToString()
+            ' Call the function to update the AvailableCount in InventoryStatus
+            UpdateAvailableCount(selectedCarID, numberOfCars)
+        Else
+            MessageBox.Show("Please enter a valid number between 1 and 7.")
+        End If
+        ReloadForm()
     End Sub
+    Private Sub ReloadForm()
+        ' Close the current instance of the form
+        Me.Close()
 
-
-    Private Sub MainPanel_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Car_InventoryGB_Enter(sender As Object, e As EventArgs) Handles Car_InventoryGB.Enter
-
+        ' Open a new instance of the form
+        Dim newForm As New Admin_Mainform()
+        newForm.Show()
+        newForm.loggedIn = True ' Set loggedIn to True
+        loggedIn = True ' Set loggedIn to True
+        newForm.Profile.Text = "" & Profile.Text
+        newForm.UpdateUI() ' Update the UI in MainForm
     End Sub
 End Class

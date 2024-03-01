@@ -9,6 +9,7 @@ Public Class User_Profile
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
+    Public price As String
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
@@ -57,6 +58,7 @@ Public Class User_Profile
                             Dim delivered As Boolean = readercheck.GetBoolean(readercheck.GetOrdinal("Delivered"))
                             carID = readercheck("CarID").ToString()
                             Price2LB.Text = readercheck("Price").ToString()
+                            price = readercheck("Price").ToString()
                             PriceLabel.Text = readercheck("CarID").ToString()
                             CarImage.Image = My.Resources.ResourceManager.GetObject(carID)
                             CarName.Text = GetCarName(carID)
@@ -66,6 +68,13 @@ Public Class User_Profile
                                 ' Condition 1: Cart = 1, Ordered = 0, Delivered = 0
                                 ' Perform actions for Condition 1
                                 CartElements(True)
+                                If CheckAvailability(carID) Then
+                                    OrderBtn.Visible = True
+                                    stockstatus.Visible = False
+                                Else
+                                    OrderBtn.Visible = False
+                                    stockstatus.Visible = True
+                                End If
                                 Console.WriteLine("Condition 1: Cart = 1, Ordered = 0, Delivered = 0")
                                 '********************************************************************************************************************************
                             ElseIf Not cart AndAlso ordered AndAlso Not delivered Then
@@ -73,6 +82,7 @@ Public Class User_Profile
                                 ' Perform actions for Condition 2
                                 CartElements(False)
                                 confoLB.Text = "Your Order is Processing..."
+                                stockstatus.Visible = False
                                 Try
                                     Using connection As New SqlConnection(connectionString)
                                         connection.Open()
@@ -92,6 +102,7 @@ Public Class User_Profile
                                 ' Perform actions for Condition 3
                                 CartElements(False)
                                 confoLB.Text = "Your Car is Delivered"
+                                stockstatus.Visible = False
                                 Try
                                     Using connection As New SqlConnection(connectionString)
                                         connection.Open()
@@ -140,7 +151,8 @@ Public Class User_Profile
                     Else
                         ' No rows returned
                         ' Handle no rows returned
-                        confoLB.Text = "No Car In Cart"
+                        confoLB.Text = ""
+                        stockstatus.Text = ""
                         CartElements(False)
                     End If
                 End Using
@@ -321,13 +333,32 @@ Public Class User_Profile
         End If
     End Sub
 
+    Public Function CheckAvailability(ByVal carID As String) As Boolean
+        Dim query As String = "SELECT AvailableCount FROM InventoryStatus WHERE CarID = @CarID"
+        Using connection As New SqlConnection(connectionString)
+            Using command As New SqlCommand(query, connection)
+                command.Parameters.AddWithValue("@CarID", carID)
+                connection.Open()
+                Dim AvailableCounts As Integer = Convert.ToInt32(command.ExecuteScalar())
+                If AvailableCounts > 0 Then
+                    Return True
+                Else
+                    Return False
+                End If
+            End Using
+        End Using
+    End Function
+
     Private Sub OrderBtn_Click(sender As Object, e As EventArgs) Handles OrderBtn.Click
         ' Display a message box with Yes and No buttons
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to Order this Car?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
         ' Check the user's response
         If result = DialogResult.Yes Then
-            Payment.ShowDialog()
             Payment.CustID = CustID
+            Payment.carID = carID
+            Payment.price = price
+            Payment.price = price
+            Payment.ShowDialog()
         End If
     End Sub
 End Class
