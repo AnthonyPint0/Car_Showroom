@@ -1,12 +1,16 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Globalization
 
-Public Class Form_Login
+Public Class Admin_Login
+    Private Sub Admin_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
     Public loggedIn As Boolean = False
-    Public CustID As Integer
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
@@ -49,11 +53,11 @@ Public Class Form_Login
     Private Sub PerformLogin()
         If username_txt.Text = "admin" And username_txt.Text = "admin" Then
             Me.Hide()
-            Admin_Login.Show()
-            Admin_Login.username_txt.Text = ""
-            Admin_Login.Password_txt.Text = ""
+            Admin_Register.Show()
             username_txt.Text = ""
             Password_txt.Text = ""
+            Form_Login.username_txt.Text = ""
+            Form_Login.Password_txt.Text = ""
             Exit Sub
         End If
         Try
@@ -61,28 +65,24 @@ Public Class Form_Login
             con.Open()
 
             ' Execute SQL command
-            Dim sql As String = "SELECT * FROM customer WHERE Username = @Username AND Password = @Password"
+            Dim sql As String = "SELECT * FROM admin WHERE Username = @Username AND Password = @Password"
             Using cmd As New SqlCommand(sql, con)
                 cmd.Parameters.AddWithValue("@Username", username_txt.Text)
                 cmd.Parameters.AddWithValue("@Password", Password_txt.Text)
 
                 ' Execute the command
                 Dim reader As SqlDataReader = cmd.ExecuteReader()
-                ' Check if there are any rows returned
-                If reader.Read() Then
-                    ' Populate labels with the retrieved data
-                    CustID = reader("CustomerID").ToString()
-                End If
+
                 ' Check if there is a row with matching username and password
                 If reader.HasRows Then
                     ' User is authenticated
                     MessageBox.Show("Login successful")
                     Me.Hide() ' To hide the login form
-                    Mainform.Show() ' To show the main form
-                    Mainform.loggedIn = True ' Set loggedIn to True
+                    Admin_Mainform.Show() ' To show the main form
+                    Admin_Mainform.loggedIn = True ' Set loggedIn to True
                     loggedIn = True ' Set loggedIn to True
-                    Mainform.Profile.Text = "" & username_txt.Text
-                    Mainform.UpdateUI() ' Update the UI in MainForm
+                    Admin_Mainform.Profile.Text = "" & username_txt.Text
+                    Admin_Mainform.UpdateUI() ' Update the UI in MainForm
                 Else
                     ' User authentication failed
                     MessageBox.Show("Invalid username or password")
@@ -97,9 +97,6 @@ Public Class Form_Login
         Finally
             ' Close the database connection in the finally block to ensure it's always closed
             con.Close()
-            Mainform.CustID = CustID
-            Individual_Car.CustID = CustID
-            User_Profile.CustID = CustID
         End Try
     End Sub
 
@@ -110,15 +107,6 @@ Public Class Form_Login
         Else
             Password_txt.PasswordChar = "*" ' Hide characters
         End If
-    End Sub
-
-    Private Sub Registerlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Registerlink.LinkClicked
-        Me.Hide()
-        Form_Register.Show()
-        Mainform.loggedIn = False
-        loggedIn = False ' Set loggedIn to False
-        username_txt.Text = ""
-        Password_txt.Text = ""
     End Sub
 
     Private Sub Remove_user_btn_Click(sender As Object, e As EventArgs) Handles Remove_user_btn.Click
@@ -135,7 +123,7 @@ Public Class Form_Login
             con.Open()
 
             ' Execute SQL command to delete user by username
-            Dim sql As String = "DELETE FROM customer WHERE Username = @Username"
+            Dim sql As String = "DELETE FROM admin WHERE Username = @Username"
             Using cmd As New SqlCommand(sql, con)
                 ' Replace the parameter with the actual value
                 cmd.Parameters.AddWithValue("@Username", username)
@@ -163,18 +151,20 @@ Public Class Form_Login
         Password_txt.PasswordChar = "*" ' Hide characters
     End Sub
 
-    Private Sub Form_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub guestL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles guestL.LinkClicked
         Me.Hide()
-        Mainform.Show()
-        Mainform.Profile.Text = ""
-        Mainform.loggedIn = False
-        loggedIn = False
-        Mainform.UpdateUI()
-        username_txt.Text = ""
-        Password_txt.Text = ""
+        Form_Login.Show()
+        Form_Login.username_txt.Text = ""
+        Form_Login.Password_txt.Text = ""
     End Sub
+
+
+    'Private Sub guestL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles guestL.LinkClicked
+    'Me.Hide()
+    '   Mainform.Show()
+    '    Mainform.Profile.Text = ""
+    '   Mainform.loggedIn = False
+    '  loggedIn = False
+    ' Mainform.UpdateUI()
+    ' End Sub
 End Class

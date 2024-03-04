@@ -123,11 +123,12 @@ Partial Class Form_Login
         'Registerlink
         '
         Me.Registerlink.AutoSize = True
+        Me.Registerlink.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Registerlink.LinkColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.Registerlink.Location = New System.Drawing.Point(216, 439)
+        Me.Registerlink.Location = New System.Drawing.Point(215, 439)
         Me.Registerlink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Registerlink.Name = "Registerlink"
-        Me.Registerlink.Size = New System.Drawing.Size(139, 15)
+        Me.Registerlink.Size = New System.Drawing.Size(162, 17)
         Me.Registerlink.TabIndex = 7
         Me.Registerlink.TabStop = True
         Me.Registerlink.Text = "New User? Register Now!"
@@ -202,11 +203,12 @@ Partial Class Form_Login
         '
         Me.guestL.AutoSize = True
         Me.guestL.BackColor = System.Drawing.Color.Transparent
-        Me.guestL.LinkColor = System.Drawing.Color.Blue
-        Me.guestL.Location = New System.Drawing.Point(713, 453)
+        Me.guestL.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.guestL.LinkColor = System.Drawing.Color.RoyalBlue
+        Me.guestL.Location = New System.Drawing.Point(695, 439)
         Me.guestL.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.guestL.Name = "guestL"
-        Me.guestL.Size = New System.Drawing.Size(102, 15)
+        Me.guestL.Size = New System.Drawing.Size(120, 17)
         Me.guestL.TabIndex = 12
         Me.guestL.TabStop = True
         Me.guestL.Text = "Continue as Guest"

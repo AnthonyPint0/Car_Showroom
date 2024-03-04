@@ -131,11 +131,12 @@ Partial Class Form_Register
         '
         Me.Loginlink.AutoSize = True
         Me.Loginlink.BackColor = System.Drawing.Color.Transparent
+        Me.Loginlink.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Loginlink.LinkColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.Loginlink.Location = New System.Drawing.Point(254, 420)
+        Me.Loginlink.Location = New System.Drawing.Point(238, 422)
         Me.Loginlink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Loginlink.Name = "Loginlink"
-        Me.Loginlink.Size = New System.Drawing.Size(112, 13)
+        Me.Loginlink.Size = New System.Drawing.Size(140, 16)
         Me.Loginlink.TabIndex = 8
         Me.Loginlink.TabStop = True
         Me.Loginlink.Text = "Already a user? Login!"
@@ -271,11 +272,12 @@ Partial Class Form_Register
         '
         Me.guestL.AutoSize = True
         Me.guestL.BackColor = System.Drawing.Color.Transparent
+        Me.guestL.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold)
         Me.guestL.LinkColor = System.Drawing.Color.Blue
-        Me.guestL.Location = New System.Drawing.Point(679, 430)
+        Me.guestL.Location = New System.Drawing.Point(659, 425)
         Me.guestL.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.guestL.Name = "guestL"
-        Me.guestL.Size = New System.Drawing.Size(94, 13)
+        Me.guestL.Size = New System.Drawing.Size(120, 17)
         Me.guestL.TabIndex = 9
         Me.guestL.TabStop = True
         Me.guestL.Text = "Continue as Guest"

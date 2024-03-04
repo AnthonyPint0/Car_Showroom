@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Globalization
 
-Public Class Form_Register
+Public Class Admin_Register
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
@@ -47,6 +47,8 @@ Public Class Form_Register
             ' Validate input: Check if all fields are provided
             If String.IsNullOrWhiteSpace(txtBfirstName.Text) OrElse
            String.IsNullOrWhiteSpace(txtBlastName.Text) OrElse
+           String.IsNullOrWhiteSpace(comboRole.Text) OrElse
+           String.IsNullOrWhiteSpace(comboDepartment.Text) OrElse
            String.IsNullOrWhiteSpace(txtBemail.Text) OrElse
            String.IsNullOrWhiteSpace(txtBaddress.Text) OrElse
            String.IsNullOrWhiteSpace(txtBcontactNumber.Text) OrElse
@@ -60,11 +62,13 @@ Public Class Form_Register
             con.Open()
 
             ' Execute SQL command to insert new user registration
-            Dim sql As String = "INSERT INTO customer (FirstName, LastName, Email, Address, ContactNumber, Username, Password) VALUES (@FirstName, @LastName, @Email, @Address, @ContactNumber, @Username, @Password)"
+            Dim sql As String = "INSERT INTO admin (FirstName, LastName, Role, Department, Email, Address, ContactNumber, Username, Password) VALUES (@FirstName, @LastName, @Email, @Address, @ContactNumber, @Username, @Password)"
             Using cmd As New SqlCommand(sql, con)
                 ' Set parameter values
                 cmd.Parameters.AddWithValue("@FirstName", txtBfirstName.Text)
                 cmd.Parameters.AddWithValue("@LastName", txtBlastName.Text)
+                cmd.Parameters.AddWithValue("@Role", comboRole.SelectedItem.ToString()) ' Use selected item from comboRole
+                cmd.Parameters.AddWithValue("@Department", comboDepartment.SelectedItem.ToString()) ' Use selected item from comboDepartment
                 cmd.Parameters.AddWithValue("@Email", txtBemail.Text)
                 cmd.Parameters.AddWithValue("@Address", txtBaddress.Text)
                 cmd.Parameters.AddWithValue("@ContactNumber", txtBcontactNumber.Text)
@@ -102,24 +106,21 @@ Public Class Form_Register
     End Sub
     Private Sub Back_Btn_Click(sender As Object, e As EventArgs) Handles Back_Btn.Click
         Me.Hide()
-        Form_Login.Show()
+        Admin_Mainform.Show()
     End Sub
 
-    Private Sub Form_Register_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Admin_Register_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Add items to the Role ComboBox
+        comboRole.Items.AddRange({"Manager", "Salesman", "Accountant", "IT Staff", "HR Manager", "Marketing Specialist"})
 
-    End Sub
+        ' Add items to the Department ComboBox
+        comboDepartment.Items.AddRange({"Sales", "Accounting", "IT", "Human Resources", "Marketing", "Administration"})
 
-    Protected Sub guestL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles guestL.LinkClicked
-        Me.Hide()
-        Mainform.loggedIn = False ' Set loggedIn to False
-        Mainform.Show() ' To show the main form
-        Mainform.UpdateUI() ' Update the UI in MainForm
-    End Sub
+        ' Add items to the Role ComboBox
+        ' comboRole.Items.AddRange({"Manager", "Salesman", "Accountant", "IT Staff", "HR Manager", "Marketing Specialist"})
 
-    Private Sub Loginlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Loginlink.LinkClicked
-        Me.Show()
-        Form_Login.Show()
-        Form_Login.username_txt.Text = ""
-        Form_Login.Password_txt.Text = ""
+        ' Add items to the Department ComboBox
+        'comboDepartment.Items.AddRange({"Sales", "Accounting", "IT", "Human Resources", "Marketing", "Administration"})
+
     End Sub
 End Class

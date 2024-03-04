@@ -64,6 +64,17 @@ Namespace My
                 Return CType(Me("Car_ShowroomConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=Tru"& _ 
+            "e;Encrypt=True;TrustServerCertificate=True")>  _
+        Public ReadOnly Property Car_ShowroomAConnectionString() As String
+            Get
+                Return CType(Me("Car_ShowroomAConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
