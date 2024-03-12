@@ -8,7 +8,7 @@ Public Class Individual_Car
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
-    Public loggedIn As Boolean = False
+    Public loggedIn As Boolean
     Private selectedButton As Button = Nothing
     Public CustReviewLink As String
     Public carID As String
@@ -266,10 +266,11 @@ Public Class Individual_Car
         ' Call the function to handle button clicks
         HandleButtonClick(Homebel)
         Me.Hide()
-        Mainform.Show()
-        Mainform.loggedIn = loggedIn ' Set loggedIn to True
-        Mainform.Profile.Text = "" & Profile.Text
-        Mainform.UpdateUI() ' Update the UI in MainForm
+        HomeForm.Show()
+        HomeForm.loggedIn = loggedIn ' Set loggedIn to True
+        HomeForm.Profile.Text = "" & Profile.Text
+        HomeForm.UpdateUI() ' Update the UI in HomeForm
+        HomeForm.PopulateCarDisplayPanel(loggedIn)
     End Sub
 
     Private Sub HandleButtonClick(clickedButton As Button)
@@ -320,26 +321,30 @@ Public Class Individual_Car
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Me.Hide()
-        Mainform.Show()
-        Mainform.loggedIn = loggedIn ' Set loggedIn to True
-        Mainform.Profile.Text = "" & Profile.Text
-        Mainform.UpdateUI() ' Update the UI in MainForm
+        HomeForm.Show()
+        HomeForm.loggedIn = loggedIn ' Set loggedIn to True
+        HomeForm.Profile.Text = "" & Profile.Text
+        HomeForm.UpdateUI() ' Update the UI in HomeForm
+        HomeForm.PopulateCarDisplayPanel(loggedIn)
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.Hide()
-        Mainform.Show()
-        Mainform.loggedIn = loggedIn ' Set loggedIn to True
-        Mainform.Profile.Text = "" & Profile.Text
-        Mainform.UpdateUI() ' Update the UI in MainForm
+        HomeForm.Show()
+        HomeForm.loggedIn = loggedIn ' Set loggedIn to True
+        HomeForm.Profile.Text = "" & Profile.Text
+        HomeForm.UpdateUI() ' Update the UI in HomeForm
+        HomeForm.PopulateCarDisplayPanel(loggedIn)
     End Sub
 
     Private Sub back_icon_Click(sender As Object, e As EventArgs) Handles back_icon.Click
         Me.Hide()
-        Mainform.Show()
-        Mainform.loggedIn = loggedIn ' Set loggedIn to True
-        Mainform.Profile.Text = "" & Profile.Text
-        Mainform.UpdateUI() ' Update the UI in MainForm
+        HomeForm.Show()
+        HomeForm.loggedIn = loggedIn ' Set loggedIn to True
+        HomeForm.Profile.Text = "" & Profile.Text
+        HomeForm.UpdateUI() ' Update the UI in HomeForm
+        HomeForm.PopulateCarDisplayPanel(loggedIn)
+
     End Sub
 
     Private Sub CustReviewLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles CustReviewLabel.LinkClicked
@@ -499,5 +504,9 @@ Public Class Individual_Car
         User_Profile.UpdateUI()
         User_Profile.CheckOrderConditionsForCustomer(CustID)
         User_Profile.CustomerInfo(CustID)
+    End Sub
+
+    Private Sub CarImage_Click(sender As Object, e As EventArgs) Handles CarImage.Click
+
     End Sub
 End Class

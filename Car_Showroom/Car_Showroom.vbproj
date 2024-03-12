@@ -85,6 +85,12 @@
     <Compile Include="Admin_Register.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CarDisplayCard.Designer.vb">
+      <DependentUpon>CarDisplayCard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CarDisplayCard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Car_ShowroomADataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,10 +110,22 @@
     <Compile Include="Admin_Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Payment.Designer.vb">
       <DependentUpon>Payment.vb</DependentUpon>
     </Compile>
     <Compile Include="Payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeForm.Designer.vb">
+      <DependentUpon>HomeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomeForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User_Profile.Designer.vb">
@@ -167,6 +185,12 @@
     <EmbeddedResource Include="Admin_Register.resx">
       <DependentUpon>Admin_Register.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CarDisplayCard.resx">
+      <DependentUpon>CarDisplayCard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.vb</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Profile.resx">
       <DependentUpon>User_Profile.vb</DependentUpon>

@@ -36,9 +36,10 @@ Public Class Payment
     End Sub
 
     Private Sub Ordering()
+        Dim loggedIn As Boolean = True
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to Pay Now?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
         ' Check the user's response
-        If Result = DialogResult.Yes Then
+        If result = DialogResult.Yes Then
             Try
                 Using connectionorder As New SqlConnection(connectionString)
                     connectionorder.Open()
@@ -77,7 +78,8 @@ Public Class Payment
                     ' Handle any exceptions that may occur
                     Console.WriteLine("Error updating inventory status: " & ex.Message)
                 End Try
-                Mainform.Show()
+                HomeForm.Show()
+                HomeForm.PopulateCarDisplayPanel(loggedIn)
                 User_Profile.Close()
                 Me.Close()
             Catch ex As Exception

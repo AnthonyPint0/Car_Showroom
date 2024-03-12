@@ -4,7 +4,7 @@ Imports System.Runtime.CompilerServices
 Public Class User_Profile
     Public CustID As Integer
     Private carID As String
-    Public loggedIn As Boolean = False
+    Public loggedIn As Boolean = True
     Private connectionString As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
     Dim drag As Boolean
     Dim mousex As Integer
@@ -231,10 +231,11 @@ Public Class User_Profile
 
     Private Sub Homebel_Click(sender As Object, e As EventArgs) Handles Homebel.Click
         Me.Hide()
-        Mainform.Show()
-        Mainform.loggedIn = loggedIn ' Set loggedIn to True
-        Mainform.Profile.Text = "" & Profile.Text
-        Mainform.UpdateUI() ' Update the UI in MainForm
+        HomeForm.Show()
+        HomeForm.loggedIn = loggedIn ' Set loggedIn to True
+        HomeForm.PopulateCarDisplayPanel(loggedIn)
+        HomeForm.Profile.Text = "" & Profile.Text
+        HomeForm.UpdateUI() ' Update the UI in HomeForm
     End Sub
 
     Private Sub Exit_btn_Click(sender As Object, e As EventArgs) Handles Exit_btn.Click
@@ -325,7 +326,8 @@ Public Class User_Profile
                         command.ExecuteNonQuery()
                     End Using
                 End Using
-                Mainform.Show()
+                HomeForm.Show()
+                HomeForm.PopulateCarDisplayPanel(loggedIn)
                 Me.Close()
             Catch ex As Exception
                 MessageBox.Show("Error marking order as successful: " & ex.Message)
