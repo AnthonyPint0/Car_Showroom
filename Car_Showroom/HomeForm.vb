@@ -281,9 +281,62 @@ Public Class HomeForm
     ' Function to load car image from file path
     Private Function LoadCarImage(CarID As String) As Image
         ' Load the image from the resources folder using the CarID as the resource name
-        Dim image As Image = My.Resources.ResourceManager.GetObject(CarID)
+        Dim image As Image = Nothing
+
+        Try
+            image = My.Resources.ResourceManager.GetObject(CarID)
+        Catch ex As Exception
+            ' Handle any exceptions that occur while loading the image
+            MessageBox.Show("Error loading image: " & ex.Message)
+        End Try
+
+        ' If the image is null, load a default image
+        If image Is Nothing Then
+            Try
+                ' Load the default image "Car_black" from resources
+                image = My.Resources.Car_blac
+            Catch ex As Exception
+                ' Handle any exceptions that occur while loading the default image
+                MessageBox.Show("Error loading default image: " & ex.Message)
+            End Try
+        End If
+
         Return image
     End Function
+
+    Private Sub InsertIntoInventoryStatus(CarId As String, AvailableCount As Integer, MaxCapacity As Integer)
+        ' Define your SQL query to insert data into the InventoryStatus table
+        Dim query As String = "INSERT INTO InventoryStatus (CarId, AvailableCount, MaxCapacity) VALUES (@CarId, @AvailableCount, @MaxCapacity)"
+
+        ' Define connection string
+        Dim connectionString As String = "Your_Connection_String_Here"
+
+        ' Create a new SqlConnection using the connection string
+        Using connection As New SqlConnection(connectionString)
+            ' Create a new SqlCommand with your SQL query and the SqlConnection
+            Using command As New SqlCommand(query, connection)
+                ' Add parameters to the SqlCommand to prevent SQL injection
+                command.Parameters.AddWithValue("@CarId", CarId)
+                command.Parameters.AddWithValue("@AvailableCount", 7)
+                command.Parameters.AddWithValue("@MaxCapacity", 7)
+
+                Try
+                    ' Open the database connection
+                    connection.Open()
+
+                    ' Execute the SQL query
+                    command.ExecuteNonQuery()
+
+                    ' Optionally, provide feedback to the user indicating successful insertion
+                    MessageBox.Show("Data inserted into InventoryStatus table successfully!")
+                Catch ex As Exception
+                    ' Handle any exceptions that occur during database interaction
+                    MessageBox.Show("Error inserting data into InventoryStatus table: " & ex.Message)
+                End Try
+            End Using
+        End Using
+    End Sub
+
 
     ' Function to retrieve car data from database
     Private Function GetDataFromCarsTable() As DataTable
@@ -336,10 +389,15 @@ Public Class HomeForm
         ' Open a new instance of the form
         Dim newForm As New HomeForm()
         newForm.Show()
+        newForm.CustID = CustID
+        newForm.VarID = VarID
         newForm.loggedIn = loggedIn ' Set loggedIn to loggedIn
         newForm.UpdateUI() ' Update the UI in MainForm
         newForm.PopulateCarDisplayPanel(loggedIn)
         newForm.Profile.Text = "" & Profile.Text
+        Console.WriteLine(CustID)
+        User_Profile.CustID = CustID
+        Individual_Car.CustID = CustID
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click

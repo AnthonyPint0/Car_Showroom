@@ -84,6 +84,11 @@ Public Class Payment
                 Me.Close()
             Catch ex As Exception
                 MessageBox.Show("Error marking order as successful: " & ex.Message)
+            Finally
+                Console.WriteLine(CustID)
+                User_Profile.CustID = CustID
+                HomeForm.CustID = CustID
+                Individual_Car.CustID = CustID
             End Try
         End If
     End Sub
@@ -108,5 +113,9 @@ Public Class Payment
     Private Sub Payment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Text = price
         Label5.Text = price
+        Console.WriteLine(CustID)
+        User_Profile.CustID = CustID
+        HomeForm.CustID = CustID
+        Individual_Car.CustID = CustID
     End Sub
 End Class

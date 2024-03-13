@@ -25,8 +25,8 @@ Partial Class CarDisplayCard
         Me.BalenoPan = New System.Windows.Forms.Panel()
         Me.ViewMoreBtn = New System.Windows.Forms.Button()
         Me.PriceLB = New System.Windows.Forms.Label()
-        Me.CarNameLB = New System.Windows.Forms.Label()
         Me.CarImagePB = New System.Windows.Forms.PictureBox()
+        Me.CarNameLB = New System.Windows.Forms.Label()
         Me.BalenoPan.SuspendLayout()
         CType(Me.CarImagePB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -68,6 +68,16 @@ Partial Class CarDisplayCard
         Me.PriceLB.TabIndex = 18
         Me.PriceLB.Text = "Starting from ₹ 6.66 Lakh"
         '
+        'CarImagePB
+        '
+        Me.CarImagePB.Image = Global.Car_Showroom.My.Resources.Resources.Car_blac
+        Me.CarImagePB.Location = New System.Drawing.Point(6, 30)
+        Me.CarImagePB.Name = "CarImagePB"
+        Me.CarImagePB.Size = New System.Drawing.Size(217, 127)
+        Me.CarImagePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.CarImagePB.TabIndex = 17
+        Me.CarImagePB.TabStop = False
+        '
         'CarNameLB
         '
         Me.CarNameLB.AutoSize = True
@@ -79,16 +89,6 @@ Partial Class CarDisplayCard
         Me.CarNameLB.Size = New System.Drawing.Size(136, 17)
         Me.CarNameLB.TabIndex = 16
         Me.CarNameLB.Text = "Maruti Suzuki Baleno"
-        '
-        'CarImagePB
-        '
-        Me.CarImagePB.Image = Global.Car_Showroom.My.Resources.Resources.BalenoC1
-        Me.CarImagePB.Location = New System.Drawing.Point(6, 30)
-        Me.CarImagePB.Name = "CarImagePB"
-        Me.CarImagePB.Size = New System.Drawing.Size(217, 127)
-        Me.CarImagePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.CarImagePB.TabIndex = 17
-        Me.CarImagePB.TabStop = False
         '
         'CarDisplayCard
         '

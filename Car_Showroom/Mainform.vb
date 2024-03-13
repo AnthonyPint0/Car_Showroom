@@ -430,4 +430,8 @@ Public Class Mainform
             loggedIn = False
         End If
     End Sub
+
+    Private Sub Sidebar_Paint(sender As Object, e As PaintEventArgs) Handles Sidebar.Paint
+
+    End Sub
 End Class
