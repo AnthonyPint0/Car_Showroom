@@ -2,7 +2,8 @@
 Imports Microsoft.VisualBasic.Devices
 
 Public Class Payment
-    Private connectionString As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
+    Private connectionString As String = Form1.conectionString
+
     Public CustID As Integer
     Public carID As String
     Dim drag As Boolean

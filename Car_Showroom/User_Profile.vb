@@ -6,7 +6,8 @@ Public Class User_Profile
     Public CustID As Integer
     Private carID As String
     Public loggedIn As Boolean = True
-    Private connectionString As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
+    Private connectionString As String = Form1.conectionString
+
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer

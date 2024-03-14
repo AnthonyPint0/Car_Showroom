@@ -11,7 +11,7 @@ Public Class HomeForm
     Private selectedButton As Button = Nothing
     Public VarID As String
     Public CustID As Integer
-
+    Public connector As String = Form1.conectionString
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
@@ -359,7 +359,7 @@ Public Class HomeForm
         Dim query As String = "SELECT * FROM Cars"
 
         ' Create a new instance of the SqlConnection class to connect to your database
-        Using connection As New SqlConnection("Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False")
+        Using connection As New SqlConnection(connector)
             ' Create a new instance of the SqlCommand class with your SQL query and the SqlConnection
             Using command As New SqlCommand(query, connection)
                 ' Create a new instance of the SqlDataAdapter class to fetch the data from the database

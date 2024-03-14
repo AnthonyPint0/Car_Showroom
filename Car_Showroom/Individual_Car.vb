@@ -17,7 +17,8 @@ Public Class Individual_Car
     Public colour2 As String
     Public colour3 As String
     Public CustID As Integer
-    Private connectionString As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
+    Private connectionString As String = Form1.conectionString
+
     Private a As String
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown

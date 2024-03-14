@@ -5,6 +5,8 @@ Public Class Form_Register
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
+    Public connector As String = Form1.conectionString
+
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
         mousex = System.Windows.Forms.Cursor.Position.X - Me.Left
@@ -37,7 +39,7 @@ Public Class Form_Register
         End If
     End Sub
 
-    Public con As New SqlConnection("Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False")
+    Public con As New SqlConnection(connector)
     Private Sub Register_btn_Click(sender As Object, e As EventArgs) Handles Register_btn.Click
         PerformRegistration()
     End Sub

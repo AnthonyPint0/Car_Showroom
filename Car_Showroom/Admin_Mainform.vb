@@ -11,7 +11,8 @@ Public Class Admin_Mainform
     Public loggedIn As Boolean = False
     Private selectedButton As Button = Nothing
     Public carID As String
-    Private connectionString As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
+    Private connectionString As String = Form1.conectionString
+
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
         drag = True 'Set the flag to indicate dragging is in progress
