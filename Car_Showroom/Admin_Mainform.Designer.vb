@@ -100,10 +100,18 @@ Partial Class Admin_Mainform
         Me.SalesRepertGB = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.OrderHistoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OrderHistoryTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.OrderHistoryTableAdapter()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustomerID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Username = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cart = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Ordered = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Delivered = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MovedOn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -728,7 +736,6 @@ Partial Class Admin_Mainform
         Me.CarNameTextBox.Name = "CarNameTextBox"
         Me.CarNameTextBox.Size = New System.Drawing.Size(151, 21)
         Me.CarNameTextBox.TabIndex = 25
-        Me.CarNameTextBox.Text = "Hyundai Grand i10 Nios"
         '
         'Label4
         '
@@ -899,29 +906,13 @@ Partial Class Admin_Mainform
         Me.DataGridView3.AllowUserToDeleteRows = False
         Me.DataGridView3.AutoGenerateColumns = False
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn7})
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.CustomerID, Me.Username, Me.Price, Me.Cart, Me.Ordered, Me.Delivered, Me.Status, Me.MovedOn})
         Me.DataGridView3.DataSource = Me.OrderHistoryBindingSource
         Me.DataGridView3.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.Size = New System.Drawing.Size(701, 426)
         Me.DataGridView3.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "CustomerID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "CustomerID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Width = 70
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Username"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Username"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Width = 70
         '
         'OrderHistoryBindingSource
         '
@@ -931,6 +922,85 @@ Partial Class Admin_Mainform
         'OrderHistoryTableAdapter
         '
         Me.OrderHistoryTableAdapter.ClearBeforeFill = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "OrderID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "OrderID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 55
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "CarID"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "CarID"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 70
+        '
+        'CustomerID
+        '
+        Me.CustomerID.DataPropertyName = "CustomerID"
+        Me.CustomerID.HeaderText = "CustomerID"
+        Me.CustomerID.Name = "CustomerID"
+        Me.CustomerID.ReadOnly = True
+        Me.CustomerID.Width = 70
+        '
+        'Username
+        '
+        Me.Username.DataPropertyName = "Username"
+        Me.Username.HeaderText = "Username"
+        Me.Username.Name = "Username"
+        Me.Username.ReadOnly = True
+        Me.Username.Width = 70
+        '
+        'Price
+        '
+        Me.Price.DataPropertyName = "Price"
+        Me.Price.HeaderText = "Price"
+        Me.Price.Name = "Price"
+        Me.Price.ReadOnly = True
+        Me.Price.Width = 70
+        '
+        'Cart
+        '
+        Me.Cart.DataPropertyName = "Cart"
+        Me.Cart.HeaderText = "Cart"
+        Me.Cart.Name = "Cart"
+        Me.Cart.ReadOnly = True
+        Me.Cart.Width = 30
+        '
+        'Ordered
+        '
+        Me.Ordered.DataPropertyName = "Ordered"
+        Me.Ordered.HeaderText = "Ordered"
+        Me.Ordered.Name = "Ordered"
+        Me.Ordered.ReadOnly = True
+        Me.Ordered.Width = 60
+        '
+        'Delivered
+        '
+        Me.Delivered.DataPropertyName = "Delivered"
+        Me.Delivered.HeaderText = "Delivered"
+        Me.Delivered.Name = "Delivered"
+        Me.Delivered.ReadOnly = True
+        Me.Delivered.Width = 60
+        '
+        'Status
+        '
+        Me.Status.DataPropertyName = "Status"
+        Me.Status.HeaderText = "Status"
+        Me.Status.Name = "Status"
+        Me.Status.ReadOnly = True
+        Me.Status.Width = 70
+        '
+        'MovedOn
+        '
+        Me.MovedOn.DataPropertyName = "MovedOn"
+        Me.MovedOn.HeaderText = "MovedOn"
+        Me.MovedOn.Name = "MovedOn"
+        Me.MovedOn.ReadOnly = True
         '
         'Admin_Mainform
         '
@@ -1045,8 +1115,16 @@ Partial Class Admin_Mainform
     Friend WithEvents SalesRepertGB As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents DataGridView3 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents OrderHistoryBindingSource As BindingSource
     Friend WithEvents OrderHistoryTableAdapter As Car_ShowroomADataSetTableAdapters.OrderHistoryTableAdapter
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents CustomerID As DataGridViewTextBoxColumn
+    Friend WithEvents Username As DataGridViewTextBoxColumn
+    Friend WithEvents Price As DataGridViewTextBoxColumn
+    Friend WithEvents Cart As DataGridViewCheckBoxColumn
+    Friend WithEvents Ordered As DataGridViewCheckBoxColumn
+    Friend WithEvents Delivered As DataGridViewCheckBoxColumn
+    Friend WithEvents Status As DataGridViewTextBoxColumn
+    Friend WithEvents MovedOn As DataGridViewTextBoxColumn
 End Class

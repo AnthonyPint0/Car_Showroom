@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
 Imports System.Runtime.CompilerServices
 
 Public Class User_Profile
@@ -60,14 +61,43 @@ Public Class User_Profile
                             Price2LB.Text = readercheck("Price").ToString()
                             price = readercheck("Price").ToString()
                             PriceLabel.Text = readercheck("CarID").ToString()
-                            ' Set the image to the PictureBox, using the carID to retrieve it from resources
-                            CarImage.Image = My.Resources.ResourceManager.GetObject(carID)
+                            ' Load the image from the resources folder using the CarID as the resource name
+                            Dim image As Image = Nothing
 
-                            ' If the image with the specified carID does not exist, it will return Nothing
-                            ' In that case, you can use the default image (Car_blac) as a fallback
-                            If CarImage.Image Is Nothing Then
-                                CarImage.Image = My.Resources.Car_blac
+                            Try
+                                ' Try to load the image from resources using the CarID
+                                image = My.Resources.ResourceManager.GetObject(carID)
+                            Catch ex As Exception
+                                ' Handle any exceptions that occur while loading the image from resources
+                                MessageBox.Show("Error loading image from resources: " & ex.Message)
+                            End Try
+
+                            ' If the image is still null, try loading it from the "Images" folder
+                            If image Is Nothing Then
+                                Dim imagePath As String = Path.Combine(Application.StartupPath, "Images", carID & ".jpg")
+
+                                If File.Exists(imagePath) Then
+                                    Try
+                                        ' Load the image from the "Images" folder
+                                        image = Image.FromFile(imagePath)
+                                    Catch ex As Exception
+                                        ' Handle any exceptions that occur while loading the image from the "Images" folder
+                                        MessageBox.Show("Error loading image from folder: " & ex.Message)
+                                    End Try
+                                Else
+                                    Try
+                                        ' Load the default image "Car_black" from resources
+                                        image = My.Resources.Car_blac
+                                    Catch ex As Exception
+                                        ' Handle any exceptions that occur while loading the default image
+                                        MessageBox.Show("Error loading default image: " & ex.Message)
+                                    End Try
+                                End If
                             End If
+
+                            ' Set the image to the PictureBox
+                            CarImage.Image = image
+
                             CarName.Text = GetCarName(carID)
                             ' Check the conditions using if-else statements
                             '********************************************************************************************************************************

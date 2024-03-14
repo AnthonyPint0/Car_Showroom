@@ -3,6 +3,7 @@ Imports System.Data.SqlClient
 Imports System.Security.Policy
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports System.Runtime.CompilerServices
+Imports System.IO
 
 Public Class Individual_Car
     Dim drag As Boolean
@@ -55,20 +56,43 @@ Public Class Individual_Car
 
     ' Define a method to retrieve and display car details based on CarID
     Public Sub DisplayCarDetails(ByVal carID As String)
-        Dim imageName As String = carID ' Assuming carID contains "SwiftC1"
+        ' Load the image from the resources folder using the CarID as the resource name
         Dim image As Image = Nothing
 
-        ' Check if the image exists in resources
-        If My.Resources.ResourceManager.GetObject(imageName) IsNot Nothing Then
-            ' Image with carID exists
-            image = My.Resources.ResourceManager.GetObject(imageName)
-        Else
-            ' Image with carID does not exist, use default image
-            image = My.Resources.Car_blac
+        Try
+            ' Try to load the image from resources using the CarID
+            image = My.Resources.ResourceManager.GetObject(carID)
+        Catch ex As Exception
+            ' Handle any exceptions that occur while loading the image from resources
+            MessageBox.Show("Error loading image from resources: " & ex.Message)
+        End Try
+
+        ' If the image is still null, try loading it from the "Images" folder
+        If image Is Nothing Then
+            Dim imagePath As String = Path.Combine(Application.StartupPath, "Images", carID & ".jpg")
+
+            If File.Exists(imagePath) Then
+                Try
+                    ' Load the image from the "Images" folder
+                    image = Image.FromFile(imagePath)
+                Catch ex As Exception
+                    ' Handle any exceptions that occur while loading the image from the "Images" folder
+                    MessageBox.Show("Error loading image from folder: " & ex.Message)
+                End Try
+            Else
+                Try
+                    ' Load the default image "Car_black" from resources
+                    image = My.Resources.Car_blac
+                Catch ex As Exception
+                    ' Handle any exceptions that occur while loading the default image
+                    MessageBox.Show("Error loading default image: " & ex.Message)
+                End Try
+            End If
         End If
 
         ' Set the image to the PictureBox
         CarImage.Image = image
+
         Try
             ' Create a SqlConnection using the connection string
             Using connectionCarDetails As New SqlConnection(connectionString)

@@ -2,6 +2,7 @@
 Imports System.Drawing.Drawing2D
 Imports System.IO
 Imports System.Resources
+Imports System.Runtime.InteropServices.ComTypes
 
 Public Class Admin_Mainform
     Dim drag As Boolean
@@ -43,7 +44,12 @@ Public Class Admin_Mainform
             Application.Exit()
         End If
     End Sub
+
     Private Sub Admin_Mainform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Car_InventoryGB.Visible = True
+        Add_carGB.Visible = False
+        CustomerGB.Visible = False
+        SalesRepertGB.Visible = False
         'TODO: This line of code loads data into the 'Car_ShowroomADataSet.OrderHistory' table. You can move, or remove it, as needed.
         Me.OrderHistoryTableAdapter.Fill(Me.Car_ShowroomADataSet.OrderHistory)
         'TODO: This line of code loads data into the 'Car_ShowroomADataSet.Customer' table. You can move, or remove it, as needed.
@@ -69,20 +75,34 @@ Public Class Admin_Mainform
     End Sub
 
     Private Sub LoadCarIds()
-        ' Define the list of car IDs
-        Dim carIds() As String = {
-        "AmazeC1", "AuraC1", "BalenoC1", "BoleroC1", "BrezzaC1",
-        "CarensC1", "CiazC1", "CretaC1", "DzireC1", "ErtigaC1",
-        "i10_NiosC1", "InnovaC1", "KwidC1", "MagniteC1", "NexonC1",
-        "PunchC1", "ScorpioC1", "SeltosC1", "SwiftC1", "Tata Tigor",
-        "TriberC1", "VernaC1", "WagonRC1", "XUV300C1"
-    }
+        ' Clear existing items from the ComboBox
+        CarIDCB.Items.Clear()
 
-        ' Add each car ID to the ComboBox
+        ' Query the Cars table to retrieve all car IDs
+        Dim query As String = "SELECT CarId FROM Cars"
+        Dim carIds As New List(Of String)()
+
+        Using connection As New SqlConnection(connectionString)
+            Using command As New SqlCommand(query, connection)
+                connection.Open()
+                Dim reader As SqlDataReader = command.ExecuteReader()
+
+                ' Read each car ID and add it to the list
+                While reader.Read()
+                    carIds.Add(reader("CarId").ToString())
+                End While
+
+                ' Close the reader
+                reader.Close()
+            End Using
+        End Using
+
+        ' Add retrieved car IDs to the ComboBox
         For Each carId As String In carIds
             CarIDCB.Items.Add(carId)
         Next
     End Sub
+
     Private Sub Registerlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Registerlink.LinkClicked
         Me.Hide()
         Form_Login.Show()
@@ -354,21 +374,26 @@ Public Class Admin_Mainform
     End Sub
 
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
-        ' Save the uploaded image to the resources folder
-        Dim imageName As String = CarIdTextBox.Text ' Generate a unique file name
-        Dim imagePath As String = Path.Combine(Application.StartupPath, "Resources", imageName)
+        ' Specify the directory path for the Images folder
+        Dim imagesFolderPath As String = Path.Combine(Application.StartupPath, "Images")
 
+        ' Create the Images folder if it doesn't exist
+        If Not Directory.Exists(imagesFolderPath) Then
+            Directory.CreateDirectory(imagesFolderPath)
+        End If
+
+        ' Generate a unique file name for the uploaded image
+        Dim imageName As String = CarIdTextBox.Text & ".jpg" ' You can use a unique identifier here
+        Dim imagePath As String = Path.Combine(imagesFolderPath, imageName)
+
+        ' Check if an image is selected in the PictureBox
         If CarPictureBox.Image IsNot Nothing Then
             Try
-                ' Save the image to a file
+                ' Save the image to the specified file path
                 CarPictureBox.Image.Save(imagePath)
 
-                ' Add the image to the project resources
-                Using writer As New ResXResourceWriter("My Project\Resources.resx")
-                    writer.AddResource(imageName, Image.FromFile(imagePath))
-                End Using
-
-                MessageBox.Show("Image saved to resources successfully!")
+                ' Provide feedback to the user
+                MessageBox.Show("Image saved to Images folder successfully!")
             Catch ex As Exception
                 MessageBox.Show("Error saving image: " & ex.Message)
             End Try
@@ -458,6 +483,7 @@ Public Class Admin_Mainform
 
                         ' Optionally, provide feedback to the user indicating successful insertion
                         MessageBox.Show("Data inserted into CarColors table successfully!")
+                        ReloadForm()
                     Catch ex As Exception
                         ' Handle any exceptions that occur during database interaction
                         MessageBox.Show("Error inserting data into CarColors table: " & ex.Message)

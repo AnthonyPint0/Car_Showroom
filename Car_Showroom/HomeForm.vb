@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Drawing.Drawing2D
+Imports System.IO
 
 Public Class HomeForm
 
@@ -284,24 +285,38 @@ Public Class HomeForm
         Dim image As Image = Nothing
 
         Try
+            ' Try to load the image from resources using the CarID
             image = My.Resources.ResourceManager.GetObject(CarID)
         Catch ex As Exception
-            ' Handle any exceptions that occur while loading the image
-            MessageBox.Show("Error loading image: " & ex.Message)
+            ' Handle any exceptions that occur while loading the image from resources
+            MessageBox.Show("Error loading image from resources: " & ex.Message)
         End Try
 
-        ' If the image is null, load a default image
+        ' If the image is still null, try loading it from the "Images" folder
         If image Is Nothing Then
-            Try
-                ' Load the default image "Car_black" from resources
-                image = My.Resources.Car_blac
-            Catch ex As Exception
-                ' Handle any exceptions that occur while loading the default image
-                MessageBox.Show("Error loading default image: " & ex.Message)
-            End Try
+            Dim imagePath As String = Path.Combine(Application.StartupPath, "Images", CarID & ".jpg")
+
+            If File.Exists(imagePath) Then
+                Try
+                    ' Load the image from the "Images" folder
+                    image = Image.FromFile(imagePath)
+                Catch ex As Exception
+                    ' Handle any exceptions that occur while loading the image from the "Images" folder
+                    MessageBox.Show("Error loading image from folder: " & ex.Message)
+                End Try
+            Else
+                Try
+                    ' Load the default image "Car_black" from resources
+                    image = My.Resources.Car_blac
+                Catch ex As Exception
+                    ' Handle any exceptions that occur while loading the default image
+                    MessageBox.Show("Error loading default image: " & ex.Message)
+                End Try
+            End If
         End If
 
         Return image
+
     End Function
 
     Private Sub InsertIntoInventoryStatus(CarId As String, AvailableCount As Integer, MaxCapacity As Integer)

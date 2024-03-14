@@ -29,6 +29,8 @@ CREATE TABLE Cars(
 
 
 DELETE FROM Cars WHERE CarId = 'HarrierC1'
+DELETE FROM CarColors WHERE CarId = 'HarrierC1'
+DELETE FROM InventoryStatus WHERE CarId = 'HarrierC1'
 
 
 INSERT INTO Cars (CarId, CarName, Engine, Mileage, Transmission, FuelType, MaxPower, SeatingCapacity, DriverType, BodyType, Description, Price, CustReview, CustReviewLink)
@@ -115,7 +117,6 @@ VALUES ('CarId', 'CarName', 'Engine', 'Mileage', 'Transmission', 'FuelType', 'Ma
 SELECT * FROM Cars;
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-DELETE FROM Cars WHERE CarId = "HarrierC1"
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
