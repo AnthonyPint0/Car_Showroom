@@ -83,6 +83,27 @@ Partial Class Admin_Mainform
         Me.CarNameTextBox = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.CustomerGB = New System.Windows.Forms.GroupBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.CustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CustomerTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.CustomerTableAdapter()
+        Me.CustomerIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContactNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RegistrationDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SalesRepertGB = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OrderHistoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OrderHistoryTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.OrderHistoryTableAdapter()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,6 +114,14 @@ Partial Class Admin_Mainform
         Me.Car_InventoryGB.SuspendLayout()
         Me.Add_carGB.SuspendLayout()
         CType(Me.CarPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CustomerGB.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SalesRepertGB.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OrderHistoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Exit_btn
@@ -299,6 +328,8 @@ Partial Class Admin_Mainform
         Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.FlowLayoutPanel1.Controls.Add(Me.Car_InventoryGB)
         Me.FlowLayoutPanel1.Controls.Add(Me.Add_carGB)
+        Me.FlowLayoutPanel1.Controls.Add(Me.CustomerGB)
+        Me.FlowLayoutPanel1.Controls.Add(Me.SalesRepertGB)
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(199, 31)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(746, 507)
@@ -719,6 +750,188 @@ Partial Class Admin_Mainform
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "CarID"
         '
+        'CustomerGB
+        '
+        Me.CustomerGB.BackColor = System.Drawing.Color.White
+        Me.CustomerGB.Controls.Add(Me.GroupBox1)
+        Me.CustomerGB.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustomerGB.Location = New System.Drawing.Point(3, 997)
+        Me.CustomerGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 25)
+        Me.CustomerGB.Name = "CustomerGB"
+        Me.CustomerGB.Size = New System.Drawing.Size(722, 469)
+        Me.CustomerGB.TabIndex = 6
+        Me.CustomerGB.TabStop = False
+        Me.CustomerGB.Text = "Customer Management"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.AutoGenerateColumns = False
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CustomerIDDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.AddressDataGridViewTextBoxColumn, Me.ContactNumberDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.RegistrationDateDataGridViewTextBoxColumn})
+        Me.DataGridView2.DataSource = Me.CustomerBindingSource
+        Me.DataGridView2.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.Size = New System.Drawing.Size(701, 426)
+        Me.DataGridView2.TabIndex = 1
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.DataGridView2)
+        Me.GroupBox1.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 25)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(710, 438)
+        Me.GroupBox1.TabIndex = 2
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "GroupBox1"
+        '
+        'CustomerBindingSource
+        '
+        Me.CustomerBindingSource.DataMember = "Customer"
+        Me.CustomerBindingSource.DataSource = Me.Car_ShowroomADataSet
+        '
+        'CustomerTableAdapter
+        '
+        Me.CustomerTableAdapter.ClearBeforeFill = True
+        '
+        'CustomerIDDataGridViewTextBoxColumn
+        '
+        Me.CustomerIDDataGridViewTextBoxColumn.DataPropertyName = "CustomerID"
+        Me.CustomerIDDataGridViewTextBoxColumn.HeaderText = "CustomerID"
+        Me.CustomerIDDataGridViewTextBoxColumn.Name = "CustomerIDDataGridViewTextBoxColumn"
+        Me.CustomerIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustomerIDDataGridViewTextBoxColumn.Width = 70
+        '
+        'FirstNameDataGridViewTextBoxColumn
+        '
+        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FirstNameDataGridViewTextBoxColumn.Width = 70
+        '
+        'LastNameDataGridViewTextBoxColumn
+        '
+        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName"
+        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "LastName"
+        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
+        Me.LastNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.LastNameDataGridViewTextBoxColumn.Width = 70
+        '
+        'EmailDataGridViewTextBoxColumn
+        '
+        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "Email"
+        Me.EmailDataGridViewTextBoxColumn.HeaderText = "Email"
+        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
+        Me.EmailDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EmailDataGridViewTextBoxColumn.Width = 150
+        '
+        'AddressDataGridViewTextBoxColumn
+        '
+        Me.AddressDataGridViewTextBoxColumn.DataPropertyName = "Address"
+        Me.AddressDataGridViewTextBoxColumn.HeaderText = "Address"
+        Me.AddressDataGridViewTextBoxColumn.Name = "AddressDataGridViewTextBoxColumn"
+        Me.AddressDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AddressDataGridViewTextBoxColumn.Width = 170
+        '
+        'ContactNumberDataGridViewTextBoxColumn
+        '
+        Me.ContactNumberDataGridViewTextBoxColumn.DataPropertyName = "ContactNumber"
+        Me.ContactNumberDataGridViewTextBoxColumn.HeaderText = "ContactNumber"
+        Me.ContactNumberDataGridViewTextBoxColumn.Name = "ContactNumberDataGridViewTextBoxColumn"
+        Me.ContactNumberDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ContactNumberDataGridViewTextBoxColumn.Width = 120
+        '
+        'UsernameDataGridViewTextBoxColumn
+        '
+        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "Username"
+        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "Username"
+        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
+        Me.UsernameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.UsernameDataGridViewTextBoxColumn.Width = 70
+        '
+        'PasswordDataGridViewTextBoxColumn
+        '
+        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "Password"
+        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "Password"
+        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
+        Me.PasswordDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PasswordDataGridViewTextBoxColumn.Width = 70
+        '
+        'RegistrationDateDataGridViewTextBoxColumn
+        '
+        Me.RegistrationDateDataGridViewTextBoxColumn.DataPropertyName = "RegistrationDate"
+        Me.RegistrationDateDataGridViewTextBoxColumn.HeaderText = "RegistrationDate"
+        Me.RegistrationDateDataGridViewTextBoxColumn.Name = "RegistrationDateDataGridViewTextBoxColumn"
+        Me.RegistrationDateDataGridViewTextBoxColumn.ReadOnly = True
+        Me.RegistrationDateDataGridViewTextBoxColumn.Width = 120
+        '
+        'SalesRepertGB
+        '
+        Me.SalesRepertGB.BackColor = System.Drawing.Color.White
+        Me.SalesRepertGB.Controls.Add(Me.GroupBox3)
+        Me.SalesRepertGB.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SalesRepertGB.Location = New System.Drawing.Point(3, 1494)
+        Me.SalesRepertGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 25)
+        Me.SalesRepertGB.Name = "SalesRepertGB"
+        Me.SalesRepertGB.Size = New System.Drawing.Size(722, 469)
+        Me.SalesRepertGB.TabIndex = 7
+        Me.SalesRepertGB.TabStop = False
+        Me.SalesRepertGB.Text = "Sales Report"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.DataGridView3)
+        Me.GroupBox3.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.Location = New System.Drawing.Point(6, 25)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(710, 438)
+        Me.GroupBox3.TabIndex = 2
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "GroupBox3"
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowUserToAddRows = False
+        Me.DataGridView3.AllowUserToDeleteRows = False
+        Me.DataGridView3.AutoGenerateColumns = False
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn7})
+        Me.DataGridView3.DataSource = Me.OrderHistoryBindingSource
+        Me.DataGridView3.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.ReadOnly = True
+        Me.DataGridView3.Size = New System.Drawing.Size(701, 426)
+        Me.DataGridView3.TabIndex = 1
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "CustomerID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "CustomerID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 70
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Username"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Username"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Width = 70
+        '
+        'OrderHistoryBindingSource
+        '
+        Me.OrderHistoryBindingSource.DataMember = "OrderHistory"
+        Me.OrderHistoryBindingSource.DataSource = Me.Car_ShowroomADataSet
+        '
+        'OrderHistoryTableAdapter
+        '
+        Me.OrderHistoryTableAdapter.ClearBeforeFill = True
+        '
         'Admin_Mainform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -745,6 +958,14 @@ Partial Class Admin_Mainform
         Me.Add_carGB.ResumeLayout(False)
         Me.Add_carGB.PerformLayout()
         CType(Me.CarPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CustomerGB.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SalesRepertGB.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OrderHistoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -807,4 +1028,25 @@ Partial Class Admin_Mainform
     Friend WithEvents Label18 As Label
     Friend WithEvents CarPictureBox As PictureBox
     Friend WithEvents BodyTypeCB As ComboBox
+    Friend WithEvents CustomerGB As GroupBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents CustomerBindingSource As BindingSource
+    Friend WithEvents CustomerTableAdapter As Car_ShowroomADataSetTableAdapters.CustomerTableAdapter
+    Friend WithEvents CustomerIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LastNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AddressDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ContactNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RegistrationDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SalesRepertGB As GroupBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents OrderHistoryBindingSource As BindingSource
+    Friend WithEvents OrderHistoryTableAdapter As Car_ShowroomADataSetTableAdapters.OrderHistoryTableAdapter
 End Class

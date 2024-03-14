@@ -44,6 +44,10 @@ Public Class Admin_Mainform
         End If
     End Sub
     Private Sub Admin_Mainform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Car_ShowroomADataSet.OrderHistory' table. You can move, or remove it, as needed.
+        Me.OrderHistoryTableAdapter.Fill(Me.Car_ShowroomADataSet.OrderHistory)
+        'TODO: This line of code loads data into the 'Car_ShowroomADataSet.Customer' table. You can move, or remove it, as needed.
+        Me.CustomerTableAdapter.Fill(Me.Car_ShowroomADataSet.Customer)
         BodyTypeCB.Items.Add("Hatchback")
         BodyTypeCB.Items.Add("Sedan")
         BodyTypeCB.Items.Add("SUV")
@@ -145,6 +149,8 @@ Public Class Admin_Mainform
         HandleButtonClick(Car_Inventory)
         Car_InventoryGB.Visible = True
         Add_carGB.Visible = False
+        CustomerGB.Visible = False
+        SalesRepertGB.Visible = False
     End Sub
 
     Private Sub Customer_Management_Click(sender As Object, e As EventArgs) Handles Customer_Management.Click
@@ -152,6 +158,8 @@ Public Class Admin_Mainform
         HandleButtonClick(Customer_Management)
         Car_InventoryGB.Visible = False
         Add_carGB.Visible = False
+        CustomerGB.Visible = True
+        SalesRepertGB.Visible = False
     End Sub
 
     Private Sub Sales_Reports_Click(sender As Object, e As EventArgs) Handles Sales_Reports.Click
@@ -159,6 +167,8 @@ Public Class Admin_Mainform
         HandleButtonClick(Sales_Reports)
         Car_InventoryGB.Visible = False
         Add_carGB.Visible = False
+        CustomerGB.Visible = False
+        SalesRepertGB.Visible = True
     End Sub
 
     Private Sub Add_car_Click(sender As Object, e As EventArgs) Handles Add_carBtn.Click
@@ -166,6 +176,8 @@ Public Class Admin_Mainform
         HandleButtonClick(Add_carBtn)
         Car_InventoryGB.Visible = False
         Add_carGB.Visible = True
+        CustomerGB.Visible = False
+        SalesRepertGB.Visible = False
     End Sub
 
     Private Sub HandleButtonClick(clickedButton As Button)
