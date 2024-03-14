@@ -1,10 +1,11 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
 Imports System.Runtime.CompilerServices
 
 Public Class User_Profile
     Public CustID As Integer
     Private carID As String
-    Public loggedIn As Boolean = False
+    Public loggedIn As Boolean = True
     Private connectionString As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
     Dim drag As Boolean
     Dim mousex As Integer
@@ -60,7 +61,43 @@ Public Class User_Profile
                             Price2LB.Text = readercheck("Price").ToString()
                             price = readercheck("Price").ToString()
                             PriceLabel.Text = readercheck("CarID").ToString()
-                            CarImage.Image = My.Resources.ResourceManager.GetObject(carID)
+                            ' Load the image from the resources folder using the CarID as the resource name
+                            Dim image As Image = Nothing
+
+                            Try
+                                ' Try to load the image from resources using the CarID
+                                image = My.Resources.ResourceManager.GetObject(carID)
+                            Catch ex As Exception
+                                ' Handle any exceptions that occur while loading the image from resources
+                                MessageBox.Show("Error loading image from resources: " & ex.Message)
+                            End Try
+
+                            ' If the image is still null, try loading it from the "Images" folder
+                            If image Is Nothing Then
+                                Dim imagePath As String = Path.Combine(Application.StartupPath, "Images", carID & ".jpg")
+
+                                If File.Exists(imagePath) Then
+                                    Try
+                                        ' Load the image from the "Images" folder
+                                        image = Image.FromFile(imagePath)
+                                    Catch ex As Exception
+                                        ' Handle any exceptions that occur while loading the image from the "Images" folder
+                                        MessageBox.Show("Error loading image from folder: " & ex.Message)
+                                    End Try
+                                Else
+                                    Try
+                                        ' Load the default image "Car_black" from resources
+                                        image = My.Resources.Car_blac
+                                    Catch ex As Exception
+                                        ' Handle any exceptions that occur while loading the default image
+                                        MessageBox.Show("Error loading default image: " & ex.Message)
+                                    End Try
+                                End If
+                            End If
+
+                            ' Set the image to the PictureBox
+                            CarImage.Image = image
+
                             CarName.Text = GetCarName(carID)
                             ' Check the conditions using if-else statements
                             '********************************************************************************************************************************
@@ -76,6 +113,9 @@ Public Class User_Profile
                                     stockstatus.Visible = True
                                 End If
                                 Console.WriteLine("Condition 1: Cart = 1, Ordered = 0, Delivered = 0")
+                                Console.WriteLine(custID)
+                                HomeForm.CustID = custID
+                                Individual_Car.CustID = custID
                                 '********************************************************************************************************************************
                             ElseIf Not cart AndAlso ordered AndAlso Not delivered Then
                                 ' Condition 2: Cart = 0, Ordered = 1, Delivered = 0
@@ -96,6 +136,9 @@ Public Class User_Profile
                                     MessageBox.Show("Error marking order as successful: " & ex.Message)
                                 End Try
                                 Console.WriteLine("Condition 2: Cart = 0, Ordered = 1, Delivered = 0")
+                                Console.WriteLine(custID)
+                                HomeForm.CustID = custID
+                                Individual_Car.CustID = custID
                                 '********************************************************************************************************************************
                             ElseIf Not cart AndAlso Not ordered AndAlso delivered Then
                                 ' Condition 3: Cart = 0, Ordered = 0, Delivered = 1
@@ -116,6 +159,9 @@ Public Class User_Profile
                                     MessageBox.Show("Error marking order as successful: " & ex.Message)
                                 End Try
                                 Console.WriteLine("Condition 3: Cart = 0, Ordered = 0, Delivered = 1")
+                                Console.WriteLine(custID)
+                                HomeForm.CustID = custID
+                                Individual_Car.CustID = custID
                                 '********************************************************************************************************************************
                             ElseIf Not cart AndAlso Not ordered AndAlso Not delivered Then
                                 ' Condition 3: Cart = 0, Ordered = 0, Delivered = 0
@@ -141,16 +187,25 @@ Public Class User_Profile
                                     MessageBox.Show("Error marking order as successful: " & ex.Message)
                                 End Try
                                 Console.WriteLine("Condition 4: Cart = 0, Ordered = 0, Delivered = 0")
+                                Console.WriteLine(custID)
+                                HomeForm.CustID = custID
+                                Individual_Car.CustID = custID
                                 '********************************************************************************************************************************
                             Else
                                 ' Other conditions
                                 ' Perform actions for other conditions or handle unknown conditions
                                 Console.WriteLine("Other conditions")
+                                Console.WriteLine(custID)
+                                HomeForm.CustID = custID
+                                Individual_Car.CustID = custID
                             End If
                         End While
                     Else
                         ' No rows returned
                         ' Handle no rows returned
+                        Console.WriteLine(custID)
+                        HomeForm.CustID = custID
+                        Individual_Car.CustID = custID
                         confoLB.Text = ""
                         stockstatus.Text = ""
                         CartElements(False)
@@ -174,10 +229,12 @@ Public Class User_Profile
     End Sub
 
     Private Sub User_Profile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Console.WriteLine(CustID)
+        Console.WriteLine(carID)
     End Sub
 
     Public Sub CustomerInfo(ByVal CustID As String)
+        Console.WriteLine(CustID)
         Try
             ' Create a SqlConnection using the connection string
             Using connection As New SqlConnection(connectionString)
@@ -205,7 +262,7 @@ Public Class User_Profile
                             AddressTxt.Text = reader("Address").ToString()
                         Else
                             ' If no rows are returned, display a message
-                            MessageBox.Show("No car found with the specified CarID.")
+                            Console.WriteLine("No Customer found with the specified CustID.")
                         End If
                     End Using
                 End Using
@@ -231,10 +288,12 @@ Public Class User_Profile
 
     Private Sub Homebel_Click(sender As Object, e As EventArgs) Handles Homebel.Click
         Me.Hide()
-        Mainform.Show()
-        Mainform.loggedIn = loggedIn ' Set loggedIn to True
-        Mainform.Profile.Text = "" & Profile.Text
-        Mainform.UpdateUI() ' Update the UI in MainForm
+        HomeForm.Show()
+        HomeForm.CustID = CustID
+        HomeForm.loggedIn = loggedIn ' Set loggedIn to True
+        HomeForm.PopulateCarDisplayPanel(loggedIn)
+        HomeForm.Profile.Text = "" & Profile.Text
+        HomeForm.UpdateUI() ' Update the UI in HomeForm
     End Sub
 
     Private Sub Exit_btn_Click(sender As Object, e As EventArgs) Handles Exit_btn.Click
@@ -325,7 +384,8 @@ Public Class User_Profile
                         command.ExecuteNonQuery()
                     End Using
                 End Using
-                Mainform.Show()
+                HomeForm.Show()
+                HomeForm.PopulateCarDisplayPanel(loggedIn)
                 Me.Close()
             Catch ex As Exception
                 MessageBox.Show("Error marking order as successful: " & ex.Message)

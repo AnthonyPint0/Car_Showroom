@@ -27,8 +27,7 @@ Partial Class Admin_Mainform
         Me.Exit_btn = New System.Windows.Forms.Button()
         Me.Sidebar = New System.Windows.Forms.Panel()
         Me.Profile = New System.Windows.Forms.Button()
-        Me.Settings = New System.Windows.Forms.Button()
-        Me.Employee_Management = New System.Windows.Forms.Button()
+        Me.Add_carBtn = New System.Windows.Forms.Button()
         Me.Sales_Reports = New System.Windows.Forms.Button()
         Me.Customer_Management = New System.Windows.Forms.Button()
         Me.Car_Inventory = New System.Windows.Forms.Button()
@@ -51,6 +50,68 @@ Partial Class Admin_Mainform
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Add_carGB = New System.Windows.Forms.GroupBox()
+        Me.BodyTypeCB = New System.Windows.Forms.ComboBox()
+        Me.CarPictureBox = New System.Windows.Forms.PictureBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.UploadImageButton = New System.Windows.Forms.Button()
+        Me.DescriptionTB = New System.Windows.Forms.RichTextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.CustReviewlinkTB = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.PriceTB = New System.Windows.Forms.TextBox()
+        Me.CustReviewTB = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.DriverTypeTB = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.MaxPowerTB = New System.Windows.Forms.TextBox()
+        Me.SeatingCapacityTB = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TransmissionTB = New System.Windows.Forms.TextBox()
+        Me.FuelTypeTB = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.EngineTB = New System.Windows.Forms.TextBox()
+        Me.MileageTB = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.CarIdTextBox = New System.Windows.Forms.TextBox()
+        Me.SaveButton = New System.Windows.Forms.Button()
+        Me.CarNameTextBox = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.CustomerGB = New System.Windows.Forms.GroupBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.CustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CustomerTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.CustomerTableAdapter()
+        Me.CustomerIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContactNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RegistrationDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SalesRepertGB = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.OrderHistoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OrderHistoryTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.OrderHistoryTableAdapter()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustomerID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Username = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cart = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Ordered = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Delivered = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MovedOn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,6 +120,16 @@ Partial Class Admin_Mainform
         CType(Me.Car_ShowroomADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Car_InventoryGB.SuspendLayout()
+        Me.Add_carGB.SuspendLayout()
+        CType(Me.CarPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CustomerGB.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SalesRepertGB.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OrderHistoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Exit_btn
@@ -79,8 +150,7 @@ Partial Class Admin_Mainform
         Me.Sidebar.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Sidebar.BackgroundImage = CType(resources.GetObject("Sidebar.BackgroundImage"), System.Drawing.Image)
         Me.Sidebar.Controls.Add(Me.Profile)
-        Me.Sidebar.Controls.Add(Me.Settings)
-        Me.Sidebar.Controls.Add(Me.Employee_Management)
+        Me.Sidebar.Controls.Add(Me.Add_carBtn)
         Me.Sidebar.Controls.Add(Me.Sales_Reports)
         Me.Sidebar.Controls.Add(Me.Customer_Management)
         Me.Sidebar.Controls.Add(Me.Car_Inventory)
@@ -107,31 +177,18 @@ Partial Class Admin_Mainform
         Me.Profile.Text = "Guest"
         Me.Profile.UseVisualStyleBackColor = False
         '
-        'Settings
+        'Add_carBtn
         '
-        Me.Settings.BackColor = System.Drawing.Color.Transparent
-        Me.Settings.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Settings.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Settings.ForeColor = System.Drawing.Color.White
-        Me.Settings.Location = New System.Drawing.Point(0, 359)
-        Me.Settings.Name = "Settings"
-        Me.Settings.Size = New System.Drawing.Size(194, 36)
-        Me.Settings.TabIndex = 20
-        Me.Settings.Text = "Settings"
-        Me.Settings.UseVisualStyleBackColor = False
-        '
-        'Employee_Management
-        '
-        Me.Employee_Management.BackColor = System.Drawing.Color.Transparent
-        Me.Employee_Management.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Employee_Management.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Employee_Management.ForeColor = System.Drawing.Color.White
-        Me.Employee_Management.Location = New System.Drawing.Point(0, 311)
-        Me.Employee_Management.Name = "Employee_Management"
-        Me.Employee_Management.Size = New System.Drawing.Size(194, 36)
-        Me.Employee_Management.TabIndex = 19
-        Me.Employee_Management.Text = "Employee Management"
-        Me.Employee_Management.UseVisualStyleBackColor = False
+        Me.Add_carBtn.BackColor = System.Drawing.Color.Transparent
+        Me.Add_carBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Add_carBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Add_carBtn.ForeColor = System.Drawing.Color.White
+        Me.Add_carBtn.Location = New System.Drawing.Point(1, 209)
+        Me.Add_carBtn.Name = "Add_carBtn"
+        Me.Add_carBtn.Size = New System.Drawing.Size(194, 36)
+        Me.Add_carBtn.TabIndex = 20
+        Me.Add_carBtn.Text = "Add New Car"
+        Me.Add_carBtn.UseVisualStyleBackColor = False
         '
         'Sales_Reports
         '
@@ -152,7 +209,7 @@ Partial Class Admin_Mainform
         Me.Customer_Management.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Customer_Management.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Customer_Management.ForeColor = System.Drawing.Color.White
-        Me.Customer_Management.Location = New System.Drawing.Point(0, 199)
+        Me.Customer_Management.Location = New System.Drawing.Point(1, 322)
         Me.Customer_Management.Name = "Customer_Management"
         Me.Customer_Management.Size = New System.Drawing.Size(194, 55)
         Me.Customer_Management.TabIndex = 17
@@ -276,11 +333,14 @@ Partial Class Admin_Mainform
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.AutoScroll = True
-        Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.White
+        Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.FlowLayoutPanel1.Controls.Add(Me.Car_InventoryGB)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Add_carGB)
+        Me.FlowLayoutPanel1.Controls.Add(Me.CustomerGB)
+        Me.FlowLayoutPanel1.Controls.Add(Me.SalesRepertGB)
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(199, 31)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(756, 507)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(746, 507)
         Me.FlowLayoutPanel1.TabIndex = 44
         '
         'Car_InventoryGB
@@ -295,9 +355,9 @@ Partial Class Admin_Mainform
         Me.Car_InventoryGB.Controls.Add(Me.DataGridView1)
         Me.Car_InventoryGB.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Car_InventoryGB.Location = New System.Drawing.Point(3, 3)
-        Me.Car_InventoryGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 15)
+        Me.Car_InventoryGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 25)
         Me.Car_InventoryGB.Name = "Car_InventoryGB"
-        Me.Car_InventoryGB.Size = New System.Drawing.Size(740, 484)
+        Me.Car_InventoryGB.Size = New System.Drawing.Size(722, 469)
         Me.Car_InventoryGB.TabIndex = 4
         Me.Car_InventoryGB.TabStop = False
         Me.Car_InventoryGB.Text = "Car Inventory"
@@ -357,11 +417,596 @@ Partial Class Admin_Mainform
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Add Car:"
         '
+        'Add_carGB
+        '
+        Me.Add_carGB.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.Add_carGB.Controls.Add(Me.BodyTypeCB)
+        Me.Add_carGB.Controls.Add(Me.CarPictureBox)
+        Me.Add_carGB.Controls.Add(Me.Label18)
+        Me.Add_carGB.Controls.Add(Me.UploadImageButton)
+        Me.Add_carGB.Controls.Add(Me.DescriptionTB)
+        Me.Add_carGB.Controls.Add(Me.Label17)
+        Me.Add_carGB.Controls.Add(Me.CustReviewlinkTB)
+        Me.Add_carGB.Controls.Add(Me.Label14)
+        Me.Add_carGB.Controls.Add(Me.PriceTB)
+        Me.Add_carGB.Controls.Add(Me.CustReviewTB)
+        Me.Add_carGB.Controls.Add(Me.Label15)
+        Me.Add_carGB.Controls.Add(Me.Label16)
+        Me.Add_carGB.Controls.Add(Me.DriverTypeTB)
+        Me.Add_carGB.Controls.Add(Me.Label10)
+        Me.Add_carGB.Controls.Add(Me.Label11)
+        Me.Add_carGB.Controls.Add(Me.MaxPowerTB)
+        Me.Add_carGB.Controls.Add(Me.SeatingCapacityTB)
+        Me.Add_carGB.Controls.Add(Me.Label12)
+        Me.Add_carGB.Controls.Add(Me.Label13)
+        Me.Add_carGB.Controls.Add(Me.TransmissionTB)
+        Me.Add_carGB.Controls.Add(Me.FuelTypeTB)
+        Me.Add_carGB.Controls.Add(Me.Label8)
+        Me.Add_carGB.Controls.Add(Me.Label9)
+        Me.Add_carGB.Controls.Add(Me.EngineTB)
+        Me.Add_carGB.Controls.Add(Me.MileageTB)
+        Me.Add_carGB.Controls.Add(Me.Label6)
+        Me.Add_carGB.Controls.Add(Me.Label7)
+        Me.Add_carGB.Controls.Add(Me.CarIdTextBox)
+        Me.Add_carGB.Controls.Add(Me.SaveButton)
+        Me.Add_carGB.Controls.Add(Me.CarNameTextBox)
+        Me.Add_carGB.Controls.Add(Me.Label4)
+        Me.Add_carGB.Controls.Add(Me.Label5)
+        Me.Add_carGB.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Add_carGB.Location = New System.Drawing.Point(3, 500)
+        Me.Add_carGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 25)
+        Me.Add_carGB.Name = "Add_carGB"
+        Me.Add_carGB.Size = New System.Drawing.Size(706, 469)
+        Me.Add_carGB.TabIndex = 5
+        Me.Add_carGB.TabStop = False
+        Me.Add_carGB.Text = "Add New Car"
+        '
+        'BodyTypeCB
+        '
+        Me.BodyTypeCB.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.BodyTypeCB.FormattingEnabled = True
+        Me.BodyTypeCB.Location = New System.Drawing.Point(522, 369)
+        Me.BodyTypeCB.Name = "BodyTypeCB"
+        Me.BodyTypeCB.Size = New System.Drawing.Size(151, 23)
+        Me.BodyTypeCB.TabIndex = 55
+        '
+        'CarPictureBox
+        '
+        Me.CarPictureBox.Location = New System.Drawing.Point(137, 377)
+        Me.CarPictureBox.Name = "CarPictureBox"
+        Me.CarPictureBox.Size = New System.Drawing.Size(145, 83)
+        Me.CarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.CarPictureBox.TabIndex = 54
+        Me.CarPictureBox.TabStop = False
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.Red
+        Me.Label18.Location = New System.Drawing.Point(9, 374)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(122, 32)
+        Me.Label18.TabIndex = 53
+        Me.Label18.Text = "*Image Name must " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "be Same as CarID"
+        '
+        'UploadImageButton
+        '
+        Me.UploadImageButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.UploadImageButton.ForeColor = System.Drawing.Color.Black
+        Me.UploadImageButton.Location = New System.Drawing.Point(6, 415)
+        Me.UploadImageButton.Name = "UploadImageButton"
+        Me.UploadImageButton.Size = New System.Drawing.Size(116, 34)
+        Me.UploadImageButton.TabIndex = 52
+        Me.UploadImageButton.Text = "Upload Image"
+        Me.UploadImageButton.UseVisualStyleBackColor = False
+        '
+        'DescriptionTB
+        '
+        Me.DescriptionTB.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.DescriptionTB.Location = New System.Drawing.Point(110, 275)
+        Me.DescriptionTB.Name = "DescriptionTB"
+        Me.DescriptionTB.Size = New System.Drawing.Size(237, 96)
+        Me.DescriptionTB.TabIndex = 51
+        Me.DescriptionTB.Text = ""
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(21, 276)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(72, 16)
+        Me.Label17.TabIndex = 50
+        Me.Label17.Text = "Description"
+        '
+        'CustReviewlinkTB
+        '
+        Me.CustReviewlinkTB.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.CustReviewlinkTB.Location = New System.Drawing.Point(110, 226)
+        Me.CustReviewlinkTB.Name = "CustReviewlinkTB"
+        Me.CustReviewlinkTB.Size = New System.Drawing.Size(151, 21)
+        Me.CustReviewlinkTB.TabIndex = 49
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(6, 231)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(98, 16)
+        Me.Label14.TabIndex = 48
+        Me.Label14.Text = "CustReviewLink"
+        '
+        'PriceTB
+        '
+        Me.PriceTB.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.PriceTB.Location = New System.Drawing.Point(110, 126)
+        Me.PriceTB.Name = "PriceTB"
+        Me.PriceTB.Size = New System.Drawing.Size(151, 21)
+        Me.PriceTB.TabIndex = 47
+        '
+        'CustReviewTB
+        '
+        Me.CustReviewTB.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.CustReviewTB.Location = New System.Drawing.Point(110, 175)
+        Me.CustReviewTB.Name = "CustReviewTB"
+        Me.CustReviewTB.Size = New System.Drawing.Size(151, 21)
+        Me.CustReviewTB.TabIndex = 46
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(21, 180)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(74, 16)
+        Me.Label15.TabIndex = 45
+        Me.Label15.Text = "CustReview"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(41, 133)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(37, 16)
+        Me.Label16.TabIndex = 44
+        Me.Label16.Text = "Price"
+        '
+        'DriverTypeTB
+        '
+        Me.DriverTypeTB.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.DriverTypeTB.Location = New System.Drawing.Point(522, 322)
+        Me.DriverTypeTB.Name = "DriverTypeTB"
+        Me.DriverTypeTB.Size = New System.Drawing.Size(151, 21)
+        Me.DriverTypeTB.TabIndex = 43
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(436, 373)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(68, 16)
+        Me.Label10.TabIndex = 41
+        Me.Label10.Text = "Body Type"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(434, 326)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(70, 16)
+        Me.Label11.TabIndex = 40
+        Me.Label11.Text = "Driver Type"
+        '
+        'MaxPowerTB
+        '
+        Me.MaxPowerTB.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.MaxPowerTB.Location = New System.Drawing.Point(522, 222)
+        Me.MaxPowerTB.Name = "MaxPowerTB"
+        Me.MaxPowerTB.Size = New System.Drawing.Size(151, 21)
+        Me.MaxPowerTB.TabIndex = 39
+        '
+        'SeatingCapacityTB
+        '
+        Me.SeatingCapacityTB.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.SeatingCapacityTB.Location = New System.Drawing.Point(522, 271)
+        Me.SeatingCapacityTB.Name = "SeatingCapacityTB"
+        Me.SeatingCapacityTB.Size = New System.Drawing.Size(151, 21)
+        Me.SeatingCapacityTB.TabIndex = 38
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(398, 273)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(106, 16)
+        Me.Label12.TabIndex = 37
+        Me.Label12.Text = "Seating Capacity"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(432, 226)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(72, 16)
+        Me.Label13.TabIndex = 36
+        Me.Label13.Text = "Max Power"
+        '
+        'TransmissionTB
+        '
+        Me.TransmissionTB.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.TransmissionTB.Location = New System.Drawing.Point(522, 129)
+        Me.TransmissionTB.Name = "TransmissionTB"
+        Me.TransmissionTB.Size = New System.Drawing.Size(151, 21)
+        Me.TransmissionTB.TabIndex = 35
+        '
+        'FuelTypeTB
+        '
+        Me.FuelTypeTB.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.FuelTypeTB.Location = New System.Drawing.Point(522, 178)
+        Me.FuelTypeTB.Name = "FuelTypeTB"
+        Me.FuelTypeTB.Size = New System.Drawing.Size(151, 21)
+        Me.FuelTypeTB.TabIndex = 34
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(441, 180)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(63, 16)
+        Me.Label8.TabIndex = 33
+        Me.Label8.Text = "Fuel Type"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(420, 133)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(84, 16)
+        Me.Label9.TabIndex = 32
+        Me.Label9.Text = "Transmission"
+        '
+        'EngineTB
+        '
+        Me.EngineTB.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.EngineTB.Location = New System.Drawing.Point(522, 29)
+        Me.EngineTB.Name = "EngineTB"
+        Me.EngineTB.Size = New System.Drawing.Size(151, 21)
+        Me.EngineTB.TabIndex = 31
+        '
+        'MileageTB
+        '
+        Me.MileageTB.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.MileageTB.Location = New System.Drawing.Point(522, 78)
+        Me.MileageTB.Name = "MileageTB"
+        Me.MileageTB.Size = New System.Drawing.Size(151, 21)
+        Me.MileageTB.TabIndex = 30
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(452, 80)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(52, 16)
+        Me.Label6.TabIndex = 29
+        Me.Label6.Text = "Mileage"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(457, 33)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(47, 16)
+        Me.Label7.TabIndex = 28
+        Me.Label7.Text = "Engine"
+        '
+        'CarIdTextBox
+        '
+        Me.CarIdTextBox.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.CarIdTextBox.Location = New System.Drawing.Point(110, 34)
+        Me.CarIdTextBox.Name = "CarIdTextBox"
+        Me.CarIdTextBox.Size = New System.Drawing.Size(151, 21)
+        Me.CarIdTextBox.TabIndex = 27
+        '
+        'SaveButton
+        '
+        Me.SaveButton.BackColor = System.Drawing.Color.Green
+        Me.SaveButton.ForeColor = System.Drawing.Color.White
+        Me.SaveButton.Location = New System.Drawing.Point(557, 417)
+        Me.SaveButton.Name = "SaveButton"
+        Me.SaveButton.Size = New System.Drawing.Size(90, 43)
+        Me.SaveButton.TabIndex = 26
+        Me.SaveButton.Text = "Add Car"
+        Me.SaveButton.UseVisualStyleBackColor = False
+        '
+        'CarNameTextBox
+        '
+        Me.CarNameTextBox.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CarNameTextBox.Location = New System.Drawing.Point(110, 83)
+        Me.CarNameTextBox.Name = "CarNameTextBox"
+        Me.CarNameTextBox.Size = New System.Drawing.Size(151, 21)
+        Me.CarNameTextBox.TabIndex = 25
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(21, 86)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(65, 16)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Car Name"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(41, 41)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(39, 16)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "CarID"
+        '
+        'CustomerGB
+        '
+        Me.CustomerGB.BackColor = System.Drawing.Color.White
+        Me.CustomerGB.Controls.Add(Me.GroupBox1)
+        Me.CustomerGB.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustomerGB.Location = New System.Drawing.Point(3, 997)
+        Me.CustomerGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 25)
+        Me.CustomerGB.Name = "CustomerGB"
+        Me.CustomerGB.Size = New System.Drawing.Size(722, 469)
+        Me.CustomerGB.TabIndex = 6
+        Me.CustomerGB.TabStop = False
+        Me.CustomerGB.Text = "Customer Management"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.AutoGenerateColumns = False
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CustomerIDDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.AddressDataGridViewTextBoxColumn, Me.ContactNumberDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.RegistrationDateDataGridViewTextBoxColumn})
+        Me.DataGridView2.DataSource = Me.CustomerBindingSource
+        Me.DataGridView2.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.Size = New System.Drawing.Size(701, 426)
+        Me.DataGridView2.TabIndex = 1
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.DataGridView2)
+        Me.GroupBox1.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 25)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(710, 438)
+        Me.GroupBox1.TabIndex = 2
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "GroupBox1"
+        '
+        'CustomerBindingSource
+        '
+        Me.CustomerBindingSource.DataMember = "Customer"
+        Me.CustomerBindingSource.DataSource = Me.Car_ShowroomADataSet
+        '
+        'CustomerTableAdapter
+        '
+        Me.CustomerTableAdapter.ClearBeforeFill = True
+        '
+        'CustomerIDDataGridViewTextBoxColumn
+        '
+        Me.CustomerIDDataGridViewTextBoxColumn.DataPropertyName = "CustomerID"
+        Me.CustomerIDDataGridViewTextBoxColumn.HeaderText = "CustomerID"
+        Me.CustomerIDDataGridViewTextBoxColumn.Name = "CustomerIDDataGridViewTextBoxColumn"
+        Me.CustomerIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CustomerIDDataGridViewTextBoxColumn.Width = 70
+        '
+        'FirstNameDataGridViewTextBoxColumn
+        '
+        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FirstNameDataGridViewTextBoxColumn.Width = 70
+        '
+        'LastNameDataGridViewTextBoxColumn
+        '
+        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName"
+        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "LastName"
+        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
+        Me.LastNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.LastNameDataGridViewTextBoxColumn.Width = 70
+        '
+        'EmailDataGridViewTextBoxColumn
+        '
+        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "Email"
+        Me.EmailDataGridViewTextBoxColumn.HeaderText = "Email"
+        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
+        Me.EmailDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EmailDataGridViewTextBoxColumn.Width = 150
+        '
+        'AddressDataGridViewTextBoxColumn
+        '
+        Me.AddressDataGridViewTextBoxColumn.DataPropertyName = "Address"
+        Me.AddressDataGridViewTextBoxColumn.HeaderText = "Address"
+        Me.AddressDataGridViewTextBoxColumn.Name = "AddressDataGridViewTextBoxColumn"
+        Me.AddressDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AddressDataGridViewTextBoxColumn.Width = 170
+        '
+        'ContactNumberDataGridViewTextBoxColumn
+        '
+        Me.ContactNumberDataGridViewTextBoxColumn.DataPropertyName = "ContactNumber"
+        Me.ContactNumberDataGridViewTextBoxColumn.HeaderText = "ContactNumber"
+        Me.ContactNumberDataGridViewTextBoxColumn.Name = "ContactNumberDataGridViewTextBoxColumn"
+        Me.ContactNumberDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ContactNumberDataGridViewTextBoxColumn.Width = 120
+        '
+        'UsernameDataGridViewTextBoxColumn
+        '
+        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "Username"
+        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "Username"
+        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
+        Me.UsernameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.UsernameDataGridViewTextBoxColumn.Width = 70
+        '
+        'PasswordDataGridViewTextBoxColumn
+        '
+        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "Password"
+        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "Password"
+        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
+        Me.PasswordDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PasswordDataGridViewTextBoxColumn.Width = 70
+        '
+        'RegistrationDateDataGridViewTextBoxColumn
+        '
+        Me.RegistrationDateDataGridViewTextBoxColumn.DataPropertyName = "RegistrationDate"
+        Me.RegistrationDateDataGridViewTextBoxColumn.HeaderText = "RegistrationDate"
+        Me.RegistrationDateDataGridViewTextBoxColumn.Name = "RegistrationDateDataGridViewTextBoxColumn"
+        Me.RegistrationDateDataGridViewTextBoxColumn.ReadOnly = True
+        Me.RegistrationDateDataGridViewTextBoxColumn.Width = 120
+        '
+        'SalesRepertGB
+        '
+        Me.SalesRepertGB.BackColor = System.Drawing.Color.White
+        Me.SalesRepertGB.Controls.Add(Me.GroupBox3)
+        Me.SalesRepertGB.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SalesRepertGB.Location = New System.Drawing.Point(3, 1494)
+        Me.SalesRepertGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 25)
+        Me.SalesRepertGB.Name = "SalesRepertGB"
+        Me.SalesRepertGB.Size = New System.Drawing.Size(722, 469)
+        Me.SalesRepertGB.TabIndex = 7
+        Me.SalesRepertGB.TabStop = False
+        Me.SalesRepertGB.Text = "Sales Report"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.DataGridView3)
+        Me.GroupBox3.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.Location = New System.Drawing.Point(6, 25)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(710, 438)
+        Me.GroupBox3.TabIndex = 2
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "GroupBox3"
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowUserToAddRows = False
+        Me.DataGridView3.AllowUserToDeleteRows = False
+        Me.DataGridView3.AutoGenerateColumns = False
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.CustomerID, Me.Username, Me.Price, Me.Cart, Me.Ordered, Me.Delivered, Me.Status, Me.MovedOn})
+        Me.DataGridView3.DataSource = Me.OrderHistoryBindingSource
+        Me.DataGridView3.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.ReadOnly = True
+        Me.DataGridView3.Size = New System.Drawing.Size(701, 426)
+        Me.DataGridView3.TabIndex = 1
+        '
+        'OrderHistoryBindingSource
+        '
+        Me.OrderHistoryBindingSource.DataMember = "OrderHistory"
+        Me.OrderHistoryBindingSource.DataSource = Me.Car_ShowroomADataSet
+        '
+        'OrderHistoryTableAdapter
+        '
+        Me.OrderHistoryTableAdapter.ClearBeforeFill = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "OrderID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "OrderID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 55
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "CarID"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "CarID"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 70
+        '
+        'CustomerID
+        '
+        Me.CustomerID.DataPropertyName = "CustomerID"
+        Me.CustomerID.HeaderText = "CustomerID"
+        Me.CustomerID.Name = "CustomerID"
+        Me.CustomerID.ReadOnly = True
+        Me.CustomerID.Width = 70
+        '
+        'Username
+        '
+        Me.Username.DataPropertyName = "Username"
+        Me.Username.HeaderText = "Username"
+        Me.Username.Name = "Username"
+        Me.Username.ReadOnly = True
+        Me.Username.Width = 70
+        '
+        'Price
+        '
+        Me.Price.DataPropertyName = "Price"
+        Me.Price.HeaderText = "Price"
+        Me.Price.Name = "Price"
+        Me.Price.ReadOnly = True
+        Me.Price.Width = 70
+        '
+        'Cart
+        '
+        Me.Cart.DataPropertyName = "Cart"
+        Me.Cart.HeaderText = "Cart"
+        Me.Cart.Name = "Cart"
+        Me.Cart.ReadOnly = True
+        Me.Cart.Width = 30
+        '
+        'Ordered
+        '
+        Me.Ordered.DataPropertyName = "Ordered"
+        Me.Ordered.HeaderText = "Ordered"
+        Me.Ordered.Name = "Ordered"
+        Me.Ordered.ReadOnly = True
+        Me.Ordered.Width = 60
+        '
+        'Delivered
+        '
+        Me.Delivered.DataPropertyName = "Delivered"
+        Me.Delivered.HeaderText = "Delivered"
+        Me.Delivered.Name = "Delivered"
+        Me.Delivered.ReadOnly = True
+        Me.Delivered.Width = 60
+        '
+        'Status
+        '
+        Me.Status.DataPropertyName = "Status"
+        Me.Status.HeaderText = "Status"
+        Me.Status.Name = "Status"
+        Me.Status.ReadOnly = True
+        Me.Status.Width = 70
+        '
+        'MovedOn
+        '
+        Me.MovedOn.DataPropertyName = "MovedOn"
+        Me.MovedOn.HeaderText = "MovedOn"
+        Me.MovedOn.Name = "MovedOn"
+        Me.MovedOn.ReadOnly = True
+        '
         'Admin_Mainform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(983, 571)
         Me.Controls.Add(Me.Exit_btn)
         Me.Controls.Add(Me.FlowLayoutPanel1)
@@ -380,6 +1025,17 @@ Partial Class Admin_Mainform
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Car_InventoryGB.ResumeLayout(False)
         Me.Car_InventoryGB.PerformLayout()
+        Me.Add_carGB.ResumeLayout(False)
+        Me.Add_carGB.PerformLayout()
+        CType(Me.CarPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CustomerGB.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SalesRepertGB.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OrderHistoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -401,8 +1057,7 @@ Partial Class Admin_Mainform
     Friend WithEvents CarIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AvailableCountDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MaxCapacityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Settings As Button
-    Friend WithEvents Employee_Management As Button
+    Friend WithEvents Add_carBtn As Button
     Friend WithEvents Customer_Management As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
@@ -410,4 +1065,66 @@ Partial Class Admin_Mainform
     Friend WithEvents noofcars As TextBox
     Friend WithEvents CarIDCB As ComboBox
     Friend WithEvents AddCarBtn As Button
+    Friend WithEvents Add_carGB As GroupBox
+    Friend WithEvents CarIdTextBox As TextBox
+    Friend WithEvents SaveButton As Button
+    Friend WithEvents CarNameTextBox As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents EngineTB As TextBox
+    Friend WithEvents MileageTB As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents DriverTypeTB As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents MaxPowerTB As TextBox
+    Friend WithEvents SeatingCapacityTB As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents TransmissionTB As TextBox
+    Friend WithEvents FuelTypeTB As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents DescriptionTB As RichTextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents CustReviewlinkTB As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents PriceTB As TextBox
+    Friend WithEvents CustReviewTB As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents UploadImageButton As Button
+    Friend WithEvents Label18 As Label
+    Friend WithEvents CarPictureBox As PictureBox
+    Friend WithEvents BodyTypeCB As ComboBox
+    Friend WithEvents CustomerGB As GroupBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents CustomerBindingSource As BindingSource
+    Friend WithEvents CustomerTableAdapter As Car_ShowroomADataSetTableAdapters.CustomerTableAdapter
+    Friend WithEvents CustomerIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LastNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AddressDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ContactNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RegistrationDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SalesRepertGB As GroupBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents OrderHistoryBindingSource As BindingSource
+    Friend WithEvents OrderHistoryTableAdapter As Car_ShowroomADataSetTableAdapters.OrderHistoryTableAdapter
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents CustomerID As DataGridViewTextBoxColumn
+    Friend WithEvents Username As DataGridViewTextBoxColumn
+    Friend WithEvents Price As DataGridViewTextBoxColumn
+    Friend WithEvents Cart As DataGridViewCheckBoxColumn
+    Friend WithEvents Ordered As DataGridViewCheckBoxColumn
+    Friend WithEvents Delivered As DataGridViewCheckBoxColumn
+    Friend WithEvents Status As DataGridViewTextBoxColumn
+    Friend WithEvents MovedOn As DataGridViewTextBoxColumn
 End Class

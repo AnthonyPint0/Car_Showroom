@@ -5,7 +5,7 @@ Public Class Form_Login
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
-    Public loggedIn As Boolean = False
+    Public loggedIn As Boolean
     Public CustID As Integer
 
     Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
@@ -78,11 +78,12 @@ Public Class Form_Login
                     ' User is authenticated
                     MessageBox.Show("Login successful")
                     Me.Hide() ' To hide the login form
-                    Mainform.Show() ' To show the main form
-                    Mainform.loggedIn = True ' Set loggedIn to True
+                    HomeForm.Show() ' To show the main form
+                    HomeForm.loggedIn = True ' Set loggedIn to True
                     loggedIn = True ' Set loggedIn to True
-                    Mainform.Profile.Text = "" & username_txt.Text
-                    Mainform.UpdateUI() ' Update the UI in MainForm
+                    HomeForm.Profile.Text = "" & username_txt.Text
+                    HomeForm.UpdateUI() ' Update the UI in HomeForm
+                    HomeForm.PopulateCarDisplayPanel(loggedIn)
                 Else
                     ' User authentication failed
                     MessageBox.Show("Invalid username or password")
@@ -97,7 +98,7 @@ Public Class Form_Login
         Finally
             ' Close the database connection in the finally block to ensure it's always closed
             con.Close()
-            Mainform.CustID = CustID
+            HomeForm.CustID = CustID
             Individual_Car.CustID = CustID
             User_Profile.CustID = CustID
         End Try
@@ -115,7 +116,7 @@ Public Class Form_Login
     Private Sub Registerlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Registerlink.LinkClicked
         Me.Hide()
         Form_Register.Show()
-        Mainform.loggedIn = False
+        HomeForm.loggedIn = False
         loggedIn = False ' Set loggedIn to False
         username_txt.Text = ""
         Password_txt.Text = ""
@@ -169,12 +170,14 @@ Public Class Form_Login
 
     Private Sub guestL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles guestL.LinkClicked
         Me.Hide()
-        Mainform.Show()
-        Mainform.Profile.Text = ""
-        Mainform.loggedIn = False
+        HomeForm.Show()
+        HomeForm.Profile.Text = ""
+        HomeForm.loggedIn = False
         loggedIn = False
-        Mainform.UpdateUI()
+        HomeForm.UpdateUI()
+        HomeForm.PopulateCarDisplayPanel(loggedIn)
         username_txt.Text = ""
         Password_txt.Text = ""
     End Sub
+
 End Class

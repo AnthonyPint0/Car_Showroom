@@ -1,6 +1,8 @@
-﻿Imports System.Windows.Forms
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 Imports System.Drawing.Drawing2D
+Imports System.IO
+Imports System.Resources
+Imports System.Runtime.InteropServices.ComTypes
 
 Public Class Admin_Mainform
     Dim drag As Boolean
@@ -42,7 +44,20 @@ Public Class Admin_Mainform
             Application.Exit()
         End If
     End Sub
+
     Private Sub Admin_Mainform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Car_InventoryGB.Visible = True
+        Add_carGB.Visible = False
+        CustomerGB.Visible = False
+        SalesRepertGB.Visible = False
+        'TODO: This line of code loads data into the 'Car_ShowroomADataSet.OrderHistory' table. You can move, or remove it, as needed.
+        Me.OrderHistoryTableAdapter.Fill(Me.Car_ShowroomADataSet.OrderHistory)
+        'TODO: This line of code loads data into the 'Car_ShowroomADataSet.Customer' table. You can move, or remove it, as needed.
+        Me.CustomerTableAdapter.Fill(Me.Car_ShowroomADataSet.Customer)
+        BodyTypeCB.Items.Add("Hatchback")
+        BodyTypeCB.Items.Add("Sedan")
+        BodyTypeCB.Items.Add("SUV")
+        BodyTypeCB.Items.Add("MUV")
         'TODO: This line of code loads data into the 'Car_ShowroomADataSet.InventoryStatus' table. You can move, or remove it, as needed.
         Me.InventoryStatusTableAdapter.Fill(Me.Car_ShowroomADataSet.InventoryStatus)
         UpdateUI()
@@ -50,7 +65,7 @@ Public Class Admin_Mainform
         selectedButton = Car_Inventory
         Car_Inventory.BackColor = Color.FromArgb(5, 82, 82) ' Set dark blue color for selected button
         ' Enable MouseEnter and MouseLeave events for all buttons except the selected one
-        For Each button As Button In {Car_Inventory, Customer_Management, Sales_Reports, Employee_Management, Settings}
+        For Each button As Button In {Car_Inventory, Customer_Management, Sales_Reports, Add_carBtn}
             If button IsNot selectedButton Then
                 AddHandler button.MouseEnter, AddressOf Button_MouseEnter
                 AddHandler button.MouseLeave, AddressOf Button_MouseLeave
@@ -60,20 +75,34 @@ Public Class Admin_Mainform
     End Sub
 
     Private Sub LoadCarIds()
-        ' Define the list of car IDs
-        Dim carIds() As String = {
-        "AmazeC1", "AuraC1", "BalenoC1", "BoleroC1", "BrezzaC1",
-        "CarensC1", "CiazC1", "CretaC1", "DzireC1", "ErtigaC1",
-        "i10_NiosC1", "InnovaC1", "KwidC1", "MagniteC1", "NexonC1",
-        "PunchC1", "ScorpioC1", "SeltosC1", "SwiftC1", "Tata Tigor",
-        "TriberC1", "VernaC1", "WagonRC1", "XUV300C1"
-    }
+        ' Clear existing items from the ComboBox
+        CarIDCB.Items.Clear()
 
-        ' Add each car ID to the ComboBox
+        ' Query the Cars table to retrieve all car IDs
+        Dim query As String = "SELECT CarId FROM Cars"
+        Dim carIds As New List(Of String)()
+
+        Using connection As New SqlConnection(connectionString)
+            Using command As New SqlCommand(query, connection)
+                connection.Open()
+                Dim reader As SqlDataReader = command.ExecuteReader()
+
+                ' Read each car ID and add it to the list
+                While reader.Read()
+                    carIds.Add(reader("CarId").ToString())
+                End While
+
+                ' Close the reader
+                reader.Close()
+            End Using
+        End Using
+
+        ' Add retrieved car IDs to the ComboBox
         For Each carId As String In carIds
             CarIDCB.Items.Add(carId)
         Next
     End Sub
+
     Private Sub Registerlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Registerlink.LinkClicked
         Me.Hide()
         Form_Login.Show()
@@ -139,26 +168,36 @@ Public Class Admin_Mainform
         ' Call the function to handle button clicks
         HandleButtonClick(Car_Inventory)
         Car_InventoryGB.Visible = True
+        Add_carGB.Visible = False
+        CustomerGB.Visible = False
+        SalesRepertGB.Visible = False
     End Sub
 
     Private Sub Customer_Management_Click(sender As Object, e As EventArgs) Handles Customer_Management.Click
         ' Call the function to handle button clicks
         HandleButtonClick(Customer_Management)
+        Car_InventoryGB.Visible = False
+        Add_carGB.Visible = False
+        CustomerGB.Visible = True
+        SalesRepertGB.Visible = False
     End Sub
 
     Private Sub Sales_Reports_Click(sender As Object, e As EventArgs) Handles Sales_Reports.Click
         ' Call the function to handle button clicks
         HandleButtonClick(Sales_Reports)
+        Car_InventoryGB.Visible = False
+        Add_carGB.Visible = False
+        CustomerGB.Visible = False
+        SalesRepertGB.Visible = True
     End Sub
 
-    Private Sub Employee_Management_Click(sender As Object, e As EventArgs) Handles Employee_Management.Click
+    Private Sub Add_car_Click(sender As Object, e As EventArgs) Handles Add_carBtn.Click
         ' Call the function to handle button clicks
-        HandleButtonClick(Employee_Management)
-    End Sub
-
-    Private Sub Settings_Click(sender As Object, e As EventArgs) Handles Settings.Click
-        ' Call the function to handle button clicks
-        HandleButtonClick(Settings)
+        HandleButtonClick(Add_carBtn)
+        Car_InventoryGB.Visible = False
+        Add_carGB.Visible = True
+        CustomerGB.Visible = False
+        SalesRepertGB.Visible = False
     End Sub
 
     Private Sub HandleButtonClick(clickedButton As Button)
@@ -181,7 +220,7 @@ Public Class Admin_Mainform
         RemoveHandler clickedButton.MouseLeave, AddressOf Button_MouseLeave
 
         ' Enable MouseEnter and MouseLeave events for all other buttons
-        For Each button As Button In {Car_Inventory, Customer_Management, Sales_Reports, Employee_Management, Settings}
+        For Each button As Button In {Car_Inventory, Customer_Management, Sales_Reports, Add_carBtn}
             If button IsNot clickedButton Then
                 AddHandler button.MouseEnter, AddressOf Button_MouseEnter
                 AddHandler button.MouseLeave, AddressOf Button_MouseLeave
@@ -329,4 +368,149 @@ Public Class Admin_Mainform
         newForm.Profile.Text = "" & Profile.Text
         newForm.UpdateUI() ' Update the UI in MainForm
     End Sub
+
+    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
+
+    End Sub
+
+    Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
+        ' Specify the directory path for the Images folder
+        Dim imagesFolderPath As String = Path.Combine(Application.StartupPath, "Images")
+
+        ' Create the Images folder if it doesn't exist
+        If Not Directory.Exists(imagesFolderPath) Then
+            Directory.CreateDirectory(imagesFolderPath)
+        End If
+
+        ' Generate a unique file name for the uploaded image
+        Dim imageName As String = CarIdTextBox.Text & ".jpg" ' You can use a unique identifier here
+        Dim imagePath As String = Path.Combine(imagesFolderPath, imageName)
+
+        ' Check if an image is selected in the PictureBox
+        If CarPictureBox.Image IsNot Nothing Then
+            Try
+                ' Save the image to the specified file path
+                CarPictureBox.Image.Save(imagePath)
+
+                ' Provide feedback to the user
+                MessageBox.Show("Image saved to Images folder successfully!")
+            Catch ex As Exception
+                MessageBox.Show("Error saving image: " & ex.Message)
+            End Try
+        Else
+            MessageBox.Show("No image to save!")
+        End If
+
+        ' Insert car information into the database
+        Dim carId As String = CarIdTextBox.Text
+        Dim carName As String = CarNameTextBox.Text
+        Dim Engine As String = EngineTB.Text
+        Dim Mileage As String = MileageTB.Text
+        Dim Price As String = PriceTB.Text
+        Dim Descrpition As String = DescriptionTB.Text
+        Dim CustReview As String = CustReviewTB.Text
+        Dim CustReviewlink As String = CustReviewlinkTB.Text
+        Dim FuelType As String = FuelTypeTB.Text
+        Dim Transmission As String = TransmissionTB.Text
+        Dim MaxPower As String = MaxPowerTB.Text
+        Dim SeatingCapacity As String = SeatingCapacityTB.Text
+        Dim DriveType As String = DriverTypeTB.Text
+        Dim BodyType As String = BodyTypeCB.SelectedItem.ToString()
+
+        ' Retrieve other car information from respective controls
+
+        ' Example SQL query to insert data into the Cars table
+        Dim query As String = $"INSERT INTO Cars (CarId, CarName, Engine, Mileage, Transmission, FuelType, MaxPower, SeatingCapacity, DriverType, BodyType, Description, Price, CustReview, CustReviewLink) VALUES ('{carId}', '{carName}', '{Engine}', '{Mileage}', '{Transmission}', '{FuelType}', '{MaxPower}', '{SeatingCapacity}', '{DriveType}', '{BodyType}', '{Descrpition}', {Price}, {CustReview}, '{CustReviewlink}')"
+
+        ' Execute the query to insert data into the database
+        ' Ensure to handle exceptions and provide appropriate feedback to the user
+        Try
+            ' Create a new instance of SqlConnection with your connection string
+            Using connection As New SqlConnection(connectionString)
+                ' Create a new instance of SqlCommand with the query and the SqlConnection
+                Using command As New SqlCommand(query, connection)
+                    ' Open the connection
+                    connection.Open()
+                    ' Execute the SQL query
+                    command.ExecuteNonQuery()
+                End Using
+            End Using
+            ' Provide feedback to the user indicating successful insertion
+            MessageBox.Show("Data inserted successfully!")
+
+            ' Define your SQL query to insert data into the InventoryStatus table
+            Dim insertquery As String = "INSERT INTO InventoryStatus (CarId, AvailableCount, MaxCapacity) VALUES (@CarId, 7, 7)"
+
+            ' Create a new SqlConnection using the connection string
+            Using insertconnection As New SqlConnection(connectionString)
+                ' Create a new SqlCommand with your SQL query and the SqlConnection
+                Using command As New SqlCommand(insertquery, insertconnection)
+                    ' Add parameters to the SqlCommand to prevent SQL injection
+                    command.Parameters.AddWithValue("@CarId", carId)
+
+                    Try
+                        ' Open the database connection
+                        insertconnection.Open()
+
+                        ' Execute the SQL query
+                        command.ExecuteNonQuery()
+
+                        ' Optionally, provide feedback to the user indicating successful insertion
+                        MessageBox.Show("Data inserted into InventoryStatus table successfully!")
+                    Catch ex As Exception
+                        ' Handle any exceptions that occur during database interaction
+                        MessageBox.Show("Error inserting data into InventoryStatus table: " & ex.Message)
+                    End Try
+                End Using
+            End Using
+
+            ' Define your SQL query to insert data into the CarColors table
+            Dim colorquery As String = "INSERT INTO CarColors (CarId, Color1, Color2, Color3) VALUES (@CarId, 'Red', 'Blue', 'Black')"
+
+            ' Create a new SqlConnection using the connection string
+            Using colorConnection As New SqlConnection(connectionString)
+                ' Create a new SqlCommand with your SQL query and the SqlConnection
+                Using command As New SqlCommand(colorquery, colorConnection)
+                    ' Add parameters to the SqlCommand to prevent SQL injection
+                    command.Parameters.AddWithValue("@CarId", carId)
+
+                    Try
+                        ' Open the database connection
+                        colorConnection.Open()
+
+                        ' Execute the SQL query
+                        command.ExecuteNonQuery()
+
+                        ' Optionally, provide feedback to the user indicating successful insertion
+                        MessageBox.Show("Data inserted into CarColors table successfully!")
+                        ReloadForm()
+                    Catch ex As Exception
+                        ' Handle any exceptions that occur during database interaction
+                        MessageBox.Show("Error inserting data into CarColors table: " & ex.Message)
+                    End Try
+                End Using
+            End Using
+
+        Catch ex As Exception
+            ' Handle any exceptions that occur during database interaction
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub UploadImageButton_Click(sender As Object, e As EventArgs) Handles UploadImageButton.Click
+        ' Open a file dialog to allow the user to select an image
+        Using openFileDialog As New OpenFileDialog()
+            openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png, *.gif)|*.jpg;*.jpeg;*.png;*.gif"
+            If openFileDialog.ShowDialog() = DialogResult.OK Then
+                ' Display the selected image in the PictureBox control
+                CarPictureBox.Image = Image.FromFile(openFileDialog.FileName)
+            End If
+        End Using
+    End Sub
+
+    Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
+
+    End Sub
+
 End Class
