@@ -392,4 +392,4 @@ select * from OrderHistory
 select * from Cars
 select * from InventoryStatus
 
-UPDATE InventoryStatus SET AvailableCount = 1 WHERE CarID = 'i10_NiosC1';
+UPDATE InventoryStatus SET AvailableCount = 1 WHERE CarID = 'HarrierC1';

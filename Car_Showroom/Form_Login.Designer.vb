@@ -119,6 +119,7 @@ Partial Class Form_Login
         Me.Remove_user_btn.TabIndex = 6
         Me.Remove_user_btn.Text = "Remove"
         Me.Remove_user_btn.UseVisualStyleBackColor = False
+        Me.Remove_user_btn.Visible = False
         '
         'Registerlink
         '

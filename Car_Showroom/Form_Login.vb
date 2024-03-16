@@ -79,13 +79,12 @@ Public Class Form_Login
                     ' User is authenticated
                     MessageBox.Show("Login successful")
                     Me.Hide() ' To hide the login form
-                    HomeForm.Show() ' To show the main form
                     HomeForm.loggedIn = True ' Set loggedIn to True
                     loggedIn = True ' Set loggedIn to True
                     HomeForm.Profile.Text = "" & username_txt.Text
+                    HomeForm.Show() ' To show the main form
                     HomeForm.UpdateUI() ' Update the UI in HomeForm
-                    HomeForm.PopulateCarDisplayPanel(loggedIn)
-                Else
+                    ' Else
                     ' User authentication failed
                     MessageBox.Show("Invalid username or password")
                 End If
@@ -171,12 +170,11 @@ Public Class Form_Login
 
     Private Sub guestL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles guestL.LinkClicked
         Me.Hide()
-        HomeForm.Show()
         HomeForm.Profile.Text = ""
         HomeForm.loggedIn = False
         loggedIn = False
+        HomeForm.Show()
         HomeForm.UpdateUI()
-        HomeForm.PopulateCarDisplayPanel(loggedIn)
         username_txt.Text = ""
         Password_txt.Text = ""
     End Sub

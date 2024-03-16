@@ -79,8 +79,13 @@ Public Class Payment
                     ' Handle any exceptions that may occur
                     Console.WriteLine("Error updating inventory status: " & ex.Message)
                 End Try
+                User_Profile.CustID = CustID
+                HomeForm.CustID = CustID
+                Individual_Car.CustID = CustID
+                User_Profile.loggedIn = True
+                HomeForm.loggedIn = True
+                Individual_Car.loggedIn = True
                 HomeForm.Show()
-                HomeForm.PopulateCarDisplayPanel(loggedIn)
                 User_Profile.Close()
                 Me.Close()
             Catch ex As Exception
@@ -90,6 +95,9 @@ Public Class Payment
                 User_Profile.CustID = CustID
                 HomeForm.CustID = CustID
                 Individual_Car.CustID = CustID
+                User_Profile.loggedIn = True
+                HomeForm.loggedIn = True
+                Individual_Car.loggedIn = True
             End Try
         End If
     End Sub
@@ -112,6 +120,7 @@ Public Class Payment
     End Sub
 
     Private Sub Payment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         Label1.Text = price
         Label5.Text = price
         Console.WriteLine(CustID)

@@ -113,7 +113,9 @@ Public Class HomeForm
         ' Check the user's response
         If result = DialogResult.Yes Then
             ' If the user clicks Yes, close the application
-            Me.Hide()
+            Me.Close()
+            Individual_Car.Close()
+            User_Profile.Close()
             Form_Login.Show()
             loggedIn = False
             Form_Login.loggedIn = False
@@ -220,6 +222,7 @@ Public Class HomeForm
 
     End Sub
     Private Sub MainFormTST_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        PopulateCarDisplayPanel(loggedIn)
         UpdateUI()
         ' Set the "Allbel" button as the initially selected button
         selectedButton = Allbel
@@ -403,12 +406,11 @@ Public Class HomeForm
 
         ' Open a new instance of the form
         Dim newForm As New HomeForm()
-        newForm.Show()
         newForm.CustID = CustID
         newForm.VarID = VarID
         newForm.loggedIn = loggedIn ' Set loggedIn to loggedIn
+        newForm.Show()
         newForm.UpdateUI() ' Update the UI in MainForm
-        newForm.PopulateCarDisplayPanel(loggedIn)
         newForm.Profile.Text = "" & Profile.Text
         Console.WriteLine(CustID)
         User_Profile.CustID = CustID

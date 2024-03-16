@@ -154,7 +154,7 @@ Public Class Admin_Login
     End Sub
 
     Private Sub GuestL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles guestL.LinkClicked
-        Me.Hide()
+        Me.Close()
         Form_Login.Show()
         Form_Login.username_txt.Text = ""
         Form_Login.Password_txt.Text = ""

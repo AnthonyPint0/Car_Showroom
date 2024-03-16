@@ -157,7 +157,7 @@ Public Class Admin_Mainform
         ' Check the user's response
         If result = DialogResult.Yes Then
             ' If the user clicks Yes, close the application
-            Me.Hide()
+            Me.Close()
             Admin_Login.Show()
             loggedIn = False
             Admin_Login.loggedIn = False

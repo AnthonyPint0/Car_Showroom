@@ -85,6 +85,7 @@ Partial Class Admin_Login
         Me.Remove_user_btn.TabIndex = 18
         Me.Remove_user_btn.Text = "Remove"
         Me.Remove_user_btn.UseVisualStyleBackColor = False
+        Me.Remove_user_btn.Visible = False
         '
         'Exit_btn
         '

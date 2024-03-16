@@ -78,7 +78,7 @@ Public Class Form_Register
 
                 ' Display registration success message
                 MessageBox.Show("Registration successful")
-                Me.Hide()
+                Me.Close()
                 Form_Login.Show()
             End Using
         Catch ex As Exception
@@ -112,14 +112,14 @@ Public Class Form_Register
     End Sub
 
     Protected Sub guestL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles guestL.LinkClicked
-        Me.Hide()
+        Me.Close()
         HomeForm.loggedIn = False ' Set loggedIn to False
         HomeForm.Show() ' To show the main form
         HomeForm.UpdateUI() ' Update the UI in HomeForm
     End Sub
 
     Private Sub Loginlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Loginlink.LinkClicked
-        Me.Show()
+        Me.Close()
         Form_Login.Show()
         Form_Login.username_txt.Text = ""
         Form_Login.Password_txt.Text = ""

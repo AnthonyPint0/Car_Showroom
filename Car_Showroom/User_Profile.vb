@@ -289,11 +289,10 @@ Public Class User_Profile
 
     Private Sub Homebel_Click(sender As Object, e As EventArgs) Handles Homebel.Click
         Me.Hide()
-        HomeForm.Show()
         HomeForm.CustID = CustID
         HomeForm.loggedIn = loggedIn ' Set loggedIn to True
-        HomeForm.PopulateCarDisplayPanel(loggedIn)
         HomeForm.Profile.Text = "" & Profile.Text
+        HomeForm.Show()
         HomeForm.UpdateUI() ' Update the UI in HomeForm
     End Sub
 
@@ -315,7 +314,9 @@ Public Class User_Profile
         ' Check the user's response
         If result = DialogResult.Yes Then
             ' If the user clicks Yes, close the application
-            Me.Hide()
+            Me.Close()
+            Individual_Car.Close()
+            HomeForm.Close()
             Form_Login.Show()
             loggedIn = False
             Form_Login.loggedIn = False
@@ -386,7 +387,6 @@ Public Class User_Profile
                     End Using
                 End Using
                 HomeForm.Show()
-                HomeForm.PopulateCarDisplayPanel(loggedIn)
                 Me.Close()
             Catch ex As Exception
                 MessageBox.Show("Error marking order as successful: " & ex.Message)
