@@ -38,6 +38,7 @@ Partial Class User_Profile
         Me.Label1 = New System.Windows.Forms.Label()
         Me.usernameTxt = New System.Windows.Forms.TextBox()
         Me.CartPanel = New System.Windows.Forms.Panel()
+        Me.stockstatus = New System.Windows.Forms.Label()
         Me.confoLB = New System.Windows.Forms.Label()
         Me.Cart = New System.Windows.Forms.Label()
         Me.Price2LB = New System.Windows.Forms.Label()
@@ -62,7 +63,7 @@ Partial Class User_Profile
         Me.HeaderPanel = New System.Windows.Forms.Panel()
         Me.Label94 = New System.Windows.Forms.Label()
         Me.FlowCart = New System.Windows.Forms.FlowLayoutPanel()
-        Me.stockstatus = New System.Windows.Forms.Label()
+        Me.Remove_user_btn = New System.Windows.Forms.Button()
         Me.UserInfoPanel1.SuspendLayout()
         Me.CartPanel.SuspendLayout()
         CType(Me.trashimg, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -248,6 +249,18 @@ Partial Class User_Profile
         Me.CartPanel.Name = "CartPanel"
         Me.CartPanel.Size = New System.Drawing.Size(394, 181)
         Me.CartPanel.TabIndex = 46
+        '
+        'stockstatus
+        '
+        Me.stockstatus.AutoSize = True
+        Me.stockstatus.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.stockstatus.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.stockstatus.ForeColor = System.Drawing.Color.Red
+        Me.stockstatus.Location = New System.Drawing.Point(242, 132)
+        Me.stockstatus.Name = "stockstatus"
+        Me.stockstatus.Size = New System.Drawing.Size(137, 30)
+        Me.stockstatus.TabIndex = 48
+        Me.stockstatus.Text = "Out of Stock"
         '
         'confoLB
         '
@@ -513,17 +526,19 @@ Partial Class User_Profile
         Me.FlowCart.Size = New System.Drawing.Size(421, 185)
         Me.FlowCart.TabIndex = 31
         '
-        'stockstatus
+        'Remove_user_btn
         '
-        Me.stockstatus.AutoSize = True
-        Me.stockstatus.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.stockstatus.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.stockstatus.ForeColor = System.Drawing.Color.Red
-        Me.stockstatus.Location = New System.Drawing.Point(242, 132)
-        Me.stockstatus.Name = "stockstatus"
-        Me.stockstatus.Size = New System.Drawing.Size(137, 30)
-        Me.stockstatus.TabIndex = 48
-        Me.stockstatus.Text = "Out of Stock"
+        Me.Remove_user_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.Remove_user_btn.Font = New System.Drawing.Font("Bahnschrift", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Remove_user_btn.ForeColor = System.Drawing.Color.White
+        Me.Remove_user_btn.Location = New System.Drawing.Point(855, 142)
+        Me.Remove_user_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Remove_user_btn.Name = "Remove_user_btn"
+        Me.Remove_user_btn.Size = New System.Drawing.Size(99, 32)
+        Me.Remove_user_btn.TabIndex = 49
+        Me.Remove_user_btn.Text = "Remove"
+        Me.Remove_user_btn.UseVisualStyleBackColor = False
+        Me.Remove_user_btn.Visible = False
         '
         'User_Profile
         '
@@ -531,6 +546,7 @@ Partial Class User_Profile
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(990, 568)
+        Me.Controls.Add(Me.Remove_user_btn)
         Me.Controls.Add(Me.UserInfoPanel1)
         Me.Controls.Add(Me.Sidebar)
         Me.Controls.Add(Me.UserInfoPanel2)
@@ -602,4 +618,5 @@ Partial Class User_Profile
     Friend WithEvents FlowCart As FlowLayoutPanel
     Friend WithEvents confoLB As Label
     Friend WithEvents stockstatus As Label
+    Friend WithEvents Remove_user_btn As Button
 End Class

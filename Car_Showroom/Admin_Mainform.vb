@@ -5,35 +5,12 @@ Imports System.Resources
 Imports System.Runtime.InteropServices.ComTypes
 
 Public Class Admin_Mainform
-    Dim drag As Boolean
-    Dim mousex As Integer
-    Dim mousey As Integer
     Public loggedIn As Boolean = False
     Private selectedButton As Button = Nothing
     Public carID As String
-    Private connectionString As String = Form1.conectionString
-
-
-    Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
-        drag = True 'Set the flag to indicate dragging is in progress
-        mousex = System.Windows.Forms.Cursor.Position.X - Me.Left
-        mousey = System.Windows.Forms.Cursor.Position.Y - Me.Top
-    End Sub
-
-    Private Sub Form1_Login_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
-        'Check if dragging is in progress
-        If drag Then
-            Dim newx As Integer
-            Dim newy As Integer
-            newx = System.Windows.Forms.Cursor.Position.X - mousex
-            newy = System.Windows.Forms.Cursor.Position.Y - mousey
-            Me.Location = New Point(newx, newy)
-        End If
-    End Sub
-
-    Private Sub Form_Login_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
-        drag = False 'Reset the flag when dragging is complete
-    End Sub
+    Private connectionString As String = Form_Login.connector
+    Public connector As String = connectionString
+    Public con As New SqlConnection(connector)
 
     Private Sub Exit_btn_Click(sender As Object, e As EventArgs) Handles Exit_btn.Click
         ' Display a message box with Yes and No buttons
@@ -165,40 +142,36 @@ Public Class Admin_Mainform
             Admin_Login.Password_txt.Text = ""
         End If
     End Sub
+
+    Private Sub GBVisibility(ByVal CarInv As Boolean, ByVal AddC As Boolean, ByVal Cust As Boolean, ByVal Sales As Boolean)
+        Car_InventoryGB.Visible = CarInv
+        Add_carGB.Visible = AddC
+        CustomerGB.Visible = Cust
+        SalesRepertGB.Visible = Sales
+    End Sub
+
     Private Sub Car_Inventory_Click(sender As Object, e As EventArgs) Handles Car_Inventory.Click, MyBase.Click
         ' Call the function to handle button clicks
         HandleButtonClick(Car_Inventory)
-        Car_InventoryGB.Visible = True
-        Add_carGB.Visible = False
-        CustomerGB.Visible = False
-        SalesRepertGB.Visible = False
+        GBVisibility(True, False, False, False)
     End Sub
 
     Private Sub Customer_Management_Click(sender As Object, e As EventArgs) Handles Customer_Management.Click
         ' Call the function to handle button clicks
         HandleButtonClick(Customer_Management)
-        Car_InventoryGB.Visible = False
-        Add_carGB.Visible = False
-        CustomerGB.Visible = True
-        SalesRepertGB.Visible = False
+        GBVisibility(False, False, True, False)
     End Sub
 
     Private Sub Sales_Reports_Click(sender As Object, e As EventArgs) Handles Sales_Reports.Click
         ' Call the function to handle button clicks
         HandleButtonClick(Sales_Reports)
-        Car_InventoryGB.Visible = False
-        Add_carGB.Visible = False
-        CustomerGB.Visible = False
-        SalesRepertGB.Visible = True
+        GBVisibility(False, False, False, True)
     End Sub
 
     Private Sub Add_car_Click(sender As Object, e As EventArgs) Handles Add_carBtn.Click
         ' Call the function to handle button clicks
         HandleButtonClick(Add_carBtn)
-        Car_InventoryGB.Visible = False
-        Add_carGB.Visible = True
-        CustomerGB.Visible = False
-        SalesRepertGB.Visible = False
+        GBVisibility(False, True, False, False)
     End Sub
 
     Private Sub HandleButtonClick(clickedButton As Button)
@@ -259,17 +232,12 @@ Public Class Admin_Mainform
         Try
             ' Get the current AvailableCount for the specified carID
             Dim currentCount As Integer = GetCurrentAvailableCount(carID)
-            Console.WriteLine(currentCount)
-            Console.WriteLine("Good7")
             ' Calculate the new count after adding the specified number of cars
             Dim newCount As Integer = currentCount + countToAdd
-            Console.WriteLine(newCount)
             ' Limit the new count to a maximum of 7
             If newCount > 7 Then
                 newCount = 7
-                Console.WriteLine("Good8")
             End If
-            Console.WriteLine(newCount)
 
             ' Define the SQL query to update the AvailableCount
             Dim query As String = "UPDATE InventoryStatus SET AvailableCount = @newCount WHERE CarID = @carID"
@@ -279,20 +247,16 @@ Public Class Admin_Mainform
                 ' Create a SqlCommand with the query and connection
                 Using command As New SqlCommand(query, connection)
                     ' Add parameters for CarID and newCount to the SqlCommand
-                    Console.WriteLine(newCount)
                     command.Parameters.AddWithValue("@carID", carID)
                     command.Parameters.AddWithValue("@newCount", newCount)
-                    Console.WriteLine(newCount)
                     ' Open the connection
                     connection.Open()
 
                     ' Execute the SQL query
                     Dim rowsAffected As Integer = command.ExecuteNonQuery()
-                    Console.WriteLine("Good10")
                     ' Check if any rows were affected by the update
                     If rowsAffected > 0 Then
                         MessageBox.Show("AvailableCount updated successfully.")
-                        Console.WriteLine("Good11")
                     Else
                         MessageBox.Show("No rows updated. CarID not found.")
                     End If
@@ -310,7 +274,6 @@ Public Class Admin_Mainform
 
         ' Create a variable to store the AvailableCount
         Dim currentCount As Integer = 0
-        Console.WriteLine("Good1")
         Try
             ' Create a SqlConnection using the connection string
             Using connection As New SqlConnection(connectionString)
@@ -329,19 +292,14 @@ Public Class Admin_Mainform
                     If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
                         currentCount = Convert.ToInt32(result)
                     End If
-                    Console.WriteLine("Good2")
                 End Using
-                Console.WriteLine("Good3")
             End Using
         Catch ex As Exception
             ' Handle any exceptions that may occur
             MessageBox.Show("Error retrieving AvailableCount: " & ex.Message)
-            Console.WriteLine("Bad")
         End Try
-        Console.WriteLine("Good5")
         ' Return the current AvailableCount
         Return currentCount
-        Console.WriteLine("Good6")
     End Function
 
     Private Sub AddCarBtn_Click(sender As Object, e As EventArgs) Handles AddCarBtn.Click
@@ -357,10 +315,10 @@ Public Class Admin_Mainform
         End If
         ReloadForm()
     End Sub
+
     Private Sub ReloadForm()
         ' Close the current instance of the form
         Me.Close()
-
         ' Open a new instance of the form
         Dim newForm As New Admin_Mainform()
         newForm.Show()
@@ -368,10 +326,6 @@ Public Class Admin_Mainform
         loggedIn = True ' Set loggedIn to True
         newForm.Profile.Text = "" & Profile.Text
         newForm.UpdateUI() ' Update the UI in MainForm
-    End Sub
-
-    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
-
     End Sub
 
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
@@ -510,8 +464,43 @@ Public Class Admin_Mainform
         End Using
     End Sub
 
-    Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
 
+    Private Sub Remove_user_btn_Click(sender As Object, e As EventArgs) Handles Remove_user_btn.Click
+        ' Get the username from the user (you may use a TextBox or another input method)
+        Dim usernameToRemove As String = InputBox("Enter the username to remove:", "Remove User")
+
+        ' Call the RemoveUser function
+        RemoveUser(usernameToRemove)
     End Sub
 
+
+    Private Sub RemoveUser(username As String)
+        Try
+            ' Open the database connection
+            con.Open()
+
+            ' Execute SQL command to delete user by username
+            Dim sql As String = "DELETE FROM admin WHERE Username = @Username"
+            Using cmd As New SqlCommand(sql, con)
+                ' Replace the parameter with the actual value
+                cmd.Parameters.AddWithValue("@Username", username)
+
+                ' Execute the command
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+
+                ' Check if any rows were affected to determine if the user was deleted
+                If rowsAffected > 0 Then
+                    MessageBox.Show("User removed successfully")
+                Else
+                    MessageBox.Show("User not found or could not be removed")
+                End If
+            End Using
+        Catch ex As Exception
+            ' Handle any exceptions that may occur during database operations
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+            ' Close the database connection in the finally block to ensure it's always closed
+            con.Close()
+        End Try
+    End Sub
 End Class

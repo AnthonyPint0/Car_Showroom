@@ -2,31 +2,8 @@
 Imports System.Globalization
 
 Public Class Form_Register
-    Dim drag As Boolean
-    Dim mousex As Integer
-    Dim mousey As Integer
-    Public connector As String = Form1.conectionString
-
-    Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
-        drag = True 'Set the flag to indicate dragging is in progress
-        mousex = System.Windows.Forms.Cursor.Position.X - Me.Left
-        mousey = System.Windows.Forms.Cursor.Position.Y - Me.Top
-    End Sub
-
-    Private Sub Form1_Login_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
-        'Check if dragging is in progress
-        If drag Then
-            Dim newx As Integer
-            Dim newy As Integer
-            newx = System.Windows.Forms.Cursor.Position.X - mousex
-            newy = System.Windows.Forms.Cursor.Position.Y - mousey
-            Me.Location = New Point(newx, newy)
-        End If
-    End Sub
-
-    Private Sub Form_Login_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
-        drag = False 'Reset the flag when dragging is complete
-    End Sub
+    Public connector As String = Form_Login.connector
+    Public con As New SqlConnection(connector)
 
     Private Sub Exit_btn_Click(sender As Object, e As EventArgs) Handles Exit_btn.Click
         ' Display a message box with Yes and No buttons
@@ -39,7 +16,6 @@ Public Class Form_Register
         End If
     End Sub
 
-    Public con As New SqlConnection(connector)
     Private Sub Register_btn_Click(sender As Object, e As EventArgs) Handles Register_btn.Click
         PerformRegistration()
     End Sub
