@@ -3,36 +3,11 @@ Imports System.Drawing.Drawing2D
 Imports System.IO
 
 Public Class HomeForm
-
-    Dim drag As Boolean
-    Dim mousex As Integer
-    Dim mousey As Integer
     Public loggedIn As Boolean
     Private selectedButton As Button = Nothing
     Public VarID As String
     Public CustID As Integer
-
-
-    Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
-        drag = True 'Set the flag to indicate dragging is in progress
-        mousex = System.Windows.Forms.Cursor.Position.X - Me.Left
-        mousey = System.Windows.Forms.Cursor.Position.Y - Me.Top
-    End Sub
-
-    Private Sub Form1_Login_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
-        'Check if dragging is in progress
-        If drag Then
-            Dim newx As Integer
-            Dim newy As Integer
-            newx = System.Windows.Forms.Cursor.Position.X - mousex
-            newy = System.Windows.Forms.Cursor.Position.Y - mousey
-            Me.Location = New Point(newx, newy)
-        End If
-    End Sub
-
-    Private Sub Form_Login_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
-        drag = False 'Reset the flag when dragging is complete
-    End Sub
+    Public connector As String = Form_Login.connector
 
     Private Sub Exit_btn_Click(sender As Object, e As EventArgs) Handles Exit_btn.Click
         ' Display a message box with Yes and No buttons
@@ -113,7 +88,9 @@ Public Class HomeForm
         ' Check the user's response
         If result = DialogResult.Yes Then
             ' If the user clicks Yes, close the application
-            Me.Hide()
+            Me.Close()
+            Individual_Car.Close()
+            User_Profile.Close()
             Form_Login.Show()
             loggedIn = False
             Form_Login.loggedIn = False
@@ -220,6 +197,7 @@ Public Class HomeForm
 
     End Sub
     Private Sub MainFormTST_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        PopulateCarDisplayPanel(loggedIn)
         UpdateUI()
         ' Set the "Allbel" button as the initially selected button
         selectedButton = Allbel
@@ -359,7 +337,7 @@ Public Class HomeForm
         Dim query As String = "SELECT * FROM Cars"
 
         ' Create a new instance of the SqlConnection class to connect to your database
-        Using connection As New SqlConnection("Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False")
+        Using connection As New SqlConnection(connector)
             ' Create a new instance of the SqlCommand class with your SQL query and the SqlConnection
             Using command As New SqlCommand(query, connection)
                 ' Create a new instance of the SqlDataAdapter class to fetch the data from the database
@@ -403,12 +381,11 @@ Public Class HomeForm
 
         ' Open a new instance of the form
         Dim newForm As New HomeForm()
-        newForm.Show()
         newForm.CustID = CustID
         newForm.VarID = VarID
         newForm.loggedIn = loggedIn ' Set loggedIn to loggedIn
+        newForm.Show()
         newForm.UpdateUI() ' Update the UI in MainForm
-        newForm.PopulateCarDisplayPanel(loggedIn)
         newForm.Profile.Text = "" & Profile.Text
         Console.WriteLine(CustID)
         User_Profile.CustID = CustID

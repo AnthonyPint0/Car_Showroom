@@ -84,10 +84,8 @@ Partial Class Admin_Mainform
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.CustomerGB = New System.Windows.Forms.GroupBox()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CustomerTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.CustomerTableAdapter()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.CustomerIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -97,11 +95,10 @@ Partial Class Admin_Mainform
         Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RegistrationDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SalesRepertGB = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.OrderHistoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OrderHistoryTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.OrderHistoryTableAdapter()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CustomerID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -112,6 +109,10 @@ Partial Class Admin_Mainform
         Me.Delivered = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MovedOn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OrderHistoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CustomerTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.CustomerTableAdapter()
+        Me.OrderHistoryTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.OrderHistoryTableAdapter()
+        Me.Remove_user_btn = New System.Windows.Forms.Button()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -123,8 +124,8 @@ Partial Class Admin_Mainform
         Me.Add_carGB.SuspendLayout()
         CType(Me.CarPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustomerGB.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SalesRepertGB.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -765,10 +766,22 @@ Partial Class Admin_Mainform
         Me.CustomerGB.Location = New System.Drawing.Point(3, 997)
         Me.CustomerGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 25)
         Me.CustomerGB.Name = "CustomerGB"
-        Me.CustomerGB.Size = New System.Drawing.Size(722, 469)
+        Me.CustomerGB.Size = New System.Drawing.Size(722, 494)
         Me.CustomerGB.TabIndex = 6
         Me.CustomerGB.TabStop = False
         Me.CustomerGB.Text = "Customer Management"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Remove_user_btn)
+        Me.GroupBox1.Controls.Add(Me.DataGridView2)
+        Me.GroupBox1.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 25)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(710, 463)
+        Me.GroupBox1.TabIndex = 2
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "GroupBox1"
         '
         'DataGridView2
         '
@@ -783,26 +796,6 @@ Partial Class Admin_Mainform
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.Size = New System.Drawing.Size(701, 426)
         Me.DataGridView2.TabIndex = 1
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.DataGridView2)
-        Me.GroupBox1.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 25)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(710, 438)
-        Me.GroupBox1.TabIndex = 2
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
-        '
-        'CustomerBindingSource
-        '
-        Me.CustomerBindingSource.DataMember = "Customer"
-        Me.CustomerBindingSource.DataSource = Me.Car_ShowroomADataSet
-        '
-        'CustomerTableAdapter
-        '
-        Me.CustomerTableAdapter.ClearBeforeFill = True
         '
         'CustomerIDDataGridViewTextBoxColumn
         '
@@ -876,12 +869,17 @@ Partial Class Admin_Mainform
         Me.RegistrationDateDataGridViewTextBoxColumn.ReadOnly = True
         Me.RegistrationDateDataGridViewTextBoxColumn.Width = 120
         '
+        'CustomerBindingSource
+        '
+        Me.CustomerBindingSource.DataMember = "Customer"
+        Me.CustomerBindingSource.DataSource = Me.Car_ShowroomADataSet
+        '
         'SalesRepertGB
         '
         Me.SalesRepertGB.BackColor = System.Drawing.Color.White
         Me.SalesRepertGB.Controls.Add(Me.GroupBox3)
         Me.SalesRepertGB.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SalesRepertGB.Location = New System.Drawing.Point(3, 1494)
+        Me.SalesRepertGB.Location = New System.Drawing.Point(3, 1519)
         Me.SalesRepertGB.Margin = New System.Windows.Forms.Padding(3, 3, 3, 25)
         Me.SalesRepertGB.Name = "SalesRepertGB"
         Me.SalesRepertGB.Size = New System.Drawing.Size(722, 469)
@@ -913,15 +911,6 @@ Partial Class Admin_Mainform
         Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.Size = New System.Drawing.Size(701, 426)
         Me.DataGridView3.TabIndex = 1
-        '
-        'OrderHistoryBindingSource
-        '
-        Me.OrderHistoryBindingSource.DataMember = "OrderHistory"
-        Me.OrderHistoryBindingSource.DataSource = Me.Car_ShowroomADataSet
-        '
-        'OrderHistoryTableAdapter
-        '
-        Me.OrderHistoryTableAdapter.ClearBeforeFill = True
         '
         'DataGridViewTextBoxColumn1
         '
@@ -1002,6 +991,33 @@ Partial Class Admin_Mainform
         Me.MovedOn.Name = "MovedOn"
         Me.MovedOn.ReadOnly = True
         '
+        'OrderHistoryBindingSource
+        '
+        Me.OrderHistoryBindingSource.DataMember = "OrderHistory"
+        Me.OrderHistoryBindingSource.DataSource = Me.Car_ShowroomADataSet
+        '
+        'CustomerTableAdapter
+        '
+        Me.CustomerTableAdapter.ClearBeforeFill = True
+        '
+        'OrderHistoryTableAdapter
+        '
+        Me.OrderHistoryTableAdapter.ClearBeforeFill = True
+        '
+        'Remove_user_btn
+        '
+        Me.Remove_user_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Remove_user_btn.Font = New System.Drawing.Font("Bahnschrift", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Remove_user_btn.ForeColor = System.Drawing.Color.White
+        Me.Remove_user_btn.Location = New System.Drawing.Point(602, 431)
+        Me.Remove_user_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Remove_user_btn.Name = "Remove_user_btn"
+        Me.Remove_user_btn.Size = New System.Drawing.Size(99, 32)
+        Me.Remove_user_btn.TabIndex = 19
+        Me.Remove_user_btn.Text = "Remove"
+        Me.Remove_user_btn.UseVisualStyleBackColor = False
+        Me.Remove_user_btn.Visible = False
+        '
         'Admin_Mainform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1029,8 +1045,8 @@ Partial Class Admin_Mainform
         Me.Add_carGB.PerformLayout()
         CType(Me.CarPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CustomerGB.ResumeLayout(False)
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SalesRepertGB.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
@@ -1127,4 +1143,5 @@ Partial Class Admin_Mainform
     Friend WithEvents Delivered As DataGridViewCheckBoxColumn
     Friend WithEvents Status As DataGridViewTextBoxColumn
     Friend WithEvents MovedOn As DataGridViewTextBoxColumn
+    Friend WithEvents Remove_user_btn As Button
 End Class

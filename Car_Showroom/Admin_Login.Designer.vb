@@ -26,7 +26,7 @@ Partial Class Admin_Login
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ShowPasswordCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Remove_user_btn = New System.Windows.Forms.Button()
+        Me.Clear_user_btn = New System.Windows.Forms.Button()
         Me.Exit_btn = New System.Windows.Forms.Button()
         Me.Login_btn = New System.Windows.Forms.Button()
         Me.Password_txt = New System.Windows.Forms.TextBox()
@@ -73,18 +73,19 @@ Partial Class Admin_Login
         Me.ShowPasswordCheckBox.TabIndex = 19
         Me.ShowPasswordCheckBox.UseVisualStyleBackColor = True
         '
-        'Remove_user_btn
+        'Clear_user_btn
         '
-        Me.Remove_user_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Remove_user_btn.Font = New System.Drawing.Font("Bahnschrift", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Remove_user_btn.ForeColor = System.Drawing.Color.White
-        Me.Remove_user_btn.Location = New System.Drawing.Point(648, 357)
-        Me.Remove_user_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Remove_user_btn.Name = "Remove_user_btn"
-        Me.Remove_user_btn.Size = New System.Drawing.Size(99, 32)
-        Me.Remove_user_btn.TabIndex = 18
-        Me.Remove_user_btn.Text = "Remove"
-        Me.Remove_user_btn.UseVisualStyleBackColor = False
+        Me.Clear_user_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Clear_user_btn.Font = New System.Drawing.Font("Bahnschrift", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Clear_user_btn.ForeColor = System.Drawing.Color.White
+        Me.Clear_user_btn.Location = New System.Drawing.Point(648, 357)
+        Me.Clear_user_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Clear_user_btn.Name = "Clear_user_btn"
+        Me.Clear_user_btn.Size = New System.Drawing.Size(99, 32)
+        Me.Clear_user_btn.TabIndex = 18
+        Me.Clear_user_btn.Text = "Clear"
+        Me.Clear_user_btn.UseVisualStyleBackColor = False
+        Me.Clear_user_btn.Visible = False
         '
         'Exit_btn
         '
@@ -208,7 +209,7 @@ Partial Class Admin_Login
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ShowPasswordCheckBox)
-        Me.Controls.Add(Me.Remove_user_btn)
+        Me.Controls.Add(Me.Clear_user_btn)
         Me.Controls.Add(Me.Exit_btn)
         Me.Controls.Add(Me.Login_btn)
         Me.Controls.Add(Me.Password_txt)
@@ -234,7 +235,7 @@ Partial Class Admin_Login
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents ShowPasswordCheckBox As CheckBox
-    Friend WithEvents Remove_user_btn As Button
+    Friend WithEvents Clear_user_btn As Button
     Friend WithEvents Exit_btn As Button
     Friend WithEvents Login_btn As Button
     Friend WithEvents Password_txt As TextBox

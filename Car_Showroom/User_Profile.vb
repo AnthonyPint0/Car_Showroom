@@ -6,32 +6,10 @@ Public Class User_Profile
     Public CustID As Integer
     Private carID As String
     Public loggedIn As Boolean = True
-    Private connectionString As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
-    Dim drag As Boolean
-    Dim mousex As Integer
-    Dim mousey As Integer
+    Private connectionString As String = Form_Login.connector
+    Public connector As String = connectionString
+    Public con As New SqlConnection(connector)
     Public price As String
-
-    Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
-        drag = True 'Set the flag to indicate dragging is in progress
-        mousex = System.Windows.Forms.Cursor.Position.X - Me.Left
-        mousey = System.Windows.Forms.Cursor.Position.Y - Me.Top
-    End Sub
-
-    Private Sub Form1_Login_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
-        'Check if dragging is in progress
-        If drag Then
-            Dim newx As Integer
-            Dim newy As Integer
-            newx = System.Windows.Forms.Cursor.Position.X - mousex
-            newy = System.Windows.Forms.Cursor.Position.Y - mousey
-            Me.Location = New Point(newx, newy)
-        End If
-    End Sub
-
-    Private Sub Form_Login_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
-        drag = False 'Reset the flag when dragging is complete
-    End Sub
 
     Public Sub CheckOrderConditionsForCustomer(ByVal custID As Integer)
         ' Define your SQL query to fetch orders for the given CustID
@@ -288,11 +266,10 @@ Public Class User_Profile
 
     Private Sub Homebel_Click(sender As Object, e As EventArgs) Handles Homebel.Click
         Me.Hide()
-        HomeForm.Show()
         HomeForm.CustID = CustID
         HomeForm.loggedIn = loggedIn ' Set loggedIn to True
-        HomeForm.PopulateCarDisplayPanel(loggedIn)
         HomeForm.Profile.Text = "" & Profile.Text
+        HomeForm.Show()
         HomeForm.UpdateUI() ' Update the UI in HomeForm
     End Sub
 
@@ -314,7 +291,9 @@ Public Class User_Profile
         ' Check the user's response
         If result = DialogResult.Yes Then
             ' If the user clicks Yes, close the application
-            Me.Hide()
+            Me.Close()
+            Individual_Car.Close()
+            HomeForm.Close()
             Form_Login.Show()
             loggedIn = False
             Form_Login.loggedIn = False
@@ -350,14 +329,6 @@ Public Class User_Profile
         Return carName
     End Function
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
-
     Private Sub ViewMBtn_Click(sender As Object, e As EventArgs) Handles ViewMBtn.Click
         Me.Hide() ' To hide the login form
         Individual_Car.carID = carID
@@ -385,7 +356,6 @@ Public Class User_Profile
                     End Using
                 End Using
                 HomeForm.Show()
-                HomeForm.PopulateCarDisplayPanel(loggedIn)
                 Me.Close()
             Catch ex As Exception
                 MessageBox.Show("Error marking order as successful: " & ex.Message)
@@ -421,5 +391,39 @@ Public Class User_Profile
             Payment.ShowDialog()
         End If
     End Sub
-End Class
+    Private Sub Remove_user_btn_Click(sender As Object, e As EventArgs) Handles Remove_user_btn.Click
+        ' Get the username from the user (you may use a TextBox or another input method)
+        Dim usernameToRemove As String = MessageBox.Show("Are you sure you want to Order this Car?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If usernameToRemove = DialogResult.Yes Then
+            ' Call the RemoveUser function
+            RemoveUser(CustID)
+        End If
+    End Sub
 
+    Private Sub RemoveUser(username As String)
+        Try
+            ' Open the database connection
+            con.Open()
+            ' Execute SQL command to delete user by username
+            Dim sql As String = "DELETE FROM Customer WHERE CustomerID = @CustomerID"
+            Using cmd As New SqlCommand(sql, con)
+                ' Replace the parameter with the actual value
+                cmd.Parameters.AddWithValue("@CustomerID", CustID)
+                ' Execute the command
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                ' Check if any rows were affected to determine if the user was deleted
+                If rowsAffected > 0 Then
+                    MessageBox.Show("User removed successfully")
+                Else
+                    MessageBox.Show("User not found or could not be removed")
+                End If
+            End Using
+        Catch ex As Exception
+            ' Handle any exceptions that may occur during database operations
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+            ' Close the database connection in the finally block to ensure it's always closed
+            con.Close()
+        End Try
+    End Sub
+End Class

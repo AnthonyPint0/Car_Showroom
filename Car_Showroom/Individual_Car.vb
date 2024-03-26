@@ -6,9 +6,6 @@ Imports System.Runtime.CompilerServices
 Imports System.IO
 
 Public Class Individual_Car
-    Dim drag As Boolean
-    Dim mousex As Integer
-    Dim mousey As Integer
     Public loggedIn As Boolean
     Private selectedButton As Button = Nothing
     Public CustReviewLink As String
@@ -17,29 +14,8 @@ Public Class Individual_Car
     Public colour2 As String
     Public colour3 As String
     Public CustID As Integer
-    Private connectionString As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
+    Private connectionString As String = Form_Login.connector
     Private a As String
-
-    Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
-        drag = True 'Set the flag to indicate dragging is in progress
-        mousex = System.Windows.Forms.Cursor.Position.X - Me.Left
-        mousey = System.Windows.Forms.Cursor.Position.Y - Me.Top
-    End Sub
-
-    Private Sub Form1_Login_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
-        'Check if dragging is in progress
-        If drag Then
-            Dim newx As Integer
-            Dim newy As Integer
-            newx = System.Windows.Forms.Cursor.Position.X - mousex
-            newy = System.Windows.Forms.Cursor.Position.Y - mousey
-            Me.Location = New Point(newx, newy)
-        End If
-    End Sub
-
-    Private Sub Form_Login_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
-        drag = False 'Reset the flag when dragging is complete
-    End Sub
 
     Private Sub Exit_btn_Click(sender As Object, e As EventArgs) Handles Exit_btn.Click
         ' Display a message box with Yes and No buttons
@@ -290,7 +266,9 @@ Public Class Individual_Car
         ' Check the user's response
         If result = DialogResult.Yes Then
             ' If the user clicks Yes, close the application
-            Me.Hide()
+            Me.Close()
+            HomeForm.Close()
+            User_Profile.Close()
             Form_Login.Show()
             loggedIn = False
             Form_Login.loggedIn = False
@@ -301,12 +279,13 @@ Public Class Individual_Car
     Private Sub Homebel_Click(sender As Object, e As EventArgs) Handles Homebel.Click
         ' Call the function to handle button clicks
         HandleButtonClick(Homebel)
-        Me.Hide()
-        HomeForm.Show()
+        Me.Close()
+        HomeForm.Close()
         HomeForm.loggedIn = loggedIn ' Set loggedIn to True
         HomeForm.Profile.Text = "" & Profile.Text
+        HomeForm.CustID = CustID
+        HomeForm.Show()
         HomeForm.UpdateUI() ' Update the UI in HomeForm
-        HomeForm.PopulateCarDisplayPanel(loggedIn)
     End Sub
 
     Private Sub HandleButtonClick(clickedButton As Button)
@@ -356,30 +335,33 @@ Public Class Individual_Car
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Me.Hide()
-        HomeForm.Show()
+        Me.Close()
+        HomeForm.Close()
         HomeForm.loggedIn = loggedIn ' Set loggedIn to True
         HomeForm.Profile.Text = "" & Profile.Text
+        HomeForm.CustID = CustID
+        HomeForm.Show()
         HomeForm.UpdateUI() ' Update the UI in HomeForm
-        HomeForm.PopulateCarDisplayPanel(loggedIn)
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        Me.Hide()
-        HomeForm.Show()
+        Me.Close()
+        HomeForm.Close()
         HomeForm.loggedIn = loggedIn ' Set loggedIn to True
         HomeForm.Profile.Text = "" & Profile.Text
+        HomeForm.CustID = CustID
+        HomeForm.Show()
         HomeForm.UpdateUI() ' Update the UI in HomeForm
-        HomeForm.PopulateCarDisplayPanel(loggedIn)
     End Sub
 
     Private Sub back_icon_Click(sender As Object, e As EventArgs) Handles back_icon.Click
-        Me.Hide()
-        HomeForm.Show()
+        Me.Close()
+        HomeForm.Close()
         HomeForm.loggedIn = loggedIn ' Set loggedIn to True
         HomeForm.Profile.Text = "" & Profile.Text
+        HomeForm.CustID = CustID
+        HomeForm.Show()
         HomeForm.UpdateUI() ' Update the UI in HomeForm
-        HomeForm.PopulateCarDisplayPanel(loggedIn)
 
     End Sub
 
@@ -545,9 +527,13 @@ Public Class Individual_Car
         User_Profile.UpdateUI()
         User_Profile.CheckOrderConditionsForCustomer(CustID)
         User_Profile.CustomerInfo(CustID)
+        HomeForm.Close()
+        HomeForm.loggedIn = loggedIn ' Set loggedIn to True
+        HomeForm.Profile.Text = "" & Profile.Text
+        HomeForm.CustID = CustID
+        HomeForm.Show()
+        HomeForm.Hide()
+        HomeForm.UpdateUI() ' Update the UI in HomeForm
     End Sub
 
-    Private Sub CarImage_Click(sender As Object, e As EventArgs) Handles CarImage.Click
-
-    End Sub
 End Class

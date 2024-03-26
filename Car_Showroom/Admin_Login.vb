@@ -5,34 +5,9 @@ Public Class Admin_Login
     Private Sub Admin_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
-
-
-    Dim drag As Boolean
-    Dim mousex As Integer
-    Dim mousey As Integer
     Public loggedIn As Boolean = False
-
-    Private Sub Form1_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
-        drag = True 'Set the flag to indicate dragging is in progress
-        mousex = System.Windows.Forms.Cursor.Position.X - Me.Left
-        mousey = System.Windows.Forms.Cursor.Position.Y - Me.Top
-    End Sub
-
-    Private Sub Form1_Login_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
-        'Check if dragging is in progress
-        If drag Then
-            Dim newx As Integer
-            Dim newy As Integer
-            newx = System.Windows.Forms.Cursor.Position.X - mousex
-            newy = System.Windows.Forms.Cursor.Position.Y - mousey
-            Me.Location = New Point(newx, newy)
-        End If
-    End Sub
-
-    Private Sub Form_Login_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
-        drag = False 'Reset the flag when dragging is complete
-    End Sub
-    Public con As New SqlConnection("Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False")
+    Public connector As String = Form_Login.connector
+    Public con As New SqlConnection(connector)
 
     Private Sub Login_btn_Click(sender As Object, e As EventArgs) Handles Login_btn.Click
         ' Call a method to handle login function
@@ -109,50 +84,18 @@ Public Class Admin_Login
         End If
     End Sub
 
-    Private Sub Remove_user_btn_Click(sender As Object, e As EventArgs) Handles Remove_user_btn.Click
-        ' Get the username from the user (you may use a TextBox or another input method)
-        Dim usernameToRemove As String = InputBox("Enter the username to remove:", "Remove User")
-
-        ' Call the RemoveUser function
-        RemoveUser(usernameToRemove)
+    Private Sub Clear_user_btn_Click(sender As Object, e As EventArgs) Handles Clear_user_btn.Click
+        username_txt.Clear()
+        Password_txt.Clear()
     End Sub
 
-    Private Sub RemoveUser(username As String)
-        Try
-            ' Open the database connection
-            con.Open()
-
-            ' Execute SQL command to delete user by username
-            Dim sql As String = "DELETE FROM admin WHERE Username = @Username"
-            Using cmd As New SqlCommand(sql, con)
-                ' Replace the parameter with the actual value
-                cmd.Parameters.AddWithValue("@Username", username)
-
-                ' Execute the command
-                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
-
-                ' Check if any rows were affected to determine if the user was deleted
-                If rowsAffected > 0 Then
-                    MessageBox.Show("User removed successfully")
-                Else
-                    MessageBox.Show("User not found or could not be removed")
-                End If
-            End Using
-        Catch ex As Exception
-            ' Handle any exceptions that may occur during database operations
-            MessageBox.Show("Error: " & ex.Message)
-        Finally
-            ' Close the database connection in the finally block to ensure it's always closed
-            con.Close()
-        End Try
-    End Sub
 
     Private Sub Password_txt_TextChanged(sender As Object, e As EventArgs) Handles Password_txt.TextChanged
         Password_txt.PasswordChar = "*" ' Hide characters
     End Sub
 
     Private Sub GuestL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles guestL.LinkClicked
-        Me.Hide()
+        Me.Close()
         Form_Login.Show()
         Form_Login.username_txt.Text = ""
         Form_Login.Password_txt.Text = ""
