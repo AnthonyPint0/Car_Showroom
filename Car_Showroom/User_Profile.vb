@@ -264,6 +264,23 @@ Public Class User_Profile
         End If
     End Sub
 
+    Public Sub CheckCustID()
+        If CustID = 0 Then
+            ' Execute code when CustID is None
+            ' For example:
+            MessageBox.Show("There has been a error occured! Please Log Out and Try Again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ' If the user clicks Yes, close the application
+            Me.Close()
+            HomeForm.Close()
+            Individual_Car.Close()
+            Form_Login.Show()
+            loggedIn = False
+            Form_Login.loggedIn = False
+            Form_Login.username_txt.Text = ""
+            Form_Login.Password_txt.Text = ""
+        End If
+    End Sub
+
     Private Sub Homebel_Click(sender As Object, e As EventArgs) Handles Homebel.Click
         Me.Hide()
         HomeForm.CustID = CustID

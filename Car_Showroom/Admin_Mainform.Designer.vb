@@ -85,6 +85,7 @@ Partial Class Admin_Mainform
         Me.Label5 = New System.Windows.Forms.Label()
         Me.CustomerGB = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Remove_user_btn = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.CustomerIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -112,7 +113,6 @@ Partial Class Admin_Mainform
         Me.OrderHistoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CustomerTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.CustomerTableAdapter()
         Me.OrderHistoryTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.OrderHistoryTableAdapter()
-        Me.Remove_user_btn = New System.Windows.Forms.Button()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,7 +142,7 @@ Partial Class Admin_Mainform
         Me.Exit_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Exit_btn.Name = "Exit_btn"
         Me.Exit_btn.Size = New System.Drawing.Size(28, 26)
-        Me.Exit_btn.TabIndex = 42
+        Me.Exit_btn.TabIndex = 1
         Me.Exit_btn.Text = "X"
         Me.Exit_btn.UseVisualStyleBackColor = False
         '
@@ -163,7 +163,7 @@ Partial Class Admin_Mainform
         Me.Sidebar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Sidebar.Name = "Sidebar"
         Me.Sidebar.Size = New System.Drawing.Size(194, 571)
-        Me.Sidebar.TabIndex = 41
+        Me.Sidebar.TabIndex = 0
         '
         'Profile
         '
@@ -174,7 +174,7 @@ Partial Class Admin_Mainform
         Me.Profile.Location = New System.Drawing.Point(4, 508)
         Me.Profile.Name = "Profile"
         Me.Profile.Size = New System.Drawing.Size(188, 36)
-        Me.Profile.TabIndex = 22
+        Me.Profile.TabIndex = 6
         Me.Profile.Text = "Guest"
         Me.Profile.UseVisualStyleBackColor = False
         '
@@ -187,7 +187,7 @@ Partial Class Admin_Mainform
         Me.Add_carBtn.Location = New System.Drawing.Point(1, 209)
         Me.Add_carBtn.Name = "Add_carBtn"
         Me.Add_carBtn.Size = New System.Drawing.Size(194, 36)
-        Me.Add_carBtn.TabIndex = 20
+        Me.Add_carBtn.TabIndex = 2
         Me.Add_carBtn.Text = "Add New Car"
         Me.Add_carBtn.UseVisualStyleBackColor = False
         '
@@ -200,7 +200,7 @@ Partial Class Admin_Mainform
         Me.Sales_Reports.Location = New System.Drawing.Point(0, 262)
         Me.Sales_Reports.Name = "Sales_Reports"
         Me.Sales_Reports.Size = New System.Drawing.Size(194, 36)
-        Me.Sales_Reports.TabIndex = 18
+        Me.Sales_Reports.TabIndex = 3
         Me.Sales_Reports.Text = "Sales Reports"
         Me.Sales_Reports.UseVisualStyleBackColor = False
         '
@@ -213,7 +213,7 @@ Partial Class Admin_Mainform
         Me.Customer_Management.Location = New System.Drawing.Point(1, 322)
         Me.Customer_Management.Name = "Customer_Management"
         Me.Customer_Management.Size = New System.Drawing.Size(194, 55)
-        Me.Customer_Management.TabIndex = 17
+        Me.Customer_Management.TabIndex = 4
         Me.Customer_Management.Text = "Customer Management"
         Me.Customer_Management.UseVisualStyleBackColor = False
         '
@@ -226,7 +226,7 @@ Partial Class Admin_Mainform
         Me.Car_Inventory.Location = New System.Drawing.Point(0, 153)
         Me.Car_Inventory.Name = "Car_Inventory"
         Me.Car_Inventory.Size = New System.Drawing.Size(194, 36)
-        Me.Car_Inventory.TabIndex = 16
+        Me.Car_Inventory.TabIndex = 1
         Me.Car_Inventory.Text = "Car Inventory"
         Me.Car_Inventory.UseVisualStyleBackColor = False
         '
@@ -239,7 +239,7 @@ Partial Class Admin_Mainform
         Me.Logout.Location = New System.Drawing.Point(73, 464)
         Me.Logout.Name = "Logout"
         Me.Logout.Size = New System.Drawing.Size(68, 21)
-        Me.Logout.TabIndex = 15
+        Me.Logout.TabIndex = 5
         Me.Logout.Text = "Log out"
         '
         'Registerlink
@@ -342,7 +342,7 @@ Partial Class Admin_Mainform
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(199, 31)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(746, 507)
-        Me.FlowLayoutPanel1.TabIndex = 44
+        Me.FlowLayoutPanel1.TabIndex = 2
         '
         'Car_InventoryGB
         '
@@ -370,7 +370,7 @@ Partial Class Admin_Mainform
         Me.AddCarBtn.Location = New System.Drawing.Point(557, 417)
         Me.AddCarBtn.Name = "AddCarBtn"
         Me.AddCarBtn.Size = New System.Drawing.Size(90, 43)
-        Me.AddCarBtn.TabIndex = 26
+        Me.AddCarBtn.TabIndex = 2
         Me.AddCarBtn.Text = "Add Car"
         Me.AddCarBtn.UseVisualStyleBackColor = False
         '
@@ -379,7 +379,7 @@ Partial Class Admin_Mainform
         Me.noofcars.Location = New System.Drawing.Point(278, 438)
         Me.noofcars.Name = "noofcars"
         Me.noofcars.Size = New System.Drawing.Size(58, 25)
-        Me.noofcars.TabIndex = 25
+        Me.noofcars.TabIndex = 1
         '
         'CarIDCB
         '
@@ -387,7 +387,7 @@ Partial Class Admin_Mainform
         Me.CarIDCB.Location = New System.Drawing.Point(12, 435)
         Me.CarIDCB.Name = "CarIDCB"
         Me.CarIDCB.Size = New System.Drawing.Size(121, 26)
-        Me.CarIDCB.TabIndex = 24
+        Me.CarIDCB.TabIndex = 0
         '
         'Label3
         '
@@ -469,7 +469,7 @@ Partial Class Admin_Mainform
         Me.BodyTypeCB.Location = New System.Drawing.Point(522, 369)
         Me.BodyTypeCB.Name = "BodyTypeCB"
         Me.BodyTypeCB.Size = New System.Drawing.Size(151, 23)
-        Me.BodyTypeCB.TabIndex = 55
+        Me.BodyTypeCB.TabIndex = 13
         '
         'CarPictureBox
         '
@@ -498,7 +498,7 @@ Partial Class Admin_Mainform
         Me.UploadImageButton.Location = New System.Drawing.Point(6, 415)
         Me.UploadImageButton.Name = "UploadImageButton"
         Me.UploadImageButton.Size = New System.Drawing.Size(116, 34)
-        Me.UploadImageButton.TabIndex = 52
+        Me.UploadImageButton.TabIndex = 14
         Me.UploadImageButton.Text = "Upload Image"
         Me.UploadImageButton.UseVisualStyleBackColor = False
         '
@@ -508,7 +508,7 @@ Partial Class Admin_Mainform
         Me.DescriptionTB.Location = New System.Drawing.Point(110, 275)
         Me.DescriptionTB.Name = "DescriptionTB"
         Me.DescriptionTB.Size = New System.Drawing.Size(237, 96)
-        Me.DescriptionTB.TabIndex = 51
+        Me.DescriptionTB.TabIndex = 5
         Me.DescriptionTB.Text = ""
         '
         'Label17
@@ -527,7 +527,7 @@ Partial Class Admin_Mainform
         Me.CustReviewlinkTB.Location = New System.Drawing.Point(110, 226)
         Me.CustReviewlinkTB.Name = "CustReviewlinkTB"
         Me.CustReviewlinkTB.Size = New System.Drawing.Size(151, 21)
-        Me.CustReviewlinkTB.TabIndex = 49
+        Me.CustReviewlinkTB.TabIndex = 4
         '
         'Label14
         '
@@ -545,7 +545,7 @@ Partial Class Admin_Mainform
         Me.PriceTB.Location = New System.Drawing.Point(110, 126)
         Me.PriceTB.Name = "PriceTB"
         Me.PriceTB.Size = New System.Drawing.Size(151, 21)
-        Me.PriceTB.TabIndex = 47
+        Me.PriceTB.TabIndex = 2
         '
         'CustReviewTB
         '
@@ -553,7 +553,7 @@ Partial Class Admin_Mainform
         Me.CustReviewTB.Location = New System.Drawing.Point(110, 175)
         Me.CustReviewTB.Name = "CustReviewTB"
         Me.CustReviewTB.Size = New System.Drawing.Size(151, 21)
-        Me.CustReviewTB.TabIndex = 46
+        Me.CustReviewTB.TabIndex = 3
         '
         'Label15
         '
@@ -581,7 +581,7 @@ Partial Class Admin_Mainform
         Me.DriverTypeTB.Location = New System.Drawing.Point(522, 322)
         Me.DriverTypeTB.Name = "DriverTypeTB"
         Me.DriverTypeTB.Size = New System.Drawing.Size(151, 21)
-        Me.DriverTypeTB.TabIndex = 43
+        Me.DriverTypeTB.TabIndex = 12
         '
         'Label10
         '
@@ -609,7 +609,7 @@ Partial Class Admin_Mainform
         Me.MaxPowerTB.Location = New System.Drawing.Point(522, 222)
         Me.MaxPowerTB.Name = "MaxPowerTB"
         Me.MaxPowerTB.Size = New System.Drawing.Size(151, 21)
-        Me.MaxPowerTB.TabIndex = 39
+        Me.MaxPowerTB.TabIndex = 10
         '
         'SeatingCapacityTB
         '
@@ -617,7 +617,7 @@ Partial Class Admin_Mainform
         Me.SeatingCapacityTB.Location = New System.Drawing.Point(522, 271)
         Me.SeatingCapacityTB.Name = "SeatingCapacityTB"
         Me.SeatingCapacityTB.Size = New System.Drawing.Size(151, 21)
-        Me.SeatingCapacityTB.TabIndex = 38
+        Me.SeatingCapacityTB.TabIndex = 11
         '
         'Label12
         '
@@ -645,7 +645,7 @@ Partial Class Admin_Mainform
         Me.TransmissionTB.Location = New System.Drawing.Point(522, 129)
         Me.TransmissionTB.Name = "TransmissionTB"
         Me.TransmissionTB.Size = New System.Drawing.Size(151, 21)
-        Me.TransmissionTB.TabIndex = 35
+        Me.TransmissionTB.TabIndex = 8
         '
         'FuelTypeTB
         '
@@ -653,7 +653,7 @@ Partial Class Admin_Mainform
         Me.FuelTypeTB.Location = New System.Drawing.Point(522, 178)
         Me.FuelTypeTB.Name = "FuelTypeTB"
         Me.FuelTypeTB.Size = New System.Drawing.Size(151, 21)
-        Me.FuelTypeTB.TabIndex = 34
+        Me.FuelTypeTB.TabIndex = 9
         '
         'Label8
         '
@@ -681,7 +681,7 @@ Partial Class Admin_Mainform
         Me.EngineTB.Location = New System.Drawing.Point(522, 29)
         Me.EngineTB.Name = "EngineTB"
         Me.EngineTB.Size = New System.Drawing.Size(151, 21)
-        Me.EngineTB.TabIndex = 31
+        Me.EngineTB.TabIndex = 6
         '
         'MileageTB
         '
@@ -689,7 +689,7 @@ Partial Class Admin_Mainform
         Me.MileageTB.Location = New System.Drawing.Point(522, 78)
         Me.MileageTB.Name = "MileageTB"
         Me.MileageTB.Size = New System.Drawing.Size(151, 21)
-        Me.MileageTB.TabIndex = 30
+        Me.MileageTB.TabIndex = 7
         '
         'Label6
         '
@@ -717,7 +717,7 @@ Partial Class Admin_Mainform
         Me.CarIdTextBox.Location = New System.Drawing.Point(110, 34)
         Me.CarIdTextBox.Name = "CarIdTextBox"
         Me.CarIdTextBox.Size = New System.Drawing.Size(151, 21)
-        Me.CarIdTextBox.TabIndex = 27
+        Me.CarIdTextBox.TabIndex = 0
         '
         'SaveButton
         '
@@ -726,7 +726,7 @@ Partial Class Admin_Mainform
         Me.SaveButton.Location = New System.Drawing.Point(557, 417)
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(90, 43)
-        Me.SaveButton.TabIndex = 26
+        Me.SaveButton.TabIndex = 15
         Me.SaveButton.Text = "Add Car"
         Me.SaveButton.UseVisualStyleBackColor = False
         '
@@ -736,7 +736,7 @@ Partial Class Admin_Mainform
         Me.CarNameTextBox.Location = New System.Drawing.Point(110, 83)
         Me.CarNameTextBox.Name = "CarNameTextBox"
         Me.CarNameTextBox.Size = New System.Drawing.Size(151, 21)
-        Me.CarNameTextBox.TabIndex = 25
+        Me.CarNameTextBox.TabIndex = 1
         '
         'Label4
         '
@@ -783,6 +783,20 @@ Partial Class Admin_Mainform
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
         '
+        'Remove_user_btn
+        '
+        Me.Remove_user_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Remove_user_btn.Font = New System.Drawing.Font("Bahnschrift", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Remove_user_btn.ForeColor = System.Drawing.Color.White
+        Me.Remove_user_btn.Location = New System.Drawing.Point(602, 431)
+        Me.Remove_user_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Remove_user_btn.Name = "Remove_user_btn"
+        Me.Remove_user_btn.Size = New System.Drawing.Size(99, 32)
+        Me.Remove_user_btn.TabIndex = 1
+        Me.Remove_user_btn.Text = "Remove"
+        Me.Remove_user_btn.UseVisualStyleBackColor = False
+        Me.Remove_user_btn.Visible = False
+        '
         'DataGridView2
         '
         Me.DataGridView2.AllowUserToAddRows = False
@@ -795,7 +809,7 @@ Partial Class Admin_Mainform
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.Size = New System.Drawing.Size(701, 426)
-        Me.DataGridView2.TabIndex = 1
+        Me.DataGridView2.TabIndex = 0
         '
         'CustomerIDDataGridViewTextBoxColumn
         '
@@ -910,7 +924,7 @@ Partial Class Admin_Mainform
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.Size = New System.Drawing.Size(701, 426)
-        Me.DataGridView3.TabIndex = 1
+        Me.DataGridView3.TabIndex = 0
         '
         'DataGridViewTextBoxColumn1
         '
@@ -1003,20 +1017,6 @@ Partial Class Admin_Mainform
         'OrderHistoryTableAdapter
         '
         Me.OrderHistoryTableAdapter.ClearBeforeFill = True
-        '
-        'Remove_user_btn
-        '
-        Me.Remove_user_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Remove_user_btn.Font = New System.Drawing.Font("Bahnschrift", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Remove_user_btn.ForeColor = System.Drawing.Color.White
-        Me.Remove_user_btn.Location = New System.Drawing.Point(602, 431)
-        Me.Remove_user_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Remove_user_btn.Name = "Remove_user_btn"
-        Me.Remove_user_btn.Size = New System.Drawing.Size(99, 32)
-        Me.Remove_user_btn.TabIndex = 19
-        Me.Remove_user_btn.Text = "Remove"
-        Me.Remove_user_btn.UseVisualStyleBackColor = False
-        Me.Remove_user_btn.Visible = False
         '
         'Admin_Mainform
         '

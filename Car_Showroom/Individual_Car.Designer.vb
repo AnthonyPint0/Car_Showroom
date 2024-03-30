@@ -91,7 +91,7 @@ Partial Class Individual_Car
         Me.Exit_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Exit_btn.Name = "Exit_btn"
         Me.Exit_btn.Size = New System.Drawing.Size(30, 33)
-        Me.Exit_btn.TabIndex = 41
+        Me.Exit_btn.TabIndex = 1
         Me.Exit_btn.Text = "X"
         Me.Exit_btn.UseVisualStyleBackColor = False
         '
@@ -465,7 +465,7 @@ Partial Class Individual_Car
         Me.Add2cartBtn.Location = New System.Drawing.Point(699, 509)
         Me.Add2cartBtn.Name = "Add2cartBtn"
         Me.Add2cartBtn.Size = New System.Drawing.Size(188, 36)
-        Me.Add2cartBtn.TabIndex = 23
+        Me.Add2cartBtn.TabIndex = 2
         Me.Add2cartBtn.Text = "Add to Cart"
         Me.Add2cartBtn.UseVisualStyleBackColor = False
         '
@@ -515,7 +515,7 @@ Partial Class Individual_Car
         Me.Profile.Location = New System.Drawing.Point(4, 508)
         Me.Profile.Name = "Profile"
         Me.Profile.Size = New System.Drawing.Size(188, 36)
-        Me.Profile.TabIndex = 22
+        Me.Profile.TabIndex = 3
         Me.Profile.Text = "Guest"
         Me.Profile.UseVisualStyleBackColor = False
         '
@@ -528,7 +528,7 @@ Partial Class Individual_Car
         Me.Homebel.Location = New System.Drawing.Point(-2, 184)
         Me.Homebel.Name = "Homebel"
         Me.Homebel.Size = New System.Drawing.Size(194, 36)
-        Me.Homebel.TabIndex = 16
+        Me.Homebel.TabIndex = 1
         Me.Homebel.Text = "Home"
         Me.Homebel.UseVisualStyleBackColor = False
         '
@@ -541,7 +541,7 @@ Partial Class Individual_Car
         Me.Logout.Location = New System.Drawing.Point(56, 467)
         Me.Logout.Name = "Logout"
         Me.Logout.Size = New System.Drawing.Size(68, 21)
-        Me.Logout.TabIndex = 15
+        Me.Logout.TabIndex = 2
         Me.Logout.Text = "Log out"
         '
         'Registerlink

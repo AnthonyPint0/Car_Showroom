@@ -3,8 +3,9 @@ Imports System.Globalization
 
 Public Class Admin_Login
     Private Sub Admin_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Password_txt.PasswordChar = If(ShowPasswordCheckBox.Checked, ControlChars.NullChar, "*")
     End Sub
+
     Public loggedIn As Boolean = False
     Public connector As String = Form_Login.connector
     Public con As New SqlConnection(connector)
@@ -76,12 +77,7 @@ Public Class Admin_Login
     End Sub
 
     Private Sub ShowPasswordCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles ShowPasswordCheckBox.CheckedChanged
-        ' Toggle the PasswordChar based on the CheckBox state
-        If ShowPasswordCheckBox.Checked Then
-            Password_txt.PasswordChar = ControlChars.NullChar ' Show characters
-        Else
-            Password_txt.PasswordChar = "*" ' Hide characters
-        End If
+        Password_txt.PasswordChar = If(ShowPasswordCheckBox.Checked, ControlChars.NullChar, "*")
     End Sub
 
     Private Sub Clear_user_btn_Click(sender As Object, e As EventArgs) Handles Clear_user_btn.Click

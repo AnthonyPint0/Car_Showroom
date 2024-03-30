@@ -170,7 +170,7 @@ Partial Class HomeForm
         Me.Exit_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Exit_btn.Name = "Exit_btn"
         Me.Exit_btn.Size = New System.Drawing.Size(28, 26)
-        Me.Exit_btn.TabIndex = 42
+        Me.Exit_btn.TabIndex = 1
         Me.Exit_btn.Text = "X"
         Me.Exit_btn.UseVisualStyleBackColor = False
         '
@@ -203,7 +203,7 @@ Partial Class HomeForm
         Me.Profile.Location = New System.Drawing.Point(4, 508)
         Me.Profile.Name = "Profile"
         Me.Profile.Size = New System.Drawing.Size(188, 36)
-        Me.Profile.TabIndex = 22
+        Me.Profile.TabIndex = 7
         Me.Profile.Text = "Guest"
         Me.Profile.UseVisualStyleBackColor = False
         '
@@ -216,7 +216,7 @@ Partial Class HomeForm
         Me.MUVbel.Location = New System.Drawing.Point(0, 321)
         Me.MUVbel.Name = "MUVbel"
         Me.MUVbel.Size = New System.Drawing.Size(194, 36)
-        Me.MUVbel.TabIndex = 20
+        Me.MUVbel.TabIndex = 5
         Me.MUVbel.Text = "MUV"
         Me.MUVbel.UseVisualStyleBackColor = False
         '
@@ -229,7 +229,7 @@ Partial Class HomeForm
         Me.SUVbel.Location = New System.Drawing.Point(0, 279)
         Me.SUVbel.Name = "SUVbel"
         Me.SUVbel.Size = New System.Drawing.Size(194, 36)
-        Me.SUVbel.TabIndex = 19
+        Me.SUVbel.TabIndex = 4
         Me.SUVbel.Text = "SUV"
         Me.SUVbel.UseVisualStyleBackColor = False
         '
@@ -242,7 +242,7 @@ Partial Class HomeForm
         Me.Sedanbel.Location = New System.Drawing.Point(0, 237)
         Me.Sedanbel.Name = "Sedanbel"
         Me.Sedanbel.Size = New System.Drawing.Size(194, 36)
-        Me.Sedanbel.TabIndex = 18
+        Me.Sedanbel.TabIndex = 3
         Me.Sedanbel.Text = "Sedan"
         Me.Sedanbel.UseVisualStyleBackColor = False
         '
@@ -255,7 +255,7 @@ Partial Class HomeForm
         Me.Hatchbackbel.Location = New System.Drawing.Point(0, 195)
         Me.Hatchbackbel.Name = "Hatchbackbel"
         Me.Hatchbackbel.Size = New System.Drawing.Size(194, 36)
-        Me.Hatchbackbel.TabIndex = 17
+        Me.Hatchbackbel.TabIndex = 2
         Me.Hatchbackbel.Text = "Hatchback"
         Me.Hatchbackbel.UseVisualStyleBackColor = False
         '
@@ -268,7 +268,7 @@ Partial Class HomeForm
         Me.Allbel.Location = New System.Drawing.Point(0, 153)
         Me.Allbel.Name = "Allbel"
         Me.Allbel.Size = New System.Drawing.Size(194, 36)
-        Me.Allbel.TabIndex = 16
+        Me.Allbel.TabIndex = 1
         Me.Allbel.Text = "All"
         Me.Allbel.UseVisualStyleBackColor = False
         '
@@ -281,7 +281,7 @@ Partial Class HomeForm
         Me.Logout.Location = New System.Drawing.Point(56, 467)
         Me.Logout.Name = "Logout"
         Me.Logout.Size = New System.Drawing.Size(68, 21)
-        Me.Logout.TabIndex = 15
+        Me.Logout.TabIndex = 6
         Me.Logout.Text = "Log out"
         '
         'Registerlink

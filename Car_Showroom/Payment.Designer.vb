@@ -66,7 +66,7 @@ Partial Class Payment
         Me.Button1.Location = New System.Drawing.Point(270, 260)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(211, 36)
-        Me.Button1.TabIndex = 27
+        Me.Button1.TabIndex = 2
         Me.Button1.Text = "Cancel"
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -99,7 +99,7 @@ Partial Class Payment
         Me.OrderBtn.Location = New System.Drawing.Point(28, 260)
         Me.OrderBtn.Name = "OrderBtn"
         Me.OrderBtn.Size = New System.Drawing.Size(211, 36)
-        Me.OrderBtn.TabIndex = 24
+        Me.OrderBtn.TabIndex = 1
         Me.OrderBtn.Text = "Order Now"
         Me.OrderBtn.UseVisualStyleBackColor = False
         '

@@ -60,7 +60,7 @@ Public Class Form_Login
                     HomeForm.Profile.Text = "" & username_txt.Text
                     HomeForm.Show() ' To show the main form
                     HomeForm.UpdateUI() ' Update the UI in HomeForm
-                    ' Else
+                Else
                     ' User authentication failed
                     MessageBox.Show("Invalid username or password")
                 End If
@@ -81,12 +81,7 @@ Public Class Form_Login
     End Sub
 
     Private Sub ShowPasswordCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles ShowPasswordCheckBox.CheckedChanged
-        ' Toggle the PasswordChar based on the CheckBox state
-        If ShowPasswordCheckBox.Checked Then
-            Password_txt.PasswordChar = ControlChars.NullChar ' Show characters
-        Else
-            Password_txt.PasswordChar = "*" ' Hide characters
-        End If
+        Password_txt.PasswordChar = If(ShowPasswordCheckBox.Checked, ControlChars.NullChar, "*")
     End Sub
 
     Private Sub Registerlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Registerlink.LinkClicked
@@ -104,11 +99,11 @@ Public Class Form_Login
     End Sub
 
     Private Sub Password_txt_TextChanged(sender As Object, e As EventArgs) Handles Password_txt.TextChanged
-        Password_txt.PasswordChar = "*" ' Hide characters
+
     End Sub
 
     Private Sub Form_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Password_txt.PasswordChar = If(ShowPasswordCheckBox.Checked, ControlChars.NullChar, "*")
     End Sub
 
     Private Sub guestL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles guestL.LinkClicked

@@ -251,6 +251,23 @@ Public Class Individual_Car
         End If
     End Sub
 
+    Public Sub CheckCustID()
+        If CustID = 0 Then
+            ' Execute code when CustID is None
+            ' For example:
+            MessageBox.Show("There has been a error occured! Please Log Out and Try Again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ' If the user clicks Yes, close the application
+            Me.Close()
+            HomeForm.Close()
+            User_Profile.Close()
+            Form_Login.Show()
+            loggedIn = False
+            Form_Login.loggedIn = False
+            Form_Login.username_txt.Text = ""
+            Form_Login.Password_txt.Text = ""
+        End If
+    End Sub
+
     Private Sub GroupBox2_Enter(sender As Object, e As EventArgs)
 
     End Sub
@@ -393,6 +410,7 @@ Public Class Individual_Car
 
     Public Sub CheckOrderConditionsForCustomer(ByVal custID As Integer, ByVal carID As String, ByVal a As String)
         Try
+            CheckCustID()
             Dim querycheck As String = "SELECT * FROM Orders WHERE CustomerID = @CustID"
 
             ' Create a SqlConnection
@@ -515,11 +533,21 @@ Public Class Individual_Car
                 End Using
             End Using
         Catch ex As Exception
-            MessageBox.Show("Redo the Order Error Message: " & ex.Message)
+            MessageBox.Show("There has been a error occured! Please Log Out and Try Again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ' If the user clicks Yes, close the application
+            Me.Close()
+            HomeForm.Close()
+            User_Profile.Close()
+            Form_Login.Show()
+            loggedIn = False
+            Form_Login.loggedIn = False
+            Form_Login.username_txt.Text = ""
+            Form_Login.Password_txt.Text = ""
         End Try
     End Sub
 
     Private Sub Profile_Click(sender As Object, e As EventArgs) Handles Profile.Click
+        CheckCustID()
         Me.Hide()
         User_Profile.Show()
         User_Profile.loggedIn = loggedIn ' Set loggedIn to True

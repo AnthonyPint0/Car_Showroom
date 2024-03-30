@@ -71,7 +71,7 @@ Partial Class Form_Login
         Me.username_txt.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.username_txt.Name = "username_txt"
         Me.username_txt.Size = New System.Drawing.Size(182, 23)
-        Me.username_txt.TabIndex = 2
+        Me.username_txt.TabIndex = 0
         '
         'Password_txt
         '
@@ -79,7 +79,7 @@ Partial Class Form_Login
         Me.Password_txt.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Password_txt.Name = "Password_txt"
         Me.Password_txt.Size = New System.Drawing.Size(182, 23)
-        Me.Password_txt.TabIndex = 3
+        Me.Password_txt.TabIndex = 1
         '
         'Login_btn
         '
@@ -90,7 +90,7 @@ Partial Class Form_Login
         Me.Login_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Login_btn.Name = "Login_btn"
         Me.Login_btn.Size = New System.Drawing.Size(83, 32)
-        Me.Login_btn.TabIndex = 4
+        Me.Login_btn.TabIndex = 2
         Me.Login_btn.Text = "Login"
         Me.Login_btn.UseVisualStyleBackColor = False
         '
@@ -103,7 +103,7 @@ Partial Class Form_Login
         Me.Exit_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Exit_btn.Name = "Exit_btn"
         Me.Exit_btn.Size = New System.Drawing.Size(28, 26)
-        Me.Exit_btn.TabIndex = 5
+        Me.Exit_btn.TabIndex = 4
         Me.Exit_btn.Text = "X"
         Me.Exit_btn.UseVisualStyleBackColor = False
         '
@@ -116,10 +116,9 @@ Partial Class Form_Login
         Me.Clear_user_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Clear_user_btn.Name = "Clear_user_btn"
         Me.Clear_user_btn.Size = New System.Drawing.Size(99, 32)
-        Me.Clear_user_btn.TabIndex = 6
+        Me.Clear_user_btn.TabIndex = 3
         Me.Clear_user_btn.Text = "Clear"
         Me.Clear_user_btn.UseVisualStyleBackColor = False
-        Me.Clear_user_btn.Visible = False
         '
         'Registerlink
         '
@@ -130,7 +129,7 @@ Partial Class Form_Login
         Me.Registerlink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Registerlink.Name = "Registerlink"
         Me.Registerlink.Size = New System.Drawing.Size(162, 17)
-        Me.Registerlink.TabIndex = 7
+        Me.Registerlink.TabIndex = 0
         Me.Registerlink.TabStop = True
         Me.Registerlink.Text = "New User? Register Now!"
         '
@@ -210,7 +209,7 @@ Partial Class Form_Login
         Me.guestL.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.guestL.Name = "guestL"
         Me.guestL.Size = New System.Drawing.Size(120, 17)
-        Me.guestL.TabIndex = 12
+        Me.guestL.TabIndex = 5
         Me.guestL.TabStop = True
         Me.guestL.Text = "Continue as Guest"
         '

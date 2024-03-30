@@ -87,7 +87,7 @@ Partial Class User_Profile
         Me.Exit_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Exit_btn.Name = "Exit_btn"
         Me.Exit_btn.Size = New System.Drawing.Size(27, 26)
-        Me.Exit_btn.TabIndex = 41
+        Me.Exit_btn.TabIndex = 1
         Me.Exit_btn.Text = "X"
         Me.Exit_btn.UseVisualStyleBackColor = False
         '
@@ -100,7 +100,7 @@ Partial Class User_Profile
         Me.OrderBtn.Location = New System.Drawing.Point(253, 133)
         Me.OrderBtn.Name = "OrderBtn"
         Me.OrderBtn.Size = New System.Drawing.Size(126, 36)
-        Me.OrderBtn.TabIndex = 23
+        Me.OrderBtn.TabIndex = 2
         Me.OrderBtn.Text = "Order Now"
         Me.OrderBtn.UseVisualStyleBackColor = False
         '
@@ -248,7 +248,7 @@ Partial Class User_Profile
         Me.CartPanel.Location = New System.Drawing.Point(3, 3)
         Me.CartPanel.Name = "CartPanel"
         Me.CartPanel.Size = New System.Drawing.Size(394, 181)
-        Me.CartPanel.TabIndex = 46
+        Me.CartPanel.TabIndex = 0
         '
         'stockstatus
         '
@@ -312,7 +312,7 @@ Partial Class User_Profile
         Me.ViewMBtn.Location = New System.Drawing.Point(301, 68)
         Me.ViewMBtn.Name = "ViewMBtn"
         Me.ViewMBtn.Size = New System.Drawing.Size(78, 23)
-        Me.ViewMBtn.TabIndex = 28
+        Me.ViewMBtn.TabIndex = 1
         Me.ViewMBtn.Text = "View More"
         Me.ViewMBtn.UseVisualStyleBackColor = False
         '
@@ -433,7 +433,7 @@ Partial Class User_Profile
         Me.Profile.Location = New System.Drawing.Point(4, 508)
         Me.Profile.Name = "Profile"
         Me.Profile.Size = New System.Drawing.Size(188, 36)
-        Me.Profile.TabIndex = 22
+        Me.Profile.TabIndex = 3
         Me.Profile.Text = "Guest"
         Me.Profile.UseVisualStyleBackColor = False
         '
@@ -446,7 +446,7 @@ Partial Class User_Profile
         Me.Homebel.Location = New System.Drawing.Point(-2, 184)
         Me.Homebel.Name = "Homebel"
         Me.Homebel.Size = New System.Drawing.Size(194, 36)
-        Me.Homebel.TabIndex = 16
+        Me.Homebel.TabIndex = 1
         Me.Homebel.Text = "Home"
         Me.Homebel.UseVisualStyleBackColor = False
         '
@@ -459,7 +459,7 @@ Partial Class User_Profile
         Me.Logout.Location = New System.Drawing.Point(56, 467)
         Me.Logout.Name = "Logout"
         Me.Logout.Size = New System.Drawing.Size(68, 21)
-        Me.Logout.TabIndex = 15
+        Me.Logout.TabIndex = 2
         Me.Logout.Text = "Log out"
         '
         'Registerlink
@@ -535,7 +535,7 @@ Partial Class User_Profile
         Me.Remove_user_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Remove_user_btn.Name = "Remove_user_btn"
         Me.Remove_user_btn.Size = New System.Drawing.Size(99, 32)
-        Me.Remove_user_btn.TabIndex = 49
+        Me.Remove_user_btn.TabIndex = 2
         Me.Remove_user_btn.Text = "Remove"
         Me.Remove_user_btn.UseVisualStyleBackColor = False
         Me.Remove_user_btn.Visible = False

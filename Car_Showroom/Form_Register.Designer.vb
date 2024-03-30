@@ -60,7 +60,7 @@ Partial Class Form_Register
         Me.Register_btn.Location = New System.Drawing.Point(486, 367)
         Me.Register_btn.Name = "Register_btn"
         Me.Register_btn.Size = New System.Drawing.Size(83, 32)
-        Me.Register_btn.TabIndex = 0
+        Me.Register_btn.TabIndex = 7
         Me.Register_btn.Text = "Register"
         Me.Register_btn.UseVisualStyleBackColor = False
         '
@@ -69,14 +69,14 @@ Partial Class Form_Register
         Me.txtBpassword.Location = New System.Drawing.Point(552, 320)
         Me.txtBpassword.Name = "txtBpassword"
         Me.txtBpassword.Size = New System.Drawing.Size(157, 20)
-        Me.txtBpassword.TabIndex = 13
+        Me.txtBpassword.TabIndex = 6
         '
         'txtBusername
         '
         Me.txtBusername.Location = New System.Drawing.Point(552, 265)
         Me.txtBusername.Name = "txtBusername"
         Me.txtBusername.Size = New System.Drawing.Size(157, 20)
-        Me.txtBusername.TabIndex = 12
+        Me.txtBusername.TabIndex = 5
         '
         'Label2
         '
@@ -137,7 +137,7 @@ Partial Class Form_Register
         Me.Loginlink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Loginlink.Name = "Loginlink"
         Me.Loginlink.Size = New System.Drawing.Size(140, 16)
-        Me.Loginlink.TabIndex = 8
+        Me.Loginlink.TabIndex = 0
         Me.Loginlink.TabStop = True
         Me.Loginlink.Text = "Already a user? Login!"
         '
@@ -171,7 +171,7 @@ Partial Class Form_Register
         Me.Back_Btn.Location = New System.Drawing.Point(626, 367)
         Me.Back_Btn.Name = "Back_Btn"
         Me.Back_Btn.Size = New System.Drawing.Size(83, 32)
-        Me.Back_Btn.TabIndex = 17
+        Me.Back_Btn.TabIndex = 8
         Me.Back_Btn.Text = "Back"
         Me.Back_Btn.UseVisualStyleBackColor = False
         '
@@ -180,14 +180,14 @@ Partial Class Form_Register
         Me.txtBfirstName.Location = New System.Drawing.Point(550, 39)
         Me.txtBfirstName.Name = "txtBfirstName"
         Me.txtBfirstName.Size = New System.Drawing.Size(157, 20)
-        Me.txtBfirstName.TabIndex = 29
+        Me.txtBfirstName.TabIndex = 0
         '
         'txtBlastName
         '
         Me.txtBlastName.Location = New System.Drawing.Point(552, 84)
         Me.txtBlastName.Name = "txtBlastName"
         Me.txtBlastName.Size = New System.Drawing.Size(157, 20)
-        Me.txtBlastName.TabIndex = 31
+        Me.txtBlastName.TabIndex = 1
         '
         'Label5
         '
@@ -203,7 +203,7 @@ Partial Class Form_Register
         Me.txtBemail.Location = New System.Drawing.Point(552, 132)
         Me.txtBemail.Name = "txtBemail"
         Me.txtBemail.Size = New System.Drawing.Size(157, 20)
-        Me.txtBemail.TabIndex = 33
+        Me.txtBemail.TabIndex = 2
         '
         'Label6
         '
@@ -219,7 +219,7 @@ Partial Class Form_Register
         Me.txtBaddress.Location = New System.Drawing.Point(551, 180)
         Me.txtBaddress.Name = "txtBaddress"
         Me.txtBaddress.Size = New System.Drawing.Size(157, 20)
-        Me.txtBaddress.TabIndex = 35
+        Me.txtBaddress.TabIndex = 3
         '
         'Label7
         '
@@ -235,7 +235,7 @@ Partial Class Form_Register
         Me.txtBcontactNumber.Location = New System.Drawing.Point(551, 221)
         Me.txtBcontactNumber.Name = "txtBcontactNumber"
         Me.txtBcontactNumber.Size = New System.Drawing.Size(157, 20)
-        Me.txtBcontactNumber.TabIndex = 37
+        Me.txtBcontactNumber.TabIndex = 4
         '
         'Label9
         '
@@ -264,7 +264,7 @@ Partial Class Form_Register
         Me.Exit_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Exit_btn.Name = "Exit_btn"
         Me.Exit_btn.Size = New System.Drawing.Size(28, 26)
-        Me.Exit_btn.TabIndex = 38
+        Me.Exit_btn.TabIndex = 9
         Me.Exit_btn.Text = "X"
         Me.Exit_btn.UseVisualStyleBackColor = False
         '
@@ -278,7 +278,7 @@ Partial Class Form_Register
         Me.guestL.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.guestL.Name = "guestL"
         Me.guestL.Size = New System.Drawing.Size(120, 17)
-        Me.guestL.TabIndex = 9
+        Me.guestL.TabIndex = 10
         Me.guestL.TabStop = True
         Me.guestL.Text = "Continue as Guest"
         '
