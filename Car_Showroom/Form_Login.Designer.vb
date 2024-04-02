@@ -119,7 +119,6 @@ Partial Class Form_Login
         Me.Clear_user_btn.TabIndex = 6
         Me.Clear_user_btn.Text = "Clear"
         Me.Clear_user_btn.UseVisualStyleBackColor = False
-        Me.Clear_user_btn.Visible = False
         '
         'Registerlink
         '

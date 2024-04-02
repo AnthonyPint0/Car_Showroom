@@ -213,42 +213,55 @@ Public Class User_Profile
 
     Public Sub CustomerInfo(ByVal CustID As String)
         Console.WriteLine(CustID)
-        Try
-            ' Create a SqlConnection using the connection string
-            Using connection As New SqlConnection(connectionString)
-                ' Open the connection
-                connection.Open()
+        If CustID = 0 Then
+            MessageBox.Show("There has been a error Occured, Kindly logout and redo please", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ' If the user clicks Yes, close the application
+            Me.Close()
+            HomeForm.Close()
+            Individual_Car.Close()
+            Form_Login.Show()
+            loggedIn = False
+            Form_Login.loggedIn = False
+            Form_Login.username_txt.Text = ""
+            Form_Login.Password_txt.Text = ""
+        Else
+            Try
+                ' Create a SqlConnection using the connection string
+                Using connection As New SqlConnection(connectionString)
+                    ' Open the connection
+                    connection.Open()
 
-                ' Define a SQL query to retrieve car details based on CarID
-                Dim query As String = "SELECT * FROM customer WHERE CustomerID = @CustID"
+                    ' Define a SQL query to retrieve car details based on CarID
+                    Dim query As String = "SELECT * FROM customer WHERE CustomerID = @CustID"
 
-                ' Create a SqlCommand with the query and connection
-                Using command As New SqlCommand(query, connection)
-                    ' Add a parameter for CarID to the SqlCommand
-                    command.Parameters.AddWithValue("@CustID", CustID)
+                    ' Create a SqlCommand with the query and connection
+                    Using command As New SqlCommand(query, connection)
+                        ' Add a parameter for CarID to the SqlCommand
+                        command.Parameters.AddWithValue("@CustID", CustID)
 
-                    ' Execute the SQL query and retrieve the results
-                    Using reader As SqlDataReader = command.ExecuteReader()
-                        ' Check if there are any rows returned
-                        If reader.Read() Then
-                            ' Populate labels with the retrieved data
-                            usernameTxt.Text = reader("Username").ToString()
-                            FirstNTxt.Text = reader("FirstName").ToString()
-                            LastNTxt.Text = reader("LastName").ToString()
-                            EmailTxt.Text = reader("Email").ToString()
-                            ContactNoTxt.Text = reader("ContactNumber").ToString()
-                            AddressTxt.Text = reader("Address").ToString()
-                        Else
-                            ' If no rows are returned, display a message
-                            Console.WriteLine("No Customer found with the specified CustID.")
-                        End If
+                        ' Execute the SQL query and retrieve the results
+                        Using reader As SqlDataReader = command.ExecuteReader()
+                            ' Check if there are any rows returned
+                            If reader.Read() Then
+                                ' Populate labels with the retrieved data
+                                usernameTxt.Text = reader("Username").ToString()
+                                FirstNTxt.Text = reader("FirstName").ToString()
+                                LastNTxt.Text = reader("LastName").ToString()
+                                EmailTxt.Text = reader("Email").ToString()
+                                ContactNoTxt.Text = reader("ContactNumber").ToString()
+                                AddressTxt.Text = reader("Address").ToString()
+                            Else
+                                ' If no rows are returned, display a message
+                                Console.WriteLine("No Customer found with the specified CustID.")
+                            End If
+                        End Using
                     End Using
                 End Using
-            End Using
-        Catch ex As Exception
-            ' Handle any exceptions that may occur
-            MessageBox.Show("Error: " & ex.Message)
-        End Try
+            Catch ex As Exception
+                ' Handle any exceptions that may occur
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+        End If
     End Sub
     Public Sub UpdateUI()
         If loggedIn Then
@@ -356,6 +369,7 @@ Public Class User_Profile
                     End Using
                 End Using
                 HomeForm.Show()
+                HomeForm.CustID = CustID
                 Me.Close()
             Catch ex As Exception
                 MessageBox.Show("Error marking order as successful: " & ex.Message)

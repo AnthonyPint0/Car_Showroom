@@ -85,7 +85,6 @@ Partial Class Admin_Login
         Me.Clear_user_btn.TabIndex = 18
         Me.Clear_user_btn.Text = "Clear"
         Me.Clear_user_btn.UseVisualStyleBackColor = False
-        Me.Clear_user_btn.Visible = False
         '
         'Exit_btn
         '

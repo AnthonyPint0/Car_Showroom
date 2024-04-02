@@ -11,9 +11,10 @@
     <AssemblyName>Car_Showroom</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -121,6 +122,11 @@
     </Compile>
     <Compile Include="HomeForm.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowroonDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroonDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="User_Profile.Designer.vb">
       <DependentUpon>User_Profile.vb</DependentUpon>
@@ -243,6 +249,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="ShowroonDataSet.xsc">
+      <DependentUpon>ShowroonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroonDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroonDataSet.xss">
+      <DependentUpon>ShowroonDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CretaC1.png" />

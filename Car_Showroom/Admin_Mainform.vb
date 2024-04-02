@@ -24,20 +24,20 @@ Public Class Admin_Mainform
     End Sub
 
     Private Sub Admin_Mainform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'ShowroonDataSet.OrderHistory' table. You can move, or remove it, as needed.
+        Me.OrderHistoryTableAdapter1.Fill(Me.ShowroonDataSet.OrderHistory)
+        'TODO: This line of code loads data into the 'ShowroonDataSet.Customer' table. You can move, or remove it, as needed.
+        Me.CustomerTableAdapter1.Fill(Me.ShowroonDataSet.Customer)
+        'TODO: This line of code loads data into the 'ShowroonDataSet.InventoryStatus' table. You can move, or remove it, as needed.
+        Me.InventoryStatusTableAdapter1.Fill(Me.ShowroonDataSet.InventoryStatus)
         Car_InventoryGB.Visible = True
         Add_carGB.Visible = False
         CustomerGB.Visible = False
         SalesRepertGB.Visible = False
-        'TODO: This line of code loads data into the 'Car_ShowroomADataSet.OrderHistory' table. You can move, or remove it, as needed.
-        Me.OrderHistoryTableAdapter.Fill(Me.Car_ShowroomADataSet.OrderHistory)
-        'TODO: This line of code loads data into the 'Car_ShowroomADataSet.Customer' table. You can move, or remove it, as needed.
-        Me.CustomerTableAdapter.Fill(Me.Car_ShowroomADataSet.Customer)
         BodyTypeCB.Items.Add("Hatchback")
         BodyTypeCB.Items.Add("Sedan")
         BodyTypeCB.Items.Add("SUV")
         BodyTypeCB.Items.Add("MUV")
-        'TODO: This line of code loads data into the 'Car_ShowroomADataSet.InventoryStatus' table. You can move, or remove it, as needed.
-        Me.InventoryStatusTableAdapter.Fill(Me.Car_ShowroomADataSet.InventoryStatus)
         UpdateUI()
         ' Set the "Car_Inventory" button as the initially selected button
         selectedButton = Car_Inventory
