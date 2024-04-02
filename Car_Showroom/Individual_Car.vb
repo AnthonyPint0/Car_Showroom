@@ -480,6 +480,7 @@ Public Class Individual_Car
                                 ElseIf Not cart AndAlso Not ordered AndAlso Not delivered Then
                                     ' Condition 3: Cart = 0, Ordered = 0, Delivered = 0
                                     ' Perform actions for Condition 4
+                                    MessageBox.Show("You are unable to add cars to your cart or place new orders while your current order is being processed.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                                     Console.WriteLine("Condition 4: Cart = 0, Ordered = 0, Delivered = 0")
                                     '********************************************************************************************************************************
                                 Else
