@@ -380,14 +380,27 @@ Public Class Individual_Car
     Private Sub Add2cart_Click(sender As Object, e As EventArgs) Handles Add2cartBtn.Click
         If loggedIn Then
             Console.WriteLine(CustID)
-            ' Display a message box with Yes and No buttons
-            Dim result As DialogResult = MessageBox.Show("Are you sure you want to add this Car to Cart?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            ' Check the user's response
-            If result = DialogResult.Yes Then
-                CheckOrderConditionsForCustomer(CustID, carID, a)
+            If CustID = 0 Then
+                MessageBox.Show("There has been a error Occured, Kindly logout and redo please", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                ' If the user clicks Yes, close the application
+                Me.Close()
+                HomeForm.Close()
+                User_Profile.Close()
+                Form_Login.Show()
+                loggedIn = False
+                Form_Login.loggedIn = False
+                Form_Login.username_txt.Text = ""
+                Form_Login.Password_txt.Text = ""
+            Else
+                ' Display a message box with Yes and No buttons
+                Dim result As DialogResult = MessageBox.Show("Are you sure you want to add this Car to Cart?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                ' Check the user's response
+                If result = DialogResult.Yes Then
+                    CheckOrderConditionsForCustomer(CustID, carID, a)
+                End If
             End If
         Else
-            MessageBox.Show("To add cars to your cart, please log in to your account.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("To add cars to your cart, please log in to your account.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
@@ -467,6 +480,7 @@ Public Class Individual_Car
                                 ElseIf Not cart AndAlso Not ordered AndAlso Not delivered Then
                                     ' Condition 3: Cart = 0, Ordered = 0, Delivered = 0
                                     ' Perform actions for Condition 4
+                                    MessageBox.Show("You are unable to add cars to your cart or place new orders while your current order is being processed.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                                     Console.WriteLine("Condition 4: Cart = 0, Ordered = 0, Delivered = 0")
                                     '********************************************************************************************************************************
                                 Else
@@ -531,6 +545,7 @@ Public Class Individual_Car
         HomeForm.loggedIn = loggedIn ' Set loggedIn to True
         HomeForm.Profile.Text = "" & Profile.Text
         HomeForm.CustID = CustID
+        User_Profile.CustID = CustID
         HomeForm.Show()
         HomeForm.Hide()
         HomeForm.UpdateUI() ' Update the UI in HomeForm

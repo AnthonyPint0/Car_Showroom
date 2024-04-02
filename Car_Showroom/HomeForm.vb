@@ -361,6 +361,7 @@ Public Class HomeForm
     Private Sub Profile_Click(sender As Object, e As EventArgs) Handles Profile.Click
         If loggedIn Then
             Me.Hide()
+            User_Profile.CustID = CustID
             User_Profile.Show()
             User_Profile.loggedIn = loggedIn ' Set loggedIn to True
             User_Profile.Profile.Text = "" & Profile.Text

@@ -4,7 +4,7 @@ Imports System.Globalization
 Public Class Form_Login
     Public loggedIn As Boolean
     Public CustID As Integer
-    Public connector As String = "Data Source=DESKTOP-R8V9OD0;Initial Catalog=Car_ShowroomA;Integrated Security=True;Encrypt=True; Encrypt=False"
+    Public connector As String = "Data Source=DESKTOP-COMG-76;Initial Catalog=Showroon;Integrated Security=True; Encrypt=False"
     Public con As New SqlConnection(connector)
 
     Private Sub Login_btn_Click(sender As Object, e As EventArgs) Handles Login_btn.Click
@@ -60,7 +60,7 @@ Public Class Form_Login
                     HomeForm.Profile.Text = "" & username_txt.Text
                     HomeForm.Show() ' To show the main form
                     HomeForm.UpdateUI() ' Update the UI in HomeForm
-                    ' Else
+                Else
                     ' User authentication failed
                     MessageBox.Show("Invalid username or password")
                 End If

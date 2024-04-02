@@ -85,6 +85,7 @@ Partial Class Admin_Mainform
         Me.Label5 = New System.Windows.Forms.Label()
         Me.CustomerGB = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Remove_user_btn = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.CustomerIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -112,7 +113,13 @@ Partial Class Admin_Mainform
         Me.OrderHistoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CustomerTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.CustomerTableAdapter()
         Me.OrderHistoryTableAdapter = New Car_Showroom.Car_ShowroomADataSetTableAdapters.OrderHistoryTableAdapter()
-        Me.Remove_user_btn = New System.Windows.Forms.Button()
+        Me.ShowroonDataSet = New Car_Showroom.ShowroonDataSet()
+        Me.InventoryStatusBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InventoryStatusTableAdapter1 = New Car_Showroom.ShowroonDataSetTableAdapters.InventoryStatusTableAdapter()
+        Me.CustomerBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CustomerTableAdapter1 = New Car_Showroom.ShowroonDataSetTableAdapters.CustomerTableAdapter()
+        Me.OrderHistoryBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OrderHistoryTableAdapter1 = New Car_Showroom.ShowroonDataSetTableAdapters.OrderHistoryTableAdapter()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -131,6 +138,10 @@ Partial Class Admin_Mainform
         Me.GroupBox3.SuspendLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OrderHistoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ShowroonDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InventoryStatusBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CustomerBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OrderHistoryBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Exit_btn
@@ -283,7 +294,7 @@ Partial Class Admin_Mainform
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CarIDDataGridViewTextBoxColumn, Me.AvailableCountDataGridViewTextBoxColumn, Me.MaxCapacityDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.InventoryStatusBindingSource
+        Me.DataGridView1.DataSource = Me.InventoryStatusBindingSource1
         Me.DataGridView1.Location = New System.Drawing.Point(6, 24)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -395,7 +406,7 @@ Partial Class Admin_Mainform
         Me.Label3.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(275, 416)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 16)
+        Me.Label3.Size = New System.Drawing.Size(73, 16)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "No. of Cars"
         '
@@ -405,7 +416,7 @@ Partial Class Admin_Mainform
         Me.Label2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(12, 416)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 16)
+        Me.Label2.Size = New System.Drawing.Size(40, 16)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "CarID"
         '
@@ -487,7 +498,7 @@ Partial Class Admin_Mainform
         Me.Label18.ForeColor = System.Drawing.Color.Red
         Me.Label18.Location = New System.Drawing.Point(9, 374)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(122, 32)
+        Me.Label18.Size = New System.Drawing.Size(123, 32)
         Me.Label18.TabIndex = 53
         Me.Label18.Text = "*Image Name must " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "be Same as CarID"
         '
@@ -517,7 +528,7 @@ Partial Class Admin_Mainform
         Me.Label17.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.Location = New System.Drawing.Point(21, 276)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(72, 16)
+        Me.Label17.Size = New System.Drawing.Size(73, 16)
         Me.Label17.TabIndex = 50
         Me.Label17.Text = "Description"
         '
@@ -535,7 +546,7 @@ Partial Class Admin_Mainform
         Me.Label14.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(6, 231)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(98, 16)
+        Me.Label14.Size = New System.Drawing.Size(99, 16)
         Me.Label14.TabIndex = 48
         Me.Label14.Text = "CustReviewLink"
         '
@@ -561,7 +572,7 @@ Partial Class Admin_Mainform
         Me.Label15.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(21, 180)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(74, 16)
+        Me.Label15.Size = New System.Drawing.Size(75, 16)
         Me.Label15.TabIndex = 45
         Me.Label15.Text = "CustReview"
         '
@@ -571,7 +582,7 @@ Partial Class Admin_Mainform
         Me.Label16.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.Location = New System.Drawing.Point(41, 133)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(37, 16)
+        Me.Label16.Size = New System.Drawing.Size(38, 16)
         Me.Label16.TabIndex = 44
         Me.Label16.Text = "Price"
         '
@@ -589,7 +600,7 @@ Partial Class Admin_Mainform
         Me.Label10.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(436, 373)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(68, 16)
+        Me.Label10.Size = New System.Drawing.Size(69, 16)
         Me.Label10.TabIndex = 41
         Me.Label10.Text = "Body Type"
         '
@@ -599,7 +610,7 @@ Partial Class Admin_Mainform
         Me.Label11.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(434, 326)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(70, 16)
+        Me.Label11.Size = New System.Drawing.Size(71, 16)
         Me.Label11.TabIndex = 40
         Me.Label11.Text = "Driver Type"
         '
@@ -625,7 +636,7 @@ Partial Class Admin_Mainform
         Me.Label12.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(398, 273)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(106, 16)
+        Me.Label12.Size = New System.Drawing.Size(107, 16)
         Me.Label12.TabIndex = 37
         Me.Label12.Text = "Seating Capacity"
         '
@@ -635,7 +646,7 @@ Partial Class Admin_Mainform
         Me.Label13.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(432, 226)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(72, 16)
+        Me.Label13.Size = New System.Drawing.Size(73, 16)
         Me.Label13.TabIndex = 36
         Me.Label13.Text = "Max Power"
         '
@@ -661,7 +672,7 @@ Partial Class Admin_Mainform
         Me.Label8.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(441, 180)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(63, 16)
+        Me.Label8.Size = New System.Drawing.Size(64, 16)
         Me.Label8.TabIndex = 33
         Me.Label8.Text = "Fuel Type"
         '
@@ -671,7 +682,7 @@ Partial Class Admin_Mainform
         Me.Label9.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(420, 133)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(84, 16)
+        Me.Label9.Size = New System.Drawing.Size(85, 16)
         Me.Label9.TabIndex = 32
         Me.Label9.Text = "Transmission"
         '
@@ -697,7 +708,7 @@ Partial Class Admin_Mainform
         Me.Label6.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(452, 80)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(52, 16)
+        Me.Label6.Size = New System.Drawing.Size(53, 16)
         Me.Label6.TabIndex = 29
         Me.Label6.Text = "Mileage"
         '
@@ -707,7 +718,7 @@ Partial Class Admin_Mainform
         Me.Label7.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(457, 33)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(47, 16)
+        Me.Label7.Size = New System.Drawing.Size(48, 16)
         Me.Label7.TabIndex = 28
         Me.Label7.Text = "Engine"
         '
@@ -744,7 +755,7 @@ Partial Class Admin_Mainform
         Me.Label4.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(21, 86)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 16)
+        Me.Label4.Size = New System.Drawing.Size(66, 16)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Car Name"
         '
@@ -754,7 +765,7 @@ Partial Class Admin_Mainform
         Me.Label5.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(41, 41)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(39, 16)
+        Me.Label5.Size = New System.Drawing.Size(40, 16)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "CarID"
         '
@@ -783,6 +794,20 @@ Partial Class Admin_Mainform
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
         '
+        'Remove_user_btn
+        '
+        Me.Remove_user_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Remove_user_btn.Font = New System.Drawing.Font("Bahnschrift", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Remove_user_btn.ForeColor = System.Drawing.Color.White
+        Me.Remove_user_btn.Location = New System.Drawing.Point(602, 431)
+        Me.Remove_user_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Remove_user_btn.Name = "Remove_user_btn"
+        Me.Remove_user_btn.Size = New System.Drawing.Size(99, 32)
+        Me.Remove_user_btn.TabIndex = 19
+        Me.Remove_user_btn.Text = "Remove"
+        Me.Remove_user_btn.UseVisualStyleBackColor = False
+        Me.Remove_user_btn.Visible = False
+        '
         'DataGridView2
         '
         Me.DataGridView2.AllowUserToAddRows = False
@@ -790,7 +815,7 @@ Partial Class Admin_Mainform
         Me.DataGridView2.AutoGenerateColumns = False
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CustomerIDDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.AddressDataGridViewTextBoxColumn, Me.ContactNumberDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.RegistrationDateDataGridViewTextBoxColumn})
-        Me.DataGridView2.DataSource = Me.CustomerBindingSource
+        Me.DataGridView2.DataSource = Me.CustomerBindingSource1
         Me.DataGridView2.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
@@ -905,7 +930,7 @@ Partial Class Admin_Mainform
         Me.DataGridView3.AutoGenerateColumns = False
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.CustomerID, Me.Username, Me.Price, Me.Cart, Me.Ordered, Me.Delivered, Me.Status, Me.MovedOn})
-        Me.DataGridView3.DataSource = Me.OrderHistoryBindingSource
+        Me.DataGridView3.DataSource = Me.OrderHistoryBindingSource1
         Me.DataGridView3.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.ReadOnly = True
@@ -1004,19 +1029,37 @@ Partial Class Admin_Mainform
         '
         Me.OrderHistoryTableAdapter.ClearBeforeFill = True
         '
-        'Remove_user_btn
+        'ShowroonDataSet
         '
-        Me.Remove_user_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Remove_user_btn.Font = New System.Drawing.Font("Bahnschrift", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Remove_user_btn.ForeColor = System.Drawing.Color.White
-        Me.Remove_user_btn.Location = New System.Drawing.Point(602, 431)
-        Me.Remove_user_btn.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Remove_user_btn.Name = "Remove_user_btn"
-        Me.Remove_user_btn.Size = New System.Drawing.Size(99, 32)
-        Me.Remove_user_btn.TabIndex = 19
-        Me.Remove_user_btn.Text = "Remove"
-        Me.Remove_user_btn.UseVisualStyleBackColor = False
-        Me.Remove_user_btn.Visible = False
+        Me.ShowroonDataSet.DataSetName = "ShowroonDataSet"
+        Me.ShowroonDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'InventoryStatusBindingSource1
+        '
+        Me.InventoryStatusBindingSource1.DataMember = "InventoryStatus"
+        Me.InventoryStatusBindingSource1.DataSource = Me.ShowroonDataSet
+        '
+        'InventoryStatusTableAdapter1
+        '
+        Me.InventoryStatusTableAdapter1.ClearBeforeFill = True
+        '
+        'CustomerBindingSource1
+        '
+        Me.CustomerBindingSource1.DataMember = "Customer"
+        Me.CustomerBindingSource1.DataSource = Me.ShowroonDataSet
+        '
+        'CustomerTableAdapter1
+        '
+        Me.CustomerTableAdapter1.ClearBeforeFill = True
+        '
+        'OrderHistoryBindingSource1
+        '
+        Me.OrderHistoryBindingSource1.DataMember = "OrderHistory"
+        Me.OrderHistoryBindingSource1.DataSource = Me.ShowroonDataSet
+        '
+        'OrderHistoryTableAdapter1
+        '
+        Me.OrderHistoryTableAdapter1.ClearBeforeFill = True
         '
         'Admin_Mainform
         '
@@ -1052,6 +1095,10 @@ Partial Class Admin_Mainform
         Me.GroupBox3.ResumeLayout(False)
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OrderHistoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ShowroonDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InventoryStatusBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CustomerBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OrderHistoryBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1144,4 +1191,11 @@ Partial Class Admin_Mainform
     Friend WithEvents Status As DataGridViewTextBoxColumn
     Friend WithEvents MovedOn As DataGridViewTextBoxColumn
     Friend WithEvents Remove_user_btn As Button
+    Friend WithEvents ShowroonDataSet As ShowroonDataSet
+    Friend WithEvents InventoryStatusBindingSource1 As BindingSource
+    Friend WithEvents InventoryStatusTableAdapter1 As ShowroonDataSetTableAdapters.InventoryStatusTableAdapter
+    Friend WithEvents CustomerBindingSource1 As BindingSource
+    Friend WithEvents CustomerTableAdapter1 As ShowroonDataSetTableAdapters.CustomerTableAdapter
+    Friend WithEvents OrderHistoryBindingSource1 As BindingSource
+    Friend WithEvents OrderHistoryTableAdapter1 As ShowroonDataSetTableAdapters.OrderHistoryTableAdapter
 End Class

@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("Car_ShowroomADataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("ShowroonDataSet"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class Car_ShowroomADataSet
+Partial Public Class ShowroonDataSet
     Inherits Global.System.Data.DataSet
     
     Private tableadmin As adminDataTable
@@ -39,9 +39,9 @@ Partial Public Class Car_ShowroomADataSet
     
     Private tableOrders As OrdersDataTable
     
-    Private relationFK__CarColors__CarId__6383C8BA As Global.System.Data.DataRelation
+    Private relationFK__CarColors__CarId__1ED998B2 As Global.System.Data.DataRelation
     
-    Private relationFK__Inventory__CarID__5EBF139D As Global.System.Data.DataRelation
+    Private relationFK__Inventory__CarID__1BFD2C07 As Global.System.Data.DataRelation
     
     Private relationFK_Car_Order As Global.System.Data.DataRelation
     
@@ -226,7 +226,7 @@ Partial Public Class Car_ShowroomADataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As Car_ShowroomADataSet = CType(MyBase.Clone,Car_ShowroomADataSet)
+        Dim cln As ShowroonDataSet = CType(MyBase.Clone,ShowroonDataSet)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -346,8 +346,8 @@ Partial Public Class Car_ShowroomADataSet
                 Me.tableOrders.InitVars
             End If
         End If
-        Me.relationFK__CarColors__CarId__6383C8BA = Me.Relations("FK__CarColors__CarId__6383C8BA")
-        Me.relationFK__Inventory__CarID__5EBF139D = Me.Relations("FK__Inventory__CarID__5EBF139D")
+        Me.relationFK__CarColors__CarId__1ED998B2 = Me.Relations("FK__CarColors__CarId__1ED998B2")
+        Me.relationFK__Inventory__CarID__1BFD2C07 = Me.Relations("FK__Inventory__CarID__1BFD2C07")
         Me.relationFK_Car_Order = Me.Relations("FK_Car_Order")
         Me.relationFK_Customer_Order = Me.Relations("FK_Customer_Order")
     End Sub
@@ -355,9 +355,9 @@ Partial Public Class Car_ShowroomADataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "Car_ShowroomADataSet"
+        Me.DataSetName = "ShowroonDataSet"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/Car_ShowroomADataSet.xsd"
+        Me.Namespace = "http://tempuri.org/ShowroonDataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableadmin = New adminDataTable()
@@ -374,10 +374,10 @@ Partial Public Class Car_ShowroomADataSet
         MyBase.Tables.Add(Me.tableOrderHistory)
         Me.tableOrders = New OrdersDataTable()
         MyBase.Tables.Add(Me.tableOrders)
-        Me.relationFK__CarColors__CarId__6383C8BA = New Global.System.Data.DataRelation("FK__CarColors__CarId__6383C8BA", New Global.System.Data.DataColumn() {Me.tableCars.CarIdColumn}, New Global.System.Data.DataColumn() {Me.tableCarColors.CarIdColumn}, false)
-        Me.Relations.Add(Me.relationFK__CarColors__CarId__6383C8BA)
-        Me.relationFK__Inventory__CarID__5EBF139D = New Global.System.Data.DataRelation("FK__Inventory__CarID__5EBF139D", New Global.System.Data.DataColumn() {Me.tableCars.CarIdColumn}, New Global.System.Data.DataColumn() {Me.tableInventoryStatus.CarIDColumn}, false)
-        Me.Relations.Add(Me.relationFK__Inventory__CarID__5EBF139D)
+        Me.relationFK__CarColors__CarId__1ED998B2 = New Global.System.Data.DataRelation("FK__CarColors__CarId__1ED998B2", New Global.System.Data.DataColumn() {Me.tableCars.CarIdColumn}, New Global.System.Data.DataColumn() {Me.tableCarColors.CarIdColumn}, false)
+        Me.Relations.Add(Me.relationFK__CarColors__CarId__1ED998B2)
+        Me.relationFK__Inventory__CarID__1BFD2C07 = New Global.System.Data.DataRelation("FK__Inventory__CarID__1BFD2C07", New Global.System.Data.DataColumn() {Me.tableCars.CarIdColumn}, New Global.System.Data.DataColumn() {Me.tableInventoryStatus.CarIDColumn}, false)
+        Me.Relations.Add(Me.relationFK__Inventory__CarID__1BFD2C07)
         Me.relationFK_Car_Order = New Global.System.Data.DataRelation("FK_Car_Order", New Global.System.Data.DataColumn() {Me.tableCars.CarIdColumn}, New Global.System.Data.DataColumn() {Me.tableOrders.CarIDColumn}, false)
         Me.Relations.Add(Me.relationFK_Car_Order)
         Me.relationFK_Customer_Order = New Global.System.Data.DataRelation("FK_Customer_Order", New Global.System.Data.DataColumn() {Me.tableCustomer.CustomerIDColumn}, New Global.System.Data.DataColumn() {Me.tableOrders.CustomerIDColumn}, false)
@@ -437,7 +437,7 @@ Partial Public Class Car_ShowroomADataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As Car_ShowroomADataSet = New Car_ShowroomADataSet()
+        Dim ds As ShowroonDataSet = New ShowroonDataSet()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -855,7 +855,7 @@ Partial Public Class Car_ShowroomADataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Car_ShowroomADataSet = New Car_ShowroomADataSet()
+            Dim ds As ShowroonDataSet = New ShowroonDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1047,11 +1047,11 @@ Partial Public Class Car_ShowroomADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddCarColorsRow(ByVal parentCarsRowByFK__CarColors__CarId__6383C8BA As CarsRow, ByVal Color1 As String, ByVal Color2 As String, ByVal Color3 As String) As CarColorsRow
+        Public Overloads Function AddCarColorsRow(ByVal parentCarsRowByFK__CarColors__CarId__1ED998B2 As CarsRow, ByVal Color1 As String, ByVal Color2 As String, ByVal Color3 As String) As CarColorsRow
             Dim rowCarColorsRow As CarColorsRow = CType(Me.NewRow,CarColorsRow)
             Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Color1, Color2, Color3}
-            If (Not (parentCarsRowByFK__CarColors__CarId__6383C8BA) Is Nothing) Then
-                columnValuesArray(1) = parentCarsRowByFK__CarColors__CarId__6383C8BA(0)
+            If (Not (parentCarsRowByFK__CarColors__CarId__1ED998B2) Is Nothing) Then
+                columnValuesArray(1) = parentCarsRowByFK__CarColors__CarId__1ED998B2(0)
             End If
             rowCarColorsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowCarColorsRow)
@@ -1179,7 +1179,7 @@ Partial Public Class Car_ShowroomADataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Car_ShowroomADataSet = New Car_ShowroomADataSet()
+            Dim ds As ShowroonDataSet = New ShowroonDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1622,7 +1622,7 @@ Partial Public Class Car_ShowroomADataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Car_ShowroomADataSet = New Car_ShowroomADataSet()
+            Dim ds As ShowroonDataSet = New ShowroonDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2004,7 +2004,7 @@ Partial Public Class Car_ShowroomADataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Car_ShowroomADataSet = New Car_ShowroomADataSet()
+            Dim ds As ShowroonDataSet = New ShowroonDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2176,11 +2176,11 @@ Partial Public Class Car_ShowroomADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddInventoryStatusRow(ByVal parentCarsRowByFK__Inventory__CarID__5EBF139D As CarsRow, ByVal AvailableCount As Integer, ByVal MaxCapacity As Integer) As InventoryStatusRow
+        Public Overloads Function AddInventoryStatusRow(ByVal parentCarsRowByFK__Inventory__CarID__1BFD2C07 As CarsRow, ByVal AvailableCount As Integer, ByVal MaxCapacity As Integer) As InventoryStatusRow
             Dim rowInventoryStatusRow As InventoryStatusRow = CType(Me.NewRow,InventoryStatusRow)
             Dim columnValuesArray() As Object = New Object() {Nothing, AvailableCount, MaxCapacity}
-            If (Not (parentCarsRowByFK__Inventory__CarID__5EBF139D) Is Nothing) Then
-                columnValuesArray(0) = parentCarsRowByFK__Inventory__CarID__5EBF139D(0)
+            If (Not (parentCarsRowByFK__Inventory__CarID__1BFD2C07) Is Nothing) Then
+                columnValuesArray(0) = parentCarsRowByFK__Inventory__CarID__1BFD2C07(0)
             End If
             rowInventoryStatusRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowInventoryStatusRow)
@@ -2297,7 +2297,7 @@ Partial Public Class Car_ShowroomADataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Car_ShowroomADataSet = New Car_ShowroomADataSet()
+            Dim ds As ShowroonDataSet = New ShowroonDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2367,6 +2367,8 @@ Partial Public Class Car_ShowroomADataSet
     Partial Public Class OrderHistoryDataTable
         Inherits Global.System.Data.TypedTableBase(Of OrderHistoryRow)
         
+        Private columnOrderHis As Global.System.Data.DataColumn
+        
         Private columnOrderID As Global.System.Data.DataColumn
         
         Private columnCarID As Global.System.Data.DataColumn
@@ -2423,6 +2425,14 @@ Partial Public Class Car_ShowroomADataSet
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property OrderHisColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOrderHis
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -2551,7 +2561,7 @@ Partial Public Class Car_ShowroomADataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overloads Function AddOrderHistoryRow(ByVal OrderID As Integer, ByVal CarID As String, ByVal CustomerID As Integer, ByVal Username As String, ByVal Price As Decimal, ByVal Cart As Boolean, ByVal Ordered As Boolean, ByVal Delivered As Boolean, ByVal Status As String, ByVal Message As String, ByVal MovedOn As Date) As OrderHistoryRow
             Dim rowOrderHistoryRow As OrderHistoryRow = CType(Me.NewRow,OrderHistoryRow)
-            Dim columnValuesArray() As Object = New Object() {OrderID, CarID, CustomerID, Username, Price, Cart, Ordered, Delivered, Status, Message, MovedOn}
+            Dim columnValuesArray() As Object = New Object() {Nothing, OrderID, CarID, CustomerID, Username, Price, Cart, Ordered, Delivered, Status, Message, MovedOn}
             rowOrderHistoryRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowOrderHistoryRow)
             Return rowOrderHistoryRow
@@ -2559,8 +2569,8 @@ Partial Public Class Car_ShowroomADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByOrderID(ByVal OrderID As Integer) As OrderHistoryRow
-            Return CType(Me.Rows.Find(New Object() {OrderID}),OrderHistoryRow)
+        Public Function FindByOrderHis(ByVal OrderHis As Integer) As OrderHistoryRow
+            Return CType(Me.Rows.Find(New Object() {OrderHis}),OrderHistoryRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2580,6 +2590,7 @@ Partial Public Class Car_ShowroomADataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnOrderHis = MyBase.Columns("OrderHis")
             Me.columnOrderID = MyBase.Columns("OrderID")
             Me.columnCarID = MyBase.Columns("CarID")
             Me.columnCustomerID = MyBase.Columns("CustomerID")
@@ -2596,6 +2607,8 @@ Partial Public Class Car_ShowroomADataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
+            Me.columnOrderHis = New Global.System.Data.DataColumn("OrderHis", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnOrderHis)
             Me.columnOrderID = New Global.System.Data.DataColumn("OrderID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnOrderID)
             Me.columnCarID = New Global.System.Data.DataColumn("CarID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -2618,9 +2631,13 @@ Partial Public Class Car_ShowroomADataSet
             MyBase.Columns.Add(Me.columnMessage)
             Me.columnMovedOn = New Global.System.Data.DataColumn("MovedOn", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnMovedOn)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnOrderID}, true))
-            Me.columnOrderID.AllowDBNull = false
-            Me.columnOrderID.Unique = true
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnOrderHis}, true))
+            Me.columnOrderHis.AutoIncrement = true
+            Me.columnOrderHis.AutoIncrementSeed = -1
+            Me.columnOrderHis.AutoIncrementStep = -1
+            Me.columnOrderHis.AllowDBNull = false
+            Me.columnOrderHis.ReadOnly = true
+            Me.columnOrderHis.Unique = true
             Me.columnCarID.AllowDBNull = false
             Me.columnCarID.MaxLength = 50
             Me.columnCustomerID.AllowDBNull = false
@@ -2699,7 +2716,7 @@ Partial Public Class Car_ShowroomADataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Car_ShowroomADataSet = New Car_ShowroomADataSet()
+            Dim ds As ShowroonDataSet = New ShowroonDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -3098,7 +3115,7 @@ Partial Public Class Car_ShowroomADataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Car_ShowroomADataSet = New Car_ShowroomADataSet()
+            Dim ds As ShowroonDataSet = New ShowroonDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -3419,10 +3436,10 @@ Partial Public Class Car_ShowroomADataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property CarsRow() As CarsRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK__CarColors__CarId__6383C8BA")),CarsRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK__CarColors__CarId__1ED998B2")),CarsRow)
             End Get
             Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("FK__CarColors__CarId__6383C8BA"))
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK__CarColors__CarId__1ED998B2"))
             End Set
         End Property
         
@@ -3839,20 +3856,20 @@ Partial Public Class Car_ShowroomADataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function GetCarColorsRows() As CarColorsRow()
-            If (Me.Table.ChildRelations("FK__CarColors__CarId__6383C8BA") Is Nothing) Then
+            If (Me.Table.ChildRelations("FK__CarColors__CarId__1ED998B2") Is Nothing) Then
                 Return New CarColorsRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK__CarColors__CarId__6383C8BA")),CarColorsRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK__CarColors__CarId__1ED998B2")),CarColorsRow())
             End If
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function GetInventoryStatusRows() As InventoryStatusRow()
-            If (Me.Table.ChildRelations("FK__Inventory__CarID__5EBF139D") Is Nothing) Then
+            If (Me.Table.ChildRelations("FK__Inventory__CarID__1BFD2C07") Is Nothing) Then
                 Return New InventoryStatusRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK__Inventory__CarID__5EBF139D")),InventoryStatusRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK__Inventory__CarID__1BFD2C07")),InventoryStatusRow())
             End If
         End Function
         
@@ -4076,10 +4093,10 @@ Partial Public Class Car_ShowroomADataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property CarsRow() As CarsRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK__Inventory__CarID__5EBF139D")),CarsRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK__Inventory__CarID__1BFD2C07")),CarsRow)
             End Get
             Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("FK__Inventory__CarID__5EBF139D"))
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK__Inventory__CarID__1BFD2C07"))
             End Set
         End Property
     End Class
@@ -4101,9 +4118,24 @@ Partial Public Class Car_ShowroomADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property OrderHis() As Integer
+            Get
+                Return CType(Me(Me.tableOrderHistory.OrderHisColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableOrderHistory.OrderHisColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property OrderID() As Integer
             Get
-                Return CType(Me(Me.tableOrderHistory.OrderIDColumn),Integer)
+                Try 
+                    Return CType(Me(Me.tableOrderHistory.OrderIDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'OrderID' in table 'OrderHistory' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableOrderHistory.OrderIDColumn) = value
@@ -4231,6 +4263,18 @@ Partial Public Class Car_ShowroomADataSet
                 Me(Me.tableOrderHistory.MovedOnColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsOrderIDNull() As Boolean
+            Return Me.IsNull(Me.tableOrderHistory.OrderIDColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetOrderIDNull()
+            Me(Me.tableOrderHistory.OrderIDColumn) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -4702,7 +4746,7 @@ Partial Public Class Car_ShowroomADataSet
     End Class
 End Class
 
-Namespace Car_ShowroomADataSetTableAdapters
+Namespace ShowroonDataSetTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -4932,7 +4976,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_ShowroomAConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4950,7 +4994,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Car_ShowroomADataSet.adminDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.adminDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -4963,9 +5007,9 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Car_ShowroomADataSet.adminDataTable
+        Public Overloads Overridable Function GetData() As ShowroonDataSet.adminDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Car_ShowroomADataSet.adminDataTable = New Car_ShowroomADataSet.adminDataTable()
+            Dim dataTable As ShowroonDataSet.adminDataTable = New ShowroonDataSet.adminDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -4973,14 +5017,14 @@ Namespace Car_ShowroomADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Car_ShowroomADataSet.adminDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.adminDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Car_ShowroomADataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "admin")
         End Function
         
@@ -5511,7 +5555,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_ShowroomAConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5528,7 +5572,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Car_ShowroomADataSet.CarColorsDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.CarColorsDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -5541,9 +5585,9 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Car_ShowroomADataSet.CarColorsDataTable
+        Public Overloads Overridable Function GetData() As ShowroonDataSet.CarColorsDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Car_ShowroomADataSet.CarColorsDataTable = New Car_ShowroomADataSet.CarColorsDataTable()
+            Dim dataTable As ShowroonDataSet.CarColorsDataTable = New ShowroonDataSet.CarColorsDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -5551,14 +5595,14 @@ Namespace Car_ShowroomADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Car_ShowroomADataSet.CarColorsDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.CarColorsDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Car_ShowroomADataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "CarColors")
         End Function
         
@@ -6022,7 +6066,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_ShowroomAConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6041,7 +6085,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Car_ShowroomADataSet.CarsDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.CarsDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -6054,9 +6098,9 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Car_ShowroomADataSet.CarsDataTable
+        Public Overloads Overridable Function GetData() As ShowroonDataSet.CarsDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Car_ShowroomADataSet.CarsDataTable = New Car_ShowroomADataSet.CarsDataTable()
+            Dim dataTable As ShowroonDataSet.CarsDataTable = New ShowroonDataSet.CarsDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -6064,14 +6108,14 @@ Namespace Car_ShowroomADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Car_ShowroomADataSet.CarsDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.CarsDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Car_ShowroomADataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Cars")
         End Function
         
@@ -6741,7 +6785,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_ShowroomAConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6759,7 +6803,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Car_ShowroomADataSet.CustomerDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.CustomerDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -6772,9 +6816,9 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Car_ShowroomADataSet.CustomerDataTable
+        Public Overloads Overridable Function GetData() As ShowroonDataSet.CustomerDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Car_ShowroomADataSet.CustomerDataTable = New Car_ShowroomADataSet.CustomerDataTable()
+            Dim dataTable As ShowroonDataSet.CustomerDataTable = New ShowroonDataSet.CustomerDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -6782,14 +6826,14 @@ Namespace Car_ShowroomADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Car_ShowroomADataSet.CustomerDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.CustomerDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Car_ShowroomADataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Customer")
         End Function
         
@@ -7251,7 +7295,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_ShowroomAConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7268,7 +7312,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Car_ShowroomADataSet.InventoryStatusDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.InventoryStatusDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -7281,9 +7325,9 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Car_ShowroomADataSet.InventoryStatusDataTable
+        Public Overloads Overridable Function GetData() As ShowroonDataSet.InventoryStatusDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Car_ShowroomADataSet.InventoryStatusDataTable = New Car_ShowroomADataSet.InventoryStatusDataTable()
+            Dim dataTable As ShowroonDataSet.InventoryStatusDataTable = New ShowroonDataSet.InventoryStatusDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -7291,14 +7335,14 @@ Namespace Car_ShowroomADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Car_ShowroomADataSet.InventoryStatusDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.InventoryStatusDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Car_ShowroomADataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "InventoryStatus")
         End Function
         
@@ -7540,6 +7584,7 @@ Namespace Car_ShowroomADataSetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "OrderHistory"
+            tableMapping.ColumnMappings.Add("OrderHis", "OrderHis")
             tableMapping.ColumnMappings.Add("OrderID", "OrderID")
             tableMapping.ColumnMappings.Add("CarID", "CarID")
             tableMapping.ColumnMappings.Add("CustomerID", "CustomerID")
@@ -7554,14 +7599,17 @@ Namespace Car_ShowroomADataSetTableAdapters
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[OrderHistory] WHERE (([OrderID] = @Original_OrderID) AND ([Car"& _ 
-                "ID] = @Original_CarID) AND ([CustomerID] = @Original_CustomerID) AND ([Username]"& _ 
-                " = @Original_Username) AND ([Price] = @Original_Price) AND ([Cart] = @Original_C"& _ 
-                "art) AND ([Ordered] = @Original_Ordered) AND ([Delivered] = @Original_Delivered)"& _ 
-                " AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)"& _ 
-                ") AND ((@IsNull_MovedOn = 1 AND [MovedOn] IS NULL) OR ([MovedOn] = @Original_Mov"& _ 
-                "edOn)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[OrderHistory] WHERE (([OrderHis] = @Original_OrderHis) AND ((@"& _ 
+                "IsNull_OrderID = 1 AND [OrderID] IS NULL) OR ([OrderID] = @Original_OrderID)) AN"& _ 
+                "D ([CarID] = @Original_CarID) AND ([CustomerID] = @Original_CustomerID) AND ([Us"& _ 
+                "ername] = @Original_Username) AND ([Price] = @Original_Price) AND ([Cart] = @Ori"& _ 
+                "ginal_Cart) AND ([Ordered] = @Original_Ordered) AND ([Delivered] = @Original_Del"& _ 
+                "ivered) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_"& _ 
+                "Status)) AND ((@IsNull_MovedOn = 1 AND [MovedOn] IS NULL) OR ([MovedOn] = @Origi"& _ 
+                "nal_MovedOn)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OrderHis", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrderHis", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OrderID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrderID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OrderID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrderID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CarID", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CarID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CustomerID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CustomerID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -7579,9 +7627,9 @@ Namespace Car_ShowroomADataSetTableAdapters
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[OrderHistory] ([OrderID], [CarID], [CustomerID], [Username], ["& _ 
                 "Price], [Cart], [Ordered], [Delivered], [Status], [Message], [MovedOn]) VALUES ("& _ 
                 "@OrderID, @CarID, @CustomerID, @Username, @Price, @Cart, @Ordered, @Delivered, @"& _ 
-                "Status, @Message, @MovedOn);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT OrderID, CarID, CustomerID, Username, Price"& _ 
-                ", Cart, Ordered, Delivered, Status, Message, MovedOn FROM OrderHistory WHERE (Or"& _ 
-                "derID = @OrderID)"
+                "Status, @Message, @MovedOn);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT OrderHis, OrderID, CarID, CustomerID, Usern"& _ 
+                "ame, Price, Cart, Ordered, Delivered, Status, Message, MovedOn FROM OrderHistory"& _ 
+                " WHERE (OrderHis = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@OrderID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrderID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CarID", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CarID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7599,14 +7647,16 @@ Namespace Car_ShowroomADataSetTableAdapters
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[OrderHistory] SET [OrderID] = @OrderID, [CarID] = @CarID, [Customer"& _ 
                 "ID] = @CustomerID, [Username] = @Username, [Price] = @Price, [Cart] = @Cart, [Or"& _ 
                 "dered] = @Ordered, [Delivered] = @Delivered, [Status] = @Status, [Message] = @Me"& _ 
-                "ssage, [MovedOn] = @MovedOn WHERE (([OrderID] = @Original_OrderID) AND ([CarID] "& _ 
-                "= @Original_CarID) AND ([CustomerID] = @Original_CustomerID) AND ([Username] = @"& _ 
-                "Original_Username) AND ([Price] = @Original_Price) AND ([Cart] = @Original_Cart)"& _ 
-                " AND ([Ordered] = @Original_Ordered) AND ([Delivered] = @Original_Delivered) AND"& _ 
-                " ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AN"& _ 
-                "D ((@IsNull_MovedOn = 1 AND [MovedOn] IS NULL) OR ([MovedOn] = @Original_MovedOn"& _ 
-                ")));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT OrderID, CarID, CustomerID, Username, Price, Cart, Ordered, Deliver"& _ 
-                "ed, Status, Message, MovedOn FROM OrderHistory WHERE (OrderID = @OrderID)"
+                "ssage, [MovedOn] = @MovedOn WHERE (([OrderHis] = @Original_OrderHis) AND ((@IsNu"& _ 
+                "ll_OrderID = 1 AND [OrderID] IS NULL) OR ([OrderID] = @Original_OrderID)) AND (["& _ 
+                "CarID] = @Original_CarID) AND ([CustomerID] = @Original_CustomerID) AND ([Userna"& _ 
+                "me] = @Original_Username) AND ([Price] = @Original_Price) AND ([Cart] = @Origina"& _ 
+                "l_Cart) AND ([Ordered] = @Original_Ordered) AND ([Delivered] = @Original_Deliver"& _ 
+                "ed) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Stat"& _ 
+                "us)) AND ((@IsNull_MovedOn = 1 AND [MovedOn] IS NULL) OR ([MovedOn] = @Original_"& _ 
+                "MovedOn)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT OrderHis, OrderID, CarID, CustomerID, Username, Price, Cart,"& _ 
+                " Ordered, Delivered, Status, Message, MovedOn FROM OrderHistory WHERE (OrderHis "& _ 
+                "= @OrderHis)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@OrderID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrderID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CarID", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CarID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7619,6 +7669,8 @@ Namespace Car_ShowroomADataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Status", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Status", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Message", Global.System.Data.SqlDbType.Text, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Message", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MovedOn", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MovedOn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OrderHis", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrderHis", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_OrderID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrderID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_OrderID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "OrderID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CarID", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CarID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CustomerID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CustomerID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -7631,13 +7683,14 @@ Namespace Car_ShowroomADataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Status", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Status", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MovedOn", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MovedOn", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MovedOn", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MovedOn", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@OrderHis", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "OrderHis", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_ShowroomAConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7646,8 +7699,8 @@ Namespace Car_ShowroomADataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT OrderID, CarID, CustomerID, Username, Price, Cart, Ordered, Delivered, Sta"& _ 
-                "tus, Message, MovedOn FROM dbo.OrderHistory"
+            Me._commandCollection(0).CommandText = "SELECT OrderHis, OrderID, CarID, CustomerID, Username, Price, Cart, Ordered, Deli"& _ 
+                "vered, Status, Message, MovedOn FROM dbo.OrderHistory"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -7655,7 +7708,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Car_ShowroomADataSet.OrderHistoryDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.OrderHistoryDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -7668,9 +7721,9 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Car_ShowroomADataSet.OrderHistoryDataTable
+        Public Overloads Overridable Function GetData() As ShowroonDataSet.OrderHistoryDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Car_ShowroomADataSet.OrderHistoryDataTable = New Car_ShowroomADataSet.OrderHistoryDataTable()
+            Dim dataTable As ShowroonDataSet.OrderHistoryDataTable = New ShowroonDataSet.OrderHistoryDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -7678,14 +7731,14 @@ Namespace Car_ShowroomADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Car_ShowroomADataSet.OrderHistoryDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.OrderHistoryDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Car_ShowroomADataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "OrderHistory")
         End Function
         
@@ -7707,36 +7760,43 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_OrderID As Integer, ByVal Original_CarID As String, ByVal Original_CustomerID As Integer, ByVal Original_Username As String, ByVal Original_Price As Decimal, ByVal Original_Cart As Boolean, ByVal Original_Ordered As Boolean, ByVal Original_Delivered As Boolean, ByVal Original_Status As String, ByVal Original_MovedOn As Global.System.Nullable(Of Date)) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_OrderID,Integer)
+        Public Overloads Overridable Function Delete(ByVal Original_OrderHis As Integer, ByVal Original_OrderID As Global.System.Nullable(Of Integer), ByVal Original_CarID As String, ByVal Original_CustomerID As Integer, ByVal Original_Username As String, ByVal Original_Price As Decimal, ByVal Original_Cart As Boolean, ByVal Original_Ordered As Boolean, ByVal Original_Delivered As Boolean, ByVal Original_Status As String, ByVal Original_MovedOn As Global.System.Nullable(Of Date)) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_OrderHis,Integer)
+            If (Original_OrderID.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_OrderID.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
             If (Original_CarID Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_CarID")
             Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_CarID,String)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_CarID,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_CustomerID,Integer)
+            Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_CustomerID,Integer)
             If (Original_Username Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Username")
             Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_Username,String)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Username,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Price,Decimal)
-            Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Cart,Boolean)
-            Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Ordered,Boolean)
-            Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_Delivered,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Price,Decimal)
+            Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_Cart,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Ordered,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_Delivered,Boolean)
             If (Original_Status Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(9).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_Status,String)
-            End If
-            If (Original_MovedOn.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(Original_MovedOn.Value,Date)
-            Else
                 Me.Adapter.DeleteCommand.Parameters(10).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(Original_Status,String)
+            End If
+            If (Original_MovedOn.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(Original_MovedOn.Value,Date)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(13).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -7757,8 +7817,12 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal OrderID As Integer, ByVal CarID As String, ByVal CustomerID As Integer, ByVal Username As String, ByVal Price As Decimal, ByVal Cart As Boolean, ByVal Ordered As Boolean, ByVal Delivered As Boolean, ByVal Status As String, ByVal Message As String, ByVal MovedOn As Global.System.Nullable(Of Date)) As Integer
-            Me.Adapter.InsertCommand.Parameters(0).Value = CType(OrderID,Integer)
+        Public Overloads Overridable Function Insert(ByVal OrderID As Global.System.Nullable(Of Integer), ByVal CarID As String, ByVal CustomerID As Integer, ByVal Username As String, ByVal Price As Decimal, ByVal Cart As Boolean, ByVal Ordered As Boolean, ByVal Delivered As Boolean, ByVal Status As String, ByVal Message As String, ByVal MovedOn As Global.System.Nullable(Of Date)) As Integer
+            If (OrderID.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(OrderID.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
             If (CarID Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("CarID")
             Else
@@ -7809,7 +7873,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal OrderID As Integer,  _
+                    ByVal OrderID As Global.System.Nullable(Of Integer),  _
                     ByVal CarID As String,  _
                     ByVal CustomerID As Integer,  _
                     ByVal Username As String,  _
@@ -7820,7 +7884,8 @@ Namespace Car_ShowroomADataSetTableAdapters
                     ByVal Status As String,  _
                     ByVal Message As String,  _
                     ByVal MovedOn As Global.System.Nullable(Of Date),  _
-                    ByVal Original_OrderID As Integer,  _
+                    ByVal Original_OrderHis As Integer,  _
+                    ByVal Original_OrderID As Global.System.Nullable(Of Integer),  _
                     ByVal Original_CarID As String,  _
                     ByVal Original_CustomerID As Integer,  _
                     ByVal Original_Username As String,  _
@@ -7829,8 +7894,13 @@ Namespace Car_ShowroomADataSetTableAdapters
                     ByVal Original_Ordered As Boolean,  _
                     ByVal Original_Delivered As Boolean,  _
                     ByVal Original_Status As String,  _
-                    ByVal Original_MovedOn As Global.System.Nullable(Of Date)) As Integer
-            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(OrderID,Integer)
+                    ByVal Original_MovedOn As Global.System.Nullable(Of Date),  _
+                    ByVal OrderHis As Integer) As Integer
+            If (OrderID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(OrderID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
             If (CarID Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("CarID")
             Else
@@ -7861,36 +7931,44 @@ Namespace Car_ShowroomADataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_OrderID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_OrderHis,Integer)
+            If (Original_OrderID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_OrderID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
             If (Original_CarID Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_CarID")
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_CarID,String)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_CarID,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_CustomerID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_CustomerID,Integer)
             If (Original_Username Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Username")
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Username,String)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Username,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Price,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Cart,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Ordered,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Delivered,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Price,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Cart,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Ordered,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Delivered,Boolean)
             If (Original_Status Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Status,String)
-            End If
-            If (Original_MovedOn.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_MovedOn.Value,Date)
-            Else
                 Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Status,String)
             End If
+            If (Original_MovedOn.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_MovedOn.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(25).Value = CType(OrderHis,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -7911,6 +7989,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
+                    ByVal OrderID As Global.System.Nullable(Of Integer),  _
                     ByVal CarID As String,  _
                     ByVal CustomerID As Integer,  _
                     ByVal Username As String,  _
@@ -7921,7 +8000,8 @@ Namespace Car_ShowroomADataSetTableAdapters
                     ByVal Status As String,  _
                     ByVal Message As String,  _
                     ByVal MovedOn As Global.System.Nullable(Of Date),  _
-                    ByVal Original_OrderID As Integer,  _
+                    ByVal Original_OrderHis As Integer,  _
+                    ByVal Original_OrderID As Global.System.Nullable(Of Integer),  _
                     ByVal Original_CarID As String,  _
                     ByVal Original_CustomerID As Integer,  _
                     ByVal Original_Username As String,  _
@@ -7931,7 +8011,7 @@ Namespace Car_ShowroomADataSetTableAdapters
                     ByVal Original_Delivered As Boolean,  _
                     ByVal Original_Status As String,  _
                     ByVal Original_MovedOn As Global.System.Nullable(Of Date)) As Integer
-            Return Me.Update(Original_OrderID, CarID, CustomerID, Username, Price, Cart, Ordered, Delivered, Status, Message, MovedOn, Original_OrderID, Original_CarID, Original_CustomerID, Original_Username, Original_Price, Original_Cart, Original_Ordered, Original_Delivered, Original_Status, Original_MovedOn)
+            Return Me.Update(OrderID, CarID, CustomerID, Username, Price, Cart, Ordered, Delivered, Status, Message, MovedOn, Original_OrderHis, Original_OrderID, Original_CarID, Original_CustomerID, Original_Username, Original_Price, Original_Cart, Original_Ordered, Original_Delivered, Original_Status, Original_MovedOn, Original_OrderHis)
         End Function
     End Class
     
@@ -8147,7 +8227,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_ShowroomAConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8165,7 +8245,7 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Car_ShowroomADataSet.OrdersDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.OrdersDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -8178,9 +8258,9 @@ Namespace Car_ShowroomADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Car_ShowroomADataSet.OrdersDataTable
+        Public Overloads Overridable Function GetData() As ShowroonDataSet.OrdersDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Car_ShowroomADataSet.OrdersDataTable = New Car_ShowroomADataSet.OrdersDataTable()
+            Dim dataTable As ShowroonDataSet.OrdersDataTable = New ShowroonDataSet.OrdersDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -8188,14 +8268,14 @@ Namespace Car_ShowroomADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Car_ShowroomADataSet.OrdersDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.OrdersDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Car_ShowroomADataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Orders")
         End Function
         
@@ -8446,7 +8526,7 @@ Namespace Car_ShowroomADataSetTableAdapters
         Private Sub InitCommandCollection()
             Me._commandCollection = New Global.System.Data.IDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
-            CType(Me._commandCollection(0),Global.System.Data.SqlClient.SqlCommand).Connection = New Global.System.Data.SqlClient.SqlConnection(Global.Car_Showroom.My.MySettings.Default.Car_ShowroomAConnectionString)
+            CType(Me._commandCollection(0),Global.System.Data.SqlClient.SqlCommand).Connection = New Global.System.Data.SqlClient.SqlConnection(Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString)
             CType(Me._commandCollection(0),Global.System.Data.SqlClient.SqlCommand).CommandText = "dbo.CheckAvailableCount"
             CType(Me._commandCollection(0),Global.System.Data.SqlClient.SqlCommand).CommandType = Global.System.Data.CommandType.StoredProcedure
             CType(Me._commandCollection(0),Global.System.Data.SqlClient.SqlCommand).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.ReturnValue, 1, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -8714,7 +8794,7 @@ Namespace Car_ShowroomADataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As Car_ShowroomADataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As ShowroonDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._carsTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.Cars.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
@@ -8787,7 +8867,7 @@ Namespace Car_ShowroomADataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As Car_ShowroomADataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As ShowroonDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._carsTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.Cars.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
@@ -8853,7 +8933,7 @@ Namespace Car_ShowroomADataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As Car_ShowroomADataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As ShowroonDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._ordersTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.Orders.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
@@ -8945,7 +9025,7 @@ Namespace Car_ShowroomADataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As Car_ShowroomADataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As ShowroonDataSet) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If
