@@ -24,12 +24,12 @@ Public Class Admin_Mainform
     End Sub
 
     Private Sub Admin_Mainform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'ShowroonDataSet.OrderHistory' table. You can move, or remove it, as needed.
-        Me.OrderHistoryTableAdapter1.Fill(Me.ShowroonDataSet.OrderHistory)
-        'TODO: This line of code loads data into the 'ShowroonDataSet.Customer' table. You can move, or remove it, as needed.
-        Me.CustomerTableAdapter1.Fill(Me.ShowroonDataSet.Customer)
-        'TODO: This line of code loads data into the 'ShowroonDataSet.InventoryStatus' table. You can move, or remove it, as needed.
-        Me.InventoryStatusTableAdapter1.Fill(Me.ShowroonDataSet.InventoryStatus)
+        'TODO: This line of code loads data into the 'Car_WashDataSet.OrderHistory' table. You can move, or remove it, as needed.
+        Me.OrderHistoryTableAdapter2.Fill(Me.Car_WashDataSet.OrderHistory)
+        'TODO: This line of code loads data into the 'Car_WashDataSet.Customer' table. You can move, or remove it, as needed.
+        Me.CustomerTableAdapter2.Fill(Me.Car_WashDataSet.Customer)
+        'TODO: This line of code loads data into the 'Car_WashDataSet.InventoryStatus' table. You can move, or remove it, as needed.
+        Me.InventoryStatusTableAdapter2.Fill(Me.Car_WashDataSet.InventoryStatus)
         Car_InventoryGB.Visible = True
         Add_carGB.Visible = False
         CustomerGB.Visible = False

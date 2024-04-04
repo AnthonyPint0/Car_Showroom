@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("ShowroonDataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("Car_WashDataSet"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class ShowroonDataSet
+Partial Public Class Car_WashDataSet
     Inherits Global.System.Data.DataSet
     
     Private tableadmin As adminDataTable
@@ -39,9 +39,9 @@ Partial Public Class ShowroonDataSet
     
     Private tableOrders As OrdersDataTable
     
-    Private relationFK__CarColors__CarId__1ED998B2 As Global.System.Data.DataRelation
+    Private relationFK__CarColors__CarId__5165187F As Global.System.Data.DataRelation
     
-    Private relationFK__Inventory__CarID__1BFD2C07 As Global.System.Data.DataRelation
+    Private relationFK__Inventory__CarID__4E88ABD4 As Global.System.Data.DataRelation
     
     Private relationFK_Car_Order As Global.System.Data.DataRelation
     
@@ -226,7 +226,7 @@ Partial Public Class ShowroonDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As ShowroonDataSet = CType(MyBase.Clone,ShowroonDataSet)
+        Dim cln As Car_WashDataSet = CType(MyBase.Clone,Car_WashDataSet)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -346,8 +346,8 @@ Partial Public Class ShowroonDataSet
                 Me.tableOrders.InitVars
             End If
         End If
-        Me.relationFK__CarColors__CarId__1ED998B2 = Me.Relations("FK__CarColors__CarId__1ED998B2")
-        Me.relationFK__Inventory__CarID__1BFD2C07 = Me.Relations("FK__Inventory__CarID__1BFD2C07")
+        Me.relationFK__CarColors__CarId__5165187F = Me.Relations("FK__CarColors__CarId__5165187F")
+        Me.relationFK__Inventory__CarID__4E88ABD4 = Me.Relations("FK__Inventory__CarID__4E88ABD4")
         Me.relationFK_Car_Order = Me.Relations("FK_Car_Order")
         Me.relationFK_Customer_Order = Me.Relations("FK_Customer_Order")
     End Sub
@@ -355,9 +355,9 @@ Partial Public Class ShowroonDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "ShowroonDataSet"
+        Me.DataSetName = "Car_WashDataSet"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/ShowroonDataSet.xsd"
+        Me.Namespace = "http://tempuri.org/Car_WashDataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableadmin = New adminDataTable()
@@ -374,10 +374,10 @@ Partial Public Class ShowroonDataSet
         MyBase.Tables.Add(Me.tableOrderHistory)
         Me.tableOrders = New OrdersDataTable()
         MyBase.Tables.Add(Me.tableOrders)
-        Me.relationFK__CarColors__CarId__1ED998B2 = New Global.System.Data.DataRelation("FK__CarColors__CarId__1ED998B2", New Global.System.Data.DataColumn() {Me.tableCars.CarIdColumn}, New Global.System.Data.DataColumn() {Me.tableCarColors.CarIdColumn}, false)
-        Me.Relations.Add(Me.relationFK__CarColors__CarId__1ED998B2)
-        Me.relationFK__Inventory__CarID__1BFD2C07 = New Global.System.Data.DataRelation("FK__Inventory__CarID__1BFD2C07", New Global.System.Data.DataColumn() {Me.tableCars.CarIdColumn}, New Global.System.Data.DataColumn() {Me.tableInventoryStatus.CarIDColumn}, false)
-        Me.Relations.Add(Me.relationFK__Inventory__CarID__1BFD2C07)
+        Me.relationFK__CarColors__CarId__5165187F = New Global.System.Data.DataRelation("FK__CarColors__CarId__5165187F", New Global.System.Data.DataColumn() {Me.tableCars.CarIdColumn}, New Global.System.Data.DataColumn() {Me.tableCarColors.CarIdColumn}, false)
+        Me.Relations.Add(Me.relationFK__CarColors__CarId__5165187F)
+        Me.relationFK__Inventory__CarID__4E88ABD4 = New Global.System.Data.DataRelation("FK__Inventory__CarID__4E88ABD4", New Global.System.Data.DataColumn() {Me.tableCars.CarIdColumn}, New Global.System.Data.DataColumn() {Me.tableInventoryStatus.CarIDColumn}, false)
+        Me.Relations.Add(Me.relationFK__Inventory__CarID__4E88ABD4)
         Me.relationFK_Car_Order = New Global.System.Data.DataRelation("FK_Car_Order", New Global.System.Data.DataColumn() {Me.tableCars.CarIdColumn}, New Global.System.Data.DataColumn() {Me.tableOrders.CarIDColumn}, false)
         Me.Relations.Add(Me.relationFK_Car_Order)
         Me.relationFK_Customer_Order = New Global.System.Data.DataRelation("FK_Customer_Order", New Global.System.Data.DataColumn() {Me.tableCustomer.CustomerIDColumn}, New Global.System.Data.DataColumn() {Me.tableOrders.CustomerIDColumn}, false)
@@ -437,7 +437,7 @@ Partial Public Class ShowroonDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As ShowroonDataSet = New ShowroonDataSet()
+        Dim ds As Car_WashDataSet = New Car_WashDataSet()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -855,7 +855,7 @@ Partial Public Class ShowroonDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As ShowroonDataSet = New ShowroonDataSet()
+            Dim ds As Car_WashDataSet = New Car_WashDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1047,11 +1047,11 @@ Partial Public Class ShowroonDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddCarColorsRow(ByVal parentCarsRowByFK__CarColors__CarId__1ED998B2 As CarsRow, ByVal Color1 As String, ByVal Color2 As String, ByVal Color3 As String) As CarColorsRow
+        Public Overloads Function AddCarColorsRow(ByVal parentCarsRowByFK__CarColors__CarId__5165187F As CarsRow, ByVal Color1 As String, ByVal Color2 As String, ByVal Color3 As String) As CarColorsRow
             Dim rowCarColorsRow As CarColorsRow = CType(Me.NewRow,CarColorsRow)
             Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Color1, Color2, Color3}
-            If (Not (parentCarsRowByFK__CarColors__CarId__1ED998B2) Is Nothing) Then
-                columnValuesArray(1) = parentCarsRowByFK__CarColors__CarId__1ED998B2(0)
+            If (Not (parentCarsRowByFK__CarColors__CarId__5165187F) Is Nothing) Then
+                columnValuesArray(1) = parentCarsRowByFK__CarColors__CarId__5165187F(0)
             End If
             rowCarColorsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowCarColorsRow)
@@ -1179,7 +1179,7 @@ Partial Public Class ShowroonDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As ShowroonDataSet = New ShowroonDataSet()
+            Dim ds As Car_WashDataSet = New Car_WashDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1622,7 +1622,7 @@ Partial Public Class ShowroonDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As ShowroonDataSet = New ShowroonDataSet()
+            Dim ds As Car_WashDataSet = New Car_WashDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2004,7 +2004,7 @@ Partial Public Class ShowroonDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As ShowroonDataSet = New ShowroonDataSet()
+            Dim ds As Car_WashDataSet = New Car_WashDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2176,11 +2176,11 @@ Partial Public Class ShowroonDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddInventoryStatusRow(ByVal parentCarsRowByFK__Inventory__CarID__1BFD2C07 As CarsRow, ByVal AvailableCount As Integer, ByVal MaxCapacity As Integer) As InventoryStatusRow
+        Public Overloads Function AddInventoryStatusRow(ByVal parentCarsRowByFK__Inventory__CarID__4E88ABD4 As CarsRow, ByVal AvailableCount As Integer, ByVal MaxCapacity As Integer) As InventoryStatusRow
             Dim rowInventoryStatusRow As InventoryStatusRow = CType(Me.NewRow,InventoryStatusRow)
             Dim columnValuesArray() As Object = New Object() {Nothing, AvailableCount, MaxCapacity}
-            If (Not (parentCarsRowByFK__Inventory__CarID__1BFD2C07) Is Nothing) Then
-                columnValuesArray(0) = parentCarsRowByFK__Inventory__CarID__1BFD2C07(0)
+            If (Not (parentCarsRowByFK__Inventory__CarID__4E88ABD4) Is Nothing) Then
+                columnValuesArray(0) = parentCarsRowByFK__Inventory__CarID__4E88ABD4(0)
             End If
             rowInventoryStatusRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowInventoryStatusRow)
@@ -2297,7 +2297,7 @@ Partial Public Class ShowroonDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As ShowroonDataSet = New ShowroonDataSet()
+            Dim ds As Car_WashDataSet = New Car_WashDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2716,7 +2716,7 @@ Partial Public Class ShowroonDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As ShowroonDataSet = New ShowroonDataSet()
+            Dim ds As Car_WashDataSet = New Car_WashDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -3115,7 +3115,7 @@ Partial Public Class ShowroonDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As ShowroonDataSet = New ShowroonDataSet()
+            Dim ds As Car_WashDataSet = New Car_WashDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -3436,10 +3436,10 @@ Partial Public Class ShowroonDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property CarsRow() As CarsRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK__CarColors__CarId__1ED998B2")),CarsRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK__CarColors__CarId__5165187F")),CarsRow)
             End Get
             Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("FK__CarColors__CarId__1ED998B2"))
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK__CarColors__CarId__5165187F"))
             End Set
         End Property
         
@@ -3856,20 +3856,20 @@ Partial Public Class ShowroonDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function GetCarColorsRows() As CarColorsRow()
-            If (Me.Table.ChildRelations("FK__CarColors__CarId__1ED998B2") Is Nothing) Then
+            If (Me.Table.ChildRelations("FK__CarColors__CarId__5165187F") Is Nothing) Then
                 Return New CarColorsRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK__CarColors__CarId__1ED998B2")),CarColorsRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK__CarColors__CarId__5165187F")),CarColorsRow())
             End If
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function GetInventoryStatusRows() As InventoryStatusRow()
-            If (Me.Table.ChildRelations("FK__Inventory__CarID__1BFD2C07") Is Nothing) Then
+            If (Me.Table.ChildRelations("FK__Inventory__CarID__4E88ABD4") Is Nothing) Then
                 Return New InventoryStatusRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK__Inventory__CarID__1BFD2C07")),InventoryStatusRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK__Inventory__CarID__4E88ABD4")),InventoryStatusRow())
             End If
         End Function
         
@@ -4093,10 +4093,10 @@ Partial Public Class ShowroonDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property CarsRow() As CarsRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK__Inventory__CarID__1BFD2C07")),CarsRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK__Inventory__CarID__4E88ABD4")),CarsRow)
             End Get
             Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("FK__Inventory__CarID__1BFD2C07"))
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK__Inventory__CarID__4E88ABD4"))
             End Set
         End Property
     End Class
@@ -4746,7 +4746,7 @@ Partial Public Class ShowroonDataSet
     End Class
 End Class
 
-Namespace ShowroonDataSetTableAdapters
+Namespace Car_WashDataSetTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -4976,7 +4976,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_WashConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4994,7 +4994,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.adminDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Car_WashDataSet.adminDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -5007,9 +5007,9 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As ShowroonDataSet.adminDataTable
+        Public Overloads Overridable Function GetData() As Car_WashDataSet.adminDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As ShowroonDataSet.adminDataTable = New ShowroonDataSet.adminDataTable()
+            Dim dataTable As Car_WashDataSet.adminDataTable = New Car_WashDataSet.adminDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -5017,14 +5017,14 @@ Namespace ShowroonDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.adminDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Car_WashDataSet.adminDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Car_WashDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "admin")
         End Function
         
@@ -5555,7 +5555,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_WashConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5572,7 +5572,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.CarColorsDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Car_WashDataSet.CarColorsDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -5585,9 +5585,9 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As ShowroonDataSet.CarColorsDataTable
+        Public Overloads Overridable Function GetData() As Car_WashDataSet.CarColorsDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As ShowroonDataSet.CarColorsDataTable = New ShowroonDataSet.CarColorsDataTable()
+            Dim dataTable As Car_WashDataSet.CarColorsDataTable = New Car_WashDataSet.CarColorsDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -5595,14 +5595,14 @@ Namespace ShowroonDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.CarColorsDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Car_WashDataSet.CarColorsDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Car_WashDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "CarColors")
         End Function
         
@@ -6066,7 +6066,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_WashConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6085,7 +6085,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.CarsDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Car_WashDataSet.CarsDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -6098,9 +6098,9 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As ShowroonDataSet.CarsDataTable
+        Public Overloads Overridable Function GetData() As Car_WashDataSet.CarsDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As ShowroonDataSet.CarsDataTable = New ShowroonDataSet.CarsDataTable()
+            Dim dataTable As Car_WashDataSet.CarsDataTable = New Car_WashDataSet.CarsDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -6108,14 +6108,14 @@ Namespace ShowroonDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.CarsDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Car_WashDataSet.CarsDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Car_WashDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Cars")
         End Function
         
@@ -6785,7 +6785,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_WashConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6803,7 +6803,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.CustomerDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Car_WashDataSet.CustomerDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -6816,9 +6816,9 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As ShowroonDataSet.CustomerDataTable
+        Public Overloads Overridable Function GetData() As Car_WashDataSet.CustomerDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As ShowroonDataSet.CustomerDataTable = New ShowroonDataSet.CustomerDataTable()
+            Dim dataTable As Car_WashDataSet.CustomerDataTable = New Car_WashDataSet.CustomerDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -6826,14 +6826,14 @@ Namespace ShowroonDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.CustomerDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Car_WashDataSet.CustomerDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Car_WashDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Customer")
         End Function
         
@@ -7295,7 +7295,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_WashConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7312,7 +7312,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.InventoryStatusDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Car_WashDataSet.InventoryStatusDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -7325,9 +7325,9 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As ShowroonDataSet.InventoryStatusDataTable
+        Public Overloads Overridable Function GetData() As Car_WashDataSet.InventoryStatusDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As ShowroonDataSet.InventoryStatusDataTable = New ShowroonDataSet.InventoryStatusDataTable()
+            Dim dataTable As Car_WashDataSet.InventoryStatusDataTable = New Car_WashDataSet.InventoryStatusDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -7335,14 +7335,14 @@ Namespace ShowroonDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.InventoryStatusDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Car_WashDataSet.InventoryStatusDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Car_WashDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "InventoryStatus")
         End Function
         
@@ -7690,7 +7690,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_WashConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7708,7 +7708,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.OrderHistoryDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Car_WashDataSet.OrderHistoryDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -7721,9 +7721,9 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As ShowroonDataSet.OrderHistoryDataTable
+        Public Overloads Overridable Function GetData() As Car_WashDataSet.OrderHistoryDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As ShowroonDataSet.OrderHistoryDataTable = New ShowroonDataSet.OrderHistoryDataTable()
+            Dim dataTable As Car_WashDataSet.OrderHistoryDataTable = New Car_WashDataSet.OrderHistoryDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -7731,14 +7731,14 @@ Namespace ShowroonDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.OrderHistoryDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Car_WashDataSet.OrderHistoryDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Car_WashDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "OrderHistory")
         End Function
         
@@ -8227,7 +8227,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString
+            Me._connection.ConnectionString = Global.Car_Showroom.My.MySettings.Default.Car_WashConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8245,7 +8245,7 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As ShowroonDataSet.OrdersDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Car_WashDataSet.OrdersDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -8258,9 +8258,9 @@ Namespace ShowroonDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As ShowroonDataSet.OrdersDataTable
+        Public Overloads Overridable Function GetData() As Car_WashDataSet.OrdersDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As ShowroonDataSet.OrdersDataTable = New ShowroonDataSet.OrdersDataTable()
+            Dim dataTable As Car_WashDataSet.OrdersDataTable = New Car_WashDataSet.OrdersDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -8268,14 +8268,14 @@ Namespace ShowroonDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As ShowroonDataSet.OrdersDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Car_WashDataSet.OrdersDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As ShowroonDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Car_WashDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Orders")
         End Function
         
@@ -8526,7 +8526,7 @@ Namespace ShowroonDataSetTableAdapters
         Private Sub InitCommandCollection()
             Me._commandCollection = New Global.System.Data.IDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
-            CType(Me._commandCollection(0),Global.System.Data.SqlClient.SqlCommand).Connection = New Global.System.Data.SqlClient.SqlConnection(Global.Car_Showroom.My.MySettings.Default.ShowroonConnectionString)
+            CType(Me._commandCollection(0),Global.System.Data.SqlClient.SqlCommand).Connection = New Global.System.Data.SqlClient.SqlConnection(Global.Car_Showroom.My.MySettings.Default.Car_WashConnectionString)
             CType(Me._commandCollection(0),Global.System.Data.SqlClient.SqlCommand).CommandText = "dbo.CheckAvailableCount"
             CType(Me._commandCollection(0),Global.System.Data.SqlClient.SqlCommand).CommandType = Global.System.Data.CommandType.StoredProcedure
             CType(Me._commandCollection(0),Global.System.Data.SqlClient.SqlCommand).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.ReturnValue, 1, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -8794,7 +8794,7 @@ Namespace ShowroonDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As ShowroonDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As Car_WashDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._carsTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.Cars.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
@@ -8867,7 +8867,7 @@ Namespace ShowroonDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As ShowroonDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As Car_WashDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._carsTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.Cars.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
@@ -8933,7 +8933,7 @@ Namespace ShowroonDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As ShowroonDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As Car_WashDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._ordersTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.Orders.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
@@ -9025,7 +9025,7 @@ Namespace ShowroonDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As ShowroonDataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As Car_WashDataSet) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If

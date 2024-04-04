@@ -4,7 +4,7 @@ Imports System.Globalization
 Public Class Form_Login
     Public loggedIn As Boolean
     Public CustID As Integer
-    Public connector As String = "Data Source=DESKTOP-COMG-76;Initial Catalog=Showroon;Integrated Security=True; Encrypt=False"
+    Public connector As String = "Data Source=LAPTOP-N6QJ5U6O\SQLEXPRESS01;Initial Catalog=Car_Wash;Integrated Security=True;Encrypt=False"
     Public con As New SqlConnection(connector)
 
     Private Sub Login_btn_Click(sender As Object, e As EventArgs) Handles Login_btn.Click
