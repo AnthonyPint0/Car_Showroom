@@ -50,7 +50,7 @@ Partial Class Form_Login
         Me.Label1.Location = New System.Drawing.Point(441, 173)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(60, 15)
+        Me.Label1.Size = New System.Drawing.Size(78, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Username"
         '
@@ -61,7 +61,7 @@ Partial Class Form_Login
         Me.Label2.Location = New System.Drawing.Point(441, 273)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 15)
+        Me.Label2.Size = New System.Drawing.Size(73, 20)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Password"
         '
@@ -70,7 +70,7 @@ Partial Class Form_Login
         Me.username_txt.Location = New System.Drawing.Point(532, 173)
         Me.username_txt.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.username_txt.Name = "username_txt"
-        Me.username_txt.Size = New System.Drawing.Size(182, 23)
+        Me.username_txt.Size = New System.Drawing.Size(182, 27)
         Me.username_txt.TabIndex = 2
         '
         'Password_txt
@@ -78,7 +78,7 @@ Partial Class Form_Login
         Me.Password_txt.Location = New System.Drawing.Point(532, 269)
         Me.Password_txt.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Password_txt.Name = "Password_txt"
-        Me.Password_txt.Size = New System.Drawing.Size(182, 23)
+        Me.Password_txt.Size = New System.Drawing.Size(182, 27)
         Me.Password_txt.TabIndex = 3
         '
         'Login_btn
@@ -128,7 +128,7 @@ Partial Class Form_Login
         Me.Registerlink.Location = New System.Drawing.Point(215, 439)
         Me.Registerlink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Registerlink.Name = "Registerlink"
-        Me.Registerlink.Size = New System.Drawing.Size(162, 17)
+        Me.Registerlink.Size = New System.Drawing.Size(212, 23)
         Me.Registerlink.TabIndex = 7
         Me.Registerlink.TabStop = True
         Me.Registerlink.Text = "New User? Register Now!"
@@ -136,10 +136,10 @@ Partial Class Form_Login
         'ShowPasswordCheckBox
         '
         Me.ShowPasswordCheckBox.AutoSize = True
-        Me.ShowPasswordCheckBox.Location = New System.Drawing.Point(698, 246)
+        Me.ShowPasswordCheckBox.Location = New System.Drawing.Point(709, 249)
         Me.ShowPasswordCheckBox.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox"
-        Me.ShowPasswordCheckBox.Size = New System.Drawing.Size(15, 14)
+        Me.ShowPasswordCheckBox.Size = New System.Drawing.Size(18, 17)
         Me.ShowPasswordCheckBox.TabIndex = 8
         Me.ShowPasswordCheckBox.UseVisualStyleBackColor = True
         '
@@ -149,7 +149,7 @@ Partial Class Form_Login
         Me.Label3.Location = New System.Drawing.Point(594, 246)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 15)
+        Me.Label3.Size = New System.Drawing.Size(114, 20)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Show Password"
         '
@@ -195,7 +195,7 @@ Partial Class Form_Login
         Me.Label4.Location = New System.Drawing.Point(575, 50)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(67, 27)
+        Me.Label4.Size = New System.Drawing.Size(82, 33)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Login"
         '
@@ -208,17 +208,17 @@ Partial Class Form_Login
         Me.guestL.Location = New System.Drawing.Point(695, 439)
         Me.guestL.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.guestL.Name = "guestL"
-        Me.guestL.Size = New System.Drawing.Size(120, 17)
+        Me.guestL.Size = New System.Drawing.Size(163, 23)
         Me.guestL.TabIndex = 12
         Me.guestL.TabStop = True
         Me.guestL.Text = "Continue as Guest"
         '
         'Form_Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(828, 477)
+        Me.ClientSize = New System.Drawing.Size(868, 486)
         Me.Controls.Add(Me.guestL)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel1)
